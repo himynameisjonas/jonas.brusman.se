@@ -1,18 +1,20 @@
 # This is the default format. 
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink: /:categories/:year/:month/:day/:title 
+permalink: /:year/:month/:day/:title 
 auto: true
 pygments: true
+paginate: 10
 var:
   archive_path: /archive.html
-  categories_path : /categories.html
-  tags_path : /tags.html
+exclude: ['public']
 
 production_url : http://username.github.com # or your custom domain name
-title : My Blog =)
+title : Jonas Forsberg
+author:
+  name: Jonas Forsberg
+  email: hello@jonasforsberg.se
+  github: himynameisjonas
+  twitter: himynameisjonas
 
-author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
+# http://johntornow.com/
+# http://log.maniacalrage.net/
