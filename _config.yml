@@ -6,7 +6,7 @@ pygments: true
 paginate: 10
 var:
   archive_path: /archive.html
-exclude: ['public']
+exclude: ['public', 'bin', 'vendor']
 
 production_url : http://username.github.com # or your custom domain name
 title : Jonas Forsberg
