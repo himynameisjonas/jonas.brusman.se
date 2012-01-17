@@ -16,7 +16,8 @@ Usage:
         => 'post.next.date'
         
 -->{% endcomment %}
-
+<article>
+<div class="content">
 {% for post in posts_collate  %}
   {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
   {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
@@ -48,5 +49,6 @@ Usage:
     {% endif %}
   {% endif %}
 {% endfor %}
-
+</div>
+</article>
 {% assign posts_collate = null %}
