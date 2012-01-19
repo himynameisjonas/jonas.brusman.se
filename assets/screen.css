@@ -337,12 +337,18 @@ a:hover {
 
 @media only screen and (min-width: 480px) {
   /* Style adjustments for viewports 480px and over go here */
-
+  body {
+    min-width: 480px;
+    max-width: 768px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
   /* Style adjustments for viewports 768px and over go here */
-
+  body {
+    min-width: 768px;
+    max-width: none;
+  }
 }
 
 
