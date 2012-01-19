@@ -201,7 +201,7 @@ table { border-collapse: collapse; border-spacing: 0; }
    ========================================================================== */
 
 body {
-  font-family: 'Droid Sans Mono', sans-serif;
+  font-family: 'Droid Sans monospace', "courier new", courier, sans-serif;
 }
 
 body, p, h1, h2, h3, h4, h5, h6 {
@@ -226,7 +226,7 @@ header h1{
 header small {
   font-size: 12px;
   display: block;
-  font-family: 'Droid Sans Mono', sans-serif;
+  font-family: 'Droid Sans monospace', "courier new", courier, sans-serif;
   margin: 10px;
 }
 
@@ -237,7 +237,7 @@ header a {
 }
 
 header, header p, h1, h2, h3, h4, h5, h6 {
-  font-family: 'Abril Fatface', cursive;
+  font-family: 'Abril Fatface', 'georgia', cursive;
   font-size: 15px;
   font-weight: 400;
 }
