@@ -201,7 +201,7 @@ table { border-collapse: collapse; border-spacing: 0; }
    ========================================================================== */
 
 body {
-  font-family: 'Droid Sans monospace', "courier new", courier, sans-serif;
+  font-family: 'Droid Sans Mono', "courier new", courier, sans-serif;
 }
 
 body, p, h1, h2, h3, h4, h5, h6 {
@@ -226,7 +226,7 @@ header h1{
 header small {
   font-size: 12px;
   display: block;
-  font-family: 'Droid Sans monospace', "courier new", courier, sans-serif;
+  font-family: 'Droid Sans Mono', "courier new", courier, sans-serif;
   margin: 10px;
 }
 
@@ -254,14 +254,19 @@ footer {
   margin: 10px 0 50px;
 }
 
-article h2,
+article h2, article h1,
 article .content {
   width: 500px;
   margin: 0 auto;
 }
 
+article h1, article h2, header nav {
+  font-size: 19px;
+}
+
 article .content p {
   margin-bottom: 1em;
+  line-height: 21px;
 }
 
 .flickr-image {
