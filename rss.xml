@@ -1,8 +1,8 @@
 ---
 layout: nil
 ---
-<?xml version="1.0"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
   <channel>
     <title>jonasforsberg.se</title>
     <link>http://jonasforsberg.se</link>
@@ -20,6 +20,9 @@ layout: nil
       <author>hello@jonasforsberg.se (Jonas Forsberg)</author>
       <guid>http://jonasforsberg.se{{ post.id }}</guid>
       <description>
+        {% for flickr_url in post.flickr %}
+          &lt;a href="http://jonasforsberg.se{{ post.url }}"&gt;{{ flickr_url | flickr_medium_image | xml_escape }}&lt;/a&gt;
+        {% endfor %}
         {% if post.flickr %}
           &lt;a href="http://jonasforsberg.se{{ post.url }}"&gt;{{ post.flickr | flickr_medium_image | xml_escape }}&lt;/a&gt;
         {% endif %}

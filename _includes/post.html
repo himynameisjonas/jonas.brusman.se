@@ -4,13 +4,13 @@
     {% else %}
         <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
     {% endif %}
-    {% if post.flickr %}
+    {% for flickr_url in post.flickr %}
         {% if detail %}
-            <a href="{{ post.flickr }}">{{ post.flickr | flickr_image }}</a>
+            <a href="{{ flickr_url }}">{{ flickr_url | flickr_image }}</a>
         {% else %}
-            <a href="{{ post.url }}">{{ post.flickr | flickr_image }}</a>
+            <a href="{{ post.url }}">{{ flickr_url | flickr_image }}</a>
         {% endif %}
-    {% endif %}
+    {% endfor %}
     <div class="content text-left">
         {% if detail %}
             {{ content }}
