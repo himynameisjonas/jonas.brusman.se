@@ -19,7 +19,7 @@
         {% endif %}
     </div>
     <footer>
-    {{ post.date || date:"%Y-%m-%d" }}
+    {{ post.date || date:"%Y-%m-%d" }}</br>
     {% for tag in post.tags %}
         <a href="/tag/{{tag}}">#{{ tag }}</a>
     {% endfor %}
