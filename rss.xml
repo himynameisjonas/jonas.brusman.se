@@ -2,10 +2,10 @@
 layout: nil
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>jonasforsberg.se</title>
-    <link>http://jonasforsberg.se</link>
+    <link>{{site.production_url}}</link>
     <atom:link href="http://jonasforsberg.se/rss.xml" rel="self" type="application/rss+xml" />
     <description>Agile web developer who likes to do high fives and make cool things with Ruby on Rails.</description>
     <language>en-us</language>
@@ -15,22 +15,22 @@ layout: nil
     {% for post in site.posts %}
     <item>
       <title>{{ post.title }}</title>
-      <link>http://jonasforsberg.se{{ post.url }}</link>
+      <link>{{site.production_url}}{{ post.url }}</link>
       <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-      <author>hello@jonasforsberg.se (Jonas Forsberg)</author>
-      <guid>http://jonasforsberg.se{{ post.id }}</guid>
+      <author>Jonas Forsberg – himynameisjonas</author>
+      <guid>{{site.production_url}}{{ post.id }}</guid>
       <description>
         {% for flickr_url in post.flickr %}
-          &lt;a href="http://jonasforsberg.se{{ post.url }}"&gt;{{ flickr_url | flickr_medium_image | xml_escape }}&lt;/a&gt;
+          &lt;a href="{{site.production_url}}{{ post.url }}"&gt;{{ flickr_url | flickr_medium_image | xml_escape }}&lt;/a&gt;
         {% endfor %}
         {% if post.flickr %}
-          &lt;a href="http://jonasforsberg.se{{ post.url }}"&gt;{{ post.flickr | flickr_medium_image | xml_escape }}&lt;/a&gt;
+          &lt;a href="{{site.production_url}}{{ post.url }}"&gt;{{ post.flickr | flickr_medium_image | xml_escape }}&lt;/a&gt;
         {% endif %}
         {{ post.content | xml_escape }}
 
         &lt;p&gt;
         {% for tag in post.tags %}
-          &lt;a href="http://jonasforsberg.se/tag/{{tag}}"&gt;#{{ tag }}&lt;/a&gt;
+          &lt;a href="{{site.production_url}}/tag/{{tag}}"&gt;#{{ tag }}&lt;/a&gt;
         {% endfor %}
         &lt;/p&gt;
       </description>

@@ -8,7 +8,7 @@ var:
   archive_path: /archive.html
 exclude: ['public', 'bin', 'vendor']
 
-production_url : http://username.github.com # or your custom domain name
+production_url: http://jonasforsberg.se
 title : Jonas Forsberg
 author:
   name: Jonas Forsberg

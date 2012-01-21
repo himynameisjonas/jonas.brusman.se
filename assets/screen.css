@@ -269,6 +269,10 @@ article .content p {
   line-height: 21px;
 }
 
+article .content li {
+  line-height: 21px;
+}
+
 .flickr-image {
   margin-top: 10px;
   margin-bottom: 5px;
