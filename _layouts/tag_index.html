@@ -1,10 +1,16 @@
 ---
 layout: default
 ---
-{% for post in site.posts %}
-    {% for tag in post.tags %}
+<article>
+<div class="content">  
+  <h1>{{page.title}}</h1>
+  <ul>
+    {% for post in site.posts %}
+      {% for tag in post.tags %}
         {% if tag == page.tag %}
-            {% include post.html %}
+            <li><span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
         {% endif %}
-    {% endfor %}
-{% endfor %}
+      {% endfor %}
+    {% endfor %}  
+</div>
+</article>
