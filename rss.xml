@@ -23,9 +23,7 @@ layout: nil
         {% for flickr_url in post.flickr %}
           &lt;a href="{{site.production_url}}{{ post.url }}"&gt;{{ flickr_url | flickr_medium_image | xml_escape }}&lt;/a&gt;
         {% endfor %}
-        {% if post.flickr %}
-          &lt;a href="{{site.production_url}}{{ post.url }}"&gt;{{ post.flickr | flickr_medium_image | xml_escape }}&lt;/a&gt;
-        {% endif %}
+
         {{ post.content | xml_escape }}
 
         &lt;p&gt;
