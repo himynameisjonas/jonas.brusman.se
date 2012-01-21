@@ -256,7 +256,7 @@ footer {
 
 article h2, article h1,
 article .content {
-  width: 500px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
