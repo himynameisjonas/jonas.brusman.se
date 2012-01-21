@@ -2,7 +2,7 @@
 layout: post
 title: Hello World! 
 tags:
-- text
+- no-photo
 ---
 Hello world! The must-have post of a blog. I don't know how many blogs i have started but if I know myself this isn't the last one. Sadly...
 
