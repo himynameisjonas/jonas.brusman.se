@@ -6,7 +6,7 @@ pygments: true
 paginate: 10
 var:
   archive_path: /archive.html
-exclude: ['public', 'bin', 'vendor']
+exclude: ['public', 'bin', 'vendor', 'Gemfile', 'Gemfile.lock', 'Procfile', 'Rakefile']
 destination: 'public'
 
 production_url: http://jonasforsberg.se
