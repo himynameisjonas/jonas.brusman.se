@@ -255,9 +255,15 @@ footer {
 }
 
 article h2, article h1,
-article .content {
+article .content p,
+#disqus_thread {
   max-width: 500px;
   margin: 0 auto;
+}
+
+article .content p img {
+  margin-top: 10px;
+  width: 100%;
 }
 
 article h1, article h2, header nav {
@@ -297,6 +303,22 @@ a:hover {
 
 
 
+
+#disqus_thread {
+  color: #222;
+  margin-top: 100px;
+}
+
+.dsq-trackback-url,
+.dsq-brlink,
+#dsq-subscribe,
+#dsq-sort-by {
+  display: none;
+}
+
+.dsq-comment-footer, .dsq-comment-footer a {
+  color: #CECECE;
+}
 
 
 /* =============================================================================
