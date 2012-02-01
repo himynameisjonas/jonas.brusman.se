@@ -301,26 +301,6 @@ a:hover {
   text-decoration: underline;
 }
 
-
-
-
-#disqus_thread {
-  color: #222;
-  margin-top: 150px;
-}
-
-.dsq-trackback-url,
-.dsq-brlink,
-#dsq-subscribe,
-#dsq-sort-by {
-  display: none;
-}
-
-.dsq-comment-footer, .dsq-comment-footer a {
-  color: #CECECE;
-}
-
-
 /* =============================================================================
    Non-semantic helper classes
    Please define your styles before this section.
