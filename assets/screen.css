@@ -255,7 +255,7 @@ footer {
 }
 
 article h2, article h1,
-article .content p,
+article .content,
 #disqus_thread {
   max-width: 500px;
   margin: 0 auto;
