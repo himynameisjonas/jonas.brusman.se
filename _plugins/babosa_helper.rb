@@ -5,7 +5,7 @@ module Babosa
   module Transliterator
     class Swedish < Latin
       APPROXIMATIONS = {
-        "&" => "and"
+        "&" => "and",
         "å" => "aa",
         "ä" => "ae",
         "ö" => "oe",
