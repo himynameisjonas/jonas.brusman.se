@@ -1,3 +1,4 @@
+require File.join(File.dirname(__FILE__), "babosa_helper")
 module Jekyll
   class TagIndex < Page
     def initialize(site, base, dir, tag)
@@ -14,12 +15,13 @@ module Jekyll
     end
   end
   class TagGenerator < Generator
+    include Jekyll::SlugFilter
     safe true
     def generate(site)
       if site.layouts.key? 'tag_index'
         dir = site.config['tag_dir'] || 'tag'
         site.tags.keys.each do |tag|
-          write_tag_index(site, File.join(dir, tag), tag)
+          write_tag_index(site, File.join(dir, to_slug(tag)), tag)
         end
       end
     end
