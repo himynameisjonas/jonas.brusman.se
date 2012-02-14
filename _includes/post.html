@@ -21,7 +21,7 @@
     <footer>
     {{ post.date || date:"%Y-%m-%d" }}</br>
     {% for tag in post.tags %}
-        <a href="/tag/{{tag}}">#{{ tag }}</a>
+        <a href="/tag/{{tag | uri_escape}}">#{{ tag }}</a>
     {% endfor %}
     </footer>
 </article>
