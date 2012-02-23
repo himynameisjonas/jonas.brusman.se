@@ -256,11 +256,14 @@ footer {
 
 article h2, article h1,
 article .content,
-#disqus_thread {
+#pagination {
   max-width: 500px;
   margin: 0 auto;
 }
 
+#pagination {
+  margin-bottom: 50px;
+}
 article .content p img {
   margin-top: 10px;
   width: 100%;
