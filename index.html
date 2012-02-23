@@ -7,7 +7,7 @@ layout: default
 {% endfor %}
 
 {% if paginator.total_pages > 1 %}
-    <div id="pagination">
+    <div id="pagination" class="text-center">
         {% if paginator.previous_page %}
             <a class="prev" href="/{%if paginator.previous_page > 1 %}page{{ paginator.previous_page }}/{% endif %}">&laquo; Newer</a>
         {% endif %}
