@@ -2,6 +2,10 @@ require 'liquid'
 require 'fleakr'
 
 Fleakr.api_key = "c794c3f00be2130085e3cdef2f06aeb6"
+Fleakr.shared_secret = "12661a297b1dfd88"
+token = Fleakr.token_from_mini_token('218-145-308')
+Fleakr.auth_token = token.value
+
 CACHED_IMAGES = {}
 
 module Flickr
