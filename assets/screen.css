@@ -304,6 +304,13 @@ a:hover {
   text-decoration: underline;
 }
 
+code {
+  background-color: ghostWhite;
+  color: black;
+  padding: 1px 3px;
+  border: 1px solid #DEDEDE;
+}
+
 /* =============================================================================
    Non-semantic helper classes
    Please define your styles before this section.
