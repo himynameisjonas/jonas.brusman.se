@@ -1,5 +1,4 @@
 ---
-published: false
 layout: post
 title: A Flickr plugin to Jekyll
 tags:
@@ -10,24 +9,25 @@ tags:
 - plugin
 - code
 ---
-Den här bloggen drivs av [Jekyll](https://github.com/mojombo/jekyll) och jag har skrivit en liten enkel plugin till Jekyll för att på ett enkelt sätt infoga fotografier från flickr direkt i posten.
+This blog i driven by [Jekyll](http://jekyllrb.com/) and i have written a simple plugin to Jekyll that makes it easy to embed photographs from [Flickr](http://flickr.com) directly into your posts.
 
-Börja med att lägga till `fleakr` till din gemfile:
+If you have a Gemfile, start by adding the `fleakr` gem to your Gemfile and run `bundle install`.
+If you don't have a Gemfile, install the gem with `gem install fleakr`.
 
 {% gist 2380125 GEMFILE %}
 
-Lägg sedan in flickr-pluginen i din `_plugins` mapp
+Then add the flickr plugin to your `_plugins` folder:
 
 {% gist 2380125 flickr.rb %}
 
-Läs på [readmen för fleakr gemen](https://github.com/reagent/fleakr) för hur du får tag i dina tokens som ska in i början av flickr.rb ovan.
+Read the [readme for the fleakr gem](https://github.com/reagent/fleakr) on how to obtain your flickr api tokens. Then add them to the top of the flickr.rb file.
 
-Loopa över dina flickr-foton i din post layout, se exempel:
+Loop over your photos in your post layout, for example like this:
 
 {% gist 2380125 post.html %}
 
-Slutligen är det bara att lägga till ett eller flera foton i ett inlägg:
+Finally, the last step is to add one or more photos to your post:
 
 {% gist 2380125 example-post %}
 
-Se alla [exempel som en Gist](https://gist.github.com/2380125).
+I have also published all these [examples as a gist](https://gist.github.com/2380125).
