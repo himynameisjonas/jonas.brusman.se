@@ -10,5 +10,6 @@ tags:
 - lasse
 - people
 - square
+- linköping
 ---
 Taken in the summer of 2011 while I was playing adventure golf in Berg (outside Linköping, Sweden) with [Eva](http://log.brusman.net) and her family.
