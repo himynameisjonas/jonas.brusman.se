@@ -7,3 +7,6 @@ gem 'jekyll'
 gem 'fleakr'
 gem 'babosa'
 gem 'heroku'
+
+gem 'rack-jekyll', github: 'himynameisjonas/rack-jekyll' #github: 'adaoraul/rack-jekyll'
+gem 'unicorn'
