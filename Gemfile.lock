@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/himynameisjonas/rack-jekyll.git
+  revision: deb3360f21e1b43886dd10758ac5560fa6fd70f8
+  specs:
+    rack-jekyll (0.3.7)
+      jekyll (~> 0.11.0)
+      rack (~> 1.3.2)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -9,7 +17,7 @@ GEM
     classifier (1.3.3)
       fast-stemmer (>= 1.0.0)
     directory_watcher (1.4.1)
-    fast-stemmer (1.0.0)
+    fast-stemmer (1.0.1)
     fleakr (0.7.1)
       hpricot (>= 0.6.164)
       loggable (>= 0.2.0)
@@ -26,7 +34,8 @@ GEM
       kramdown (~> 0.13)
       liquid (~> 2.3)
       maruku (~> 0.5)
-    kramdown (0.13.4)
+    kgio (2.7.4)
+    kramdown (0.13.6)
     launchy (2.0.5)
       addressable (~> 2.2.6)
     liquid (2.3.0)
@@ -35,11 +44,17 @@ GEM
       syntax (>= 1.0.0)
     mime-types (1.17.2)
     posix-spawn (0.3.6)
+    rack (1.3.6)
+    raindrops (0.9.0)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rubyzip (0.9.5)
     syntax (1.0.0)
     term-ansicolor (1.0.7)
+    unicorn (4.3.1)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
 
 PLATFORMS
   ruby
@@ -50,3 +65,5 @@ DEPENDENCIES
   fleakr
   heroku
   jekyll
+  rack-jekyll!
+  unicorn
