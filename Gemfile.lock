@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/himynameisjonas/fleakr.git
+  revision: 2300eb3d915769a1ad76b0d4744c9b53acb01979
+  specs:
+    fleakr (0.7.1)
+      hpricot (>= 0.6.164)
+      loggable (>= 0.2.0)
+
+GIT
   remote: git://github.com/himynameisjonas/rack-jekyll.git
   revision: deb3360f21e1b43886dd10758ac5560fa6fd70f8
   specs:
@@ -18,15 +26,12 @@ GEM
       fast-stemmer (>= 1.0.0)
     directory_watcher (1.4.1)
     fast-stemmer (1.0.1)
-    fleakr (0.7.1)
-      hpricot (>= 0.6.164)
-      loggable (>= 0.2.0)
     heroku (2.20.1)
       launchy (>= 0.3.2)
       rest-client (~> 1.6.1)
       rubyzip
       term-ansicolor (~> 1.0.5)
-    hpricot (0.8.5)
+    hpricot (0.8.6)
     jekyll (0.11.2)
       albino (~> 1.3)
       classifier (~> 1.3)
@@ -62,7 +67,7 @@ PLATFORMS
 DEPENDENCIES
   RedCloth
   babosa
-  fleakr
+  fleakr!
   heroku
   jekyll
   rack-jekyll!

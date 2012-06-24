@@ -4,7 +4,7 @@ source :rubygems
 
 gem 'RedCloth'
 gem 'jekyll'
-gem 'fleakr'
+gem 'fleakr', github: 'himynameisjonas/fleakr'
 gem 'babosa'
 gem 'heroku'
 
