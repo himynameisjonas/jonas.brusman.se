@@ -14,6 +14,6 @@ tags:
 - angelina
 ---
 
-Anders and Angelina came up from Malmö to celebrate midsummer with me and Eva here in Stockholm. On Midsummer's Eve we went to Björkviks brygga, Värmdö and spent a day on the rocks by the sea. We ate and drank good, and had a wonderful day together.
+Anders and Angelina came up from Malmö to celebrate midsummer with me and Eva here in Stockholm. On Midsummer's Eve we went to Björkviks brygga, Värmdö and spent a day on the rocks by the sea. We ate great food and drank ice cold beers, and had a wonderful day together.
 
 Björkvis brygga is a new favorite place in the Stockholm area, a real highlight that I really can recommend a visit.
