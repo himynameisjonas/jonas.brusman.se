@@ -281,6 +281,10 @@ article .content li {
   line-height: 21px;
 }
 
+figure.flickr-image {
+  display: inline;
+}
+
 figure.flickr-image img {
   margin-top: 10px;
   margin-bottom: 15px;
