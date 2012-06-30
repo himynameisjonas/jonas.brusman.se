@@ -16,6 +16,12 @@ author:
   email: hello@jonasforsberg.se
   github: himynameisjonas
   twitter: himynameisjonas
-
-# http://johntornow.com/
-# http://log.maniacalrage.net/
+prose:
+  metadata:
+    "_posts":
+      layout: post
+      title: "A new post"
+      flickr:
+      - http://www.flickr.com/photos/himynameisjonas/6872156519/
+      tags:
+      - photo
