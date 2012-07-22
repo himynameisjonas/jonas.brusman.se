@@ -8,7 +8,6 @@ tags:
  - heroku
  - unicorn
  - no-photo
-published: false
 ---
 Deploy your [Jekyll](http://jekyllrb.com/) site on [Heroku](http://www.heroku.com/) with **6 workers** ready to take on your massive traffic **without first having to generate** the Jekyll site locally and there's **no need for a third-party buildpack**. And the best of all, it runs on a **single and free Heroku Dyno**.
 
