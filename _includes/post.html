@@ -19,9 +19,20 @@
         {% endif %}
     </div>
     <footer>
-    {{ post.date || date:"%Y-%m-%d" }}</br>
-    {% for tag in post.tags %}
-        <a href="/tag/{{tag | to_slug}}">#{{ tag }}</a>
-    {% endfor %}
+        {{ post.date || date:"%Y-%m-%d" }}</br>
+        {% for tag in post.tags %}
+            <a href="/tag/{{tag | to_slug}}">#{{ tag }}</a>
+        {% endfor %}
+
+        {% if site.related_posts.size > 0 %}
+            <div id="related">
+                <h3>Related Posts</h3>
+                <ul>
+                    {% for related in site.related_posts %}
+                        <li><a href="{{ related.url }}">{{related.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
     </footer>
 </article>
