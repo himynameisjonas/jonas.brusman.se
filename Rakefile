@@ -1,29 +1,36 @@
 require "rubygems"
-require 'rake'
+require "bundler/setup"
+require "stringex"
 
-desc "Switch between Jekyll-bootstrap themes."
-task :switch_theme, :theme do |t, args|
-  theme_path = File.join(File.dirname(__FILE__), "_includes", "themes", args.theme)
-  layouts_path = File.join(File.dirname(__FILE__), "_layouts")
-  
-  abort("rake aborted: './_includes/themes/#{args.theme}' directory not found.") unless Dir.exists?(theme_path)
-  abort("rake aborted: './_layouts' directory not found.") unless Dir.exists?(layouts_path)
-  
-  Dir.glob("#{theme_path}/*") do |filename|
-    puts "Generating '#{args.theme}' layout: #{File.basename(filename)}"
-    
-    open("#{layouts_path}/#{File.basename(filename)}", 'w') do |page|
-      if File.basename(filename, ".html").downcase == "default"
-        page.puts "---"
-        page.puts "---"
-        page.puts "{% assign theme_asset_path = \"/assets/themes/#{args.theme}\" %}"
-      else
-        page.puts "---"
-        page.puts "layout: default"
-        page.puts "---"
-      end 
-      page.puts "{% include themes/#{args.theme}/#{File.basename(filename)} %}" 
-    end
+# usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (defaults to "new-post")
+desc "Begin a new post"
+task :new do
+  title = ARGV[1..-1].join(" ") if ARGV.size > 1
+  unless title
+    title = get_stdin("Enter a title for your post: ")
   end
-end # task :switch_theme
 
+  filename = "_posts/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.md"
+  if File.exist?(filename)
+    abort("#{filename} already exists!")
+  end
+
+  puts "Creating new post: #{filename}"
+  open(filename, 'w') do |post|
+    post.puts "---"
+    post.puts "layout: post"
+    post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
+    post.puts "flickr:"
+    post.puts " - http://"
+    post.puts "tags:"
+    post.puts " -"
+    post.puts "---"
+  end
+
+  system("subl", filename)
+end
+
+def get_stdin(message)
+  print message
+  STDIN.gets.chomp
+end
