@@ -12,6 +12,7 @@ tags:
 - eva
 - anders
 - angelina
+- water
 ---
 
 Anders and Angelina came up from Malmö to celebrate midsummer with me and Eva here in Stockholm. On Midsummer's Eve we went to Björkviks brygga, Värmdö and spent a day on the rocks by the sea. We ate great food and drank ice cold beers, and had a wonderful day together.
