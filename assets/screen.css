@@ -205,7 +205,7 @@ body {
 }
 
 body, p, h1, h2, h3, h4, h5, h6 {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 h1, h2, h1 a, h2 a {
@@ -238,7 +238,7 @@ header a {
 
 header, header p, h1, h2, h3, h4, h5, h6 {
   font-family: 'Abril Fatface', 'georgia', cursive;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -246,6 +246,16 @@ article {
   margin-bottom: 50px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+article .content h2,
+article .content h3,
+article .content h4 {
+  margin-bottom: 0;
+}
+
+article .content p {
+  margin-top: 0;
 }
 
 footer {
@@ -328,6 +338,12 @@ code {
   color: black;
   padding: 1px 3px;
   border: 1px solid #DEDEDE;
+}
+
+em {
+  font-style: inherit;
+  background: #FFFECA;
+  padding: 0 0.1em;
 }
 
 /* =============================================================================
