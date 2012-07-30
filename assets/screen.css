@@ -202,6 +202,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 body {
   font-family: 'Droid Sans Mono', "courier new", courier, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 body, p, h1, h2, h3, h4, h5, h6 {
