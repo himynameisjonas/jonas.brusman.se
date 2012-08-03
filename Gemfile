@@ -6,6 +6,7 @@ gem 'fleakr', github: 'himynameisjonas/fleakr'
 gem 'babosa'
 gem 'heroku'
 
+gem 'rackables'
 gem 'rack-jekyll', github: 'himynameisjonas/rack-jekyll' #github: 'adaoraul/rack-jekyll'
 gem 'unicorn'
 
