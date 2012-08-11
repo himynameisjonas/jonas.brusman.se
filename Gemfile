@@ -3,6 +3,8 @@ Encoding.default_internal = Encoding::UTF_8
 source :rubygems
 
 gem 'fleakr', github: 'himynameisjonas/fleakr'
+gem 'dalli'
+
 gem 'babosa'
 gem 'heroku'
 
