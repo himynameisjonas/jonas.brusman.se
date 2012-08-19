@@ -269,7 +269,8 @@ article h2, article h1,
 article .content,
 #pagination,
 #related ul,
-#disqus_thread {
+#disqus_thread,
+#footer {
   max-width: 500px;
   margin: 0 auto;
 }
@@ -346,6 +347,10 @@ em {
   font-style: inherit;
   background: #FFFECA;
   padding: 0 0.1em;
+}
+
+#footer {
+  margin-bottom: 40px;
 }
 
 /* =============================================================================
