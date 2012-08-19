@@ -25,6 +25,23 @@ module Rackables
   end
 end
 
+class NoWWW
+  STARTS_WITH_WWW = /^www\./i
+
+  def initialize(app)
+    @app = app
+  end
+
+  def call(env)
+    if env['HTTP_HOST'] =~ STARTS_WITH_WWW
+      [301, { 'Location' => Rack::Request.new(env).url.sub(/www\./i, ''), "Content-Type" => ""}, ['Redirecting...']]
+    else
+      @app.call(env)
+    end
+  end
+end
+
+use NoWWW
 use Rackables::TrailingSlashRedirect
 use Rackables::CacheControl, :public, :max_age => 60
 run Rack::Jekyll.new(:destination => 'public')
