@@ -6,6 +6,7 @@ tags:
  - github
  - heroku
  - code
+ - no-photo
 ---
 
 Use [Prose](http://prose.io/), *a content editor for GitHub, optimized for managing websites*, to get a web based interface for managing your Jekyll site (or other text-based content in your Github repositories). You can now write a new blog post or fix that typo *without even leaving the browser*. You can even specify [metadata defaults](http://prose.io/help/handbook.html#metadata_defaults) for your posts.
