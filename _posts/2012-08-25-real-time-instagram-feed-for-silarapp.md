@@ -9,6 +9,6 @@ tags:
   - square
 ---
 
-Working on a *real-time Instagram photo feed* for a new [SilarApp](http://silarapp.com) dashboard. Perfect for a event or venue who wants to encourage the use of Instagram to increase their reach in social media.
+Working on a *real-time Instagram photo feed* for a new [SilarApp](http://silarapp.com) dashboard. Perfect for an event or a venue who wants to encourage the use of Instagram to increase their reach in social media.
 
 And by the way, I love my kitchen table!
