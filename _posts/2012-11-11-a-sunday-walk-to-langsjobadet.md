@@ -1,0 +1,13 @@
+---
+layout: post
+title: "A sunday walk to Långsjöbadet"
+flickr:
+ - http://www.flickr.com/photos/himynameisjonas/8175492824
+tags:
+ - älvsjö
+ - lake
+ - water
+ - autumn
+---
+
+Took a walk with Eva this grey Sunday. Came to a lake with a empty beach and came home with wet shoes. Looking forward to visit that beach in the summer instead.
