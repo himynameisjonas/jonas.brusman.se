@@ -9,6 +9,7 @@ var:
 exclude: ['public', 'bin', 'vendor', 'Gemfile', 'Gemfile.lock', 'Procfile', 'jekyll.thor', 'unicorn.rb']
 destination: 'public'
 
+pygments: true
 production_url: http://jonasforsberg.se
 title : Jonas Forsberg
 author:
