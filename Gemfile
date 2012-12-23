@@ -15,3 +15,4 @@ gem 'unicorn'
 
 gem 'thor'
 gem 'stringex'
+gem 'pygmentize'
