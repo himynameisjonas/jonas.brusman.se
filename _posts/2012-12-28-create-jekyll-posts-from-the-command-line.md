@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Create new Jekyll posts from the command line"
+title: "Create Jekyll posts from the command line"
 tags:
  - code
  - jekyll
