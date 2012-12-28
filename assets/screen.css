@@ -345,7 +345,7 @@ code, .highlight {
   border: 1px solid #DEDEDE;
 }
 code, .highlight, pre {
-  white-space: pre;
+  white-space: pre-wrap;
 }
 
 pre {
