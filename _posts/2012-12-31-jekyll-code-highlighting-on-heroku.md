@@ -8,7 +8,7 @@ tags:
  - ruby
 ---
 
-The built in code highlighter in Jekyll doesn't work on Heroku due to some issues with Python. I came up with a *work around by using the [Pygmentize](1) gem* instead.
+The built in code highlighter in Jekyll doesn't work on Heroku due to some issues with Python. I came up with a *work around by using the [Pygmentize][1] gem* instead.
 
 ### Gemfile
 Add the Pygmentize gem to your gemfile:
@@ -44,3 +44,5 @@ Just use the *standard highlight blocks as usual*:
 gem 'pygmentize'
 {% endhighlight %}
 {% endraw %}{% endhighlight %}
+
+[1]: https://rubygems.org/gems/pygmentize
