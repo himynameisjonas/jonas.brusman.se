@@ -17,13 +17,13 @@ Running `thor jekyll:new New and shiny post` will for example create the file `_
 
 ### How to
 Add the following to your Gemfile:
-{% highlight2 ruby %}
+{% highlight ruby %}
 gem 'thor'
 gem 'stringex'
-{% endhighlight2 %}
+{% endhighlight %}
 
 Run `bundle install` and create a `jekyll.thor` file with the following contents:
-{% highlight2 ruby %}
+{% highlight ruby %}
 require "stringex"
 class Jekyll < Thor
   desc "new", "create a new post"
@@ -50,16 +50,16 @@ class Jekyll < Thor
     system(options[:editor], filename)
   end
 end
-{% endhighlight2 %}
+{% endhighlight %}
 
 Use the new command:
-{% highlight2 console %}
+{% highlight console %}
 $ thor jekyll:new The title of the new post
-{% endhighlight2 %}
+{% endhighlight %}
 
 You can even specify which editor to open the new file with:
-{% highlight2 console %}
+{% highlight console %}
 $ thor jekyll:new The title of the new post --editor=vim
-{% endhighlight2 %}
+{% endhighlight %}
 
 The default editor is Sublime Text 2, just change on line 4 in `jekyll.thor` if an other editor is preferred.

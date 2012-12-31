@@ -14,17 +14,17 @@ This blog is driven by [Jekyll](http://jekyllrb.com/) and i have written a simpl
 If you have a Gemfile, start by adding the `fleakr` gem to your Gemfile and run `bundle install`.
 If you don't have a Gemfile, install the gem with `gem install fleakr`.
 
-{% highlight2 ruby %}
+{% highlight ruby %}
 source :rubygems
 
 gem 'RedCloth'
 gem 'jekyll'
 gem 'fleakr'
-{% endhighlight2 %}
+{% endhighlight %}
 
 Then add the flickr plugin to your `_plugins` folder:
 
-{% highlight2 ruby %}
+{% highlight ruby %}
 require 'liquid'
 require 'fleakr'
 
@@ -51,14 +51,14 @@ module Flickr
 end
 
 Liquid::Template.register_filter(Flickr)
-{% endhighlight2 %}
+{% endhighlight %}
 
 
 Read the [readme for the fleakr gem](https://github.com/reagent/fleakr) on how to obtain your flickr api tokens. Then add them to the top of the flickr.rb file.
 
 Loop over your photos in your post layout, for example like this:
 
-{% highlight2 html %}{% raw %}
+{% highlight html %}{% raw %}
 <article>
   <h1>{{ post.title }}</h1>
 
@@ -72,10 +72,10 @@ Loop over your photos in your post layout, for example like this:
     {{ post.date || date:"%Y-%m-%d" }}</br>
   </footer>
 </article>
-{% endraw %}{% endhighlight2 %}
+{% endraw %}{% endhighlight %}
 
 Finally, the last step is to add one or more photos to your post:
-{% highlight2 html %}
+{% highlight html %}
 ---
 layout: post
 title: A blog post with photos from flickr
@@ -85,7 +85,7 @@ flickr:
 - http://www.flickr.com/photos/himynameisjonas/6167153574
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-{% endhighlight2 %}
+{% endhighlight %}
 
 
 I have also published all these [examples as a gist](https://gist.github.com/2380125).
