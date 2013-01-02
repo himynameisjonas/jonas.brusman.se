@@ -274,6 +274,24 @@ article .content,
   max-width: 650px;
   margin: 0 auto;
 }
+.flickr-set {
+  margin: 0 auto;
+  max-width: 1200px;
+  font-size: 0;
+  margin-bottom: 20px;
+}
+
+.flickr-set a,
+.flickr-set a:hover {
+  text-decoration: none;
+}
+
+.flickr-set img {
+  max-width: 150px;
+  max-height: 150px;
+  width: 25%;
+  margin:0;
+}
 
 #related h3 {
   margin-bottom: 5px;
