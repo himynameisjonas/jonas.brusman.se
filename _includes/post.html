@@ -11,6 +11,19 @@
             <a href="{{ post.url }}">{{ flickr_url | flickr_image }}</a>
         {% endif %}
     {% endfor %}
+    {% if post.flickr_set %}
+        <div class="flickr-set">
+            {% if detail %}
+                <a href="{{ post.flickr_set }}">
+                    {{ post.flickr_set | flickr_set }}
+                </a>
+            {% else %}
+                <a href="{{ post.url }}">
+                    {{ post.flickr_set | flickr_set }}
+                </a>
+            {% endif %}
+        </div>
+    {% endif %}
     <div class="content text-left">
         {% if detail %}
             {{ content }}

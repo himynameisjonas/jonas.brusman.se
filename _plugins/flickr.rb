@@ -24,7 +24,23 @@ module Flickr
     "<img class='flickr-image align-center' alt='#{image[:title]}' src='#{image[:sizes][500]}'>"
   end
 
+  def flickr_set(url)
+    photos = set_object(url)
+    photos.map do |photo_url|
+      "<img class='flickr-image align-center' alt='' src='#{photo_url}'>"
+    end.join(" ")
+  end
+
   private
+
+  def set_object(url)
+    CACHE.fetch(url) do
+      set = Fleakr.resource_from_url(url)
+      photos = set.photos.map do |photo|
+        photo.large_square.url
+      end
+    end
+  end
 
   def image_object(url)
     CACHE.fetch(url) do
