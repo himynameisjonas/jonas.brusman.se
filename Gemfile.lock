@@ -27,7 +27,7 @@ GIT
       rack (~> 1.3.2)
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.com/
   specs:
     addressable (2.2.7)
     babosa (0.3.6)
