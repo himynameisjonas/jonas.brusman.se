@@ -8,6 +8,7 @@ var:
   archive_path: /archive.html
 exclude: ['public', 'bin', 'vendor', 'Gemfile', 'Gemfile.lock', 'Procfile', 'jekyll.thor', 'unicorn.rb']
 destination: 'public'
+production: true
 
 pygments: true
 production_url: http://jonasforsberg.se
