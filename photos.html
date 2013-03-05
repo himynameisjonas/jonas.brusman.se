@@ -1,0 +1,17 @@
+---
+layout: default
+title : Archive
+header : Post Archive
+---
+
+<div id="photo-archive">
+{% for post in site.posts  %}
+  {% if post.flickr %}
+    <article>
+      {% for flickr_url in post.flickr %}
+          <a href="{{ post.url }}">{{ flickr_url | flickr_image }}</a>
+      {% endfor %}
+    </article>
+  {% endif %}
+{% endfor %}
+</div>
