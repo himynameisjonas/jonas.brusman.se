@@ -1,3 +1,3 @@
 $(function(){
-    $('figure').picture();
+  $('figure').picture({container: 'article'});
 });
