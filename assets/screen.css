@@ -249,6 +249,17 @@ article {
   padding: 0 20px;
 }
 
+#photo-archive article {
+  width: 20%;
+  float: left;
+  padding: 2.25%;
+  margin-bottom: 20px;
+}
+
+#photo-archive article:nth-child(4n+5) {
+  clear: left;
+}
+
 article .content h2,
 article .content h3,
 article .content h4 {
@@ -391,6 +402,7 @@ em {
 
 #footer {
   margin-bottom: 40px;
+  clear: both;
 }
 
 /* =============================================================================
@@ -455,6 +467,17 @@ em {
   /* Style adjustments for viewports 480px and over go here */
   body {
     max-width: 480px;
+  }
+  #photo-archive article {
+    width: 45%;
+    float: left;
+    padding: 2.25%;
+  }
+  #photo-archive article:nth-child(4n+5) {
+    clear: none;
+  }
+  #photo-archive article:nth-child(2n+3) {
+    clear: left;
   }
 }
 
