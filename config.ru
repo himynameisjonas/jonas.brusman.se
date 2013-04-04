@@ -43,7 +43,7 @@ end
 
 use Rack::Lint
 
-use Rack::Subdomain, "jonasforsberg.dev", except: ['', 'www'] do
+use Rack::Subdomain, "jonasforsberg.se", except: ['', 'www'] do
   map '*', to: "/subdomains/:subdomain"
 end
 
