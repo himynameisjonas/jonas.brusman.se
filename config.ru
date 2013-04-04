@@ -41,7 +41,31 @@ class NoWWW
   end
 end
 
-use NoWWW
-use Rackables::TrailingSlashRedirect
-use Rackables::CacheControl, :public, :max_age => 60
-run Rack::Jekyll.new(:destination => 'public')
+use Rack::Lint
+
+use Rack::Subdomain, "jonasforsberg.dev", except: ['', 'www'] do
+  map '*', to: "/subdomains/:subdomain"
+end
+
+map "/subdomains/maskerad" do
+  use Rack::Static,
+    :urls => ["/img", "/js", "/css"],
+    :root => "subdomains/maskerad"
+
+  run lambda { |env|
+    [
+      200,
+      { 'Content-Type'  => 'text/html', 'Cache-Control' => 'public, max-age=86400'},
+      File.open('subdomains/maskerad/index.html', File::RDONLY)
+    ]
+  }
+end
+
+
+# jekyll blog
+map "/" do
+  use NoWWW
+  use Rackables::TrailingSlashRedirect
+  use Rackables::CacheControl, :public, :max_age => 60
+  run Rack::Jekyll.new(:destination => 'jekyll')
+end

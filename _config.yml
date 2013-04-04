@@ -6,7 +6,7 @@ pygments: true
 paginate: 10
 var:
   archive_path: /archive.html
-exclude: ['public', 'bin', 'vendor', 'Gemfile', 'Gemfile.lock', 'Procfile', 'jekyll.thor', 'unicorn.rb']
+exclude: ['public', 'bin', 'vendor', 'Gemfile', 'Gemfile.lock', 'Procfile', 'jekyll.thor', 'unicorn.rb', 'subdomains']
 destination: 'public'
 production: true
 
