@@ -11,17 +11,17 @@ var suggestions = [
 'Barbapappa',
 'Bob Marley',
 'Charlie Chaplin',
-'Döden',
+'D&ouml;den',
 'en tofu',
 'findus',
 'Fruktsallad',
 'George Coatanza',
-'Glenn Hysén',
-'Helan & Halvan',
+'Glenn Hys&eacute;n',
+'Helan &amp; Halvan',
 'Hund',
 'Kizz',
-'Koreanskt adoptivpäron',
-'Korv med bröd',
+'Koreanskt adoptivp&auml;ron',
+'Korv med br&ouml;d',
 'krabba',
 'Kyckling',
 'lapplisa',
@@ -39,12 +39,12 @@ var suggestions = [
 $(function(){
   suggestion = $("#suggestion strong, #next strong")
   var nextSuggestion = function(){
-    oldSuggestion = suggestion.first().text();
+    oldSuggestion = suggestion.first().html();
     newSuggestion = suggestions.randomElement()
     while(oldSuggestion == newSuggestion){
       newSuggestion = suggestions.randomElement()
     }
-    suggestion.text(newSuggestion);
+    suggestion.html(newSuggestion);
   }
 
   nextSuggestion();
