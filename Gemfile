@@ -16,3 +16,5 @@ gem 'unicorn'
 gem 'thor'
 gem 'stringex'
 gem 'pygmentize'
+
+gem 'rack-subdomain'
