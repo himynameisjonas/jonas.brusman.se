@@ -2,9 +2,9 @@ require 'liquid'
 require 'fleakr'
 require 'dalli'
 
-Fleakr.api_key = "c794c3f00be2130085e3cdef2f06aeb6"
-Fleakr.shared_secret = "12661a297b1dfd88"
-Fleakr.auth_token = "72157629177895598-293ceaacc4143984"
+Fleakr.api_key = ENV['FLICKR_API_KEY']
+Fleakr.shared_secret = ENV['FLICKR_SHARED_SECRET']
+Fleakr.auth_token = ENV['FLICKR_AUTH_TOKEN']
 
 CACHE = Dalli::Client.new
 
