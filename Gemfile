@@ -6,15 +6,13 @@ gem 'fleakr', github: 'himynameisjonas/fleakr'
 gem 'dalli'
 
 gem 'babosa'
-gem 'heroku'
-
-gem 'rackables'
-gem 'jekyll', github: 'himynameisjonas/jekyll' # fix of an auto generate bug
-gem 'rack-jekyll', github: 'himynameisjonas/rack-jekyll' #github: 'adaoraul/rack-jekyll'
-gem 'unicorn'
 
 gem 'thor'
 gem 'stringex'
 gem 'pygmentize'
 
+gem 'rackables'
+gem 'jekyll', '~> 1.0.1'
+gem 'rack-jekyll', github: 'adaoraul/rack-jekyll', ref: '6a4b832c5b2350c8c1263b534ebf02135deb6363'
 gem 'rack-subdomain'
+gem 'unicorn'
