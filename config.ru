@@ -4,9 +4,6 @@ require "bundler/setup"
 Bundler.require(:default)
 
 module Rackables
-  # Request paths with a trailing slash are 301 redirected to the version without, e.g.:
-  #
-  #   GET /foo/   # => 301 redirects to /foo
   class TrailingSlashRedirect
     HAS_TRAILING_SLASH = %r{^/(.*)/$}
 
@@ -23,7 +20,6 @@ module Rackables
         @app.call(env)
       end
     end
-
   end
 end
 
@@ -45,24 +41,28 @@ end
 
 use Rack::Lint
 
-use Rack::Subdomain, "jonasforsberg.se", except: ['', 'www'] do
+domain = ENV['JEKYLL_DOMAIN'] || "jonasforsberg.se"
+use Rack::Subdomain, domain, except: ['', 'www'] do
   map '*', to: "/subdomains/:subdomain"
 end
 
-map "/subdomains/maskerad" do
-  use Rack::Static,
-    :urls => ["/img", "/js", "/css"],
-    :root => "subdomains/maskerad"
+def static_site(folder)
+  lambda { |rack_builder|
+    rack_builder.use Rack::Static,
+      :urls => ["/img", "/js", "/css"],
+      :root => "subdomains/#{folder}"
 
-  run lambda { |env|
-    [
-      200,
-      { 'Content-Type'  => 'text/html', 'Cache-Control' => 'public, max-age=86400'},
-      File.open('subdomains/maskerad/index.html', File::RDONLY)
-    ]
+    rack_builder.run lambda { |env|
+      [
+        200,
+        { 'Content-Type'  => 'text/html', 'Cache-Control' => 'public, max-age=86400'},
+        File.open("subdomains/#{folder}/index.html", File::RDONLY)
+      ]
+    }
   }
 end
 
+map "/subdomains/maskerad", &static_site("maskerad")
 
 # jekyll blog
 map "/" do
