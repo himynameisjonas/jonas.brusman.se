@@ -5,7 +5,7 @@ var:
   archive_path: /archive.html
 exclude: ['jekyll', 'bin', 'vendor', 'Gemfile', 'Gemfile.lock', 'Procfile', 'jekyll.thor', 'unicorn.rb', 'subdomains']
 destination: 'jekyll'
-production: false
+production: true
 
 pygments: true
 production_url: http://jonasforsberg.se
