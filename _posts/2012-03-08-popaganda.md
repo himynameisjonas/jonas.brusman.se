@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Popaganda
+categories:
+ - photographs
 flickr:
 - http://www.flickr.com/photos/himynameisjonas/6965207109/
 - http://www.flickr.com/photos/himynameisjonas/6819084786/

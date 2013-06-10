@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Jekyll + Heroku + Unicorn = Blazing fast blogging
+categories:
+  - code
 tags:
  - code
  - ruby

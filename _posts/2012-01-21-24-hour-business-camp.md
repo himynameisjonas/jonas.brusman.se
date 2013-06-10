@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 24 Hour Business Camp
+categories:
+ - photographs
 flickr:
 - http://www.flickr.com/photos/himynameisjonas/6337662490/in/set-72157627985993547
 - http://www.flickr.com/photos/himynameisjonas/6336910521/in/set-72157627985993547

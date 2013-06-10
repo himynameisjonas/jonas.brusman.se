@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Östergötland
+categories:
+ - photographs
 flickr:
 - http://www.flickr.com/photos/himynameisjonas/7243638110/
 tags:

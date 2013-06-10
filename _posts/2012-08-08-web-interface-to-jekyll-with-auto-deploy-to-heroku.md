@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "A web interface to Jekyll"
+categories:
+  - code
 tags:
  - jekyll
  - github

@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Real-time Instagram feed for SilarApp"
+categories:
+ - photographs
+ - code
 flickr:
   - http://www.flickr.com/photos/himynameisjonas/7856126566
 tags:

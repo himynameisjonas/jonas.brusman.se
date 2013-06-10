@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Jekyll code highlighting on Heroku"
+categories:
+  - code
 tags:
  - jekyll
  - code

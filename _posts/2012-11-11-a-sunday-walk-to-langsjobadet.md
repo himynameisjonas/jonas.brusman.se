@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "A sunday walk to Långsjöbadet"
+categories:
+ - photographs
 flickr:
  - http://www.flickr.com/photos/himynameisjonas/8175492824
 tags:

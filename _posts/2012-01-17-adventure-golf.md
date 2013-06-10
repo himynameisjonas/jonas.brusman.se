@@ -1,6 +1,8 @@
 ---
 layout: post
-title: Adventure Golf 
+title: Adventure Golf
+categories:
+ - photographs
 flickr:
 - http://www.flickr.com/photos/himynameisjonas/6166618431/in/set-72157623298803241
 tags:
