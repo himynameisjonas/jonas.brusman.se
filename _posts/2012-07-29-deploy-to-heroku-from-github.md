@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Deploy to Heroku from Github"
+categories:
+  - code
 tags:
  - heroku
  - github

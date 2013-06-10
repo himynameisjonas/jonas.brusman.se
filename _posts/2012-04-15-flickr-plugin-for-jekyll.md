@@ -1,6 +1,8 @@
 ---
 layout: post
 title: A Flickr plugin to Jekyll
+categories:
+  - code
 tags:
 - jekyll
 - flickr

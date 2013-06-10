@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Ice fishing"
+categories:
+ - photographs
 flickr:
  - http://www.flickr.com/photos/himynameisjonas/8634459287
  - http://www.flickr.com/photos/himynameisjonas/8635563328/

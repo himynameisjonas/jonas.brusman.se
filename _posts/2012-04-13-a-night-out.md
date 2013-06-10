@@ -1,6 +1,8 @@
 ---
 layout: post
 title: A night out
+categories:
+ - photographs
 flickr:
 - http://www.flickr.com/photos/himynameisjonas/6167152072
 - http://www.flickr.com/photos/himynameisjonas/6167152448

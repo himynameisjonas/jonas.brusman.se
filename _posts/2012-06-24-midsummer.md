@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Midsummer
+categories:
+ - photographs
 flickr:
 - http://www.flickr.com/photos/himynameisjonas/7431028392/in/photostream
 - http://www.flickr.com/photos/himynameisjonas/7431030226/in/photostream

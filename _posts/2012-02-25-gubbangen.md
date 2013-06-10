@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Gubbängen
+categories:
+ - photographs
 flickr:
 - http://www.flickr.com/photos/himynameisjonas/4351905289
 tags:

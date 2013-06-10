@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Sunday walk"
+categories:
+ - photographs
 flickr:
  - http://www.flickr.com/photos/himynameisjonas/8999349250/
  - http://www.flickr.com/photos/himynameisjonas/8999332624/

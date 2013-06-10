@@ -1,6 +1,8 @@
 ---
 layout: post
 title: SilarApp stickers
+categories:
+ - photographs
 flickr:
 - http://www.flickr.com/photos/himynameisjonas/6869124831
 tags:
