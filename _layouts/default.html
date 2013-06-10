@@ -31,11 +31,16 @@
         <h1><a href="/">{{ site.title }}</a></h1>
         <small>I like to do high fives, take photographs and make cool things with Ruby.</small>
         <nav>
-          <a href="/archive.html">Archive</a>
+          <a href="/archive.html">All</a>
           <a href="/photos.html">Photos</a>
+          <a href="/code.html">Code</a>
           <a href="/about.html">About</a>
         </nav>
     </header>
+
+    {% if page.header %}
+        <h1 class="text-center">{{ page.header }}</h1>
+    {% endif %}
 
     {{ content }}
 
