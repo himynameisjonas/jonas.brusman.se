@@ -6,6 +6,8 @@ Fleakr.api_key = ENV['FLICKR_API_KEY']
 Fleakr.shared_secret = ENV['FLICKR_SHARED_SECRET']
 Fleakr.auth_token = ENV['FLICKR_AUTH_TOKEN']
 
+CACHE_VERSION = ENV['FLICKR_CACHE_VERSION'] || "1"
+
 CACHE = Dalli::Client.new
 
 module Flickr
@@ -43,9 +45,10 @@ module Flickr
   end
 
   def image_object(url)
-    CACHE.fetch(url) do
+    CACHE.fetch(url + CACHE_VERSION) do
       fleakr_image = Fleakr.resource_from_url(url)
       image = {:sizes => {}}
+      image[:sizes][nil] = fleakr_image.medium.url unless fleakr_image.medium.nil?
       image[:sizes][fleakr_image.medium.width.to_i] = fleakr_image.medium.url unless fleakr_image.medium.nil?
       image[:sizes][fleakr_image.small_320.width.to_i] = fleakr_image.small_320.url unless fleakr_image.small_320.nil?
       image[:sizes][fleakr_image.medium.width.to_i] = fleakr_image.medium.url unless fleakr_image.medium.nil?
