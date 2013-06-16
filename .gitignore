@@ -6,3 +6,4 @@ jekyll/*
 !.gitkeep
 tmp/*
 .powenv
+.sass-cache
