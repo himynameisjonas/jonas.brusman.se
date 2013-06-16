@@ -11,7 +11,7 @@ gem 'thor'
 gem 'stringex'
 gem 'pygmentize'
 
-gem "jekyll-sass"
+gem "jekyll-sass", require: false
 gem 'jekyll', '~> 1.0.1'
 
 gem 'rackables'
