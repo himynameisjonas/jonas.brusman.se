@@ -24,7 +24,7 @@ GEM
     colorator (0.1)
     commander (4.1.3)
       highline (~> 1.6.11)
-    dalli (1.1.5)
+    dalli (2.6.4)
     directory_watcher (1.4.1)
     fast-stemmer (1.0.2)
     highline (1.6.18)
@@ -48,6 +48,7 @@ GEM
     loggable (0.3.0)
     maruku (0.6.1)
       syntax (>= 1.0.0)
+    memcachier (0.0.2)
     posix-spawn (0.3.6)
     pygmentize (0.0.3)
     pygments.rb (0.4.2)
@@ -78,6 +79,7 @@ DEPENDENCIES
   fleakr!
   jekyll (~> 1.0.1)
   jekyll-sass
+  memcachier
   pygmentize
   rack-jekyll!
   rack-subdomain
