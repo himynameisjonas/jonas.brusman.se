@@ -18,3 +18,8 @@ I found this little Sinatra app a couple of days ago and have now set up it to a
 I have made some changes to the app, so *use [my fork](https://github.com/himynameisjonas/github-heroku-pusher)* until the pull requests has been merged. My fork adds support for *private repositories* and makes it run smoothly on just *one free Heroku Dyno*.
 
 Just follow the instructions in [the README](https://github.com/himynameisjonas/github-heroku-pusher) and you're *done in less than 5 minutes*.
+
+- - -
+
+### Important Update
+*I've have switch to a [more competent solution for my continuous deployment to Heroku](https://github.com/himynameisjonas/heroku-deployer).*
