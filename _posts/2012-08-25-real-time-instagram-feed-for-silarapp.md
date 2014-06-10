@@ -11,6 +11,7 @@ tags:
   - code
   - square
   - älvsjö
+  - realtime
 ---
 
 Working on a *real-time Instagram photo feed* for a new [SilarApp](http://silarapp.com) dashboard. Perfect for an event or a venue who wants to encourage the use of Instagram to increase their reach in social media.

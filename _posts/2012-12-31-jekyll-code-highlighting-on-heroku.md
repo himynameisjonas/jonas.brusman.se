@@ -8,7 +8,6 @@ tags:
  - code
  - heroku
  - ruby
- - no-photo
 ---
 
 The built in code highlighter in Jekyll doesn't work on Heroku due to some issues with Python. I came up with a *work around by using the [Pygmentize][1] gem* instead.
