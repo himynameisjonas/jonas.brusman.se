@@ -8,7 +8,6 @@ tags:
  - github
  - code
  - ruby
- - no-photo
 date: "2012-07-29 22:00"
 ---
 *Automatically deployment of your app to Heroku when it has been pushed to Github* with [github-heroku-pusher](https://github.com/ajlai/github-heroku-pusher) by [ajlai on Github](https://github.com/ajlai).

@@ -8,7 +8,6 @@ tags:
  - jekyll
  - thor
  - command line
- - no-photo
 ---
 
 I got *tired on creating new files manually* for each new post a write so I put together this little *command line task* with [Thor](https://github.com/wycats/thor).
