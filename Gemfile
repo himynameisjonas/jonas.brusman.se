@@ -2,9 +2,9 @@ Encoding.default_external = Encoding::UTF_8
 Encoding.default_internal = Encoding::UTF_8
 source 'https://rubygems.org'
 
-gem 'fleakr', github: 'himynameisjonas/fleakr'
-gem 'memcachier'
-gem 'dalli'
+gem 'flickraw'
+
+gem 'dalli', require: false
 
 gem 'babosa'
 
