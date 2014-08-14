@@ -5,11 +5,6 @@ require 'dalli'
 FlickRaw.api_key = ENV['FLICKR_API_KEY']
 FlickRaw.shared_secret = ENV['FLICKR_SHARED_SECRET']
 
-flickr = FlickRaw::Flickr.new
-
-flickr.access_token = ENV['FLICKR_AUTH_TOKEN']
-flickr.access_secret = ENV['FLICKR_AUTH_SECRET']
-
 CACHE_VERSION = ENV['FLICKR_CACHE_VERSION'] || "1"
 
 if ENV["MEMCACHEDCLOUD_SERVERS"]
@@ -17,7 +12,6 @@ if ENV["MEMCACHEDCLOUD_SERVERS"]
 else
   CACHE = Dalli::Client.new
 end
-
 
 module Flickr
   def flickr_image(url)
@@ -44,6 +38,15 @@ module Flickr
 
   private
 
+  def flickr
+    @flicker ||= begin
+      flickr = FlickRaw::Flickr.new
+      flickr.access_token = ENV['FLICKR_AUTH_TOKEN']
+      flickr.access_secret = ENV['FLICKR_AUTH_SECRET']
+      flickr
+    end
+  end
+
   def set_object(url)
     CACHE.fetch(url + CACHE_VERSION) do
       id = url.match(/photos\/\S*\/sets\/(\d+)/)[1]
@@ -55,10 +58,9 @@ module Flickr
   end
 
   def image_object(url)
-    puts "image_object"
     CACHE.fetch(url + CACHE_VERSION) do
-      puts "cache miss #{url}"
       id = url.match(/photos\/\S*\/(\d+)/)[1]
+      puts id.inspect
       sizes = flickr.photos.getSizes(photo_id: id)
       info = flickr.photos.getInfo(photo_id: id)
 
