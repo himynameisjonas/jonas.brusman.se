@@ -9,9 +9,9 @@ production: true
 
 pygments: true
 production_url: http://jonasforsberg.se
-title : Jonas Forsberg
+title : Jonas Brusman
 author:
-  name: Jonas Forsberg
+  name: Jonas Brusman
   email: hello@jonasforsberg.se
   github: himynameisjonas
   twitter: himynameisjonas
