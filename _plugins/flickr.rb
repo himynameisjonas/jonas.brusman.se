@@ -18,7 +18,7 @@ module Flickr
     image = image_object(url)
     "<figure class='flickr-image align-center' #{image[:sizes].map{|s| "data-media#{s.first}='#{s.last}'"}.join(" ")} alt='#{image[:title]}' title='#{image[:title]}'>
     <noscript>
-      <img class='flickr-image align-center' alt='#{image[:title]}' src='#{image[:sizes][1024]}'>
+      <img class='flickr-image align-center' alt='#{image[:title]}' src='#{image[:sizes]["1024"]}'>
     </noscript>
     </figure>
     "
@@ -26,7 +26,7 @@ module Flickr
 
   def flickr_medium_image(url)
     image = image_object(url)
-    "<img class='flickr-image align-center' alt='#{image[:title]}' src='#{image[:sizes][500]}'>"
+    "<img class='flickr-image align-center' alt='#{image[:title]}' src='#{image[:sizes]["500"]}'>"
   end
 
   def flickr_set(url)
