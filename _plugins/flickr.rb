@@ -24,6 +24,11 @@ module Flickr
     "
   end
 
+  def flickr_og_image(url)
+    image = image_object(url)
+    image[:sizes]["1600"] || image[:sizes]["1024"] || image[:sizes]["800"] || image[:sizes]["640"] || image[:sizes]["500"]
+  end
+
   def flickr_medium_image(url)
     image = image_object(url)
     "<img class='flickr-image align-center' alt='#{image[:title]}' src='#{image[:sizes]["500"]}'>"
