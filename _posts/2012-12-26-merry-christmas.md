@@ -10,6 +10,7 @@ tags:
  - fire
  - winter
  - christmas
+ - sörby
 ---
 
 A very cozy welcome to yesterday's turkey dinner at my sister's house.
