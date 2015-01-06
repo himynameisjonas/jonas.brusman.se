@@ -8,7 +8,6 @@ flickr:
   - http://www.flickr.com/photos/himynameisjonas/7856126566
 tags:
   - silarapp.com
-  - code
   - square
   - älvsjö
   - realtime

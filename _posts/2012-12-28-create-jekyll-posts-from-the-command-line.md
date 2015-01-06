@@ -4,7 +4,6 @@ title: "Create Jekyll posts from the command line"
 categories:
   - code
 tags:
- - code
  - jekyll
  - thor
  - command line
