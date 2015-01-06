@@ -5,7 +5,6 @@ categories:
   - code
 tags:
  - jekyll
- - code
  - heroku
  - ruby
 ---

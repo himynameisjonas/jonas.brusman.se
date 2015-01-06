@@ -8,8 +8,8 @@ tags:
 - flickr
 - ruby
 - plugin
-- code
 ---
+
 This blog is driven by [Jekyll](http://jekyllrb.com/) and i have written a simple plugin to Jekyll that makes it easy to embed photographs from [Flickr](http://flickr.com) directly into your posts.
 
 If you have a Gemfile, start by adding the `fleakr` gem to your Gemfile and run `bundle install`.

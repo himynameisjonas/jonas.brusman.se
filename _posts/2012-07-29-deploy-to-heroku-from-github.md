@@ -6,7 +6,6 @@ categories:
 tags:
  - heroku
  - github
- - code
  - ruby
 date: "2012-07-29 22:00"
 ---

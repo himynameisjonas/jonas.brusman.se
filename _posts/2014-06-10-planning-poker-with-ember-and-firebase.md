@@ -8,7 +8,6 @@ tags:
  - ember.js
  - javascript
  - realtime
- - code
  - javascript
  - coffeescript
 ---
