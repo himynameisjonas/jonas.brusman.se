@@ -19,5 +19,8 @@ Just follow the instructions in [the README](https://github.com/himynameisjonas/
 
 - - -
 
-### Important Update
-*I've have switch to a [more competent solution for my continuous deployment to Heroku](https://github.com/himynameisjonas/heroku-deployer).*
+### Update *2014-06-10*
+I've have switch to a [more competent solution for my continuous deployment to Heroku](https://github.com/himynameisjonas/heroku-deployer).
+
+### Update *2015-02-01*
+Heroku has released [their own Github integration](/2015/01/06/heroku-github-integration).
