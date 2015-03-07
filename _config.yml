@@ -3,16 +3,21 @@ pygments: true
 paginate: 10
 var:
   archive_path: /archive.html
-exclude: ['jekyll', 'bin', 'vendor', 'Gemfile', 'Gemfile.lock', 'Procfile', 'jekyll.thor', 'unicorn.rb', 'subdomains']
-destination: 'jekyll'
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - jekyll.thor
+  - divshot.json
+  - _site
 production: true
 
 pygments: true
-production_url: http://jonasforsberg.se
+production_url: http://jonas.brusman.se
 title : Jonas Brusman
 author:
   name: Jonas Brusman
-  email: hello@jonasforsberg.se
+  email: jonas@brusman.se
   github: himynameisjonas
   twitter: himynameisjonas
 prose:
