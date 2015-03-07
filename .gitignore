@@ -2,8 +2,9 @@ Thumbs.db
 .DS_Store
 
 .gist-cache/*
-jekyll/*
+_site/*
 !.gitkeep
 tmp/*
 .powenv
 .sass-cache
+.divshot-cache

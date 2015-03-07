@@ -1,0 +1,9 @@
+test:
+  override:
+    - bundle exec jekyll build
+deployment:
+  staging:
+    branch: master
+    commands:
+      - npm install -g divshot-cli
+      - divshot push production --token $DIVSHOT_TOKEN
