@@ -4,9 +4,9 @@ layout: nil
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
-    <title>jonasforsberg.se</title>
+    <title>jonas.brusman.se</title>
     <link>{{site.production_url}}</link>
-    <atom:link href="http://jonasforsberg.se/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jonas.brusman.se/rss.xml" rel="self" type="application/rss+xml" />
     <description>Agile web developer who likes to do high fives and make cool things with Ruby on Rails.</description>
     <language>en-us</language>
     <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
