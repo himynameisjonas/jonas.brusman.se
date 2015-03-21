@@ -1,5 +1,5 @@
 ---
-layout: nil
+layout: 
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
@@ -28,7 +28,7 @@ layout: nil
 
         &lt;p&gt;
         {% for tag in post.tags %}
-          &lt;a href="{{site.production_url}}/tag/{{tag | to_slug }}"&gt;#{{ tag | xml_escape }}&lt;/a&gt;
+          &lt;a href="{{site.production_url}}/tag/{{tag | slugify }}"&gt;#{{ tag | xml_escape }}&lt;/a&gt;
         {% endfor %}
         &lt;/p&gt;
       </description>

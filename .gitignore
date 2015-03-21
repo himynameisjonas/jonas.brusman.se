@@ -8,3 +8,4 @@ tmp/*
 .powenv
 .sass-cache
 .divshot-cache
+.jekyll-metadata

@@ -1,31 +1,33 @@
+gems:
+  - jekyll-paginate
+  - jekyll-archives
 permalink: /:year/:month/:day/:title
-pygments: true
 paginate: 10
-var:
-  archive_path: /archive.html
+jekyll-archives:
+  enabled:
+   - tags
+   - categories
+  layouts:
+    year: year-archive
+    category: categories-archive
+    tag: categories-archive
+  permalinks:
+    tag: '/tag/:name/'
+    category: '/:name/'
 exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
-  - jekyll.thor
   - divshot.json
   - _site
+  - circle.yml
 production: true
-
-pygments: true
 production_url: http://jonas.brusman.se
 title : Jonas Brusman
 author:
   name: Jonas Brusman
   email: jonas@brusman.se
   github: himynameisjonas
-  twitter: himynameisjonas
-prose:
-  metadata:
-    "_posts":
-      layout: post
-      title: "A new post"
-      flickr:
-      - http://www.flickr.com/photos/himynameisjonas/6872156519/
-      tags:
-      - photo
+  twitter: himynameis jonas
+sass:
+  sass_dir: assets/_sass
