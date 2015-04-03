@@ -65,7 +65,6 @@ module Flickr
   def image_object(url)
     CACHE.fetch(url + CACHE_VERSION) do
       id = url.match(/photos\/\S*\/(\d+)/)[1]
-      puts id.inspect
       sizes = flickr.photos.getSizes(photo_id: id)
       info = flickr.photos.getInfo(photo_id: id)
 
