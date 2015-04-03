@@ -6,5 +6,10 @@ gem 'dalli', require: false
 gem 'flickraw'
 
 gem 'jekyll', '~>2.5.3'
-gem 'jekyll-paginate'
-gem 'jekyll-archives'
+
+group :jekyll_plugins do
+  gem 'jekyll-paginate'
+  gem 'jekyll-archives'
+  gem 'jekyll-compose'
+  gem 'dotenv'
+end
