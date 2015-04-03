@@ -5,7 +5,7 @@ Thumbs.db
 _site/*
 !.gitkeep
 tmp/*
-.powenv
 .sass-cache
 .divshot-cache
 .jekyll-metadata
+.env

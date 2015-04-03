@@ -1,6 +1,7 @@
 gems:
   - jekyll-paginate
   - jekyll-archives
+  - jekyll-compose
 permalink: /:year/:month/:day/:title
 paginate: 10
 jekyll-archives:
