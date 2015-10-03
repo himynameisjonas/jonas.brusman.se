@@ -1,17 +1,13 @@
 require 'liquid'
 require 'flickraw'
 require 'dalli'
+require 'uri'
 
 FlickRaw.api_key = ENV['FLICKR_API_KEY']
 FlickRaw.shared_secret = ENV['FLICKR_SHARED_SECRET']
 
 CACHE_VERSION = ENV['FLICKR_CACHE_VERSION'] || "1"
-
-if ENV["MEMCACHEDCLOUD_SERVERS"]
-    CACHE = Dalli::Client.new(ENV["MEMCACHEDCLOUD_SERVERS"].split(','), :username => ENV["MEMCACHEDCLOUD_USERNAME"], :password => ENV["MEMCACHEDCLOUD_PASSWORD"])
-else
-  CACHE = Dalli::Client.new
-end
+CACHE = Dalli::Client.new
 
 module Flickr
   def flickr_image(url)
