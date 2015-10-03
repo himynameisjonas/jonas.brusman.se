@@ -22,6 +22,7 @@ exclude:
   - divshot.json
   - _site
   - circle.yml
+  - divshot.json
 production: true
 production_url: http://jonas.brusman.se
 title : Jonas Brusman
