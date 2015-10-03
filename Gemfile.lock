@@ -80,3 +80,6 @@ DEPENDENCIES
   jekyll-archives
   jekyll-compose
   jekyll-paginate
+
+BUNDLED WITH
+   1.10.2
