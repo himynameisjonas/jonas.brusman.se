@@ -30,5 +30,4 @@
 $(function(){
   var figures = $('figure');
   figures.picture({container: 'article'})
-  $.style.insertRule(['figure.flickr-image img'],'max-height: '+ ($(window).height() - 20) + 'px;');
 });
