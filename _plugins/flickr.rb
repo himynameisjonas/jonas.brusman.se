@@ -40,11 +40,9 @@ module Flickr
   private
 
   def flickr
-    @flicker ||= begin
-      flickr = FlickRaw::Flickr.new
+    @flicker ||= FlickRaw::Flickr.new.tap do |flickr|
       flickr.access_token = ENV['FLICKR_AUTH_TOKEN']
       flickr.access_secret = ENV['FLICKR_AUTH_SECRET']
-      flickr
     end
   end
 
@@ -52,7 +50,7 @@ module Flickr
     CACHE.fetch(url + CACHE_VERSION) do
       id = url.match(/photos\/\S*\/sets\/(\d+)/)[1]
       set = flickr.photosets.getPhotos(photoset_id: id, extras: "url_q")
-      photos = set.photo.map do |photo|
+      set.photo.map do |photo|
         photo.url_q
       end
     end
