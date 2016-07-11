@@ -160,9 +160,14 @@ article h1, article h2, header nav {
   margin-bottom: 0.1em;
 }
 
+.flickr-image-link {
+  display: block;
+}
+
 figure.flickr-image {
   display: inline;
   img {
+    background-color: #cecece;
     margin-top: 0;
     margin-bottom: 20px;
     max-width: 100%;

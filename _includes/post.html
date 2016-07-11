@@ -6,9 +6,9 @@
     {% endif %}
     {% for flickr_url in post.flickr %}
         {% if detail %}
-            <a href="{{ flickr_url }}">{{ flickr_url | flickr_image }}</a>
+            <a href="{{ flickr_url }}" class="flickr-image-link">{{ flickr_url | flickr_image }}</a>
         {% else %}
-            <a href="{{ post.url }}">{{ flickr_url | flickr_image }}</a>
+            <a href="{{ post.url }}" class="flickr-image-link">{{ flickr_url | flickr_image }}</a>
         {% endif %}
     {% endfor %}
     {% if post.flickr_set %}
