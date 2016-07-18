@@ -6,6 +6,7 @@ _site/*
 !.gitkeep
 tmp/*
 .sass-cache
+.flickr-cache
 .divshot-cache
 .jekyll-metadata
 .env
