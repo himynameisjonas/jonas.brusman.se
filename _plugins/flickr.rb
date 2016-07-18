@@ -1,15 +1,15 @@
 require 'liquid'
 require 'flickraw'
-require 'dalli'
 require 'uri'
 
-FlickRaw.api_key = ENV['FLICKR_API_KEY']
-FlickRaw.shared_secret = ENV['FLICKR_SHARED_SECRET']
-
-CACHE_VERSION = ENV['FLICKR_CACHE_VERSION'] || "1"
-CACHE = Dalli::Client.new
 
 module Flickr
+  FlickRaw.api_key = ENV['FLICKR_API_KEY']
+  FlickRaw.shared_secret = ENV['FLICKR_SHARED_SECRET']
+
+  CACHE_VERSION = ENV['FLICKR_CACHE_VERSION'] || "1"
+  CACHE_DIR = ".flickr-cache"
+
   def flickr_image(url)
     image = image_object(url)
     "<figure class='flickr-image align-center' #{image[:sizes].map{|s| "data-media#{s.first}='#{s.last}'"}.join(" ")} alt='#{image[:title]}' title='#{image[:title]}'>
@@ -47,7 +47,7 @@ module Flickr
   end
 
   def set_object(url)
-    CACHE.fetch(url + CACHE_VERSION) do
+    from_cache(url) do
       id = url.match(/photos\/\S*\/sets\/(\d+)/)[1]
       set = flickr.photosets.getPhotos(photoset_id: id, extras: "url_q")
       set.photo.map do |photo|
@@ -57,7 +57,7 @@ module Flickr
   end
 
   def image_object(url)
-    CACHE.fetch(url + CACHE_VERSION) do
+    from_cache(url) do
       id = url.match(/photos\/\S*\/(\d+)/)[1]
       sizes = flickr.photos.getSizes(photo_id: id)
       info = flickr.photos.getInfo(photo_id: id)
@@ -71,6 +71,21 @@ module Flickr
       image[:title] = info.title
       image
     end
+  end
+
+  def from_cache(url)
+    sha = Digest::SHA1.hexdigest(url + CACHE_VERSION)
+    filename = File.join(CACHE_DIR, sha)
+    if File.exists?(filename)
+      image = YAML.load(File.read(filename))
+    else
+      image = yield
+      FileUtils.mkdir_p(CACHE_DIR)
+      File.open(filename, "w") do |f|
+        f.write(YAML.dump(image))
+      end
+    end
+    return image
   end
 end
 

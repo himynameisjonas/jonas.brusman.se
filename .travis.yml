@@ -1,5 +1,9 @@
 language: ruby
-cache: bundler
+cache:
+  bundler: true
+  directories:
+  - .flickr-cache
+  - .sass-cache
 branches:
   only:
     - master
