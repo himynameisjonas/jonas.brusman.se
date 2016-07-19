@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Road trip part 2
+title: Road trip – part 2
 categories:
  - photographs
 flickr:
