@@ -104,6 +104,10 @@ footer {
   font-size: 16px;
   font-family: 'Unica One';
   text-transform: uppercase;
+
+  &:hover {
+    color: #fe57a1;
+  }
 }
 
 article h2, article h1,
