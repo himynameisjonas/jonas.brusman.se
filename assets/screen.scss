@@ -184,6 +184,20 @@ img.flickr-image {
   }
 }
 
+.about-links {
+  font-size: 1.5em;
+  display: flex;
+  justify-content: space-around;
+  margin: 3em 0;
+
+  a {
+    color: #222;
+    &:hover {
+      color: #00e;
+    }
+  }
+}
+
 footer {
   a {
     color: inherit;
