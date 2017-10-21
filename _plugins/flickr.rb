@@ -12,12 +12,12 @@ module Flickr
 
   def flickr_image(url)
     image = image_object(url)
-    "<figure class='flickr-image align-center' #{image[:sizes].map{|s| "data-media#{s.first}='#{s.last}'"}.join(" ")} alt='#{image[:title]}' title='#{image[:title]}'>
-    <noscript>
-      <img class='flickr-image align-center' alt='#{image[:title]}' src='#{image[:sizes]["1024"]}'>
-    </noscript>
-    </figure>
-    "
+    sizes = image[:sizes].reject{|k,v| k.nil? || k.to_i <= 640}
+    "<img
+      class='flickr-image align-center lazyload'
+      alt='#{image[:title]}'
+      data-sizes='auto'
+      data-srcset='#{sizes.map{ |s| "#{s.last} #{s.first}w" }.join(', ')}' />"
   end
 
   def flickr_og_image(url)
