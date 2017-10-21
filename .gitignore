@@ -10,3 +10,4 @@ tmp/*
 .divshot-cache
 .jekyll-metadata
 .env
+node_modules
