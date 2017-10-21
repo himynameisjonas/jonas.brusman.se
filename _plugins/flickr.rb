@@ -8,7 +8,7 @@ module Flickr
   FlickRaw.shared_secret = ENV['FLICKR_SHARED_SECRET']
 
   CACHE_VERSION = ENV['FLICKR_CACHE_VERSION'] || "1"
-  CACHE_DIR = ".flickr-cache"
+  CACHE_DIR = "node_modules/flickr-cache"
 
   def flickr_image(url)
     image = image_object(url)
