@@ -164,14 +164,23 @@ article h1, article h2, header nav {
   display: block;
 }
 
-figure.flickr-image {
-  display: inline;
-  img {
-    background-color: #cecece;
-    margin-top: 0;
-    margin-bottom: 20px;
-    max-width: 100%;
+img.flickr-image {
+  background-color: #cecece;
+  margin-top: 0;
+  margin-bottom: 20px;
+  max-width: 100%;
+
+  &.lazyload,
+  &.lazyloading {
+    display: block;
+    width: 100%;
+    opacity: 0;
+  }
+
+  &.lazyloaded {
     max-height: calc(100vh - 20px);
+    opacity: 1;
+    transition: opacity 300ms;
   }
 }
 
