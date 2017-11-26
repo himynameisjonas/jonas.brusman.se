@@ -12,7 +12,7 @@ body {
 }
 
 body, p, h1, h2, h3, h4, h5, h6, #pagination > * {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 h1, h2, h1 a, h2 a {
@@ -165,7 +165,7 @@ article .content,
 }
 
 article h1, article h2, header nav {
-  font-size: 30px;
+  font-size: 32px;
   line-height: 1.6em;
   margin-bottom: 0.1em;
 }
@@ -224,6 +224,7 @@ a:hover {
 }
 
 code, .highlight {
+  font-size: 17px;
   background-color: ghostWhite;
   color: black;
   padding: 1px 3px;
