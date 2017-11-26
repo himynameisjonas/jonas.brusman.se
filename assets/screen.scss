@@ -120,6 +120,12 @@ article .content,
   margin: 0 auto;
 }
 
+.flickr-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .flickr-set {
   margin: 0 auto;
   max-width: 1200px;
@@ -170,8 +176,7 @@ article h1, article h2, header nav {
 
 img.flickr-image {
   background-color: #cecece;
-  margin-top: 0;
-  margin-bottom: 20px;
+  margin: 0 10px 20px;
   max-width: 100%;
 
   &.lazyload,
