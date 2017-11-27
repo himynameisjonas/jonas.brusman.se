@@ -6,11 +6,17 @@ jekyll-archives:
   enabled:
    - tags
    - categories
+   - month
+   - year
   layouts:
-    year: year-archive
+    year: date-archive
+    month: date-archive
     category: categories-archive
     tag: categories-archive
   permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
     tag: '/tag/:name/'
     category: '/:name/'
 exclude:
