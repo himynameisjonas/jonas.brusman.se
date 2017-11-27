@@ -1,9 +1,7 @@
-gems:
-  - jekyll-paginate
+plugins:
   - jekyll-archives
-  - jekyll-compose
 permalink: /:year/:month/:day/:title
-paginate: 10
+paginate: 7
 jekyll-archives:
   enabled:
    - tags
