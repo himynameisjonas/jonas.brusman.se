@@ -124,6 +124,13 @@ article .content,
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  margin-left: -5px;
+  margin-right: -5px;
+
+  .flickr-image-link {
+    margin: 0 10px 20px;
+  }
 }
 
 .flickr-set {
@@ -176,7 +183,6 @@ article h1, article h2, header nav {
 
 img.flickr-image {
   background-color: #cecece;
-  margin: 0 10px 20px;
   max-width: 100%;
 
   &.lazyload,
