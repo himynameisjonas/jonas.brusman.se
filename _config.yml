@@ -1,5 +1,7 @@
 plugins:
   - jekyll-archives
+  - jekyll/tagging
+  - jekyll-tagging-related_posts
 permalink: /:year/:month/:day/:title
 paginate: 7
 jekyll-archives:

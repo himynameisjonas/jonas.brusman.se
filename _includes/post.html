@@ -41,15 +41,15 @@
             <a href="/tag/{{tag | slugify}}">#{{ tag }}</a>
         {% endfor %}
 
-        {% if site.related_posts.size > 0 %}
-            <div id="related">
-                <h3>Related Posts</h3>
-                <ul>
-                    {% for related in site.related_posts %}
-                        <li><a href="{{ related.url }}">{{related.title }}</a></li>
-                    {% endfor %}
-                </ul>
-            </div>
+        {% if site.related_posts.size >= 1 %}
+          <div id="related">
+            <h3>Related Posts</h3>
+            <ul>
+              {% for related in site.related_posts limit: 7 %}
+                <li><a href="{{ related.url }}">{{related.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
         {% endif %}
     </footer>
     {% if detail %}
