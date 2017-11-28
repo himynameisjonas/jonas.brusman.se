@@ -24,18 +24,18 @@
   </script>
   {% endif %}
 
-  {% if page.flickr %}
-    <meta property="og:site_name" content="Jonas Brusman" />
-    <meta property="og:title" content="{{page.title}}" />
-    <meta property="og:description" content="{{page.content | markdownify | strip_html }}" />
-    <meta property="og:image" content="{{page.flickr | first | flickr_og_image}}" />
-    <meta property="og:url" content="{{site.production_url}}{{page.url}}" />
-    <meta property="og:type" content="article" />
-    {% for tag in page.tags %}
-      <meta property="article:tag" content="{{tag}}" />
-    {% endfor %}
-    <meta property="article:author" content="https://www.facebook.com/himynameisjonas" />
-  {% endif %}
+  <meta property="og:site_name" content="Jonas Brusman" />
+  <meta property="og:title" content="{{page.title}}" />
+  <meta property="og:description" content="{{page.content | markdownify | strip_html }}" />
+  <meta property="og:url" content="{{site.production_url}}{{page.url}}" />
+  <meta property="article:author" content="https://www.facebook.com/himynameisjonas" />
+  <meta property="og:type" content="article" />
+  {% for flickr_url in page.flickr %}
+    <meta property="og:image" content="{{flickr_url | flickr_og_image}}" />
+  {% endfor %}
+  {% for tag in page.tags %}
+    <meta property="article:tag" content="{{tag}}" />
+  {% endfor %}
 </head>
 <body>
     <header class="text-center">

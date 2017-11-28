@@ -22,7 +22,11 @@ module Flickr
 
   def flickr_og_image(url)
     image = image_object(url)
-    image[:sizes]["1600"] || image[:sizes]["1024"] || image[:sizes]["800"] || image[:sizes]["640"] || image[:sizes]["500"]
+    sizes = image[:sizes].to_a.sort_by{ |k, _| k.to_i }.select do |k, _|
+      size = k.to_i
+      size < 1600 && size >= 500
+    end
+    sizes.last.last
   end
 
   def flickr_medium_image(url)
