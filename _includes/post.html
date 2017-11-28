@@ -28,7 +28,7 @@
             {% endif %}
         </div>
     {% endif %}
-    <div class="content text-left">
+    <div class="content {% if post.center %}text-center{% else %}text-left{% endif %}">
         {% if detail %}
             {{ content }}
         {% else %}
