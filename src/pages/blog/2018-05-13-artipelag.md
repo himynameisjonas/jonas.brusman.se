@@ -5,10 +5,10 @@ title: Artipelag
 categories:
   - photographs
 photos:
-  - ../../img/41357936864.jpg
-  - ../../img/41357936954.jpg
-  - ../../img/41357937044.jpg
-  - ../../img/28204793478.jpg
+  - /img/41357936864.jpg
+  - /img/41357936954.jpg
+  - /img/41357937044.jpg
+  - /img/28204793478.jpg
 tags:
   - arvid
   - eva

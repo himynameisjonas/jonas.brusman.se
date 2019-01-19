@@ -11,7 +11,6 @@ export const BlogPostTemplate = ({
   content,
   contentComponent,
   photos,
-  description,
   tags,
   title,
   helmet,
@@ -30,7 +29,6 @@ export const BlogPostTemplate = ({
             {photos != null && photos.map(({childImageSharp}, index)=>(
               <Img sizes={childImageSharp.sizes} key={index}/>
             ))}
-            <p>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -54,7 +52,6 @@ export const BlogPostTemplate = ({
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
   photos: PropTypes.array,
@@ -68,14 +65,12 @@ const BlogPost = ({ data }) => {
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
         photos={post.frontmatter.photos}
         helmet={
           <Helmet
             titleTemplate="%s | Blog"
           >
             <title>{`${post.frontmatter.title}`}</title>
-            <meta name="description" content={`${post.frontmatter.description}`} />
           </Helmet>
         }
         tags={post.frontmatter.tags}
@@ -101,7 +96,6 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        description
         tags
         photos {
           childImageSharp {

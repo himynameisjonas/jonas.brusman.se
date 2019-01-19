@@ -5,7 +5,6 @@ import Layout from '../components/Layout'
 import {BlogPostTemplate} from '../templates/blog-post'
 import Content, { HTMLContent } from '../components/Content'
 
-
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
@@ -52,7 +51,6 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
           id
           html
           fields {
