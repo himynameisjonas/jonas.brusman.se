@@ -4,11 +4,11 @@ date: 2012-01-21
 title: 24 Hour Business Camp
 categories:
  - photographs
-flickr:
-- http://www.flickr.com/photos/himynameisjonas/6337662490/in/set-72157627985993547
-- http://www.flickr.com/photos/himynameisjonas/6336910521/in/set-72157627985993547
-- http://www.flickr.com/photos/himynameisjonas/6336910929/in/set-72157627985993547
-- http://www.flickr.com/photos/himynameisjonas/6337669900/in/set-72157627985993547
+photos:
+- /img/6337662490.jpg
+- /img/6336910521.jpg
+- /img/6336910929.jpg
+- /img/6337669900.jpg
 tags:
 - 24hbc
 - silarapp.com

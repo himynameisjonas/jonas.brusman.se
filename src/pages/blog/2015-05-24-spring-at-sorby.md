@@ -4,9 +4,9 @@ date: 2015-05-24
 title: Springtime at Sörby
 categories:
  - photographs
-flickr:
- - https://www.flickr.com/photos/himynameisjonas/17853407669/
- - https://www.flickr.com/photos/himynameisjonas/17853411539/
+photos:
+ - /img/17853407669.jpg
+ - /img/17853411539.jpg
 tags:
  - sörby
  - spring

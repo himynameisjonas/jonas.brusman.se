@@ -81,10 +81,10 @@ Finally, the last step is to add one or more photos to your post:
 ---
 templateKey: blog-post
 title: A blog post with photos from flickr
-flickr:
-- http://www.flickr.com/photos/himynameisjonas/6167152072
-- http://www.flickr.com/photos/himynameisjonas/6167152448
-- http://www.flickr.com/photos/himynameisjonas/6167153574
+photos:
+- /img/6167152072.jpg
+- /img/6167152448.jpg
+- /img/6167153574.jpg
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 {% endhighlight %}

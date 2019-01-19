@@ -5,8 +5,8 @@ title: "Real-time Instagram feed for SilarApp"
 categories:
  - photographs
  - code
-flickr:
-  - http://www.flickr.com/photos/himynameisjonas/7856126566
+photos:
+  - /img/7856126566.jpg
 tags:
   - silarapp.com
   - square

@@ -4,8 +4,8 @@ date: 2012-11-11
 title: "A sunday walk to Långsjöbadet"
 categories:
  - photographs
-flickr:
- - http://www.flickr.com/photos/himynameisjonas/8175492824
+photos:
+ - /img/8175492824.jpg
 tags:
  - älvsjö
  - lake

@@ -4,12 +4,12 @@ date: 2012-03-08
 title: Popaganda
 categories:
  - photographs
-flickr:
-- http://www.flickr.com/photos/himynameisjonas/6965207109/
-- http://www.flickr.com/photos/himynameisjonas/6819084786/
-- http://www.flickr.com/photos/himynameisjonas/6965208681/
-- http://www.flickr.com/photos/himynameisjonas/6965209521/
-- http://www.flickr.com/photos/himynameisjonas/6819087598/
+photos:
+- /img/6965207109.jpg
+- /img/6819084786.jpg
+- /img/6965208681.jpg
+- /img/6965209521.jpg
+- /img/6819087598.jpg
 tags:
 - summer
 - popaganda

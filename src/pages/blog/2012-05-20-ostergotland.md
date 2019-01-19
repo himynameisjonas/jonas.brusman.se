@@ -4,8 +4,8 @@ date: 2012-05-20
 title: Östergötland
 categories:
  - photographs
-flickr:
-- http://www.flickr.com/photos/himynameisjonas/7243638110/
+photos:
+- /img/7243638110.jpg
 tags:
 - summer
 - square

@@ -4,8 +4,8 @@ date: 2012-02-13
 title: SilarApp stickers
 categories:
  - photographs
-flickr:
-- http://www.flickr.com/photos/himynameisjonas/6869124831
+photos:
+- /img/6869124831.jpg
 tags:
 - silarapp.com
 - stickers

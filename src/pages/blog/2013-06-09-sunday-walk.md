@@ -4,11 +4,11 @@ date: 2013-06-09
 title: "Sunday walk"
 categories:
  - photographs
-flickr:
- - http://www.flickr.com/photos/himynameisjonas/8999349250/
- - http://www.flickr.com/photos/himynameisjonas/8999332624/
- - http://www.flickr.com/photos/himynameisjonas/8998130893/
- - http://www.flickr.com/photos/himynameisjonas/8998116791/
+photos:
+ - /img/8999349250.jpg
+ - /img/8999332624.jpg
+ - /img/8998130893.jpg
+ - /img/8998116791.jpg
 tags:
  - eva
  - stockholm

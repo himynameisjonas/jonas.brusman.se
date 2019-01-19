@@ -4,8 +4,8 @@ date: 2012-12-26
 title: "Merry Christmas"
 categories:
  - photographs
-flickr:
- - http://www.flickr.com/photos/himynameisjonas/8306372905/in/photostream/
+photos:
+ - /img/8306372905.jpg
 tags:
  - snow
  - fire

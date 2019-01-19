@@ -4,10 +4,10 @@ date: 2013-04-09
 title: "Ice fishing"
 categories:
  - photographs
-flickr:
- - http://www.flickr.com/photos/himynameisjonas/8634459287
- - http://www.flickr.com/photos/himynameisjonas/8635563328/
- - http://www.flickr.com/photos/himynameisjonas/8635558984
+photos:
+ - /img/8634459287.jpg
+ - /img/8635563328.jpg
+ - /img/8635558984.jpg
 tags:
  - ice
  - winter

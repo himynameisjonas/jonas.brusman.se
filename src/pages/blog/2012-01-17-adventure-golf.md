@@ -4,8 +4,8 @@ date: 2012-01-17
 title: Adventure Golf
 categories:
  - photographs
-flickr:
-- http://www.flickr.com/photos/himynameisjonas/6166618431/in/set-72157623298803241
+photos:
+- /img/6166618431.jpg
 tags:
 - summer
 - adventure golf

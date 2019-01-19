@@ -4,11 +4,11 @@ date: 2012-06-24
 title: Midsummer
 categories:
  - photographs
-flickr:
-- http://www.flickr.com/photos/himynameisjonas/7431028392/in/photostream
-- http://www.flickr.com/photos/himynameisjonas/7431030226/in/photostream
-- http://www.flickr.com/photos/himynameisjonas/7431032662/in/photostream
-- http://www.flickr.com/photos/himynameisjonas/7431034030/in/photostream
+photos:
+- /img/7431028392.jpg
+- /img/7431030226.jpg
+- /img/7431032662.jpg
+- /img/7431034030.jpg
 tags:
 - summer
 - sea

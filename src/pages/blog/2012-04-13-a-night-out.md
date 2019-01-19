@@ -4,10 +4,10 @@ date: 2012-04-13
 title: A night out
 categories:
  - photographs
-flickr:
-- http://www.flickr.com/photos/himynameisjonas/6167152072
-- http://www.flickr.com/photos/himynameisjonas/6167152448
-- http://www.flickr.com/photos/himynameisjonas/6167153574
+photos:
+- /img/6167152072.jpg
+- /img/6167152448.jpg
+- /img/6167153574.jpg
 tags:
 - summer
 - david

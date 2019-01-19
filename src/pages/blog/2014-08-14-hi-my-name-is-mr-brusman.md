@@ -2,8 +2,8 @@
 templateKey: blog-post
 date: 2014-08-14
 title: "Hi my name is Mr. Brusman"
-flickr:
- - https://www.flickr.com/photos/himynameisjonas/14731693270/
+photos:
+ - /img/14731693270.jpg
 tags:
  - wedding
  - married

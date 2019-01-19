@@ -4,12 +4,12 @@ date: 2016-07-18
 title: Road trip – part 2
 categories:
  - photographs
-flickr:
-- https://www.flickr.com/photos/himynameisjonas/27938236470/
-- https://www.flickr.com/photos/himynameisjonas/27603044554/
-- https://www.flickr.com/photos/himynameisjonas/27603039744/
-- https://www.flickr.com/photos/himynameisjonas/27938262070/
-- https://www.flickr.com/photos/himynameisjonas/27938232060/
+photos:
+- /img/27938236470.jpg
+- /img/27603044554.jpg
+- /img/27603039744.jpg
+- /img/27938262070.jpg
+- /img/27938232060.jpg
 tags:
  - road trip
  - summer
