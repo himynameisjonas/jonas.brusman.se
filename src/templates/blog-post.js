@@ -5,10 +5,12 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import Img from "gatsby-image"
 
 export const BlogPostTemplate = ({
   content,
   contentComponent,
+  photos,
   description,
   tags,
   title,
@@ -25,6 +27,9 @@ export const BlogPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
+            {photos != null && photos.map(({childImageSharp}, index)=>(
+              <Img sizes={childImageSharp.sizes} key={index}/>
+            ))}
             <p>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
@@ -52,6 +57,7 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  photos: PropTypes.array,
 }
 
 const BlogPost = ({ data }) => {
@@ -63,6 +69,7 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        photos={post.frontmatter.photos}
         helmet={
           <Helmet
             titleTemplate="%s | Blog"
@@ -96,6 +103,13 @@ export const pageQuery = graphql`
         title
         description
         tags
+        photos {
+          childImageSharp {
+            sizes(maxWidth: 2000) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
       }
     }
   }

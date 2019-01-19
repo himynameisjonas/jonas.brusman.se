@@ -2,7 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Img from "gatsby-image"
+import {BlogPostTemplate} from '../templates/blog-post'
+import Content, { HTMLContent } from '../components/Content'
+
 
 export default class IndexPage extends React.Component {
   render() {
@@ -18,30 +20,14 @@ export default class IndexPage extends React.Component {
             </div>
             {posts
               .map(({ node: post }) => (
-                <div
-                  className="content"
-                  style={{ border: '1px solid #333', padding: '2em 4em' }}
+                <BlogPostTemplate
                   key={post.id}
-                >
-                  <p>
-                    <Link className="has-text-primary" to={post.fields.slug}>
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <small>{post.frontmatter.date}</small>
-                  </p>
-                  {post.frontmatter.photos != null && post.frontmatter.photos.map(({childImageSharp}, index)=>(
-                    <Img sizes={childImageSharp.sizes} key={index}/>
-                  ))}
-                  <p>
-                    {post.excerpt}
-                    <br />
-                    <br />
-                    <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
-                    </Link>
-                  </p>
-                </div>
+                  id={post.id}
+                  contentComponent={HTMLContent}
+                  title={post.frontmatter.title}
+                  photos={post.frontmatter.photos}
+                  content={post.html}
+                />
               ))}
           </div>
         </section>
@@ -68,6 +54,7 @@ export const pageQuery = graphql`
         node {
           excerpt(pruneLength: 400)
           id
+          html
           fields {
             slug
           }
