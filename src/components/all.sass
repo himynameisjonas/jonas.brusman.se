@@ -8,27 +8,36 @@ $kaldi-red-invert: #fff
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 $body-color: #333
-
-.navbar .navbar-menu
-  box-shadow:none !important
-
-.content .taglist
-  list-style: none
-  margin-bottom: 0
-  margin-left: 0
-  margin-right: 1.5rem
-  margin-top: 1.5rem
-  display: flex
-  flex-wrap: wrap
-  justify-content: left
-  align-items: center
-  li
-    padding: 0 2rem 1rem 0
-    margin-bottom: 1.5rem
-    margin-top: 0
-
-.full-size-image
-  max-width: 100%
-  margin: 0 auto 1.5rem
+$family-secondary: 'Tenor Sans', sans-serif
+$family-primary:	'Archivo Black', sans-serif
+$title-weight: '400'
+$title-strong-weight: '400'
+$body-size: 18px
 
 @import "~bulma"
+
+.full-size-image
+  max-width: calc(100% - 3rem)
+  margin: 0 auto 1.5rem
+
+.title,
+.subtitle,
+.tabs a
+  text-transform: uppercase
+
+.title
+  font-size: 3rem
+
+.subtitle
+  font-size: 1.7rem
+  font-family: $family-secondary
+
+.content
+  font-family: $family-secondary
+
+  h1,h2,h3,h4,h5,h6,
+  a
+    font-family: $family-primary
+
+  a
+    text-transform: uppercase

@@ -19,28 +19,36 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="blog-post">
+    <section className="blog-post section is-medium">
       {helmet || ""}
-      <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-        <Link to={slug}>{title}</Link>
-      </h1>
+      <div className="container is-widescreen">
+        <h1 className="title is-size-2 is-centered has-text-centered">
+          <Link to={slug}>{title}</Link>
+        </h1>
+      </div>
       {photos != null &&
         photos.map(({ childImageSharp }, index) => (
           <FullSizeImage childImageSharp={childImageSharp} key={index} />
         ))}
-      <PostContent content={content} />
-      {tags && tags.length ? (
-        <div style={{ marginTop: `4rem` }}>
-          <h4>Tags</h4>
-          <ul className="taglist">
-            {tags.map(tag => (
-              <li key={tag + `tag`}>
-                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-              </li>
-            ))}
-          </ul>
+      <div className="container is-widescreen">
+        <div className="columns is-mobile">
+          <div className="column is-three-fifths is-offset-one-fifth">
+            <PostContent content={content} className="content is-medium" />
+            {tags && tags.length ? (
+              <div style={{ marginTop: `4rem` }}>
+                <h4>Tags</h4>
+                <ul className="taglist">
+                  {tags.map(tag => (
+                    <li key={tag + `tag`}>
+                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
+          </div>
         </div>
-      ) : null}
+      </div>
     </section>
   );
 };
