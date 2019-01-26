@@ -4,7 +4,7 @@ import Img from "gatsby-image";
 
 const FullSizeImage = ({ childImageSharp }) => {
   const imageStyle = {
-    width: `calc(${childImageSharp.sizes.aspectRatio} * 99vh)`
+    width: `calc(${childImageSharp.sizes.aspectRatio} * 100vh - 3rem)`
   };
   return (
     <Img
