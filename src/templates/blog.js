@@ -4,6 +4,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import { BlogPostTemplate } from "../templates/blog-post";
 import { HTMLContent } from "../components/Content";
+import Img from "gatsby-image";
 
 export default class IndexPage extends React.Component {
   render() {
@@ -17,17 +18,35 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-        {posts.map(({ node: post }) => (
-          <BlogPostTemplate
-            key={post.id}
-            id={post.id}
-            contentComponent={HTMLContent}
-            title={post.frontmatter.title}
-            photos={post.frontmatter.photos}
-            slug={post.fields.slug}
-            content={post.html}
-          />
-        ))}
+        <section className="section is-medium">
+          <div className="container is-widescreen">
+            <div className="post-list tile is-ancestor">
+              {posts.map(({ node: post }, index) => (
+                <div className="tile is-parent is-3" key={index}>
+                  <div className="tile is-child">
+                    {post.frontmatter.photos != null && (
+                      <Img
+                        fluid={post.frontmatter.photos[0].childImageSharp.fluid}
+                      />
+                    )}
+                    <Link to={post.fields.slug.replace("/blog/", "/")}>
+                      <h2>{post.frontmatter.title}</h2>
+                    </Link>
+                  </div>
+                </div>
+                // <BlogPostTemplate
+                //   key={post.id}
+                //   id={post.id}
+                //   contentComponent={HTMLContent}
+                //   title={post.frontmatter.title}
+                //   photos={post.frontmatter.photos}
+                //   slug={post.fields.slug}
+                //   content={post.html}
+                // />
+              ))}
+            </div>
+          </div>
+        </section>
         <section className="section">
           <div className="container is-widescreen">
             <div className="columns is-mobile">
@@ -90,8 +109,8 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             photos {
               childImageSharp {
-                sizes(maxWidth: 2000) {
-                  ...GatsbyImageSharpSizes
+                fluid(maxWidth: 1000) {
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
