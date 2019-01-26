@@ -77,6 +77,7 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        slug={post.fields.slug}
       />
     </Layout>
   );
