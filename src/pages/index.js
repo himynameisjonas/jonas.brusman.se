@@ -19,6 +19,7 @@ export default class IndexPage extends React.Component {
             contentComponent={HTMLContent}
             title={post.frontmatter.title}
             photos={post.frontmatter.photos}
+            slug={post.fields.slug}
             content={post.html}
           />
         ))}

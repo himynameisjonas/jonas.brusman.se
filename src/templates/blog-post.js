@@ -13,6 +13,7 @@ export const BlogPostTemplate = ({
   photos,
   tags,
   title,
+  slug,
   helmet
 }) => {
   const PostContent = contentComponent || Content;
@@ -21,7 +22,7 @@ export const BlogPostTemplate = ({
     <section className="blog-post">
       {helmet || ""}
       <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-        {title}
+        <Link to={slug}>{title}</Link>
       </h1>
       {photos != null &&
         photos.map(({ childImageSharp }, index) => (
@@ -86,6 +87,9 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      fields {
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
