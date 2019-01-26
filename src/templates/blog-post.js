@@ -17,6 +17,7 @@ export const BlogPostTemplate = ({
   helmet
 }) => {
   const PostContent = contentComponent || Content;
+  slug = slug.replace("/blog/", "/");
 
   return (
     <section className="blog-post section is-medium">
