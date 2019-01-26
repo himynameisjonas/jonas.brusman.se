@@ -12,24 +12,17 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-            </div>
-            {posts
-              .map(({ node: post }) => (
-                <BlogPostTemplate
-                  key={post.id}
-                  id={post.id}
-                  contentComponent={HTMLContent}
-                  title={post.frontmatter.title}
-                  photos={post.frontmatter.photos}
-                  content={post.html}
-                />
-              ))}
-          </div>
-        </section>
+        {posts
+          .map(({ node: post }) => (
+            <BlogPostTemplate
+              key={post.id}
+              id={post.id}
+              contentComponent={HTMLContent}
+              title={post.frontmatter.title}
+              photos={post.frontmatter.photos}
+              content={post.html}
+            />
+          ))}
       </Layout>
     )
   }
