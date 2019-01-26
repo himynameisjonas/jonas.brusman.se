@@ -1,12 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
-import Img from "gatsby-image"
-import FullSizeImage from '../components/FullSizeImage'
+import React from "react";
+import PropTypes from "prop-types";
+import { kebabCase } from "lodash";
+import Helmet from "react-helmet";
+import { graphql, Link } from "gatsby";
+import Layout from "../components/Layout";
+import Content, { HTMLContent } from "../components/Content";
+import FullSizeImage from "../components/FullSizeImage";
 
 export const BlogPostTemplate = ({
   content,
@@ -14,19 +13,20 @@ export const BlogPostTemplate = ({
   photos,
   tags,
   title,
-  helmet,
+  helmet
 }) => {
-  const PostContent = contentComponent || Content
+  const PostContent = contentComponent || Content;
 
   return (
     <section className="blog-post">
-      {helmet || ''}
+      {helmet || ""}
       <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
         {title}
       </h1>
-      {photos != null && photos.map(({childImageSharp}, index)=>(
-        <FullSizeImage childImageSharp={childImageSharp} key={index} />
-      ))}
+      {photos != null &&
+        photos.map(({ childImageSharp }, index) => (
+          <FullSizeImage childImageSharp={childImageSharp} key={index} />
+        ))}
       <PostContent content={content} />
       {tags && tags.length ? (
         <div style={{ marginTop: `4rem` }}>
@@ -41,19 +41,19 @@ export const BlogPostTemplate = ({
         </div>
       ) : null}
     </section>
-  )
-}
+  );
+};
 
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   title: PropTypes.string,
   helmet: PropTypes.object,
-  photos: PropTypes.array,
-}
+  photos: PropTypes.array
+};
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
 
   return (
     <Layout>
@@ -62,9 +62,7 @@ const BlogPost = ({ data }) => {
         contentComponent={HTMLContent}
         photos={post.frontmatter.photos}
         helmet={
-          <Helmet
-            titleTemplate="%s | Blog"
-          >
+          <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
           </Helmet>
         }
@@ -72,16 +70,16 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
       />
     </Layout>
-  )
-}
+  );
+};
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
-}
+    markdownRemark: PropTypes.object
+  })
+};
 
-export default BlogPost
+export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
@@ -102,4 +100,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
