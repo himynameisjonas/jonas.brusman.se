@@ -27,10 +27,15 @@ export const BlogPostTemplate = ({
           <Link to={slug}>{title}</Link>
         </h1>
       </div>
-      {photos != null &&
-        photos.map(({ childImageSharp }, index) => (
-          <FullSizeImage childImageSharp={childImageSharp} key={index} />
-        ))}
+
+      {photos != null && (
+        <div className="full-size-images-wrapper">
+          {photos.map(({ childImageSharp }, index) => (
+            <FullSizeImage childImageSharp={childImageSharp} key={index} />
+          ))}
+        </div>
+      )}
+
       <div className="container is-widescreen">
         <div className="columns is-mobile">
           <div className="column is-three-fifths is-offset-one-fifth">

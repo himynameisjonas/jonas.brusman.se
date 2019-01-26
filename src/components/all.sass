@@ -16,10 +16,6 @@ $body-size: 18px
 
 @import "~bulma"
 
-.full-size-image
-  max-width: calc(100% - 3rem)
-  margin: 0 auto 1.5rem
-
 .title,
 .subtitle,
 .tabs a
@@ -31,6 +27,22 @@ $body-size: 18px
 .subtitle
   font-size: 1.7rem
   font-family: $family-secondary
+  max-width: 31em
+  margin-left: auto
+  margin-right: auto
+
+.blog-post.section.is-medium
+    padding-left: 0
+    padding-right: 0
+
+.full-size-images-wrapper
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-evenly
+
+.full-size-image
+  max-width: calc(100% - 3rem)
+  margin-bottom: 1.5rem
 
 .content
   font-family: $family-secondary
