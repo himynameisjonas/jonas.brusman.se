@@ -100,11 +100,14 @@ $body-size: 18px
     font-size: 1.5em
     text-transform: uppercase
 
-  .gatsby-image-wrapper
+  .blog-post-tile-image
     z-index: 2
     height: 100%
     width: 100%
     opacity: 0.8
+    position: absolute !important
+    top: 0
+    height: 100%
 
   &:after
     content: ""
@@ -114,10 +117,6 @@ $body-size: 18px
     overflow: hidden
     display: block
     z-index: 1
-
-  .gatsby-image-wrapper
-    position: absolute !important
-    top: 0
 
 .tags
   justify-content: center

@@ -28,6 +28,7 @@ export default class IndexPage extends React.Component {
                     <Link to={post.fields.slug.replace("/blog/", "/")}>
                       {post.frontmatter.photos != null && (
                         <Img
+                          className="blog-post-tile-image"
                           fluid={
                             post.frontmatter.photos[0].childImageSharp.fluid
                           }
