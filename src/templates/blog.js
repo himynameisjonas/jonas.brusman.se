@@ -2,8 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
-import { BlogPostTemplate } from "../templates/blog-post";
-import { HTMLContent } from "../components/Content";
 import Img from "gatsby-image";
 
 export default class IndexPage extends React.Component {
@@ -22,31 +20,25 @@ export default class IndexPage extends React.Component {
           <div className="container is-widescreen">
             <div className="post-list tile is-ancestor">
               {posts.map(({ node: post }, index) => (
-                <div className="tile is-parent is-3" key={index}>
-                  <div className="tile is-child">
-                    {post.frontmatter.photos != null && (
-                      <Img
-                        fluid={post.frontmatter.photos[0].childImageSharp.fluid}
-                      />
-                    )}
+                <div className="tile is-parent is-4" key={index}>
+                  <div className="tile is-child blog-post-tile">
                     <Link to={post.fields.slug.replace("/blog/", "/")}>
+                      {post.frontmatter.photos != null && (
+                        <Img
+                          fluid={
+                            post.frontmatter.photos[0].childImageSharp.fluid
+                          }
+                        />
+                      )}
                       <h2>{post.frontmatter.title}</h2>
                     </Link>
                   </div>
                 </div>
-                // <BlogPostTemplate
-                //   key={post.id}
-                //   id={post.id}
-                //   contentComponent={HTMLContent}
-                //   title={post.frontmatter.title}
-                //   photos={post.frontmatter.photos}
-                //   slug={post.fields.slug}
-                //   content={post.html}
-                // />
               ))}
             </div>
           </div>
         </section>
+
         <section className="section">
           <div className="container is-widescreen">
             <div className="columns is-mobile">
@@ -110,7 +102,7 @@ export const pageQuery = graphql`
             photos {
               childImageSharp {
                 fluid(maxWidth: 1000) {
-                  ...GatsbyImageSharpFluid_withWebp
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
