@@ -11,6 +11,7 @@ export const BlogPostTemplate = ({
   content,
   contentComponent,
   photos,
+  date,
   tags,
   title,
   slug,
@@ -37,21 +38,23 @@ export const BlogPostTemplate = ({
       )}
 
       <div className="container is-widescreen">
-        <div className="columns is-mobile">
-          <div className="column is-three-fifths is-offset-one-fifth">
+        <div className="columns is-mobile is-multiline is-centered">
+          <div className="column is-three-fifths">
             <PostContent content={content} className="content is-medium" />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
+          </div>
+          <div className="column is-three-fifths section">
+            <div className="has-text-centered">
+              <p>{date}</p>
+              {tags && tags.length ? (
+                <div className="tags">
                   {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
+                    <span className="tag is-dark" key={tag + `tag`}>
+                      <Link to={`/tags/${kebabCase(tag)}/`}>#{tag}</Link>
+                    </span>
                   ))}
-                </ul>
-              </div>
-            ) : null}
+                </div>
+              ) : null}
+            </div>
           </div>
         </div>
       </div>
@@ -76,6 +79,7 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         photos={post.frontmatter.photos}
+        date={post.frontmatter.date}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
