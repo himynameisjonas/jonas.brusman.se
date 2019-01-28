@@ -6,18 +6,21 @@ import Img from "gatsby-image";
 
 export default class IndexPage extends React.Component {
   render() {
-    const { data } = this.props;
+    const {
+      data,
+      pageContext: { tag }
+    } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
-    const { currentPage, numPages } = this.props.pageContext;
-    const isFirst = currentPage === 1;
-    const isLast = currentPage === numPages;
-    const prevPage = currentPage - 1 === 1 ? "/" : `page/${currentPage - 1}`;
-    const nextPage = `page/${currentPage + 1}`;
 
     return (
       <Layout>
         <section className="section is-medium">
           <div className="container is-widescreen">
+            {tag != null && (
+              <h1 className="title is-size-2 is-centered has-text-centered">
+                #{tag}
+              </h1>
+            )}
             <div className="post-list tile is-ancestor">
               {posts.map(({ node: post }, index) => (
                 <div className="tile is-parent is-4" key={index}>
@@ -38,35 +41,6 @@ export default class IndexPage extends React.Component {
             </div>
           </div>
         </section>
-
-        <section className="section">
-          <div className="container is-widescreen">
-            <div className="columns is-mobile">
-              <div className="column is-three-fifths is-offset-one-fifth">
-                <nav className="level">
-                  <div className="level-left">
-                    {!isFirst && (
-                      <div className="level-item">
-                        <Link to={prevPage} rel="prev">
-                          ← Newer posts
-                        </Link>
-                      </div>
-                    )}
-                  </div>
-                  <div className="level-right">
-                    {!isLast && (
-                      <div className="level-item">
-                        <Link to={nextPage} rel="next">
-                          Older posts →
-                        </Link>
-                      </div>
-                    )}
-                  </div>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </section>
       </Layout>
     );
   }
@@ -81,12 +55,12 @@ IndexPage.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query IndexQuery($skip: Int!, $limit: Int!) {
+  query IndexQuery($tag: String) {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-      limit: $limit
-      skip: $skip
+      filter: {
+        frontmatter: { templateKey: { eq: "blog-post" }, tags: { eq: $tag } }
+      }
     ) {
       edges {
         node {
