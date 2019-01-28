@@ -21,8 +21,16 @@ $body-size: 18px
 .tabs a
   text-transform: uppercase
 
+.tabs a:hover
+    color: $link
+
 .title
   font-size: 3rem
+  a
+    color: inherit
+
+    &:hover
+      color: $link
 
 .subtitle
   font-size: 1.7rem
@@ -71,7 +79,7 @@ $body-size: 18px
 
     &:hover
       h2
-        text-decoration: underline
+        color: $link
 
   h2
     position: absolute
@@ -105,5 +113,9 @@ $body-size: 18px
 
 .tag
   text-transform: uppercase
+
   a
     color: inherit
+
+    &:hover
+      color: $link
