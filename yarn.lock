@@ -5216,6 +5216,13 @@ gatsby-plugin-eslint@^2.0.1:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-eslint/-/gatsby-plugin-eslint-2.0.3.tgz#345053ef09468864cf74bc7ae30328556b209f6f"
 
+gatsby-plugin-netlify-cache@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cache/-/gatsby-plugin-netlify-cache-1.0.0.tgz#729bfae35800305e14bc098b9b2c095325cd74e2"
+  dependencies:
+    babel-runtime "^6.26.0"
+    fs-extra "^7.0.0"
+
 gatsby-plugin-netlify-cms@^3.0.0:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-3.0.8.tgz#4d0a13f653d0e0061a126697315f4e467e420f7d"
