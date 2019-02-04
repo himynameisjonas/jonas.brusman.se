@@ -47,16 +47,10 @@ const TemplateWrapper = ({ children }) => (
               <div className="container">
                 <ul>
                   <li>
-                    <Link to="/">All</Link>
+                    <Link to="/">Blog</Link>
                   </li>
                   <li>
-                    <a>Photos</a>
-                  </li>
-                  <li>
-                    <a>Code</a>
-                  </li>
-                  <li>
-                    <a>About</a>
+                    <Link to="/about">About</Link>
                   </li>
                 </ul>
               </div>

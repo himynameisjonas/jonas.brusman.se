@@ -4,20 +4,15 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({ content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
+    <section className="blog-post section is-medium">
+      <div className="container is-widescreen">
+        <div className="columns is-mobile is-multiline is-centered">
+          <div className="column is-three-fifths">
+            <PageContent content={content} className="content is-medium" />
           </div>
         </div>
       </div>
