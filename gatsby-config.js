@@ -56,6 +56,9 @@ module.exports = {
             options: {
               destinationDir: "static"
             }
+          },
+          {
+            resolve: `gatsby-remark-prismjs`
           }
         ]
       }

@@ -5,10 +5,10 @@ title: A Flickr plugin to Jekyll
 categories:
   - code
 tags:
-- jekyll
-- flickr
-- ruby
-- plugin
+  - jekyll
+  - flickr
+  - ruby
+  - plugin
 ---
 
 This blog is driven by [Jekyll](http://jekyllrb.com/) and i have written a simple plugin to Jekyll that makes it easy to embed photographs from [Flickr](http://flickr.com) directly into your posts.
@@ -16,17 +16,17 @@ This blog is driven by [Jekyll](http://jekyllrb.com/) and i have written a simpl
 If you have a Gemfile, start by adding the `fleakr` gem to your Gemfile and run `bundle install`.
 If you don't have a Gemfile, install the gem with `gem install fleakr`.
 
-{% highlight ruby %}
+```ruby
 source :rubygems
 
 gem 'RedCloth'
 gem 'jekyll'
 gem 'fleakr'
-{% endhighlight %}
+```
 
 Then add the flickr plugin to your `_plugins` folder:
 
-{% highlight ruby %}
+```ruby
 require 'liquid'
 require 'fleakr'
 
@@ -53,14 +53,13 @@ module Flickr
 end
 
 Liquid::Template.register_filter(Flickr)
-{% endhighlight %}
-
+```
 
 Read the [readme for the fleakr gem](https://github.com/reagent/fleakr) on how to obtain your flickr api tokens. Then add them to the top of the flickr.rb file.
 
 Loop over your photos in your post layout, for example like this:
 
-{% highlight html %}{% raw %}
+```html
 <article>
   <h1>{{ post.title }}</h1>
 
@@ -74,20 +73,23 @@ Loop over your photos in your post layout, for example like this:
     {{ post.date || date:"%Y-%m-%d" }}</br>
   </footer>
 </article>
-{% endraw %}{% endhighlight %}
+```
 
 Finally, the last step is to add one or more photos to your post:
-{% highlight html %}
+
+```html
 ---
 templateKey: blog-post
 title: A blog post with photos from flickr
 photos:
-- /img/6167152072.jpg
-- /img/6167152448.jpg
-- /img/6167153574.jpg
+  - /img/6167152072.jpg
+  - /img/6167152448.jpg
+  - /img/6167153574.jpg
 ---
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-{% endhighlight %}
 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+```
 
 I have also published all these [examples as a gist](https://gist.github.com/2380125).
