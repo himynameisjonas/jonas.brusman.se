@@ -55,5 +55,9 @@
     "gatsby-plugin-eslint": "^2.0.1",
     "prettier": "^1.14.2",
     "rimraf": "^2.6.2"
+  },
+  "toolchain": {
+    "node": "10.15.1",
+    "yarn": "1.13.0"
   }
 }
