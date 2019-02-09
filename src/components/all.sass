@@ -1,12 +1,8 @@
 @import "~bulma/sass/utilities/initial-variables"
 
-// Config vars
-// Kalidi logo brand color: #FD461E
-$kaldi-red: #D64000
-$kaldi-red-invert: #fff
-
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
+$primary: #eba63f
+$secondary: #1d1d2c
+$link: $primary
 $body-color: #333
 $family-secondary: 'Tenor Sans', sans-serif
 $family-primary:	'Archivo Black', sans-serif
@@ -78,6 +74,9 @@ $body-size: 18px
 .blog-post-tile
   position: relative
 
+  &:hover
+    .blog-post-tile-image
+      opacity: 1
   a
     display: block
     position: absolute
@@ -87,10 +86,11 @@ $body-size: 18px
     height: 100%
     z-index: 2
     overflow: hidden
+    background-color: $primary
 
     &:hover
       h2
-        color: $link
+        color: $secondary
 
   h2
     position: absolute
@@ -108,6 +108,7 @@ $body-size: 18px
     position: absolute !important
     top: 0
     height: 100%
+    transition: opacity 0.2s ease-in-out
 
   &:after
     content: ""
