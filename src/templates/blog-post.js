@@ -15,13 +15,15 @@ export const BlogPostTemplate = ({
   tags,
   title,
   slug,
+  postClass,
   helmet
 }) => {
   const PostContent = contentComponent || Content;
   slug = (slug || "").replace("/blog/", "/");
 
+  const classNames = `blog-post section is-medium ${postClass}`;
   return (
-    <section className="blog-post section is-medium">
+    <section className={classNames}>
       {helmet || ""}
       <div className="container is-widescreen">
         <h1 className="title is-size-2 is-centered has-text-centered">
@@ -87,6 +89,7 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        postClass={post.frontmatter.class}
         slug={post.fields.slug}
       />
     </Layout>
@@ -113,6 +116,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         tags
+        class
         photos {
           childImageSharp {
             sizes(maxWidth: 2000) {
