@@ -83,7 +83,7 @@ const BlogPost = ({ data }) => {
         photos={post.frontmatter.photos}
         date={post.frontmatter.date}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s | Jonas Brusman">
             <title>{`${post.frontmatter.title}`}</title>
           </Helmet>
         }

@@ -2,21 +2,25 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
+import Helmet from "react-helmet";
 import Content, { HTMLContent } from "../components/Content";
 
 export const AboutPageTemplate = ({ content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
-    <section className="blog-post section is-medium">
-      <div className="container is-widescreen">
-        <div className="columns is-mobile is-multiline is-centered">
-          <div className="column is-three-fifths">
-            <PageContent content={content} className="content is-medium" />
+    <>
+      <Helmet titleTemplate="About | Jonas Brusman" />
+      <section className="blog-post section is-medium">
+        <div className="container is-widescreen">
+          <div className="columns is-mobile is-multiline is-centered">
+            <div className="column is-three-fifths">
+              <PageContent content={content} className="content is-medium" />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
