@@ -34,7 +34,9 @@ const TemplateWrapper = ({ children }) => (
         <section className="hero is-large">
           <div className="hero-body">
             <div className="container has-text-centered">
-              <h1 className="title">Jonas Brusman</h1>
+              <h1 className="title">
+                <Link to="/">Jonas Brusman</Link>
+              </h1>
               <h2 className="subtitle">
                 I like to do high fives, take photographs and make cool things
                 with Ruby and JavaScript.
