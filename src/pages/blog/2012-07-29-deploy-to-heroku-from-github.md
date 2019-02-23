@@ -1,13 +1,12 @@
 ---
 templateKey: blog-post
+date: 2012-07-29
 title: 'Deploy to Heroku from Github'
-categories:
-  - code
 tags:
+  - programming
   - heroku
   - github
   - ruby
-date: 2012-07-29
 ---
 
 _Automatically deployment of your app to Heroku when it has been pushed to Github_ with [github-heroku-pusher](https://github.com/ajlai/github-heroku-pusher) by [ajlai on Github](https://github.com/ajlai).

@@ -26,14 +26,15 @@ export default class IndexPage extends React.Component {
                 <div className="tile is-parent is-4" key={index}>
                   <div className="tile is-child blog-post-tile">
                     <Link to={post.fields.slug.replace("/blog/", "/")}>
-                      {post.frontmatter.photos != null && (
-                        <Img
-                          className="blog-post-tile-image"
-                          fluid={
-                            post.frontmatter.photos[0].childImageSharp.fluid
-                          }
-                        />
-                      )}
+                      {post.frontmatter.photos != null &&
+                        post.frontmatter.photos[0] != null && (
+                          <Img
+                            className="blog-post-tile-image"
+                            fluid={
+                              post.frontmatter.photos[0].childImageSharp.fluid
+                            }
+                          />
+                        )}
                       <h2 className="title is-size-3">
                         {post.frontmatter.title}
                       </h2>

@@ -2,8 +2,6 @@
 templateKey: blog-post
 date: 2018-05-13
 title: Artipelag
-categories:
-  - photographs
 photos:
   - /img/41357936864.jpg
   - /img/41357936954.jpg

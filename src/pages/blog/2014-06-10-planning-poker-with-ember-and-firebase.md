@@ -1,10 +1,9 @@
 ---
 templateKey: blog-post
 date: 2014-06-10
-title: "Planning Poker with Ember.js and Firebase"
-categories:
-  - code
+title: 'Planning Poker with Ember.js and Firebase'
 tags:
+  - programming
   - firebase
   - ember.js
   - javascript
@@ -12,7 +11,7 @@ tags:
   - coffeescript
 ---
 
-Had some fun with [Ember.js][ember] and [Firebase][firebase] today. Tried out the [EmberFire][emberfire] lib provided by Firebase to use Firebase with Ember-Data. I also used the [Ember CLI][cli] for the first time, can really recommend it. Wanted to see how easy it would be to build an *real time syncing Ember.js app* and then deploy it to the new and easy to use *Firebase hosting* service.
+Had some fun with [Ember.js][ember] and [Firebase][firebase] today. Tried out the [EmberFire][emberfire] lib provided by Firebase to use Firebase with Ember-Data. I also used the [Ember CLI][cli] for the first time, can really recommend it. Wanted to see how easy it would be to build an _real time syncing Ember.js app_ and then deploy it to the new and easy to use _Firebase hosting_ service.
 
 It resulted in a [simple planning poker app][app] to help with the sprint planning for my remote team. I've uploaded the [source to Github][git].
 

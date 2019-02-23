@@ -2,9 +2,8 @@
 templateKey: blog-post
 date: 2012-04-15
 title: A Flickr plugin to Jekyll
-categories:
-  - code
 tags:
+  - programming
   - jekyll
   - flickr
   - ruby
