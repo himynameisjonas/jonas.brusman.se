@@ -76,7 +76,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             photos {
               childImageSharp {
-                fluid(maxWidth: 1000) {
+                fluid(srcSetBreakpoints: [400, 800, 1000, 2000, 2500, 3000]) {
                   ...GatsbyImageSharpFluid
                 }
               }
