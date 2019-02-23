@@ -34,7 +34,9 @@ export default class IndexPage extends React.Component {
                           }
                         />
                       )}
-                      <h2>{post.frontmatter.title}</h2>
+                      <h2 className="title is-size-3">
+                        {post.frontmatter.title}
+                      </h2>
                     </Link>
                   </div>
                 </div>

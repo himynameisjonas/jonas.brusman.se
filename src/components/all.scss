@@ -1,4 +1,5 @@
 @import '~bulma/sass/utilities/initial-variables';
+@import url('https://rsms.me/inter/inter.css');
 
 $color1: rgba(239, 71, 111, 1);
 $color2: rgba(255, 209, 102, 1);
@@ -13,10 +14,10 @@ $primary: $color1;
 $secondary: $color2;
 $link: $color1;
 $body-color: #333;
-$family-secondary: 'Tenor Sans', sans-serif;
-$family-primary: 'Archivo Black', sans-serif;
-$title-weight: '400';
-$title-strong-weight: '400';
+$family-secondary: 'Inter', sans-serif;
+$family-primary: 'Inter', sans-serif;
+$title-weight: 900;
+$title-strong-weight: 900;
 $body-size: 20px;
 
 $size-1: 400%;
@@ -47,6 +48,7 @@ body {
 
 .tabs {
   font-size: $size-5;
+  font-weight: 700;
 
   a:hover {
     color: $link;
@@ -104,10 +106,8 @@ body {
   h6,
   a {
     font-family: $family-primary;
-  }
-
-  a {
-    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: underline;
   }
 }
 
@@ -177,6 +177,7 @@ body {
     color: white;
     font-size: $size-4;
     text-transform: uppercase;
+    line-height: 1.1;
 
     @include mobile {
       font-size: $size-3;
@@ -211,6 +212,7 @@ body {
 
 .tag {
   text-transform: uppercase;
+  font-weight: $title-weight;
 
   a {
     color: inherit;
