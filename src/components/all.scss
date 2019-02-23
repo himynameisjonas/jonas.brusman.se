@@ -124,6 +124,11 @@ body {
       width: 4 / 12 * 100%;
     }
   }
+  @media screen and (min-width: 1700px) {
+    &.is-4 {
+      width: 3 / 12 * 100%;
+    }
+  }
 }
 .tile.is-parent.is-4 {
   &:nth-child(5n + 1) {

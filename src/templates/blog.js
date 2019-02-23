@@ -15,7 +15,7 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <section className="section is-medium">
-          <div className="container is-widescreen">
+          <div className="container is-fluid">
             {tag != null && (
               <h1 className="title is-size-2 is-centered has-text-centered">
                 #{tag}
