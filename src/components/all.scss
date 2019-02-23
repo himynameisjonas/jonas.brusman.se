@@ -6,6 +6,8 @@ $color3: rgba(6, 214, 160, 1);
 $color4: rgba(17, 138, 178, 1);
 $color5: rgba(7, 59, 76, 1);
 
+$coolors: $color4, $color5, $color1, $color3, $color2, $color4, $color3, $color2, $color1;
+
 $primary: $color1;
 $secondary: $color2;
 $link: $color1;
@@ -130,53 +132,17 @@ body {
     }
   }
 }
+
 .tile.is-parent.is-4 {
-  &:nth-child(5n + 1) {
-    a {
-      background-color: $color1;
-      &:hover {
-        h2 {
-          color: $body-color;
-        }
-      }
-    }
-  }
-  &:nth-child(5n + 2) {
-    a {
-      background-color: $color2;
-      &:hover {
-        h2 {
-          color: $body-color;
-        }
-      }
-    }
-  }
-  &:nth-child(5n + 3) {
-    a {
-      background-color: $color3;
-      &:hover {
-        h2 {
-          color: $body-color;
-        }
-      }
-    }
-  }
-  &:nth-child(5n + 4) {
-    a {
-      background-color: $color4;
-      &:hover {
-        h2 {
-          color: $body-color;
-        }
-      }
-    }
-  }
-  &:nth-child(5n + 5) {
-    a {
-      background-color: $color5;
-      &:hover {
-        h2 {
-          color: $body-color;
+  @for $i from 1 through length($coolors) {
+    &:nth-child(#{length($coolors)}n + #{$i}) {
+      a {
+        background-color: nth($coolors, $i);
+
+        &:hover {
+          h2 {
+            color: $body-color;
+          }
         }
       }
     }
