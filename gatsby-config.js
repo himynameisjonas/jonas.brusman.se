@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: "https://jonas.brusman.se",
     title: "Jonas Brusman",
     description:
       "I like to do high fives, take photographs and make cool things with Ruby and JavaScript."
@@ -69,6 +70,63 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`
       }
     },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+        {
+          site {
+            siteMetadata {
+              title
+              description
+              siteUrl
+              site_url: siteUrl
+            }
+          }
+        }
+      `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  date: edge.node.frontmatter.date,
+                  url:
+                    site.siteMetadata.siteUrl +
+                    edge.node.fields.slug.replace("/blog/", "/"),
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }]
+                });
+              });
+            },
+            query: `
+            {
+              allMarkdownRemark(
+                limit: 40,
+                filter: {frontmatter: {templateKey: {eq: "blog-post"}}},
+                sort: {order: DESC, fields: [frontmatter___date]}) {
+                edges {
+                  node {
+                    html
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      date
+                    }
+                  }
+                }
+              }
+            }
+          `,
+            output: "/rss.xml",
+            title: "Gatsby RSS Feed"
+          }
+        ]
+      }
+    },
+
     "gatsby-plugin-purgecss", // must be after other CSS plugins
     "gatsby-plugin-netlify" // make sure to keep it last in the array
   ]

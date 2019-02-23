@@ -29,6 +29,12 @@ const TemplateWrapper = ({ children }) => (
             href="https://fonts.googleapis.com/css?family=Archivo+Black|Tenor+Sans"
             rel="stylesheet"
           />
+          <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="jonas.brusman.se"
+            href="https://jonas.brusman.se/rss.xml"
+          />
         </Helmet>
 
         <section className="hero is-large">
