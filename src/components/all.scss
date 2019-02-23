@@ -14,12 +14,26 @@ $family-secondary: "Tenor Sans", sans-serif;
 $family-primary: "Archivo Black", sans-serif;
 $title-weight: "400";
 $title-strong-weight: "400";
-$body-size: 18px;
+$body-size: 20px;
+
+$size-1: 400%;
+$size-2: 250%;
+$size-3: 200%;
+$size-4: 150%;
+$size-5: 125%;
+$size-6: 100%;
+$size-7: 75% ;
 
 @import "~bulma";
 
+html {
+  font-size: 10px;
+}
+body {
+  font-size: calc(0.9em + 0.9vw);
+}
+
 .title,
-.subtitle,
 .tabs a {
   text-transform: uppercase;
 }
@@ -28,12 +42,16 @@ $body-size: 18px;
   max-height: 80vh;
 }
 
-.tabs a:hover {
-  color: $link;
+.tabs {
+  font-size: $size-5;
+
+  a:hover {
+    color: $link;
+  }
 }
 
 .title {
-  font-size: 3rem;
+  font-size: $size-1;
 
   a {
     color: inherit;
@@ -45,11 +63,15 @@ $body-size: 18px;
 }
 
 .subtitle {
-  font-size: 1.7rem;
+  font-size: $size-4;
   font-family: $family-secondary;
   max-width: 31em;
   margin-left: auto;
   margin-right: auto;
+}
+
+.columns.is-mobile > .column.is-three-fifths {
+  width: 36em;
 }
 
 .blog-post.section.is-medium {
@@ -181,7 +203,7 @@ $body-size: 18px;
     padding: 1.5rem;
     z-index: 3;
     color: white;
-    font-size: 1.5em;
+    font-size: $size-4;
     text-transform: uppercase;
   }
 

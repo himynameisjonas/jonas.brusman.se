@@ -25,10 +25,12 @@ export const BlogPostTemplate = ({
   return (
     <section className={classNames}>
       {helmet || ""}
-      <div className="container is-widescreen">
-        <h1 className="title is-size-2 is-centered has-text-centered">
-          <Link to={slug}>{title}</Link>
-        </h1>
+      <div className="container is-widescreen is-medium">
+        <div className="section is-medium">
+          <h1 className="title is-size-1 is-centered has-text-centered">
+            <Link to={slug}>{title}</Link>
+          </h1>
+        </div>
       </div>
 
       {photos != null && (
@@ -44,7 +46,7 @@ export const BlogPostTemplate = ({
           <div className="column is-three-fifths">
             <PostContent content={content} className="content is-medium" />
           </div>
-          <div className="column is-three-fifths section">
+          <div className="column is-three-fifths section is-medium">
             <div className="has-text-centered">
               <p>{date}</p>
               {tags && tags.length ? (
