@@ -9,7 +9,7 @@
     "gatsby": "^2.0.0",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-feed": "^2.0.13",
-    "gatsby-plugin-netlify": "^2.0.0",
+    "gatsby-plugin-netlify": "^2.0.11",
     "gatsby-plugin-netlify-cache": "^1.0.0",
     "gatsby-plugin-netlify-cms": "^3.0.0",
     "gatsby-plugin-purgecss": "^2.4.0",
