@@ -84,6 +84,10 @@ body {
 .blog-post.section.is-medium {
   padding-left: 0;
   padding-right: 0;
+
+  @include desktop {
+    padding-top: 0;
+  }
 }
 
 .full-size-images-wrapper {
