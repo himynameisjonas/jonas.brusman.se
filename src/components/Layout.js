@@ -36,7 +36,7 @@ const TemplateWrapper = ({ children }) => (
         <section className="hero is-large">
           <div className="hero-body">
             <div className="container has-text-centered">
-              <h1 className="title">
+              <h1 className="title has-text-primary">
                 <Link to="/">Jonas Brusman</Link>
               </h1>
               <h2 className="subtitle">
