@@ -6,6 +6,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import FullSizeImage from "../components/FullSizeImage";
+import { DiscussionEmbed } from "disqus-react";
 
 export const BlogPostTemplate = ({
   content,
@@ -19,9 +20,17 @@ export const BlogPostTemplate = ({
   helmet
 }) => {
   const PostContent = contentComponent || Content;
-  slug = (slug || "").replace("/blog/", "/");
-
   const classNames = `blog-post section is-medium ${postClass}`;
+  slug = (slug || "").replace("/blog/", "/");
+  const disqusShortname = "jonasforsberg";
+  const disqusConfig = {
+    url: `https://jonas.brusman.se${slug}`,
+    identifier: slug
+      .replace(/(\d{4})-(\d{2})-(\d{2})/, "$1-$2-$3")
+      .replace(/\//, ""),
+    title: title
+  };
+
   return (
     <section className={classNames}>
       {helmet || ""}
@@ -62,6 +71,12 @@ export const BlogPostTemplate = ({
                   </div>
                 ) : null}
               </div>
+            </div>
+            <div className="section">
+              <DiscussionEmbed
+                shortname={disqusShortname}
+                config={disqusConfig}
+              />
             </div>
           </div>
         </div>
