@@ -75,8 +75,10 @@ body {
   margin-right: auto;
 }
 
-.columns.is-mobile > .column.is-three-fifths {
-  width: 36em;
+.columns.is-mobile > .column.is-three-fifths-tablet {
+  @include tablet {
+    max-width: 36em;
+  }
 }
 
 .blog-post.section.is-medium {

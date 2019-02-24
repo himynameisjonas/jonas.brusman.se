@@ -43,21 +43,25 @@ export const BlogPostTemplate = ({
 
       <div className="container is-widescreen">
         <div className="columns is-mobile is-multiline is-centered">
-          <div className="column is-three-fifths">
-            <PostContent content={content} className="content is-medium" />
+          <div className="column is-three-fifths-tablet is-full-mobile">
+            <div className="section">
+              <PostContent content={content} className="content is-medium" />
+            </div>
           </div>
-          <div className="column is-three-fifths section is-medium">
-            <div className="has-text-centered">
-              <p>{date}</p>
-              {tags && tags.length ? (
-                <div className="tags">
-                  {tags.map(tag => (
-                    <span className="tag is-light" key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>#{tag}</Link>
-                    </span>
-                  ))}
-                </div>
-              ) : null}
+          <div className="column is-three-fifths-tablet is-full-mobile is-medium">
+            <div className="section">
+              <div className="has-text-centered">
+                <p>{date}</p>
+                {tags && tags.length ? (
+                  <div className="tags">
+                    {tags.map(tag => (
+                      <span className="tag is-light" key={tag + `tag`}>
+                        <Link to={`/tags/${kebabCase(tag)}/`}>#{tag}</Link>
+                      </span>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
             </div>
           </div>
         </div>
