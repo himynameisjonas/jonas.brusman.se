@@ -1,5 +1,5 @@
-@import '~bulma/sass/utilities/initial-variables';
-@import url('https://rsms.me/inter/inter.css');
+@import "~bulma/sass/utilities/initial-variables";
+@import url("https://rsms.me/inter/inter.css");
 
 $color1: rgba(239, 71, 111, 1);
 $color2: rgba(255, 209, 102, 1);
@@ -14,8 +14,8 @@ $primary: $color1;
 $secondary: $color2;
 $link: $color1;
 $body-color: #333;
-$family-secondary: 'Inter', sans-serif;
-$family-primary: 'Inter', sans-serif;
+$family-secondary: "Inter", sans-serif;
+$family-primary: "Inter", sans-serif;
 $title-weight: 900;
 $title-strong-weight: 900;
 $body-size: 20px;
@@ -28,7 +28,7 @@ $size-5: 125%;
 $size-6: 100%;
 $size-7: 75%;
 
-@import '~bulma';
+@import "~bulma";
 
 html {
   font-size: 10px;
@@ -77,7 +77,7 @@ body {
 
 .columns.is-mobile > .column.is-three-fifths-tablet {
   @include tablet {
-    max-width: 36em;
+    width: 37em;
   }
 }
 
@@ -198,7 +198,7 @@ body {
   }
 
   &:after {
-    content: '';
+    content: "";
     position: relative;
     background: $tabs-link-color;
     padding-bottom: 66%;
