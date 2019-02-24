@@ -2,3 +2,4 @@
 /photographs /
 /code /tags/programming/
 /page* /
+/tag/:tag /tags/:tag
