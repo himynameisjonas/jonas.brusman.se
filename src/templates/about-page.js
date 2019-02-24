@@ -14,8 +14,10 @@ export const AboutPageTemplate = ({ content, contentComponent }) => {
       <section className="blog-post section is-medium">
         <div className="container is-widescreen">
           <div className="columns is-mobile is-multiline is-centered">
-            <div className="column is-three-fifths">
-              <PageContent content={content} className="content is-medium" />
+            <div className="column is-three-fifths-tablet is-full-mobile">
+              <section>
+                <PageContent content={content} className="content is-medium" />
+              </section>
             </div>
           </div>
         </div>
