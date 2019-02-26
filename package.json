@@ -6,6 +6,7 @@
   "dependencies": {
     "bulma": "^0.7.0",
     "disqus-react": "^1.0.5",
+    "fontfaceobserver": "^2.1.0",
     "gatsby": "^2.0.0",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-feed": "^2.0.13",
@@ -33,6 +34,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.8.3",
     "react-helmet": "^5.2.0",
+    "react-textfit": "^1.1.0",
     "uuid": "^3.2.1"
   },
   "keywords": [

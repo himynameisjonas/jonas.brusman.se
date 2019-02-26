@@ -3,8 +3,16 @@ import PropTypes from "prop-types";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Img from "gatsby-image";
+import { Textfit } from "react-textfit";
+import FontFaceObserver from "fontfaceobserver";
 
 export default class IndexPage extends React.Component {
+  componentDidMount() {
+    let font = new FontFaceObserver("Inter");
+    font.load().then(function() {
+      window.dispatchEvent(new Event("resize"));
+    });
+  }
   render() {
     const {
       data,
@@ -35,8 +43,16 @@ export default class IndexPage extends React.Component {
                             }
                           />
                         )}
-                      <h2 className="title is-size-3">
-                        {post.frontmatter.title}
+                      <h2>
+                        <Textfit
+                          mode={
+                            post.frontmatter.title.length > 12
+                              ? "multi"
+                              : "single"
+                          }
+                        >
+                          {post.frontmatter.title}
+                        </Textfit>
                       </h2>
                     </Link>
                   </div>
