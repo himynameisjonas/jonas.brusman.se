@@ -45,6 +45,7 @@ export default class IndexPage extends React.Component {
                         )}
                       <h2>
                         <Textfit
+                          max={300}
                           mode={
                             post.frontmatter.title.length > 12
                               ? "multi"
