@@ -1,68 +1,68 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://jonas.brusman.se",
-    title: "Jonas Brusman",
+    siteUrl: 'https://jonas.brusman.se',
+    title: 'Jonas Brusman',
     description:
-      "I like to do high fives, take photographs and make cool things with Ruby and JavaScript."
+      'I like to do high fives, take photographs and make cool things with Ruby and JavaScript.',
   },
   plugins: [
-    "gatsby-plugin-netlify-cache",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sass",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    'gatsby-plugin-netlify-cache',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/static/img`,
-        name: "uploads"
-      }
+        name: 'uploads',
+      },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
-        name: "pages"
-      }
+        name: 'pages',
+      },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/img`,
-        name: "images"
-      }
+        name: 'images',
+      },
     },
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-relative-images",
+            resolve: 'gatsby-remark-relative-images',
             options: {
-              name: "uploads"
-            }
+              name: 'uploads',
+            },
           },
           {
-            resolve: "gatsby-remark-images",
+            resolve: 'gatsby-remark-images',
             options: {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 2048
-            }
+              maxWidth: 2048,
+            },
           },
           {
-            resolve: "gatsby-remark-copy-linked-files",
+            resolve: 'gatsby-remark-copy-linked-files',
             options: {
-              destinationDir: "static"
-            }
+              destinationDir: 'static',
+            },
           },
           {
-            resolve: `gatsby-remark-prismjs`
-          }
-        ]
-      }
+            resolve: `gatsby-remark-prismjs`,
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-feed`,
@@ -87,11 +87,11 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url:
                     site.siteMetadata.siteUrl +
-                    edge.node.fields.slug.replace("/blog/", "/"),
+                    edge.node.fields.slug.replace('/blog/', '/'),
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }]
-                });
-              });
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                })
+              })
             },
             query: `
             {
@@ -114,14 +114,14 @@ module.exports = {
               }
             }
           `,
-            output: "/rss.xml",
-            title: "Gatsby RSS Feed"
-          }
-        ]
-      }
+            output: '/rss.xml',
+            title: 'Gatsby RSS Feed',
+          },
+        ],
+      },
     },
 
-    "gatsby-plugin-purgecss", // must be after other CSS plugins
-    "gatsby-plugin-netlify" // make sure to keep it last in the array
-  ]
-};
+    'gatsby-plugin-purgecss', // must be after other CSS plugins
+    'gatsby-plugin-netlify', // make sure to keep it last in the array
+  ],
+}
