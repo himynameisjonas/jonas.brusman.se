@@ -8,6 +8,7 @@ tags:
   - summer
   - square
   - linköping
+  - fields
 ---
 
 Spent the weekend in Linköping. PS. it’s only 5 days left until me and Eva are moving to our new apartment!
