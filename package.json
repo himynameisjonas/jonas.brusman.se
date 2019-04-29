@@ -53,7 +53,7 @@
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
-    "gatsby-plugin-eslint": "^2.0.1",
+    "gatsby-plugin-eslint": "^2.0.5",
     "prettier": "^1.18.2",
     "rimraf": "^2.6.3"
   },
