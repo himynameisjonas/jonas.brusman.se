@@ -25,4 +25,4 @@ I've have switch to a [more competent solution for my continuous deployment to H
 
 ### Update _2015-02-01_
 
-Heroku has released [their own Github integration](/2015/01/06/heroku-github-integration).
+Heroku has released [their own Github integration](/2015-01-06-heroku-github-integration).

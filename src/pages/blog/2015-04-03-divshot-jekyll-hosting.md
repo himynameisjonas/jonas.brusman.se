@@ -35,7 +35,7 @@ deployment:
 
 It will deploy the _master branch to the production_ environment and _all other branches to the staging_ environment. All automatically when pushing to Github.
 
-[heroku-post]: /2012/07/22/jekyll-heroku-unicorn/
+[heroku-post]: /2012-07-22-jekyll-heroku-unicorn/
 [divshot]: https://divshot.com
 [pricing]: https://divshot.com/pricing
 [docs]: http://docs.divshot.com/integrations/jekyll
