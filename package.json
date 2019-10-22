@@ -22,7 +22,7 @@
     "gatsby-source-filesystem": "^2.0.28",
     "gatsby-transformer-remark": "^2.3.8",
     "gatsby-transformer-sharp": "^2.1.14",
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.13",
     "lodash-webpack-plugin": "^0.11.4",
     "node-sass": "^4.11.0",
     "parcel-bundler": "^1.11.0",
