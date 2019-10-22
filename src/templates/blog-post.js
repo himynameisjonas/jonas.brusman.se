@@ -7,6 +7,7 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import FullSizeImage from '../components/FullSizeImage'
 import { DiscussionEmbed } from 'disqus-react'
+import { Textfit } from 'react-textfit'
 
 export const BlogPostTemplate = ({
   content,
@@ -37,7 +38,11 @@ export const BlogPostTemplate = ({
       <div className="container is-widescreen is-medium">
         <div className="section is-medium">
           <h1 className="title is-size-1 is-centered has-text-centered">
-            <Link to={slug}>{title}</Link>
+            <Link to={slug}>
+              <Textfit max={100} mode={title.length > 12 ? 'multi' : 'single'}>
+                {title}
+              </Textfit>
+            </Link>
           </h1>
         </div>
       </div>
