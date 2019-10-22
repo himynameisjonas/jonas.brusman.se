@@ -1,24 +1,24 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
-import Img from 'gatsby-image'
-import { Textfit } from 'react-textfit'
-import FontFaceObserver from 'fontfaceobserver'
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql, Link } from "gatsby";
+import Layout from "../components/Layout";
+import Img from "gatsby-image";
+import { Textfit } from "react-textfit";
+import FontFaceObserver from "fontfaceobserver";
 
 export default class IndexPage extends React.Component {
   componentDidMount() {
-    let font = new FontFaceObserver('Inter')
+    let font = new FontFaceObserver("Inter");
     font.load().then(function() {
-      window.dispatchEvent(new Event('resize'))
-    })
+      window.dispatchEvent(new Event("resize"));
+    });
   }
   render() {
     const {
       data,
-      pageContext: { tag },
-    } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+      pageContext: { tag }
+    } = this.props;
+    const { edges: posts } = data.allMarkdownRemark;
 
     return (
       <Layout>
@@ -33,7 +33,7 @@ export default class IndexPage extends React.Component {
               {posts.map(({ node: post }, index) => (
                 <div className="tile is-parent is-4" key={index}>
                   <div className="tile is-child blog-post-tile">
-                    <Link to={post.fields.slug.replace('/blog/', '/')}>
+                    <Link to={post.fields.slug.replace("/blog/", "/")}>
                       {post.frontmatter.photos != null &&
                         post.frontmatter.photos[0] != null && (
                           <Img
@@ -48,8 +48,8 @@ export default class IndexPage extends React.Component {
                           max={300}
                           mode={
                             post.frontmatter.title.length > 12
-                              ? 'multi'
-                              : 'single'
+                              ? "multi"
+                              : "single"
                           }
                         >
                           {post.frontmatter.title}
@@ -63,17 +63,17 @@ export default class IndexPage extends React.Component {
           </div>
         </section>
       </Layout>
-    )
+    );
   }
 }
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-}
+      edges: PropTypes.array
+    })
+  })
+};
 
 export const pageQuery = graphql`
   query IndexQuery($tag: String) {
@@ -106,4 +106,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

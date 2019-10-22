@@ -1,13 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
-import FullSizeImage from '../components/FullSizeImage'
-import { DiscussionEmbed } from 'disqus-react'
-import { Textfit } from 'react-textfit'
+import React from "react";
+import PropTypes from "prop-types";
+import { kebabCase } from "lodash";
+import Helmet from "react-helmet";
+import { graphql, Link } from "gatsby";
+import Layout from "../components/Layout";
+import Content, { HTMLContent } from "../components/Content";
+import FullSizeImage from "../components/FullSizeImage";
+import { DiscussionEmbed } from "disqus-react";
+import { Textfit } from "react-textfit";
 
 export const BlogPostTemplate = ({
   content,
@@ -18,28 +18,28 @@ export const BlogPostTemplate = ({
   title,
   slug,
   postClass,
-  helmet,
+  helmet
 }) => {
-  const PostContent = contentComponent || Content
-  const classNames = `blog-post section is-medium ${postClass}`
-  slug = (slug || '').replace('/blog/', '/')
-  const disqusShortname = 'jonasforsberg'
+  const PostContent = contentComponent || Content;
+  const classNames = `blog-post section is-medium ${postClass}`;
+  slug = (slug || "").replace("/blog/", "/");
+  const disqusShortname = "jonasforsberg";
   const disqusConfig = {
     url: `https://jonas.brusman.se${slug}`,
     identifier: slug
-      .replace(/(\d{4})-(\d{2})-(\d{2})/, '$1-$2-$3')
-      .replace(/\//, ''),
-    title: title,
-  }
+      .replace(/(\d{4})-(\d{2})-(\d{2})/, "$1-$2-$3")
+      .replace(/\//, ""),
+    title: title
+  };
 
   return (
     <section className={classNames}>
-      {helmet || ''}
+      {helmet || ""}
       <div className="container is-widescreen is-medium">
         <div className="section is-medium">
           <h1 className="title is-size-1 is-centered has-text-centered">
             <Link to={slug}>
-              <Textfit max={100} mode={title.length > 12 ? 'multi' : 'single'}>
+              <Textfit max={100} mode={title.length > 12 ? "multi" : "single"}>
                 {title}
               </Textfit>
             </Link>
@@ -87,19 +87,19 @@ export const BlogPostTemplate = ({
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   title: PropTypes.string,
   helmet: PropTypes.object,
-  photos: PropTypes.array,
-}
+  photos: PropTypes.array
+};
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
 
   return (
     <Layout>
@@ -119,16 +119,16 @@ const BlogPost = ({ data }) => {
         slug={post.fields.slug}
       />
     </Layout>
-  )
-}
+  );
+};
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
-}
+    markdownRemark: PropTypes.object
+  })
+};
 
-export default BlogPost
+export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
@@ -153,4 +153,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
