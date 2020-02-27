@@ -8,11 +8,11 @@ I'm a developer from Sweden who likes photagraphy, so this is a place where I po
 
 You can find me elsewhere on the internet and other social medias:
 
-- [Instagram](https://www.instagram.com/himynameisjonas/)
-- [Github](https://github.com/himynameisjonas)
-- [Foursquare](https://foursquare.com/himynameisjonas)
-- [LinkedIn](https://www.linkedin.com/in/himynameisjonas)
-- [Last.fm](https://last.fm/user/himynameisjonas)
-- [Twitter](https://twitter.com/himynameisjonas)
+- <a href="https://www.instagram.com/himynameisjonas/" rel="me">Instagram</a>
+- <a href="https://github.com/himynameisjonas" rel="me">Github</a>
+- <a href="https://foursquare.com/himynameisjonas" rel="me">Foursquare</a>
+- <a href="https://www.linkedin.com/in/himynameisjonas" rel="me">LinkedIn</a>
+- <a href="https://last.fm/user/himynameisjonas" rel="me">Last.fm</a>
+- <a href="https://twitter.com/himynameisjonas" rel="me">Twitter</a>
 
 xoxo
