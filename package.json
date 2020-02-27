@@ -57,7 +57,7 @@
     "prettier": "^1.18.2",
     "rimraf": "^2.6.3"
   },
-  "toolchain": {
+  "volta": {
     "node": "10.15.1",
     "yarn": "1.13.0"
   }
