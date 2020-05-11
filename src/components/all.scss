@@ -7,8 +7,8 @@ $color3: rgba(6, 214, 160, 1);
 $color4: rgba(17, 138, 178, 1);
 $color5: rgba(7, 59, 76, 1);
 
-$coolors: $color4, $color5, $color1, $color3, $color2, $color4, $color3, $color2,
-  $color1;
+$coolors: $color2, $color4, $color5, $color1, $color3, $color4, $color3, $color1,
+  $color2;
 
 $primary: $color1;
 $secondary: $color2;
@@ -182,7 +182,7 @@ body {
     display: block;
     height: 100%;
     width: 100%;
-    padding: 1.5rem 1.5rem ;
+    padding: 1.5rem 1.5rem;
     z-index: 3;
     color: white;
     font-weight: 900;
