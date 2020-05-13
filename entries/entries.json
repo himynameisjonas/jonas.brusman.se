@@ -1,5 +1,5 @@
 {
   "layout": "entry.liquid",
   "tags": ["entries"],
-  "permalink": "{{ date | date: '%Y-%m-%d' }}/{{ page.fileSlug }}/index.html"
+  "permalink": "{{ date | date: '%Y-%m-%d' }}-{{ page.fileSlug }}/index.html"
 }
