@@ -3,9 +3,9 @@ templateKey: blog-post
 date: 2012-04-13
 title: A night out
 photos:
-  - /images/6167152072.jpg
-  - /images/6167152448.jpg
-  - /images/6167153574.jpg
+  - images/6167152072.jpg
+  - images/6167152448.jpg
+  - images/6167153574.jpg
 tags:
   - summer
   - david

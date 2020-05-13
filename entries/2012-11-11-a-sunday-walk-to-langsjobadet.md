@@ -3,7 +3,7 @@ templateKey: blog-post
 date: 2012-11-11
 title: "A sunday walk to Långsjöbadet"
 photos:
-  - /images/8175492824.jpg
+  - images/8175492824.jpg
 tags:
   - älvsjö
   - lake

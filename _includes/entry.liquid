@@ -1,0 +1,12 @@
+---
+layout: layout.liquid
+---
+<h1>
+  {{title}}
+</h1>
+
+{% for image in photos %}
+  {% responsiveImage image title %}
+{% endfor %}
+
+{{content}}

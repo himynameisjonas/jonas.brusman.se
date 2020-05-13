@@ -10,6 +10,7 @@
     "yarn": "1.22.4"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0"
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-img": "^0.2.4"
   }
 }
