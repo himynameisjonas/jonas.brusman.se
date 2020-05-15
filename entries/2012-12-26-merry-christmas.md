@@ -3,7 +3,7 @@ templateKey: blog-post
 date: 2012-12-26
 title: "Merry Christmas"
 photos:
-  - images/8306372905.jpg
+  - /images/8306372905.jpg
 tags:
   - snow
   - fire

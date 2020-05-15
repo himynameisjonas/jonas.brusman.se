@@ -3,7 +3,7 @@ templateKey: blog-post
 date: 2012-02-25
 title: Gubbängen
 photos:
-  - images/4351905289.jpg
+  - /images/4351905289.jpg
 tags:
   - white
   - snow

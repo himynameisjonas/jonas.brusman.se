@@ -3,7 +3,7 @@ templateKey: blog-post
 date: 2012-01-17
 title: Adventure Golf
 photos:
-  - images/6166618431.jpg
+  - /images/6166618431.jpg
 tags:
   - summer
   - adventure golf

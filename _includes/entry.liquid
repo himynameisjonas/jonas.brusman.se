@@ -6,7 +6,7 @@ layout: layout.liquid
 </h1>
 
 {% for image in photos %}
-  {% responsiveImage image title %}
+  <img src="{{ image }}" alt="">
 {% endfor %}
 
 {{content}}

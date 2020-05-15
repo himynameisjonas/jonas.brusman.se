@@ -3,10 +3,10 @@ templateKey: blog-post
 date: 2018-05-13
 title: Artipelag
 photos:
-  - images/41357936864.jpg
-  - images/41357936954.jpg
-  - images/41357937044.jpg
-  - images/28204793478.jpg
+  - /images/41357936864.jpg
+  - /images/41357936954.jpg
+  - /images/41357937044.jpg
+  - /images/28204793478.jpg
 tags:
   - arvid
   - eva

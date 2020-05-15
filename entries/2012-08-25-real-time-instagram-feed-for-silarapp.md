@@ -3,7 +3,7 @@ templateKey: blog-post
 date: 2012-08-25
 title: "Real-time Instagram feed for SilarApp"
 photos:
-  - images/7856126566.jpg
+  - /images/7856126566.jpg
 tags:
   - programming
   - silarapp.com

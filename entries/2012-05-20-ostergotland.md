@@ -3,7 +3,7 @@ templateKey: blog-post
 date: 2012-05-20
 title: Östergötland
 photos:
-  - images/7243638110.jpg
+  - /images/7243638110.jpg
 tags:
   - summer
   - square
