@@ -6,7 +6,7 @@ layout: layout.liquid
 </h1>
 
 {% for image in photos %}
-  <img src="{{ image }}" alt="">
+  {% imagekit image %}
 {% endfor %}
 
 {{content}}

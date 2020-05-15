@@ -5,12 +5,20 @@
     <title>My Blog</title>
   </head>
   <style>
-@import url('https://rsms.me/inter/inter.css');
-html { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
-}
+    @import url('https://rsms.me/inter/inter.css');
+    html { font-family: 'Inter', sans-serif; }
+    @supports (font-variation-settings: normal) {
+      html { font-family: 'Inter var', sans-serif; }
+    }
 
+    picture {
+      max-height: 95vh;
+      max-width: 150vh;
+    }
+
+    img {
+      max-width: 100%;
+    }
   </style>
   <body>
     {{ content }}
