@@ -4,13 +4,10 @@
     <meta charset="utf-8">
     <title>My Blog</title>
   </head>
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="/css/styles.css">
+{% comment %}
   <style>
-    @import url('https://rsms.me/inter/inter.css');
-    html { font-family: 'Inter', sans-serif; }
-    @supports (font-variation-settings: normal) {
-      html { font-family: 'Inter var', sans-serif; }
-    }
-
     picture {
       max-height: 95vh;
       max-width: 150vh;
@@ -19,7 +16,7 @@
     img {
       max-width: 100%;
     }
-  </style>
+  </style> {% endcomment %}
   <body>
     {{ content }}
   </body>

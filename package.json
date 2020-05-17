@@ -6,13 +6,26 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "eleventy --serve"
+    "build": "yarn npm-run-all build:css build:html",
+    "build:css": "postcss src/site/_includes/css/tailwind.css -o src/site/css/styles.css",
+    "build:html": "eleventy",
+    "watch": "yarn npm-run-all --parallel watch:css watch:html",
+    "watch:css": "postcss src/site/_includes/css/tailwind.css -o src/site/css/styles.css --watch",
+    "watch:html": "eleventy --serve",
+    "start": "yarn watch"
   },
   "volta": {
     "node": "12.16.3",
     "yarn": "1.22.4"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0"
+    "@11ty/eleventy": "^0.11.0",
+    "autoprefixer": "^9.7.6",
+    "html-minifier": "^4.0.0",
+    "imagekit": "^3.0.5",
+    "postcss-cli": "^7.1.1",
+    "postcss-import": "^12.0.1",
+    "tailwindcss": "^1.4.6",
+    "yarn-run-all": "^3.1.1"
   }
 }

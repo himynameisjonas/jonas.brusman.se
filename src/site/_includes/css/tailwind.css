@@ -1,0 +1,13 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.ar-3x2 {
+  height: 0;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 66.66666666666667%;
+}
