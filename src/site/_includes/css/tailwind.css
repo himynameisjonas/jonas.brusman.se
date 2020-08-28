@@ -18,10 +18,10 @@
 }
 
 .markdown {
-  @apply text-gray-900 leading-normal break-words;
+  @apply text-gray-900 leading-normal break-words text-lg;
 }
 
-.markdown > * + * {
+.markdown > * + *, .markdown > p {
   @apply mt-0 mb-4;
 }
 
@@ -46,19 +46,19 @@
 }
 
 .markdown h1 {
-  @apply leading-tight border-b text-4xl font-semibold mb-4 mt-6 pb-2;
+  @apply leading-tight border-b text-5xl font-semibold mb-4 mt-6 pb-2;
 }
 
 .markdown h2 {
-  @apply leading-tight border-b text-2xl font-semibold mb-4 mt-6 pb-2;
+  @apply leading-tight border-b text-3xl font-semibold mb-4 mt-6 pb-2;
 }
 
 .markdown h3 {
-  @apply leading-snug text-lg font-semibold mb-4 mt-6;
+  @apply leading-snug text-2xl font-semibold mb-4 mt-6;
 }
 
 .markdown h4 {
-  @apply leading-none text-base font-semibold mb-4 mt-6;
+  @apply leading-none text-lg font-semibold mb-4 mt-6;
 }
 
 .markdown h5 {
