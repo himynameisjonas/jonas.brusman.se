@@ -27,7 +27,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("responsive_image", function (imagePath) {
     const widths = [500, 1000, 2000, 3000, 4000];
 
-    return `<picture class="mb-4"><img
+    return `<picture class="m-2"><img
+    class="max-h-screen"
     alt=""
     src="${imageUrl(imagePath, { width: widths[0] })}"
     sizes="(max-width: 1000px) 99vw, 150vh"

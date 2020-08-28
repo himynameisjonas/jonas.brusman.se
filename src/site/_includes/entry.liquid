@@ -5,9 +5,11 @@ layout: layout.liquid
   {{title}}
 </h1>
 
+<div class="flex flex-wrap justify-center -mx-2">
 {% for image in photos %}
   {% responsive_image image %}
 {% endfor %}
+</div>
 
 <div class="markdown max-w-xl self-center">
   {{content}}
