@@ -1,30 +1,27 @@
-var ImageKit = require("imagekit");
-
-var imagekit = new ImageKit({
-  urlEndpoint: "https://ik.imagekit.io/ajpslbffpp/",
-  publicKey: "public_rxF82vxrVjynTcVH8mQ4AdnILV0=",
-  privateKey: "public_rxF82vxrVjynTcVH8mQ4AdnILV0=",
-});
-
-const imagekitUrl = function (path, transformation = []) {
-  return imagekit.url({
-    path,
-    transformation,
-  });
+const imageUrl = function (path, {width, height, resize}) {
+  params = [`nf_resize=${resize || 'fit'}`]
+  if (width) {
+    params.push(`w=${width}`)
+  }
+  if (height) {
+    params.push(`h=${height}`)
+  }
+  return `${path}?${params.join('&')}`
 };
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
-  eleventyConfig.addPassthroughCopy("images");
+  eleventyConfig.addPassthroughCopy("./src/site/images");
   eleventyConfig.addPassthroughCopy("./src/site/css");
 
   eleventyConfig.addShortcode("image_url", function (imagePath) {
-    return imagekitUrl(imagePath, [
+    return imageUrl(imagePath,
       {
-        aspectRatio: "3-2",
+        resize: "smartcrop",
         width: 500,
+        height: 333
       },
-    ]);
+    );
   });
 
   eleventyConfig.addShortcode("responsive_image", function (imagePath) {
@@ -32,14 +29,14 @@ module.exports = function (eleventyConfig) {
 
     return `<picture><img
     alt=""
-    src="${imagekitUrl(imagePath, [{ width: widths[0], crop: "at-max" }])}"
+    src="${imageUrl(imagePath, { width: widths[0] })}"
     sizes="(max-width: 1000px) 99vw, 150vh"
     srcset="${widths
       .map(
         (width) =>
-          `${imagekitUrl(imagePath, [
-            { width: width, crop: "at-max" },
-          ])} ${width}w`
+          `${imageUrl(imagePath,
+            { width },
+          )} ${width}w`
       )
       .join(", ")}"
     /></picture>`;
