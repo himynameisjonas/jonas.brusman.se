@@ -4,6 +4,14 @@
 
 @tailwind utilities;
 
+.link {
+  @apply text-cabaret-500 underline
+}
+
+.link:hover {
+  @apply no-underline
+}
+
 .ar-3x2 {
   height: 0;
   width: 100%;
@@ -38,7 +46,7 @@
 }
 
 .markdown a {
-  @apply text-cabaret-500 underline;
+  @apply link;
 }
 
 .markdown a:hover {
