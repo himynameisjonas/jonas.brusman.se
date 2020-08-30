@@ -1,7 +1,8 @@
 ---
 layout: layout.liquid
 ---
-<h1 class="font-black leading-none max-w-xl mb-4 md:text-5xl self-center text-3xl text-gray-700">
+<article class="h-entry flex flex-col">
+<h1 class="font-black leading-none max-w-xl mb-4 md:text-5xl self-center text-3xl text-gray-700 p-name">
   {{title}}
 </h1>
 
@@ -13,15 +14,18 @@ layout: layout.liquid
   </div>
 {% endif %}
 
-<div class="markdown max-w-2xl self-center">
+<div class="markdown max-w-2xl self-center e-content">
   {{content}}
 </div>
 
 <div class="border-t-2 max-w-2xl mb-2 mt-2 pt-2 self-center text-gray-500 w-full">
-  {{date | date: "%Y-%m-%d"}}
+  <time class="dt-published" datetime="{{date | date: "%Y-%m-%d" }}">
+    <a href="{{post.url}}" class="u-url">{{date | date: "%Y-%m-%d"}}</a>
+  </time>
   {% for tag in tags %}
     {% unless tag == "entries" %}
-      <a href="/tags/{{tag}}" class="prefix-hash link">{{tag}}</a>
+      <a href="/tags/{{tag}}" class="prefix-hash link p-category">{{tag}}</a>
     {% endunless %}
   {% endfor %}
 </div>
+</article>
