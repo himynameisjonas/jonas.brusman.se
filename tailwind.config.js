@@ -1,7 +1,10 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  purge: ["./src/**/*.md", "./src/**/*.liquid", "./src/**/*.html"],
+  purge: {
+    enabled: process.env.NETLIFY,
+    content: ["./src/**/*.md", "./src/**/*.liquid", "./src/**/*.html"],
+  },
   theme: {
     extend: {
       colors: {
