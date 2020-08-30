@@ -1,16 +1,18 @@
 ---
 layout: layout.liquid
 ---
-<h1 class="text-3xl md:text-5xl font-black leading-none mb-4 max-w-xl w-full self-center">
+<h1 class="font-black leading-none max-w-xl mb-4 md:text-5xl self-center text-3xl text-gray-700 w-full">
   {{title}}
 </h1>
 
-<div class="flex flex-wrap justify-center -mx-2 mb-8">
-{% for image in photos %}
-  {% responsive_image image %}
-{% endfor %}
-</div>
+{% if photos %}
+  <div class="flex flex-wrap justify-center -mx-2 mb-8">
+  {% for image in photos %}
+    {% responsive_image image %}
+  {% endfor %}
+  </div>
+{% endif %}
 
-<div class="markdown max-w-xl self-center">
+<div class="markdown max-w-2xl self-center">
   {{content}}
 </div>
