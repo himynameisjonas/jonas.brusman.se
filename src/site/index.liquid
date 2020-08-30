@@ -14,10 +14,10 @@ pageTitle: Welcome to my blog
     <div class="ar-3x2">
       <a
       href="{{ post.url }}"
-        class="absolute bg-cover bg-red-700 h-full left-0 top-0 w-full rounded"
+        class="absolute bg-cover bg-cabaret-500 h-full left-0 top-0 w-full rounded"
         style="background-image: url({% image_url photo %})"
       >
-        <div class="text-white px-4 inset-0 absolute bg-gray-700 flex flex-col justify-center text-center bg-opacity-25">
+        <div class="text-white px-4 inset-0 absolute flex flex-col justify-center text-center rounded {% if photo %}bg-gray-700 bg-opacity-25{% endif %}">
           <h2 class="text-3xl md:text-5xl font-black leading-none">
             {{ post.data.title }}
           </h2>

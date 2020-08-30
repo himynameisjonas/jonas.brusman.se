@@ -38,7 +38,11 @@
 }
 
 .markdown a {
-  @apply text-blue-600 font-semibold;
+  @apply text-cabaret-500 underline;
+}
+
+.markdown a:hover {
+  @apply no-underline;
 }
 
 .markdown strong a {

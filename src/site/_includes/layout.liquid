@@ -7,12 +7,20 @@
   </head>
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <link rel="stylesheet" href="/css/styles.css">
-  <body class="bg-red-200">
+  <body class="flex flex-col">
 
-    <div class="text-center text-6xl font-black underline leading-tight">
-      <a href="/">Jonas Brusman</a>
+    <div class="mt-4 mx-4 mb-10 self-center max-w-xl">
+      <a href="/" class="block font-bold uppercase leading-tight text-6xl text-cabaret-500">Jonas Brusman</a>
+      <span>
+        Hi, I like to do high fives, take photographs and make cool things with Ruby and JavaScript.
+        You can also find me at
+        <a href="https://www.instagram.com/himynameisjonas/" rel="me" class="text-gray-600">Instagram</a>,
+        <a href="https://github.com/himynameisjonas" rel="me" class="text-gray-600">Github</a>
+        and
+        <a href="https://www.linkedin.com/in/himynameisjonas" rel="me" class="text-gray-600">LinkedIn</a>.
+      </span>
     </div>
-    <div class="bg-white flex flex-col my-4 mx-0 md:mx-4 p-4 rounded">
+    <div class="flex flex-col p-4">
       {{ content }}
     </div>
   </body>
