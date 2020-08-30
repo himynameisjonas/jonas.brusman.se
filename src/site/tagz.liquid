@@ -1,0 +1,22 @@
+---
+layout: layout.liquid
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+  - entries
+  - all
+permalink: /tags/{{ tag }}/
+eleventyExcludeFromCollections: true
+---
+<h1 class="font-black leading-none max-w-xl mb-4 md:text-5xl self-center text-3xl text-gray-700">
+  <span class="prefix-hash">{{ tag }}</span>
+</h1>
+
+<div class="flex flex-wrap">
+  {% assign tagged_posts = collections[tag] %}
+  {% for post in tagged_posts %}
+    {% include list_entry %}
+  {% endfor %}
+</div>

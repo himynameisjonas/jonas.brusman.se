@@ -5,31 +5,6 @@ pageTitle: Welcome to my blog
 
 <div class="flex flex-wrap">
   {% for post in collections.entries reversed %}
-    {% if post.data.photos.size > 0 %}
-      {% assign photo = post.data.photos | first %}
-    {% else %}
-      {% assign photo = false %}
-    {% endif %}
-  <div class="flex-auto m-3 w-full md:w-2/5 lg:w-2/5 xl:w-3/12 shadow-lg">
-    <div class="ar-3x2">
-      <a
-      href="{{ post.url }}"
-        class="absolute bg-cover bg-cabaret-500 h-full left-0 top-0 w-full rounded"
-        style="background-image: url({% image_url photo %})"
-      >
-        <div class="text-gray-100 px-4 inset-0 absolute flex flex-col justify-center text-center rounded {% if photo %}bg-gray-700 bg-opacity-25{% endif %}">
-          <h2 class="text-3xl md:text-5xl font-black leading-none">
-            {{ post.data.title }}
-          </h2>
-          <time
-            datetime="{{ post.date | date: "%Y-%m-%d" }}"
-            class="font-bold"
-          >
-            {{ post.date | date: "%Y-%m-%d" }}
-          </time>
-        </div>
-      </a>
-    </div>
-  </div>
+    {% include list_entry %}
   {% endfor %}
 </div>

@@ -1,7 +1,7 @@
 ---
 layout: layout.liquid
 ---
-<h1 class="font-black leading-none max-w-xl mb-4 md:text-5xl self-center text-3xl text-gray-700 w-full">
+<h1 class="font-black leading-none max-w-xl mb-4 md:text-5xl self-center text-3xl text-gray-700">
   {{title}}
 </h1>
 
@@ -15,4 +15,13 @@ layout: layout.liquid
 
 <div class="markdown max-w-2xl self-center">
   {{content}}
+</div>
+
+<div class="border-t-2 max-w-2xl mb-2 mt-2 pt-2 self-center text-gray-500 w-full">
+  {{date | date: "%Y-%m-%d"}}
+  {% for tag in tags %}
+    {% unless tag == "entries" %}
+      <a href="/tags/{{tag}}" class="prefix-hash link">{{tag}}</a>
+    {% endunless %}
+  {% endfor %}
 </div>

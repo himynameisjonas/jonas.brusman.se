@@ -12,6 +12,11 @@
   @apply no-underline
 }
 
+.prefix-hash:before {
+  content: "#";
+  display: inline;
+}
+
 .ar-3x2 {
   height: 0;
   width: 100%;
