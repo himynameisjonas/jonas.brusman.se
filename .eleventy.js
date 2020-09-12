@@ -1,3 +1,5 @@
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+
 const imageUrl = function (path, {width, height, resize}) {
   params = [`nf_resize=${resize || 'fit'}`]
   if (width) {
@@ -11,6 +13,7 @@ const imageUrl = function (path, {width, height, resize}) {
 };
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.addPassthroughCopy("./src/site/images");
   eleventyConfig.addPassthroughCopy("./src/site/css");
