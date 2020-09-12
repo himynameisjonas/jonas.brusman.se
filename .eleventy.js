@@ -6,7 +6,8 @@ const imageUrl = function (path, {width, height, resize}) {
   if (height) {
     params.push(`h=${height}`)
   }
-  return `${path}?${params.join('&')}`
+
+  return `${process.env.IMAGE_HOST || ""}${path}?${params.join('&')}`
 };
 
 module.exports = function (eleventyConfig) {
