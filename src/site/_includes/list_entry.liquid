@@ -8,7 +8,7 @@
     <div class="ar-3x2">
       <a
         href="{{ post.url }}"
-        class="hover-wrapper absolute bg-cover bg-cabaret-500 h-full left-0 top-0 w-full rounded text-gray-100"
+        class="hover-wrapper absolute bg-cover bg-blagra-500 h-full left-0 top-0 w-full rounded text-gray-100"
       >
         {% if photo %}
           <img src="{% image_url photo %}" loading="lazy" class="absolute h-full inset-0 object-cover w-full">
@@ -19,7 +19,7 @@
           </h2>
           <time
             datetime="{{ post.date | date: "%Y-%m-%d" }}"
-            class="font-bold"
+            class="font-medium"
           >
             {{ post.date | date: "%Y-%m-%d" }}
           </time>
