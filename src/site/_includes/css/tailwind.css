@@ -17,22 +17,6 @@
   display: inline;
 }
 
-applause-button.jonas-applause-button {
-  width: 30px;
-  height: 30px;
-}
-
-applause-button.jonas-applause-button .style-root {
-  fill: theme('colors.cabaret.500') !important;
-  stroke: theme('colors.cabaret.500') !important;
-  color: theme('colors.cabaret.500') !important;
-}
-
-applause-button.jonas-applause-button .count-container {
-  @apply text-cabaret-500 leading-normal text-sm;
-  top: -85%
-}
-
 .hover-wrapper:hover .hover-wrapper__underline {
   @apply underline
 }
