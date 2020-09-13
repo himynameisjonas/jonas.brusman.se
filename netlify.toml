@@ -1,0 +1,5 @@
+[context.deploy-preview.environment]
+  IMAGE_HOST = ""
+
+[context.branch-deploy.environment]
+  IMAGE_HOST = ""
