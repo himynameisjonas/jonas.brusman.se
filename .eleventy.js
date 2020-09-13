@@ -28,6 +28,12 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  eleventyConfig.addShortcode("tracking_script", function () {
+    if(process.env.NETLIFY) {
+      return '<script data-goatcounter="https://brusman_se.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>'
+    }
+  });
+
   eleventyConfig.addShortcode("responsive_image", function (imagePath) {
     const widths = [500, 1000, 2000, 3000, 4000];
 
