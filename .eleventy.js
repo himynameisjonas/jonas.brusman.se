@@ -1,4 +1,5 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const { JSDOM } = require('jsdom');
 
 const imageUrl = function (path, {width, height, resize}) {
   params = [`nf_resize=${resize || 'fit'}`]
@@ -9,14 +10,51 @@ const imageUrl = function (path, {width, height, resize}) {
     params.push(`h=${height}`)
   }
 
-  return `${process.env.IMAGE_HOST || ""}${path}?${params.join('&')}`
+  return `${path}?${params.join('&')}`
 };
+
+const processImage = async img => {
+  const internal = /^\/images\/.*/i;
+  const srcsetRegex = /\/images\//gi
+  const src = img.getAttribute('src');
+  const srcset = img.getAttribute('srcset');
+
+  if (internal.test(src)) {
+    img.setAttribute('src', `${process.env.IMAGE_HOST}${src}`);
+  }
+
+  if (internal.test(srcset)) {
+    img.setAttribute('srcset', srcset.replace(srcsetRegex, `${process.env.IMAGE_HOST}/images/`));
+  }
+
+  return img
+}
+
+const addImageHosts = async (rawContent, outputPath) => {
+  let selector = 'img'
+  let content = rawContent;
+  if (process.env.IMAGE_HOST && outputPath.endsWith('.html')) {
+
+    const dom = new JSDOM(content);
+    const images = [...dom.window.document.querySelectorAll(selector)];
+
+    if (images.length > 0) {
+      await Promise.all(images.map(i => processImage(i)));
+      content = dom.serialize();
+    }
+  }
+
+  return content;
+};
+
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.addPassthroughCopy("./src/site/images");
   eleventyConfig.addPassthroughCopy("./src/site/css");
+
+  eleventyConfig.addTransform('imagehost', addImageHosts);
 
   eleventyConfig.addShortcode("image_url", function (imagePath) {
     return imageUrl(imagePath,

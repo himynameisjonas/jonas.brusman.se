@@ -23,6 +23,7 @@
     "@11ty/eleventy-plugin-rss": "^1.0.9",
     "autoprefixer": "^9.7.6",
     "html-minifier": "^4.0.0",
+    "jsdom": "^16.4.0",
     "postcss-cli": "^7.1.1",
     "postcss-import": "^12.0.1",
     "tailwindcss": "^1.4.6",
