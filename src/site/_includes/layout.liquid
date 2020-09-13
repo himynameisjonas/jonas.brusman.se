@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ title }} {% if title %} | {% endif %}Jonas Brusman</title>
     <link rel="alternate" type="application/atom+xml" title="jonas.brusman.se" href="https://jonas.brusman.se/rss.xml"/>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="/css/styles.css">
   </head>
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="/css/styles.css">
   <body class="flex flex-col">
     <div class="mt-4 mx-4 mb-10 self-center max-w-xl text-gray-700 h-card">
       <a href="/" rel="author" class="block font-black leading-tight md:text-left p-name text-6xl text-blagra-500 text-center u-url uppercase">
@@ -25,6 +25,7 @@
     <div class="flex flex-col p-4">
       {{ content }}
     </div>
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
     {% tracking_script -%}
   </body>
 </html>
