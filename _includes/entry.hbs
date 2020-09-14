@@ -1,0 +1,10 @@
+---
+layout: layout.liquid
+---
+<h1>
+  {{title}}
+</h1>
+{{#each photos}}
+  <img src="{{this}}" />
+{{/each}}
+{{{content}}}

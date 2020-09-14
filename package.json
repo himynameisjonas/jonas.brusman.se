@@ -1,64 +1,15 @@
 {
   "name": "jonas.brusman.se",
   "version": "1.0.0",
+  "main": "index.js",
   "author": "Jonas Brusman",
-  "dependencies": {
-    "bulma": "^0.7.4",
-    "disqus-react": "^1.0.5",
-    "fontfaceobserver": "^2.1.0",
-    "gatsby": "^2.0.0",
-    "gatsby-image": "^2.0.29",
-    "gatsby-plugin-feed": "^2.1.0",
-    "gatsby-plugin-netlify": "^2.0.13",
-    "gatsby-plugin-netlify-cache": "^1.1.0",
-    "gatsby-plugin-purgecss": "^3.1.1",
-    "gatsby-plugin-react-helmet": "^3.1.13",
-    "gatsby-plugin-sass": "^2.0.10",
-    "gatsby-plugin-sharp": "^2.0.5",
-    "gatsby-remark-copy-linked-files": "^2.0.11",
-    "gatsby-remark-images": "^3.0.10",
-    "gatsby-remark-prismjs": "^3.2.6",
-    "gatsby-remark-relative-images": "^0.2.2",
-    "gatsby-source-filesystem": "^2.0.28",
-    "gatsby-transformer-remark": "^2.3.8",
-    "gatsby-transformer-sharp": "^2.1.14",
-    "lodash": "^4.17.13",
-    "lodash-webpack-plugin": "^0.11.4",
-    "node-sass": "^4.11.0",
-    "parcel-bundler": "^1.11.0",
-    "prismjs": "^1.15.0",
-    "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.0",
-    "react-textfit": "^1.1.0",
-    "uuid": "^3.2.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
-  "main": "n/a",
-  "scripts": {
-    "start": "yarn run develop",
-    "clean": "rimraf .cache public",
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "serve": "gatsby serve",
-    "format": "prettier --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "private": true,
+  "volta": {
+    "node": "12.16.3",
+    "yarn": "1.22.4"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^6.4.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-prettier": "^3.0.0",
-    "eslint-plugin-react": "^7.11.1",
-    "gatsby-plugin-eslint": "^2.0.5",
-    "prettier": "^1.18.2",
-    "rimraf": "^2.6.3"
-  },
-  "volta": {
-    "node": "10.15.1",
-    "yarn": "1.13.0"
+    "@11ty/eleventy": "^0.11.0"
   }
 }
