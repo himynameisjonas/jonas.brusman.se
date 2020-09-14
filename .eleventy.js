@@ -10,7 +10,7 @@ const imageUrl = function (path, {width, height, resize}) {
     params.push(`h=${height}`)
   }
 
-  return `${path}?${params.join('&')}`
+  return `${path}?${params.join('&amp;')}`
 };
 
 const processImage = async img => {

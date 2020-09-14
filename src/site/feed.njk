@@ -6,7 +6,7 @@
     "title": "Jonas Brusman",
     "subtitle": "I like to do high fives, take photographs and make cool things with Ruby and JavaScript.r.",
     "url": "https://jonas.brusman.se/",
-    "feedUrl": "https://jonas.brusman.se/feed.xml",
+    "feedUrl": "https://jonas.brusman.se/rss.xml",
     "author": {
       "name": "Jonas Brusman"
     }
@@ -32,10 +32,11 @@
       <updated>{{ post.date | rssDate }}</updated>
       <id>{{ absolutePostUrl }}</id>
       <content type="html">
+        <![CDATA[
         {%- for image in post.data.photos -%}
           <img src="{% image_url image %}">
         {% endfor -%}
-        {{- post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) -}}
+        {{- post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | safe -}}]]>
       </content>
     </entry>
   {%- endfor %}
