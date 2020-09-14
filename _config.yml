@@ -8,6 +8,7 @@ var:
   categories_path : /categories.html
   tags_path : /tags.html
 
+production_url : http://username.github.com # or your custom domain name
 title : My Blog =)
 
 author :
