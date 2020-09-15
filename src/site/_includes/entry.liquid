@@ -2,7 +2,7 @@
 layout: layout.liquid
 ---
 <article class="h-entry flex flex-col">
-<h1 class="font-black leading-none max-w-2xl mb-4 md:text-5xl self-center text-3xl text-gray-700 p-name">
+<h1 class="font-black leading-none max-w-full md:max-w-2xl mb-4 md:text-5xl self-center text-3xl text-gray-700 p-name">
   {{title}}
 </h1>
 
@@ -14,11 +14,11 @@ layout: layout.liquid
   </div>
 {% endif %}
 
-<div class="markdown max-w-2xl self-center e-content">
+<div class="markdown max-w-full md:max-w-2xl self-center e-content">
   {{content}}
 </div>
 
-<div class="border-t-2 max-w-2xl mb-2 mt-2 pt-2 self-center text-gray-500 w-full">
+<div class="border-t-2 max-w-full md:max-w-2xl mb-2 mt-2 pt-2 self-center text-gray-500 w-full">
   <time class="dt-published" datetime="{{date | date: "%Y-%m-%d" }}">
     <a href="{{post.url}}" class="u-url">{{date | date: "%Y-%m-%d"}}</a>
   </time>
