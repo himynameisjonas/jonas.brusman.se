@@ -10,8 +10,12 @@ const imageUrl = function (path, {width, height, resize}) {
   if (height) {
     params.push(`h=${height}`)
   }
+  if (process.env.IMAGE_HOST) {
+    return `${process.env.IMAGE_HOST}${path}?${params.join('&amp;')}`
 
-  return `${path}?${params.join('&amp;')}`
+  } else {
+    return `${path}?${params.join('&amp;')}`
+  }
 };
 
 const processImage = async img => {
@@ -58,14 +62,25 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addTransform('imagehost', addImageHosts);
 
-  eleventyConfig.addShortcode("image_url", function (imagePath) {
-    return imageUrl(imagePath,
-      {
-        resize: "smartcrop",
-        width: 500,
-        height: 333
-      },
-    );
+  eleventyConfig.addShortcode("image_url", function (imagePath, sharing) {
+    if (sharing) {
+      return imageUrl(imagePath,
+        {
+          resize: "smartcrop",
+          width: 1200,
+          height: 630
+        },
+      );
+
+    } else {
+      return imageUrl(imagePath,
+        {
+          resize: "smartcrop",
+          width: 500,
+          height: 333
+        },
+      );
+    }
   });
 
   eleventyConfig.addShortcode("tracking_script", function () {
