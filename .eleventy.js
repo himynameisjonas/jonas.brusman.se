@@ -1,6 +1,7 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const { JSDOM } = require('jsdom');
+const striptags = require("striptags");
 
 const imageUrl = function (path, {width, height, resize}) {
   params = [`nf_resize=${resize || 'fit'}`]
@@ -52,6 +53,18 @@ const addImageHosts = async (rawContent, outputPath) => {
   return content;
 };
 
+function extractExcerpt(fallbacks) {
+  let content = fallbacks.filter(Boolean)[0]
+  if(content) {
+    excerpt = striptags(content)
+      .replace(/^\\s+|\\s+$|\\s+(?=\\s)/g, "")
+      .replace(/\s+/g, " ")
+      .trim()
+    return excerpt;
+  }
+}
+
+
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
@@ -61,6 +74,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/site/css");
 
   eleventyConfig.addTransform('imagehost', addImageHosts);
+
+  eleventyConfig.addShortcode("excerpt", (...fallbacks) => extractExcerpt(fallbacks));
 
   eleventyConfig.addShortcode("image_url", function (imagePath, sharing) {
     if (sharing) {
@@ -89,6 +104,9 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  eleventyConfig.addShortcode("dump", function () {
+    console.log('hejhej',arguments)
+  })
   eleventyConfig.addShortcode("responsive_image", function (imagePath) {
     const widths = [500, 1000, 2000, 3000, 4000];
 

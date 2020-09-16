@@ -8,6 +8,8 @@ pagination:
   - entries
   - all
 permalink: /tags/{{ tag }}/
+eleventyComputed:
+  description: Posts tagged with {{ tag }}
 eleventyExcludeFromCollections: true
 ---
 <h1 class="font-black leading-none max-w-xl mb-4 md:text-5xl self-center text-3xl text-gray-700">
