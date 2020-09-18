@@ -2,6 +2,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const { JSDOM } = require('jsdom');
 const striptags = require("striptags");
+const minify = require("html-minifier").minify;
 
 const imageUrl = function (path, {width, height, resize}) {
   params = [`nf_resize=${resize || 'fit'}`]
@@ -64,6 +65,24 @@ function extractExcerpt(fallbacks) {
   }
 }
 
+const minifyHtml = (rawContent, outputPath) => {
+  let content = rawContent;
+  if (outputPath && outputPath.endsWith(".html")) {
+    content = minify(content, {
+      removeAttributeQuotes: true,
+      collapseBooleanAttributes: true,
+      collapseWhitespace: true,
+      removeComments: true,
+      sortClassName: true,
+      sortAttributes: true,
+      html5: true,
+      decodeEntities: true,
+      removeOptionalTags: true,
+    });
+  }
+  return content;
+};
+
 
 
 module.exports = function (eleventyConfig) {
@@ -74,6 +93,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/site/css");
 
   eleventyConfig.addTransform('imagehost', addImageHosts);
+  eleventyConfig.addTransform('minifyHtml', minifyHtml);
+
 
   eleventyConfig.addShortcode("excerpt", (...fallbacks) => extractExcerpt(fallbacks));
 
