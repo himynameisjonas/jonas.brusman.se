@@ -126,6 +126,8 @@ module.exports = function (eleventyConfig) {
     /></picture>`;
   });
 
+  eleventyConfig.setUseGitIgnore(false);
+
   return {
     dir: {
       input: "src/site",
