@@ -15,7 +15,7 @@
     "start": "yarn watch"
   },
   "volta": {
-    "node": "12.20.0",
+    "node": "12.20.1",
     "yarn": "1.22.10"
   },
   "devDependencies": {
