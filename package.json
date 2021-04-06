@@ -23,7 +23,7 @@
     "@11ty/eleventy-plugin-rss": "1.1.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "3.1.0",
     "autoprefixer": "9.8.6",
-    "cssnano": "4.1.10",
+    "cssnano": "4.1.11",
     "html-minifier": "4.0.0",
     "jsdom": "16.5.1",
     "postcss-cli": "8.3.0",
