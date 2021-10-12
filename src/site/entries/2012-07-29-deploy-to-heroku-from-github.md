@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2012-07-29
 title: 'Deploy to Heroku from Github'
 tags:

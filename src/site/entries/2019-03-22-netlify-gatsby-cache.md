@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2019-03-22
 title: Cache Gatsby builds on Netlify
 tags:

@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2013-01-02
 title: "Breakfast at Mynewsdesk"
 tags:

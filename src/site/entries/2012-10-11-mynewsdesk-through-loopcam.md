@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2012-10-11
 title: "Mynewsdesk through Loopcam"
 tags:

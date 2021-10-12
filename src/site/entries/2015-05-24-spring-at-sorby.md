@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2015-05-24
 title: Springtime at Sörby
 photos:

@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2012-07-22
 title: Jekyll + Heroku + Unicorn = Blazing fast blogging
 tags:

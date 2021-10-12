@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2012-01-21
 title: 24 Hour Business Camp
 photos:

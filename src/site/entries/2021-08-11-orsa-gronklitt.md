@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2021-08-11
 title: Orsa Grönklitt
 photos:

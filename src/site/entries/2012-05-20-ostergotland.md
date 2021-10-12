@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2012-05-20
 title: Östergötland
 photos:

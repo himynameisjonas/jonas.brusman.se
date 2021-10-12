@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2015-01-06
 title: 'Heroku’s GitHub Integration'
 tags:

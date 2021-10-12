@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2014-08-16
 title: 'Deploy Jekyll to Heroku with a click on a button'
 tags:
