@@ -7,7 +7,7 @@
 @tailwind utilities;
 
 .link {
-  @apply text-blagra-500 underline
+  @apply text-yellowish underline
 }
 
 .link:hover {
