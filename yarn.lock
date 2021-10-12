@@ -24,14 +24,6 @@
     linkedom "^0.11.0"
     prismjs "^1.24.1"
 
-"@11ty/eleventy-upgrade-help@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy-upgrade-help/-/eleventy-upgrade-help-1.0.1.tgz#56464d9239c93d66b70c82a3e3edbebf82d65fe6"
-  integrity sha512-9YqcRPYhBCJjcbAdz7cGIHHzpNDLr9V3igWjeuOfq3w3I4QsYjvr/ZZCLJLSsYfwIWyyTVAGbrF800pM7qSPQA==
-  dependencies:
-    chalk "^4.1.1"
-    semver "^7.3.5"
-
 "@11ty/eleventy@^1.0.0-beta.2":
   version "1.0.0-beta.2"
   resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-1.0.0-beta.2.tgz#94f6fa31a758d3cfae25b37ec80d95f123c0d03e"
@@ -704,7 +696,7 @@ chalk@^4.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chalk@^4.1.1, chalk@^4.1.2:
+chalk@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
   integrity sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==
