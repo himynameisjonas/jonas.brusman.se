@@ -19,7 +19,7 @@
           >
         {% endif %}
         <div class="px-4 inset-0 absolute flex flex-col justify-center text-center rounded {% if photo %}bg-gray-700 bg-opacity-25{% endif %}">
-          <h2 class="text-3xl lg:text-5xl font-black leading-none hover-wrapper__underline">
+          <h2 class="{% if photo %}text-3xl lg:text-5xl leading-none{% else %}text-3xl leading-tight{% endif %} font-black hover-wrapper__underline">
             {{ post.data.title }}
           </h2>
           <time
