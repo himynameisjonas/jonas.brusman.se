@@ -19,9 +19,10 @@
     "yarn": "1.22.11"
   },
   "devDependencies": {
-    "@11ty/eleventy": "0.12.1",
+    "@11ty/eleventy": "^1.0.0-beta.2",
     "@11ty/eleventy-plugin-rss": "1.1.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "3.1.2",
+    "@11ty/eleventy-upgrade-help": "^1.0.1",
     "autoprefixer": "9.8.6",
     "cssnano": "4.1.11",
     "html-minifier": "4.0.0",

@@ -1,3 +1,4 @@
+const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const { JSDOM } = require('jsdom');
@@ -55,14 +56,16 @@ const addImageHosts = async (rawContent, outputPath) => {
 };
 
 function extractExcerpt(fallbacks) {
-  let content = fallbacks.filter(Boolean)[0]
+  let content = fallbacks.filter((s)=>
+     s && typeof s === 'string' && s.trim() !== ""
+  )[0]
   if(content) {
     excerpt = striptags(content)
-      .replace(/^\\s+|\\s+$|\\s+(?=\\s)/g, "")
-      .replace(/\s+/g, " ")
-      .trim()
+    .replace(/^\\s+|\\s+$|\\s+(?=\\s)/g, "")
+    .replace(/\s+/g, " ")
+    .trim()
     return excerpt;
-  }
+    }
 }
 
 const minifyHtml = (rawContent, outputPath) => {
@@ -86,6 +89,7 @@ const minifyHtml = (rawContent, outputPath) => {
 
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(UpgradeHelper);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.setDataDeepMerge(true);
