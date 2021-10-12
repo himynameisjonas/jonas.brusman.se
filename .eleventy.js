@@ -55,14 +55,16 @@ const addImageHosts = async (rawContent, outputPath) => {
 };
 
 function extractExcerpt(fallbacks) {
-  let content = fallbacks.filter(Boolean)[0]
+  let content = fallbacks.filter((s)=>
+     s && typeof s === 'string' && s.trim() !== ""
+  )[0]
   if(content) {
     excerpt = striptags(content)
-      .replace(/^\\s+|\\s+$|\\s+(?=\\s)/g, "")
-      .replace(/\s+/g, " ")
-      .trim()
+    .replace(/^\\s+|\\s+$|\\s+(?=\\s)/g, "")
+    .replace(/\s+/g, " ")
+    .trim()
     return excerpt;
-  }
+    }
 }
 
 const minifyHtml = (rawContent, outputPath) => {

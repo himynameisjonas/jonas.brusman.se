@@ -19,6 +19,6 @@ eleventyExcludeFromCollections: true
 <div class="flex flex-wrap">
   {% assign tagged_posts = collections[tag] %}
   {% for post in tagged_posts reversed %}
-    {% include list_entry %}
+    {% include "list_entry" %}
   {% endfor %}
 </div>

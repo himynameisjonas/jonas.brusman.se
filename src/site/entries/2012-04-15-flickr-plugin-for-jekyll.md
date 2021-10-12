@@ -59,6 +59,7 @@ Read the [readme for the fleakr gem](https://github.com/reagent/fleakr) on how t
 Loop over your photos in your post layout, for example like this:
 
 ```html
+{% raw %}
 <article>
   <h1>{{ post.title }}</h1>
 
@@ -72,6 +73,7 @@ Loop over your photos in your post layout, for example like this:
     {{ post.date || date:"%Y-%m-%d" }}</br>
   </footer>
 </article>
+{% endraw %}
 ```
 
 Finally, the last step is to add one or more photos to your post:
