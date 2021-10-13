@@ -1,0 +1,10 @@
+---
+layout: layout.liquid
+description: Jonas Brusman's notes.
+---
+
+<div class="flex flex-wrap">
+  {% for post in collections.notes reversed %}
+    {% include "list_entry" %}
+  {% endfor %}
+</div>

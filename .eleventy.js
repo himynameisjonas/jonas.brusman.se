@@ -152,6 +152,19 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setUseGitIgnore(false);
 
+  eleventyConfig.addCollection("photos", function(collectionApi) {
+    return collectionApi.getFilteredByTag("entries").filter(function(item) {
+      return "photos" in item.data;
+    });
+  });
+
+  eleventyConfig.addCollection("notes", function(collectionApi) {
+    return collectionApi.getFilteredByTag("entries").filter(function(item) {
+      return !("photos" in item.data);
+    });
+  });
+
+
   return {
     dir: {
       input: "src/site",

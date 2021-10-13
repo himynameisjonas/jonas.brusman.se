@@ -1,0 +1,10 @@
+---
+layout: layout.liquid
+description: Jonas Brusman's photos.
+---
+
+<div class="flex flex-wrap">
+  {% for post in collections.photos reversed %}
+    {% include "list_entry" %}
+  {% endfor %}
+</div>
