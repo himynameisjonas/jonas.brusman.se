@@ -7,7 +7,7 @@
 @tailwind utilities;
 
 .link {
-  @apply text-yellowish underline
+  @apply text-branding underline
 }
 
 .link:hover {

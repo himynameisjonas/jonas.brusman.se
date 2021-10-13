@@ -11,7 +11,7 @@ module.exports = {
         '2-xl': '1700px'
       },
       colors: {
-        yellowish: {
+        branding: {
           "DEFAULT": "#f1c71a",
         },
       },

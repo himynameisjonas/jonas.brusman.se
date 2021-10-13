@@ -8,7 +8,7 @@
     <div class="ar-3x2">
       <a
         href="{{ post.url }}"
-        class="hover-wrapper absolute bg-cover h-full left-0 top-0 w-full rounded {% if photo %}text-gray-100 bg-gray-400{% else %}text-gray-700 bg-yellowish {% endif %}"
+        class="hover-wrapper absolute bg-cover h-full left-0 top-0 w-full rounded {% if photo %}text-gray-100 bg-gray-400{% else %}text-gray-700 bg-branding {% endif %}"
       >
         {% if photo %}
           <img
@@ -19,7 +19,7 @@
           >
         {% endif %}
         <div class="px-4 inset-0 absolute flex flex-col justify-center text-center rounded {% if photo %}bg-gray-700 bg-opacity-25{% endif %}">
-          <h2 class="{% if photo %}text-3xl lg:text-5xl leading-none{% else %}text-3xl leading-tight{% endif %} font-black hover-wrapper__underline">
+          <h2 class="{% if photo %}text-3xl lg:text-5xl lg:leading-tight{% else %}text-3xl{% endif %} leading-tight pb-1 font-black hover-wrapper__underline">
             {{ post.data.title }}
           </h2>
           <time
