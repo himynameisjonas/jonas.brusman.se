@@ -6,6 +6,10 @@
 
 @tailwind utilities;
 
+.w-content {
+  @apply max-w-full md:max-w-2xl 2xl:max-w-4xl w-full self-center
+}
+
 .link {
   @apply text-branding underline
 }

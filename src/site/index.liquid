@@ -5,6 +5,6 @@ description: Jonas Brusman's blog. Photos and some tech / code stuff.
 
 <div class="flex flex-wrap">
   {% for post in collections.entries reversed %}
-    {% include "list_entry" %}
+    {{post.title}}
   {% endfor %}
 </div>

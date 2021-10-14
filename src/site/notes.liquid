@@ -3,8 +3,8 @@ layout: layout.liquid
 description: Jonas Brusman's notes.
 ---
 
-<div class="flex flex-wrap">
+<div class="flex flex-wrap w-content">
   {% for post in collections.notes reversed %}
-    {% include "list_entry" %}
+    {% include "list_note_entry" %}
   {% endfor %}
 </div>
