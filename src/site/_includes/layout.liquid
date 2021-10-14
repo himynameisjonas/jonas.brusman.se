@@ -18,19 +18,19 @@
     <link rel="webmention" href="https://webmention.io/jonas.brusman.se/webmention" />
     <link rel="pingback" href="https://webmention.io/jonas.brusman.se/xmlrpc" />
   </head>
-  <body class="flex flex-col">
-    <header class="flex mb-10 mt-6 flex items-baseline items-baseline gap-x-3 w-content">
-      <a href="/" rel="author" class="block font-black leading-tight md:text-left p-name text-3xl text-branding text-center uppercase">
+  <body class="flex flex-col p-4">
+    <header class="flex mb-10 mt-6 flex flex-wrap items-baseline items-baseline gap-x-3 w-content">
+      <a href="/" rel="author" class="block font-black leading-tight md:text-left p-name text-3xl text-branding uppercase">
         Jonas Brusman
       </a>
-      <nav class="flex items-baseline items-baseline gap-x-3 text-xl font-normal">
+      <nav class="flex flex-wrap items-baseline items-baseline gap-x-3 text-xl font-normal">
         <a href="/" class="hover:underline hover:text-branding text-gray-700">Home</a>
         <a href="/photos" class="hover:underline hover:text-branding text-gray-700">Photos</a>
         <a href="/notes" class="hover:underline hover:text-branding text-gray-700">Notes</a>
         <a href="/photos" class="hover:underline hover:text-branding text-gray-700">About</a>
       </nav>
     </header>
-    <div class="flex flex-col p-4">
+    <div class="flex flex-col">
       {{ content }}
     </div>
     {% tracking_script -%}
