@@ -16,7 +16,7 @@
   },
   "volta": {
     "node": "14.18.0",
-    "yarn": "1.22.15"
+    "yarn": "1.22.17"
   },
   "devDependencies": {
     "@11ty/eleventy": "1.0.0-beta.2",
