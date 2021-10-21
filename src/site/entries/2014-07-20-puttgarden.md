@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2014-07-20
 title: "Puttgarden"
 photos:

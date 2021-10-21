@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2021-02-08
 title: Snow and fire
 photos:

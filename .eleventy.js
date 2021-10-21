@@ -130,12 +130,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("dump", function () {
     console.log('hejhej',arguments)
   })
-  eleventyConfig.addShortcode("responsive_image", function (imagePath) {
+
+  eleventyConfig.addShortcode("picture_element", function (imagePath, alt, imgClass) {
     const widths = [500, 1000, 2000, 3000, 4000];
 
     return `<picture class="m-2"><img
-    class="max-h-screen"
-    alt=""
+    class="${imgClass}"
+    alt="${alt}"
     src="${imageUrl(imagePath, { width: widths[0] })}"
     sizes="(max-width: 1000px) 99vw, 150vh"
     srcset="${widths
@@ -150,6 +151,19 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.setUseGitIgnore(false);
+
+  eleventyConfig.addCollection("photos", function(collectionApi) {
+    return collectionApi.getFilteredByTag("entries").filter(function(item) {
+      return "photos" in item.data;
+    });
+  });
+
+  eleventyConfig.addCollection("notes", function(collectionApi) {
+    return collectionApi.getFilteredByTag("entries").filter(function(item) {
+      return !("photos" in item.data);
+    });
+  });
+
 
   return {
     dir: {

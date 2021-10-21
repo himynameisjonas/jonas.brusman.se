@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2014-06-10
 title: 'Planning Poker with Ember.js and Firebase'
 tags:

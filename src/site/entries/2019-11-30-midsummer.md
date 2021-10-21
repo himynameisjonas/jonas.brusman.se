@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2019-11-30
 title: Midsummer 2012
 photos:

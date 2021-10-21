@@ -1,10 +1,27 @@
 ---
 layout: layout.liquid
 description: Jonas Brusman's blog. Photos and some tech / code stuff.
+title: Blog
 ---
 
-<div class="flex flex-wrap">
-  {% for post in collections.entries reversed %}
-    {% include "list_entry" %}
-  {% endfor %}
+<div class="w-content text-gray-700">
+  <div>
+    <a href="/notes"><h2 class="text-3xl leading-tight font-black mb-2">Latest notes</h2></a>
+    {% assign notes = collections.notes | reverse %}
+    {% for post in notes limit:3  %}
+      {% include "list_note_entry" %}
+    {% endfor %}
+  </div>
+
+  <div class="flex flex-wrap">
+    <a href="/photos"><h2 class="text-3xl leading-tight font-black mb-2">Latest photos</h2></a>
+    {% assign photos = collections.photos | reverse %}
+    {% for post in photos limit:3  %}
+      <div class="flex-initial {% if forloop.first == true %}w-full{% else %}w-full md:w-1/2{% endif %}">
+        <div class="mb-6 {% cycle '', 'md:mr-3', 'md:ml-3' %}">
+          {% include "list_photo_entry" %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 </div>

@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2020-09-13
 title: "Home assistant presence detection with Homekit and iPhone"
 tags:

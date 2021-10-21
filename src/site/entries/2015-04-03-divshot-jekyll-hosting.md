@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2015-04-03
 title: Divshot Jekyll hosting
 tags:

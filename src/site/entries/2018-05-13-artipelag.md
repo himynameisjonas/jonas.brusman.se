@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2018-05-13
 title: Artipelag
 photos:

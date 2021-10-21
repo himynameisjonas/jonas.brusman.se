@@ -2,30 +2,30 @@
 layout: layout.liquid
 ---
 <article class="h-entry flex flex-col">
-<h1 class="font-black leading-none max-w-full md:max-w-2xl mb-4 md:text-5xl self-center text-3xl text-gray-700 p-name">
-  {{title}}
-</h1>
+  <h1 class="w-content font-bold leading-none mb-4 md:text-5xl text-3xl text-gray-700 p-name border-b-4 border-branding pb-4">
+    {{ headline | default: title }}
+  </h1>
 
-{% if photos %}
-  <div class="flex flex-wrap justify-center -mx-2 mb-8">
-  {% for image in photos %}
-    {% responsive_image image %}
-  {% endfor %}
+  {% if photos %}
+    <div class="flex flex-wrap justify-center -mx-2 mb-8">
+      {% for image in photos %}
+        {% include "responsive_image" %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <div class="markdown w-content e-content">
+    {{content}}
   </div>
-{% endif %}
 
-<div class="markdown max-w-full md:max-w-2xl self-center e-content">
-  {{content}}
-</div>
-
-<div class="border-t-2 max-w-full md:max-w-2xl mb-2 mt-2 pt-2 self-center text-gray-700 w-full">
-  <time class="dt-published" datetime="{{date | date: "%Y-%m-%d" }}">
-    <a href="{{post.url}}" class="u-url">{{date | date: "%Y-%m-%d"}}</a>
-  </time>
-  {% for tag in tags %}
-    {% unless tag == "entries" %}
-      <a href="/tags/{{tag}}" class="prefix-hash link p-category">{{tag}}</a>
-    {% endunless %}
-  {% endfor %}
-</div>
+  <div class="border-t-2 w-content mb-2 mt-2 pt-2 text-gray-700">
+    <time class="dt-published" datetime="{{date | date: "%Y-%m-%d" }}">
+      <a href="{{post.url}}" class="u-url">{{date | date: "%Y-%m-%d"}}</a>
+    </time>
+    {% for tag in tags %}
+      {% unless tag == "entries" %}
+        <a href="/tags/{{tag}}" class="prefix-hash link p-category">{{tag}}</a>
+      {% endunless %}
+    {% endfor %}
+  </div>
 </article>

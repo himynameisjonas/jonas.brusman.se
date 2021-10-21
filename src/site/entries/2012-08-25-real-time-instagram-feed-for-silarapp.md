@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2012-08-25
 title: "Real-time Instagram feed for SilarApp"
 photos:

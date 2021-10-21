@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2012-01-17
 title: Adventure Golf
 photos:

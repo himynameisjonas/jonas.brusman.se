@@ -9,16 +9,39 @@ pagination:
   - all
 permalink: /tags/{{ tag }}/
 eleventyComputed:
+  title: "{{tag}}"
   description: Posts tagged with {{ tag }}
 eleventyExcludeFromCollections: true
 ---
-<h1 class="font-black leading-none max-w-xl mb-4 md:text-5xl self-center text-3xl text-gray-700">
-  <span class="prefix-hash">{{ tag }}</span>
-</h1>
 
-<div class="flex flex-wrap">
-  {% assign tagged_posts = collections[tag] %}
-  {% for post in tagged_posts reversed %}
-    {% include "list_entry" %}
-  {% endfor %}
-</div>
+{% assign tagged_posts = collections[tag] %}
+{% assign tagged_notes = tagged_posts | where: "data.entryType", "note" %}
+{% assign tagged_photos = tagged_posts | where: "data.entryType", "photo" %}
+
+{% if tagged_notes.size > 0 %}
+  <div class="w-content">
+    <h2 class="text-3xl leading-tight font-black mb-2">Notes tagged with <span class="prefix-hash">{{ tag }}</span></h2>
+    {% for post in tagged_notes reversed %}
+      {% unless post.data.photos %}
+        {% include "list_note_entry" %}
+      {% endunless %}
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if tagged_photos.size > 0 %}
+  <div class="w-content">
+    <h2 class="text-3xl leading-tight font-black mb-2">Photos tagged with <span class="prefix-hash">{{ tag }}</span></h2>
+  </div>
+  <div class="flex flex-wrap {% if tagged_photos.size < 3 %}md:justify-center{% endif %} {% if tagged_photos.size < 4 %}lg:justify-center{% endif %}">
+    {% for post in tagged_photos reversed %}
+      {% if post.data.photos %}
+        <div class="flex-initial w-full md:w-1/2 lg:w-1/2 xl:w-1/3 2-xl:w-3/12">
+          <div class="mb-3 sm:m-3">
+            {% include "list_photo_entry" %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

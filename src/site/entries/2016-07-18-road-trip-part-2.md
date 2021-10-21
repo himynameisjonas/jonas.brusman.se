@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2016-07-18
 title: Road trip – part 2
 photos:

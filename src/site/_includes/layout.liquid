@@ -18,21 +18,19 @@
     <link rel="webmention" href="https://webmention.io/jonas.brusman.se/webmention" />
     <link rel="pingback" href="https://webmention.io/jonas.brusman.se/xmlrpc" />
   </head>
-  <body class="flex flex-col">
-    <div class="mt-4 mx-4 mb-10 self-center max-w-xl text-gray-700 h-card">
-      <a href="/" rel="author" class="block font-black leading-tight md:text-left p-name text-6xl text-blagra-500 text-center u-url uppercase">
+  <body class="flex flex-col p-4">
+    <header class="flex mb-10 md:mt-6 flex flex-wrap items-baseline items-baseline gap-x-3 w-content justify-center sm:justify-start">
+      <a href="/" rel="author" class="block font-black leading-tight md:text-left p-name text-3xl text-branding uppercase">
         Jonas Brusman
       </a>
-      <span class="p-note">
-        I like to do high fives, take photographs and make cool things with Ruby and JavaScript.
-      </span>
-      You can also find me at
-      <a href="https://www.instagram.com/himynameisjonas/" rel="me" class="link">Instagram</a>,
-      <a href="https://github.com/himynameisjonas" rel="me" class="link">Github</a>
-      and
-      <a href="https://twitter.com/himynameisjonas" rel="me" class="link">Twitter</a>.
-    </div>
-    <div class="flex flex-col p-4">
+      <nav class="flex flex-wrap items-baseline items-baseline gap-x-3 text-xl font-normal">
+        <a href="/" class="hover:underline hover:text-branding text-gray-700">Home</a>
+        <a href="/photos/" class="hover:underline hover:text-branding text-gray-700">Photos</a>
+        <a href="/notes/" class="hover:underline hover:text-branding text-gray-700">Notes</a>
+        <a href="/about/" class="hover:underline hover:text-branding text-gray-700">About</a>
+      </nav>
+    </header>
+    <div class="flex flex-col">
       {{ content }}
     </div>
     {% tracking_script -%}

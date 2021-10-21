@@ -1,0 +1,19 @@
+<div class="flex-initial mb-8 w-full text-gray-700 border-l-4 border-branding pl-4">
+  <a href="{{ post.url }}" class="">
+    <h2 class="text-2xl sm:text-3xl leading-tight font-bold hover:underline">
+      {{ post.data.title }}
+    </h2>
+  </a>
+  <div class="text-gray-400">
+    <a href="{{ post.url }}">
+      <time datetime="{{ post.date | date: "%Y-%m-%d" }}" class="text-gray-400 hover:text-branding">
+        {{ post.date | date: "%Y-%m-%d" }}
+      </time>
+    </a>
+    {% for tag in post.data.tags %}
+      {% unless tag == "entries" %}
+        <a href="/tags/{{tag}}" class="prefix-hash hover:text-branding">{{tag}}</a>
+      {% endunless %}
+    {% endfor %}
+  </div>
+</div>

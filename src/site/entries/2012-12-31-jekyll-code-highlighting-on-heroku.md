@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2012-12-31
 title: 'Jekyll code highlighting on Heroku'
 tags:

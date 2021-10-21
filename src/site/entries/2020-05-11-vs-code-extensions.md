@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2020-05-11
 title: "Visual Studio Code: Some extensions"
 tags:

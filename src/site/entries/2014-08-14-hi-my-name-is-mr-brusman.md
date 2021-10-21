@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2014-08-14
 title: "Hi my name is Mr. Brusman"
 photos:

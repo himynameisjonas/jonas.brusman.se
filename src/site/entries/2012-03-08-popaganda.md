@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2012-03-08
 title: Popaganda
 photos:

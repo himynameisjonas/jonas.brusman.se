@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2012-02-13
 title: SilarApp stickers
 photos:

@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2012-11-11
 title: "A sunday walk to Långsjöbadet"
 photos:

@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2012-04-13
 title: A night out
 photos:

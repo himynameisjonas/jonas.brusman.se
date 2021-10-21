@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2013-06-09
 title: "Sunday walk"
 photos:

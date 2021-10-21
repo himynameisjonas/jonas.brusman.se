@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2020-09-12
 title: Summer vacation
 photos:

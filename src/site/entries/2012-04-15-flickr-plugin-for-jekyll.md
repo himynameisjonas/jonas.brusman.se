@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2012-04-15
 title: A Flickr plugin to Jekyll
 tags:
@@ -58,8 +57,8 @@ Read the [readme for the fleakr gem](https://github.com/reagent/fleakr) on how t
 
 Loop over your photos in your post layout, for example like this:
 
-```html
 {% raw %}
+```html
 <article>
   <h1>{{ post.title }}</h1>
 
@@ -73,14 +72,13 @@ Loop over your photos in your post layout, for example like this:
     {{ post.date || date:"%Y-%m-%d" }}</br>
   </footer>
 </article>
-{% endraw %}
 ```
+{% endraw %}
 
 Finally, the last step is to add one or more photos to your post:
 
 ```html
 ---
-templateKey: blog-post
 title: A blog post with photos from flickr
 photos:
   - /images/6167152072.jpg

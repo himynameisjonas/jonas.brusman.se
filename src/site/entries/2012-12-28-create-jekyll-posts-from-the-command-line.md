@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2012-12-28
 title: 'Create Jekyll posts from the command line'
 tags:
