@@ -5,7 +5,7 @@ description: Jonas Brusman's blog. Photos and some tech / code stuff.
 
 <div class="w-content text-gray-700">
   <div>
-    <h2 class="text-3xl leading-tight font-black mb-2">Latest notes</h2>
+    <a href="/notes"><h2 class="text-3xl leading-tight font-black mb-2">Latest notes</h2></a>
     {% assign notes = collections.notes | reverse %}
     {% for post in notes limit:3  %}
       {% include "list_note_entry" %}
@@ -13,7 +13,7 @@ description: Jonas Brusman's blog. Photos and some tech / code stuff.
   </div>
 
   <div class="flex flex-wrap">
-    <h2 class="text-3xl leading-tight font-black mb-2">Latest photos</h2>
+    <a href="/photos"><h2 class="text-3xl leading-tight font-black mb-2">Latest photos</h2></a>
     {% assign photos = collections.photos | reverse %}
     {% for post in photos limit:3  %}
       <div class="flex-initial {% if forloop.first == true %}w-full{% else %}w-1/2{% endif %}">
