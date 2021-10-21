@@ -1,5 +1,6 @@
 ---
-title: Hi my name is Jonas
+title: About
+headline: Hi my name is Jonas
 layout: entry.liquid
 description: About Jonas Brusman.
 photos:

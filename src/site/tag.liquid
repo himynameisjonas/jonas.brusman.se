@@ -9,12 +9,10 @@ pagination:
   - all
 permalink: /tags/{{ tag }}/
 eleventyComputed:
+  title: "{{tag}}"
   description: Posts tagged with {{ tag }}
 eleventyExcludeFromCollections: true
 ---
-<h1 class="font-black leading-none max-w-xl mb-4 md:text-5xl self-center text-3xl text-gray-700">
-  <span class="prefix-hash">{{ tag }}</span>
-</h1>
 
 {% assign tagged_posts = collections[tag] %}
 {% assign tagged_notes = tagged_posts | where: "data.entryType", "note" %}
