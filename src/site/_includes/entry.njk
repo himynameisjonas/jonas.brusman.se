@@ -3,29 +3,29 @@ layout: layout.liquid
 ---
 <article class="h-entry flex flex-col">
   <h1 class="w-content font-bold leading-none mb-4 md:text-5xl text-3xl text-gray-700 p-name border-b-4 border-branding pb-4">
-    {{ headline | default: title }}
+    {{ headline | default(title) }}
   </h1>
 
   {% if photos %}
     <div class="flex flex-wrap justify-center -mx-2 mb-8">
       {% for image in photos %}
-        {% include "responsive_image" %}
+          {% image image, title, "(max-width: 1000px) 99vw, 150vh", "max-h-screen py-3 w-auto" %}
       {% endfor %}
     </div>
   {% endif %}
 
   <div class="markdown w-content e-content">
-    {{content}}
+    {{content | safe}}
   </div>
 
   <div class="border-t-2 w-content mb-2 mt-2 pt-2 text-gray-700">
-    <time class="dt-published" datetime="{{date | date: "%Y-%m-%d" }}">
-      <a href="{{post.url}}" class="u-url">{{date | date: "%Y-%m-%d"}}</a>
+    <time class="dt-published" datetime="{{date | formatDate("yyyy-MM-dd") }}">
+      <a href="{{post.url}}" class="u-url">{{date | formatDate("yyyy-MM-dd")}}</a>
     </time>
     {% for tag in tags %}
-      {% unless tag == "entries" %}
+      {% if tag != "entries" %}
         <a href="/tags/{{tag}}" class="prefix-hash link p-category">{{tag}}</a>
-      {% endunless %}
+      {% endif %}
     {% endfor %}
   </div>
 </article>

@@ -3,6 +3,7 @@
 node_modules/
 /dist
 /src/site/css
+/img/*
 
 # Local Netlify folder
 .netlify

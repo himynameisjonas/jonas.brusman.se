@@ -85,18 +85,48 @@ const minifyHtml = (rawContent, outputPath) => {
   return content;
 };
 
+const dateFns = require("date-fns");
+const Image = require("@11ty/eleventy-img");
 
+async function imageShortcode(src, alt, sizes, classes) {
+  src = `./src/site/${src}`
+  let metadata = await Image(src, {
+    widths: [1000, 2000, 3000, 4000],
+    formats: ["jpeg"]
+  });
+
+  let imageAttributes = {
+    alt,
+    sizes,
+    class: classes,
+    loading: "lazy",
+    decoding: "async",
+  };
+
+  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+  return Image.generateHTML(metadata, imageAttributes);
+}
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.addPassthroughCopy("./src/site/images");
+  eleventyConfig.addPassthroughCopy("./img");
   eleventyConfig.addPassthroughCopy("./src/site/css");
+
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+  eleventyConfig.addLiquidShortcode("image", imageShortcode);
+  eleventyConfig.addJavaScriptFunction("image", imageShortcode);
 
   eleventyConfig.addTransform('imagehost', addImageHosts);
   eleventyConfig.addTransform('minifyHtml', minifyHtml);
 
+  eleventyConfig.addNunjucksFilter("formatDate", function(date, format) {
+    if(date) {
+      return dateFns.format(date, format);
+    }
+  });
 
   eleventyConfig.addShortcode("excerpt", (...fallbacks) => extractExcerpt(fallbacks));
 
@@ -126,10 +156,6 @@ module.exports = function (eleventyConfig) {
       return '<script data-goatcounter="https://brusman_se.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>'
     }
   });
-
-  eleventyConfig.addShortcode("dump", function () {
-    console.log('hejhej',arguments)
-  })
 
   eleventyConfig.addShortcode("picture_element", function (imagePath, alt, imgClass) {
     const widths = [500, 1000, 2000, 3000, 4000];
