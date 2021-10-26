@@ -24,15 +24,15 @@
     linkedom "^0.12.1"
     prismjs "^1.25.0"
 
-"@11ty/eleventy@1.0.0-beta.2":
-  version "1.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-1.0.0-beta.2.tgz#94f6fa31a758d3cfae25b37ec80d95f123c0d03e"
-  integrity sha512-Vx6pJ5LEHRz1pkRYxi1yvussmpZTKOQIauFvSdahfd4/MK5ySvYFGEd3hXDEK+aReI1fGhg7DBi3DvrR6yomEg==
+"@11ty/eleventy@^1.0.0-beta.3":
+  version "1.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-1.0.0-beta.3.tgz#44b0519ce7c1589f33e0c0a04aa18aaed7acca98"
+  integrity sha512-3o2nhp3BFMbl/BWNvuWzbgJ4IV1CbjyX/IRrlNSXzE8kmr4V+zqDNTmfN7RkCgeckdQN1YZWOlGCmB4Z+ARmxA==
   dependencies:
     "@11ty/dependency-tree" "^2.0.0"
     "@iarna/toml" "^2.2.5"
     "@sindresorhus/slugify" "^1.1.2"
-    browser-sync "^2.27.5"
+    browser-sync "^2.27.6"
     chalk "^4.1.2"
     chokidar "^3.5.2"
     debug "^4.3.2"
@@ -60,7 +60,6 @@
     recursive-copy "^2.0.13"
     semver "^7.3.5"
     slugify "^1.6.1"
-    split "^1.0.1"
     time-require "^0.1.2"
 
 "@babel/code-frame@^7.0.0":
@@ -493,20 +492,20 @@ browser-process-hrtime@^1.0.0:
   resolved "https://registry.yarnpkg.com/browser-process-hrtime/-/browser-process-hrtime-1.0.0.tgz#3c9b4b7d782c8121e56f10106d84c0d0ffc94626"
   integrity sha512-9o5UecI3GhkpM6DrXr69PblIuWxPKk9Y0jHBRhdocZ2y7YECBFCsHm79Pr3OyR2AvjhDkabFJaDJMYRazHgsow==
 
-browser-sync-client@^2.27.5:
-  version "2.27.5"
-  resolved "https://registry.yarnpkg.com/browser-sync-client/-/browser-sync-client-2.27.5.tgz#acca1d8d3cf2a212e22e50119c97947772b79ef7"
-  integrity sha512-l2jtf60/exv0fQiZkhi3z8RgexYYLGS7DVDnyepkrp+oFAPlKW69daL6NrVSgrwu6lzSTCCTAiPXnUSrQ57e/Q==
+browser-sync-client@^2.27.6:
+  version "2.27.6"
+  resolved "https://registry.yarnpkg.com/browser-sync-client/-/browser-sync-client-2.27.6.tgz#23a3bd339d352bec6ce1870e9d49ce6ea357b0e8"
+  integrity sha512-hqTThp4/nE0Rxu6kn2UXVH9f8WhoHDls+bfhkZjhzCJfDdnGN9VyuwcgfD6gofaxvbzaDK00FiSCACFdmILDdg==
   dependencies:
     etag "1.8.1"
     fresh "0.5.2"
     mitt "^1.1.3"
     rxjs "^5.5.6"
 
-browser-sync-ui@^2.27.5:
-  version "2.27.5"
-  resolved "https://registry.yarnpkg.com/browser-sync-ui/-/browser-sync-ui-2.27.5.tgz#fe016377edaff7d4a9cb1e8a449cc0807e814884"
-  integrity sha512-KxBJhQ6XNbQ8w8UlkPa9/J5R0nBHgHuJUtDpEXQx1jBapDy32WGzD0NENDozP4zGNvJUgZk3N80hqB7YCieC3g==
+browser-sync-ui@^2.27.6:
+  version "2.27.6"
+  resolved "https://registry.yarnpkg.com/browser-sync-ui/-/browser-sync-ui-2.27.6.tgz#c54dd7133ac96dc65824d341afc400504cb63a04"
+  integrity sha512-0nKvGG39z5cGIyPWhNgJBF4p6n6X6JjQj99EpilHEkUOnagbVRtJaWOXlOrkPNxsz5IZ3zx4pk0wYEO4IX7J8w==
   dependencies:
     async-each-series "0.1.1"
     connect-history-api-fallback "^1"
@@ -515,13 +514,13 @@ browser-sync-ui@^2.27.5:
     socket.io-client "^2.4.0"
     stream-throttle "^0.1.3"
 
-browser-sync@^2.27.5:
-  version "2.27.5"
-  resolved "https://registry.yarnpkg.com/browser-sync/-/browser-sync-2.27.5.tgz#9e547645b045f8780d775dc2cc5409357bec6c08"
-  integrity sha512-0GMEPDqccbTxwYOUGCk5AZloDj9I/1eDZCLXUKXu7iBJPznGGOnMHs88mrhaFL0fTA0R23EmsXX9nLZP+k5YzA==
+browser-sync@^2.27.6:
+  version "2.27.6"
+  resolved "https://registry.yarnpkg.com/browser-sync/-/browser-sync-2.27.6.tgz#2c9e80e5e459df849eba3a12373c488c6ff667fd"
+  integrity sha512-lknOs7RmALVC8iLvQuNv0vhe6lChaT+GTP8qVw7s4+fZAhNvFn6jWedX94HMRs4iJOrwrm7kdg52G9mf1oHmAA==
   dependencies:
-    browser-sync-client "^2.27.5"
-    browser-sync-ui "^2.27.5"
+    browser-sync-client "^2.27.6"
+    browser-sync-ui "^2.27.6"
     bs-recipes "1.3.4"
     bs-snippet-injector "^2.0.1"
     chokidar "^3.5.1"
@@ -548,7 +547,7 @@ browser-sync@^2.27.5:
     serve-static "1.13.2"
     server-destroy "1.0.1"
     socket.io "2.4.0"
-    ua-parser-js "^0.7.28"
+    ua-parser-js "1.0.1"
     yargs "^15.4.1"
 
 browserslist@^4.0.0:
@@ -4360,13 +4359,6 @@ spdx-license-ids@^3.0.0:
   resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-3.0.10.tgz#0d9becccde7003d6c658d487dd48a32f0bf3014b"
   integrity sha512-oie3/+gKf7QtpitB0LYLETe+k8SifzsX4KixvpOsbI6S0kRiRQ5MKOio8eMSAKQ17N06+wdEOXRiId+zOxo0hA==
 
-split@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/split/-/split-1.0.1.tgz#605bd9be303aa59fb35f9229fbea0ddec9ea07d9"
-  integrity sha512-mTyOoPbrivtXnwnIxZRFYRrPNtEFKlpB2fvjSnCQUiAA6qAZzqwna5envK4uk6OIeP17CsdF3rSBGYVBsU0Tkg==
-  dependencies:
-    through "2"
-
 sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
@@ -4617,11 +4609,6 @@ tfunk@^4.0.0:
     chalk "^1.1.3"
     dlv "^1.1.3"
 
-through@2:
-  version "2.3.8"
-  resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
-  integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
-
 time-require@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/time-require/-/time-require-0.1.2.tgz#f9e12cb370fc2605e11404582ba54ef5ca2b2d98"
@@ -4694,10 +4681,10 @@ type-check@~0.3.2:
   dependencies:
     prelude-ls "~1.1.2"
 
-ua-parser-js@^0.7.28:
-  version "0.7.28"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
-  integrity sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
+ua-parser-js@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-1.0.1.tgz#268408f4d60375e67aa919fa7d117bdc66d5cd77"
+  integrity sha512-ZMu7XRN3M3R+g/YaFQKiVW0J42bzciF0+xAxP5uuO6VibE30MQvRRBctHuh22uS3yAe5jkru/i8QVOwRDJazIw==
 
 uc.micro@^1.0.1, uc.micro@^1.0.5:
   version "1.0.6"
