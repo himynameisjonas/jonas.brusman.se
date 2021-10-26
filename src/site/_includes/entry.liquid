@@ -19,13 +19,31 @@ layout: layout.liquid
   </div>
 
   <div class="border-t-2 w-content mb-2 mt-2 pt-2 text-gray-700">
-    <time class="dt-published" datetime="{{date | date: "%Y-%m-%d" }}">
-      <a href="{{post.url}}" class="u-url">{{date | date: "%Y-%m-%d"}}</a>
-    </time>
-    {% for tag in tags %}
-      {% unless tag == "entries" %}
-        <a href="/tags/{{tag}}" class="prefix-hash link p-category">{{tag}}</a>
-      {% endunless %}
-    {% endfor %}
+    <dl>
+      <dt class="font-medium">Published at</dt>
+      <dd class="mb-1">
+        <time class="dt-published" datetime="{{date | date: "%Y-%m-%d" }}">
+          <a href="{{post.url}}" class="u-url">{{date | date: "%Y-%m-%d"}}</a>
+        </time>
+      </dd>
+
+      <dt class="font-medium">Tags</dt>
+      <dd class="mb-1">
+        {% for tag in tags %}
+          {% unless tag == "entries" %}
+            <a href="/tags/{{tag}}" class="prefix-hash link p-category">{{tag}}</a>
+          {% endunless %}
+        {% endfor %}
+      </dd>
+
+      {% assign similar = collections.all | similarPosts: page.inputPath, tags %}
+      {% if similar.length > 0 %}
+        <dt class="font-medium">Related posts</dt>
+        <dd class="mb-1">
+          {% for similarPost in similar limit: 3 %}<a href="{{ similarPost.url }}" class="link">{{similarPost.data.title}}</a> {% endfor %}
+        </dd>
+      {% endif %}
+    </dl>
   </div>
+
 </article>

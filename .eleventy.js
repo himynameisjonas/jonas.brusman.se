@@ -85,7 +85,10 @@ const minifyHtml = (rawContent, outputPath) => {
   return content;
 };
 
-
+const getSimilarTags = function(tagsA, tagsB) {
+  if(!tagsA || !tagsB) { return [] }
+  return tagsA.filter(Set.prototype.has, new Set(tagsB)).length;
+}
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
@@ -97,6 +100,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addTransform('imagehost', addImageHosts);
   eleventyConfig.addTransform('minifyHtml', minifyHtml);
 
+  eleventyConfig.addLiquidFilter("similarPosts", function(collection, path, tags){
+    return collection.filter((post) => {
+      return getSimilarTags(post.data.tags, tags) >= 2 && post.data.page.inputPath !== path;
+    }).sort((a,b) => {
+      return getSimilarTags(b.data.tags, tags) - getSimilarTags(a.data.tags, tags);
+    });
+  });
 
   eleventyConfig.addShortcode("excerpt", (...fallbacks) => extractExcerpt(fallbacks));
 
