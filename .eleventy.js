@@ -148,7 +148,7 @@ module.exports = function (eleventyConfig) {
     class="${imgClass}"
     alt="${alt}"
     src="${imageUrl(imagePath, { width: widths[0] })}"
-    sizes="(max-width: 1000px) 99vw, 150vh"
+    sizes="(max-width: 1000px) 100vw, 100vh"
     srcset="${widths
       .map(
         (width) =>

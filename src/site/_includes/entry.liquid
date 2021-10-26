@@ -1,13 +1,13 @@
 ---
 layout: layout.liquid
 ---
-<article class="h-entry flex flex-col">
+<article class="flex flex-col h-entry items-center">
   <h1 class="w-content font-bold leading-none mb-4 md:text-5xl text-3xl text-gray-700 p-name border-b-4 border-branding pb-4">
     {{ headline | default: title }}
   </h1>
 
   {% if photos %}
-    <div class="flex flex-wrap justify-center -mx-2 mb-8">
+    <div class="flex -mx-2 justify-center mb-8 flex-col items-center max-w-screen-h">
       {% for image in photos %}
         {% include "responsive_image" %}
       {% endfor %}
