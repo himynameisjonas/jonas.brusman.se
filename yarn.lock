@@ -24,7 +24,7 @@
     linkedom "^0.12.1"
     prismjs "^1.25.0"
 
-"@11ty/eleventy@^1.0.0-beta.3":
+"@11ty/eleventy@1.0.0-beta.3":
   version "1.0.0-beta.3"
   resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-1.0.0-beta.3.tgz#44b0519ce7c1589f33e0c0a04aa18aaed7acca98"
   integrity sha512-3o2nhp3BFMbl/BWNvuWzbgJ4IV1CbjyX/IRrlNSXzE8kmr4V+zqDNTmfN7RkCgeckdQN1YZWOlGCmB4Z+ARmxA==
