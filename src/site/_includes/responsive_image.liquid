@@ -1,1 +1,29 @@
-{% picture_element image title "max-h-screen py-3" %}
+{% comment %} {% picture_element image title "max-h-screen py-3"%} {% endcomment %}
+<div class="w-full overflow-hidden relative max-h-screen">
+  <img
+    class="object-contain object-center max-h-screen py-2"
+    src="{{image.path}}"
+    width="{{image.originalWidth}}"
+    height="{{image.originalHeight}}"
+  >
+  <img
+    src="{{image.dataURIBase64}}"
+    class="opacity-0 absolute inset-0 w-full h-full object-cover object-center"
+    style="transition:opacity 0.5s;transition-delay:0.25s;height: calc((100vw)/({{image.originalWidth}}/{{image.originalHeight}}));"
+    width="{{image.originalWidth}}"
+    height="{{image.originalHeight}}"
+  >
+</div>
+{% comment %}
+originalWidth":2823,"originalHeight":4250
+<img
+alt="Orsa Grönklitt"
+class="blur-up max-h-screen object-contain lazyloaded"
+data-sizes="(max-width: 1000px) 99vw, 150vh"
+data-srcset="https://jonas-images.brusman.se/images/DSCF1441.jpeg?nf_resize=fit&amp;w=1000 1000w, https://jonas-images.brusman.se/images/DSCF1441.jpeg?nf_resize=fit&amp;w=2000 2000w, https://jonas-images.brusman.se/images/DSCF1441.jpeg?nf_resize=fit&amp;w=3000 3000w, https://jonas-images.brusman.se/images/DSCF1441.jpeg?nf_resize=fit&amp;w=4000 4000w"
+src="data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADwAQCdASoQAAsABUB8JYwCdAEO4dNmjAAA/tOE1cq4SxWuKQJIM8mrR4AAAA=="
+sizes="(max-width: 1000px) 99vw, 150vh"
+srcset="https://jonas-images.brusman.se/images/DSCF1441.jpeg?nf_resize=fit&amp;w=1000 1000w, https://jonas-images.brusman.se/images/DSCF1441.jpeg?nf_resize=fit&amp;w=2000 2000w, https://jonas-images.brusman.se/images/DSCF1441.jpeg?nf_resize=fit&amp;w=3000 3000w, https://jonas-images.brusman.se/images/DSCF1441.jpeg?nf_resize=fit&amp;w=4000 4000w"
+width="4733"
+height="3155"
+> {% endcomment %}

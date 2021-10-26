@@ -7,8 +7,8 @@ layout: layout.liquid
   </h1>
 
   {% if photos %}
-    <div class="flex flex-wrap justify-center -mx-2 mb-8">
-      {% for image in photos %}
+    <div class="-mx-2 mb-8">
+      {% for image in photosWithMetadata %}
         {% include "responsive_image" %}
       {% endfor %}
     </div>

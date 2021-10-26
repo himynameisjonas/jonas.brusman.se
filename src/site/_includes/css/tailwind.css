@@ -6,6 +6,20 @@
 
 @tailwind utilities;
 
+.blur-up {
+  filter: blur(20px);
+  transform: scale(1.1);
+  transition: all 400ms;
+}
+
+.blur-up.lazyloaded {
+  filter: blur(0);
+  transform: scale(1);
+}
+
+
+
+
 .w-content {
   @apply max-w-full sm:max-w-xl md:max-w-3xl  lg:max-w-4xl w-full self-center
 }

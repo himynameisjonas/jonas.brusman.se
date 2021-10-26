@@ -4,6 +4,8 @@ const { JSDOM } = require('jsdom');
 const striptags = require("striptags");
 const minify = require("html-minifier").minify;
 
+const internal = /^\/images\/.*/i;
+
 const imageUrl = function (path, {width, height, resize}) {
   params = [`nf_resize=${resize || 'fit'}`]
   if (width) {
@@ -12,6 +14,7 @@ const imageUrl = function (path, {width, height, resize}) {
   if (height) {
     params.push(`h=${height}`)
   }
+  process.env.IMAGE_HOST = "https://jonas-images.brusman.se"
   if (process.env.IMAGE_HOST) {
     return `${process.env.IMAGE_HOST}${path}?${params.join('&amp;')}`
 
@@ -20,8 +23,24 @@ const imageUrl = function (path, {width, height, resize}) {
   }
 };
 
+const lqip = require('lqip-modern');
+const shorthash = require("short-hash");
+const {AssetCache} = require("@11ty/eleventy-cache-assets");
+const getLqip = async function (url) {
+  let asset = new AssetCache(`lqip-${shorthash(url)}`);
+  if(asset.isCacheValid("2y")) {
+    return asset.getCachedValue()
+  }
+  if (internal.test(url)) {
+    url = `./src/site${url}`
+  }
+  let result = await lqip(url)
+  await asset.save(result.metadata, "json");
+
+  return result.metadata
+};
+
 const processImage = async img => {
-  const internal = /^\/images\/.*/i;
   const srcsetRegex = /\/images\//gi
   const src = img.getAttribute('src');
   const srcset = img.getAttribute('srcset');
@@ -53,6 +72,7 @@ const addImageHosts = async (rawContent, outputPath) => {
 
   return content;
 };
+
 
 function extractExcerpt(fallbacks) {
   let content = fallbacks.filter((s)=>
@@ -93,6 +113,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.addPassthroughCopy("./src/site/images");
   eleventyConfig.addPassthroughCopy("./src/site/css");
+  eleventyConfig.addPassthroughCopy("./src/site/js");
 
   eleventyConfig.addTransform('imagehost', addImageHosts);
   eleventyConfig.addTransform('minifyHtml', minifyHtml);
@@ -127,19 +148,19 @@ module.exports = function (eleventyConfig) {
     }
   });
 
-  eleventyConfig.addShortcode("dump", function () {
-    console.log('hejhej',arguments)
-  })
+  eleventyConfig.addShortcode("picture_element", async function (imagePath, alt) {
+    const widths = [1000, 2000, 3000, 4000];
+    const {originalWidth, originalHeight, dataURIBase64} = await getLqip(imagePath)
+    console.log('hej', {originalWidth, originalHeight, dataURIBase64})
 
-  eleventyConfig.addShortcode("picture_element", function (imagePath, alt, imgClass) {
-    const widths = [500, 1000, 2000, 3000, 4000];
-
-    return `<picture class="m-2"><img
-    class="${imgClass}"
+    return `<picture class="m-2 overflow-hidden"><img
+    class="lazyload blur-up max-h-screen object-contain"
     alt="${alt}"
-    src="${imageUrl(imagePath, { width: widths[0] })}"
-    sizes="(max-width: 1000px) 99vw, 150vh"
-    srcset="${widths
+    width="${originalWidth}"
+    height="${originalHeight}"
+    src="${dataURIBase64}"
+    data-sizes="(max-width: 1000px) 99vw, 150vh"
+    data-srcset="${widths
       .map(
         (width) =>
           `${imageUrl(imagePath,
