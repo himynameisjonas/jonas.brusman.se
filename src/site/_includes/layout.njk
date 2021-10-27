@@ -29,21 +29,12 @@
         Jonas Brusman
       </a>
       <nav class="flex flex-wrap items-baseline items-baseline gap-x-3 text-xl font-normal">
-        <a href="/" class="hover:underline hover:text-branding text-gray-700">Home</a>
-        <a
-          href="/photos/"
-          class="hover:underline hover:text-branding text-gray-700 {% if page.url == "
-          /photos/" or entryType == "
-          photo" %}text-branding{% endif %}">Photos</a>
-        <a
-          href="/notes/"
-          class="hover:underline hover:text-branding text-gray-700 {% if page.url == "
-          /notes/" or entryType == "
-          note" %}text-branding{% endif %}">Notes</a>
-        <a
-          href="/about/"
-          class="hover:underline hover:text-branding text-gray-700 {% if page.url == "
-          /about/" %}text-branding{% endif %}">About</a>
+        <a href="/" class="{% if page.url == "/" %}text-branding border-branding{% endif %} border-white hover:border-branding border-b-4 pb-1 hover:text-branding text-gray-700">Home</a>
+        <a href="/photos/" class="{% if page.url == "/photos/" or entryType == "photo" %}text-branding border-branding{% endif %} border-white hover:border-branding border-b-4 pb-1 hover:text-branding text-gray-700">Photos</a>
+        <a href="/notes/" class="{% if page.url == "/notes/" or entryType == "note" %}text-branding border-branding{% endif %} border-white hover:border-branding border-b-4 pb-1 hover:text-branding text-gray-700">
+          Notes
+        </a>
+        <a href="/about/" class="{% if page.url == "/about/" %}text-branding border-branding{% endif %} border-white hover:border-branding border-b-4 pb-1 hover:text-branding text-gray-700">About</a>
       </nav>
     </header>
     <div class="flex flex-col">
