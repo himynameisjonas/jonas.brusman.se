@@ -19,6 +19,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("./src/site/images");
   eleventyConfig.addPassthroughCopy("./src/site/css");
+  eleventyConfig.addPassthroughCopy("./src/site/js");
 
   eleventyConfig.addTransform('imagehost', addImageHosts);
   eleventyConfig.addTransform('minifyHtml', minifyHtml);
