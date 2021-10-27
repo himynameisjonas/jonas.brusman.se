@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}
+      {% if title %}
+        |
+      {% endif %}Jonas Brusman</title>
+    <link rel="alternate" type="application/atom+xml" title="jonas.brusman.se" href="https://jonas.brusman.se/rss.xml"/>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    {% set page_excerpt %}{% excerpt description, content, title %}{% endset %} <meta name="description" content="{{ page_excerpt | truncate(200) }}">
+    {% if photos.size > 0 -%}
+      {%- set photo = photos[0] -%} <meta property="og:image" content="{% image_url photo, true %}"/>
+      <meta property="og:image:width" content="1200"/>
+      <meta property="og:image:height" content="630"/>
+    {% endif -%}
+    <link rel="webmention" href="https://webmention.io/jonas.brusman.se/webmention"/>
+    <link rel="pingback" href="https://webmention.io/jonas.brusman.se/xmlrpc"/>
+    <link href="https://twitter.com/himynameisjonas" rel="me">
+  </head>
+  <body class="flex flex-col p-4">
+    <header class="flex mb-10 md:mt-6 flex flex-wrap items-baseline items-baseline gap-x-3 w-content justify-center sm:justify-start">
+      <a
+        href="/"
+        rel="author"
+        class="bg-branding block font-black leading-tight md:text-left p-name px-4 py-3 text-3xl text-white uppercase mb-2">
+        Jonas Brusman
+      </a>
+      <nav class="flex flex-wrap items-baseline items-baseline gap-x-3 text-xl font-normal">
+        <a href="/" class="hover:underline hover:text-branding text-gray-700">Home</a>
+        <a
+          href="/photos/"
+          class="hover:underline hover:text-branding text-gray-700 {% if page.url == "
+          /photos/" or entryType == "
+          photo" %}text-branding{% endif %}">Photos</a>
+        <a
+          href="/notes/"
+          class="hover:underline hover:text-branding text-gray-700 {% if page.url == "
+          /notes/" or entryType == "
+          note" %}text-branding{% endif %}">Notes</a>
+        <a
+          href="/about/"
+          class="hover:underline hover:text-branding text-gray-700 {% if page.url == "
+          /about/" %}text-branding{% endif %}">About</a>
+      </nav>
+    </header>
+    <div class="flex flex-col">
+      {{ content | safe }}
+    </div>
+    {% tracking_script -%}
+  </body>
+</html>
