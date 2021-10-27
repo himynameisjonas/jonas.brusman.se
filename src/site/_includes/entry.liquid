@@ -24,7 +24,7 @@ layout: layout.njk
         <dt class="font-medium">Published at</dt>
         <dd class="mb-1">
           <time class="dt-published" datetime="{{date | date: "%Y-%m-%d" }}">
-            <a href="{{post.url}}" class="u-url">{{date | date: "%Y-%m-%d"}}</a>
+            <a href="{{page.url}}" class="u-url">{{date | date: "%Y-%m-%d"}}</a>
           </time>
         </dd>
       {% endif %}
@@ -34,7 +34,7 @@ layout: layout.njk
         <dd class="mb-1">
           {% for tag in tags %}
             {% unless tag == "entries" %}
-              <a href="/tags/{{tag}}" class="prefix-hash link p-category">{{tag}}</a>
+              <a href="/tags/{{tag}}/" class="prefix-hash link p-category">{{tag}}</a>
             {% endunless %}
           {% endfor %}
         </dd>
@@ -49,5 +49,4 @@ layout: layout.njk
       {% endif %}
     </dl>
   </div>
-
 </article>
