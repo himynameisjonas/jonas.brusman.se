@@ -24,15 +24,15 @@
     linkedom "^0.12.1"
     prismjs "^1.25.0"
 
-"@11ty/eleventy@1.0.0-beta.3":
-  version "1.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-1.0.0-beta.3.tgz#44b0519ce7c1589f33e0c0a04aa18aaed7acca98"
-  integrity sha512-3o2nhp3BFMbl/BWNvuWzbgJ4IV1CbjyX/IRrlNSXzE8kmr4V+zqDNTmfN7RkCgeckdQN1YZWOlGCmB4Z+ARmxA==
+"@11ty/eleventy@1.0.0-canary.44":
+  version "1.0.0-canary.44"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-1.0.0-canary.44.tgz#4adcafb8b3c945aeeceeaa2e92c6b33768267945"
+  integrity sha512-uDAZjNPxC9jsynfwkmTUqUSgxRi9FzBJXUCXzHJyoSHl8fYSAMHi8Cm7ZPUyfRNfJmrmZAZp7HcFOqPGU1n3ag==
   dependencies:
     "@11ty/dependency-tree" "^2.0.0"
     "@iarna/toml" "^2.2.5"
     "@sindresorhus/slugify" "^1.1.2"
-    browser-sync "^2.27.6"
+    browser-sync "^2.27.5"
     chalk "^4.1.2"
     chokidar "^3.5.2"
     debug "^4.3.2"
@@ -42,8 +42,8 @@
     gray-matter "^4.0.3"
     hamljs "^0.6.2"
     handlebars "^4.7.7"
-    is-glob "^4.0.3"
-    liquidjs "9.25.1"
+    is-glob "^4.0.1"
+    liquidjs "^9.25.1"
     lodash "^4.17.21"
     luxon "^2.0.2"
     markdown-it "^12.2.0"
@@ -53,14 +53,15 @@
     mustache "^4.2.0"
     normalize-path "^3.0.0"
     nunjucks "^3.2.3"
-    path-to-regexp "^6.2.0"
     please-upgrade-node "^3.2.0"
     pretty "^2.0.0"
     pug "^3.0.2"
     recursive-copy "^2.0.13"
     semver "^7.3.5"
-    slugify "^1.6.1"
+    slugify "^1.6.0"
+    split "^1.0.1"
     time-require "^0.1.2"
+    url-pattern "^1.0.3"
 
 "@babel/code-frame@^7.0.0":
   version "7.10.4"
@@ -514,7 +515,7 @@ browser-sync-ui@^2.27.6:
     socket.io-client "^2.4.0"
     stream-throttle "^0.1.3"
 
-browser-sync@^2.27.6:
+browser-sync@^2.27.5:
   version "2.27.6"
   resolved "https://registry.yarnpkg.com/browser-sync/-/browser-sync-2.27.6.tgz#2c9e80e5e459df849eba3a12373c488c6ff667fd"
   integrity sha512-lknOs7RmALVC8iLvQuNv0vhe6lChaT+GTP8qVw7s4+fZAhNvFn6jWedX94HMRs4iJOrwrm7kdg52G9mf1oHmAA==
@@ -2642,10 +2643,10 @@ linkify-it@^3.0.1:
   dependencies:
     uc.micro "^1.0.1"
 
-liquidjs@9.25.1:
-  version "9.25.1"
-  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-9.25.1.tgz#1330e015158e9d7f0a24d4c063d2242049266f79"
-  integrity sha512-V6RYwuFsx13aKZ5ZrSUMHUgTPrEWpcP3GcafEkMdvlWVW9tTlQHOgBoJaK2HtLbOyvjXtaHXT82ZElwmRNY+Kw==
+liquidjs@^9.25.1:
+  version "9.28.2"
+  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-9.28.2.tgz#2b3536adf7e4085da0e075c9c00bdd5f7dd2dac6"
+  integrity sha512-L84iu9dvEE4kHKoVR0YHANv7hsfRLxQ5zgKGCPuwr3aXuRLV9LAoFQKACBdSWeYtNYCw4t81XhCYBdf3lj/p7Q==
 
 list-to-array@^1.1.0:
   version "1.1.0"
@@ -3254,11 +3255,6 @@ path-parse@^1.0.6:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.7.tgz#fbc114b60ca42b30d9daf5858e4bd68bbedb6735"
   integrity sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==
-
-path-to-regexp@^6.2.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-6.2.0.tgz#f7b3803336104c346889adece614669230645f38"
-  integrity sha512-f66KywYG6+43afgE/8j/GoiNyygk/bnoCbps++3ErRKsIYkGGupyv07R2Ok5m9i67Iqc+T2g1eAUGUPzWhYTyg==
 
 path-type@^3.0.0:
   version "3.0.0"
@@ -4261,7 +4257,7 @@ slash@^3.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
-slugify@^1.6.1:
+slugify@^1.6.0:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.6.1.tgz#a5fcaef29f4e57c6e932ce7044b6ffd9cf81b641"
   integrity sha512-5ofqMTbetNhxlzjYYLBaZFQd6oiTuSkQlyfPEFIMwgUABlZQ0hbk5xIV9Ydd5jghWeRoO7GkiJliUvTpLOjNRA==
@@ -4353,6 +4349,13 @@ spdx-license-ids@^3.0.0:
   version "3.0.10"
   resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-3.0.10.tgz#0d9becccde7003d6c658d487dd48a32f0bf3014b"
   integrity sha512-oie3/+gKf7QtpitB0LYLETe+k8SifzsX4KixvpOsbI6S0kRiRQ5MKOio8eMSAKQ17N06+wdEOXRiId+zOxo0hA==
+
+split@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/split/-/split-1.0.1.tgz#605bd9be303aa59fb35f9229fbea0ddec9ea07d9"
+  integrity sha512-mTyOoPbrivtXnwnIxZRFYRrPNtEFKlpB2fvjSnCQUiAA6qAZzqwna5envK4uk6OIeP17CsdF3rSBGYVBsU0Tkg==
+  dependencies:
+    through "2"
 
 sprintf-js@~1.0.2:
   version "1.0.3"
@@ -4604,6 +4607,11 @@ tfunk@^4.0.0:
     chalk "^1.1.3"
     dlv "^1.1.3"
 
+through@2:
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
+  integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
+
 time-require@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/time-require/-/time-require-0.1.2.tgz#f9e12cb370fc2605e11404582ba54ef5ca2b2d98"
@@ -4754,6 +4762,11 @@ upper-case@^1.1.1:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/upper-case/-/upper-case-1.1.3.tgz#f6b4501c2ec4cdd26ba78be7222961de77621598"
   integrity sha1-9rRQHC7EzdJrp4vnIilh3ndiFZg=
+
+url-pattern@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/url-pattern/-/url-pattern-1.0.3.tgz#0409292471b24f23c50d65a47931793d2b5acfc1"
+  integrity sha1-BAkpJHGyTyPFDWWkeTF5PStaz8E=
 
 util-deprecate@^1.0.2:
   version "1.0.2"
