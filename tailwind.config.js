@@ -12,7 +12,7 @@ module.exports = {
       },
       colors: {
         branding: {
-          "DEFAULT": "#f1c71a",
+          "DEFAULT": "#e60049",
         },
       },
       fontFamily: {
