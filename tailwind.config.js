@@ -20,6 +20,10 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    extend: {
+      animation: ['hover', 'focus'],
+    }
+  },
   plugins: [],
 };
