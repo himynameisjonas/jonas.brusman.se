@@ -7,3 +7,8 @@ IMAGE_HOST = ""
 
 [context.branch-deploy.environment]
 IMAGE_HOST = ""
+
+[[headers]]
+  for = "images/*"
+    [headers.values]
+    X-HEADER-TO-CHANGE = "hello world"
