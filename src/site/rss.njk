@@ -19,12 +19,12 @@
   <subtitle>{{ metadata.subtitle }}</subtitle>
   <link href="{{ metadata.feedUrl }}" rel="self"/>
   <link href="{{ metadata.url }}"/>
-  <updated>{{ collections.blogPosts | rssLastUpdatedDate }}</updated>
+  <updated>{{ collections.blogPost | rssLastUpdatedDate }}</updated>
   <id>{{ metadata.url }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>
   </author>
-  {%- for post in collections.blogPosts | reverse %}
+  {%- for post in collections.blogPost | reverse %}
     {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
     <entry>
       <title>{{ post.data.title }}</title>
