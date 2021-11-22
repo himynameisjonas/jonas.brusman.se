@@ -9,7 +9,7 @@ title: Blog
     <a href="/notes"><h2 class="text-3xl leading-tight font-black mb-2">Latest notes</h2></a>
     {% assign notes = collections.notes | reverse %}
     {% for post in notes limit:3  %}
-      {% include "list_note_entry" %}
+      {% include "list_note_post" %}
     {% endfor %}
   </div>
 
@@ -19,7 +19,7 @@ title: Blog
     {% for post in photos limit:3  %}
       <div class="flex-initial {% if forloop.first == true %}w-full{% else %}w-full md:w-1/2{% endif %}">
         <div class="mb-6 {% cycle '', 'md:mr-3', 'md:ml-3' %}">
-          {% include "list_photo_entry" %}
+          {% include "list_photo_post" %}
         </div>
       </div>
     {% endfor %}

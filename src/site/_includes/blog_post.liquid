@@ -33,7 +33,7 @@ layout: layout.njk
         <dt class="font-medium">Tags</dt>
         <dd class="mb-1">
           {% for tag in tags %}
-            {% unless tag == "entries" %}
+            {% unless tag == "blogPost" %}
               <a href="/tags/{{tag}}/" class="prefix-hash link p-category">{{tag}}</a>
             {% endunless %}
           {% endfor %}

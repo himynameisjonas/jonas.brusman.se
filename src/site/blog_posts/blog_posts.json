@@ -1,0 +1,5 @@
+{
+  "layout": "blog_post.liquid",
+  "tags": ["blogPost"],
+  "permalink": "{{ page.fileSlug }}/index.html"
+}

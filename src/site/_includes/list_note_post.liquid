@@ -11,7 +11,7 @@
       </time>
     </a>
     {% for tag in post.data.tags %}
-      {% unless tag == "entries" %}
+      {% unless tag == "blogPost" %}
         <a href="/tags/{{tag}}" class="prefix-hash hover:text-branding">{{tag}}</a>
       {% endunless %}
     {% endfor %}
