@@ -2,11 +2,11 @@
 layout: layout.njk
 ---
 <article class="flex flex-col h-entry items-center">
-  <div class="w-content">
-  <h1 class="font-normal mb-4 md:text-5xl text-3xl text-gray-700 p-name border-l-4 border-branding -ml-5 pl-4">
-    {{ headline | default: title }}
+  <h1 class="w-content mb-4 md:text-5xl md:leading-relaxed leading-relaxed text-3xl text-white font-semibold p-name">
+    <span class="box-decoration-clone bg-branding px-4 py-1">
+      {{ headline | default: title }}
+    </span>
   </h1>
-  </div>
 
   {% if photos %}
     <div class="flex -mx-2 justify-center mb-8 flex-col items-center max-w-screen-h">

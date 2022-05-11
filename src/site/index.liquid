@@ -17,13 +17,11 @@ title: Blog
 
   <div class="flex flex-wrap">
     <a href="/photos"><h2 class="text-3xl leading-tight font-semibold border-l-4 border-branding -ml-5 pl-4 mb-3">Latest photos</h2></a>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     {% assign photos = collections.photos | reverse %}
-    {% for post in photos limit:3  %}
-      <div class="flex-initial {% if forloop.first == true %}w-full{% else %}w-full md:w-1/2{% endif %}">
-        <div class="mb-6 {% cycle '', 'md:mr-3', 'md:ml-3' %}">
-          {% include "list_photo_post" %}
-        </div>
-      </div>
+    {% for post in photos limit:4  %}
+      {% include "list_photo_post" %}
     {% endfor %}
   </div>
 </div>
