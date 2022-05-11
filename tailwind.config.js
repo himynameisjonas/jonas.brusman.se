@@ -1,8 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  purge: {
-    enabled: process.env.NETLIFY,
+  content: {
     content: ["./src/**/*.md", "./src/**/*.liquid", "./src/**/*.njk", "./src/**/*.html", "./.eleventy.js"],
   },
   theme: {
@@ -19,11 +18,6 @@ module.exports = {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
     },
-  },
-  variants: {
-    extend: {
-      animation: ['hover', 'focus'],
-    }
   },
   plugins: [],
 };
