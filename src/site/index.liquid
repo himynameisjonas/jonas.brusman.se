@@ -6,15 +6,17 @@ title: Blog
 
 <div class="w-content text-gray-700">
   <div>
-    <a href="/notes"><h2 class="text-3xl leading-tight font-black mb-2">Latest notes</h2></a>
+    <a href="/notes"><h2 class="text-3xl leading-tight font-semibold border-l-4 border-branding -ml-5 pl-4 mb-3">Latest notes</h2></a>
     {% assign notes = collections.notes | reverse %}
-    {% for post in notes limit:3  %}
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10">
+    {% for post in notes limit:6  %}
       {% include "list_note_post" %}
     {% endfor %}
+    </div>
   </div>
 
   <div class="flex flex-wrap">
-    <a href="/photos"><h2 class="text-3xl leading-tight font-black mb-2">Latest photos</h2></a>
+    <a href="/photos"><h2 class="text-3xl leading-tight font-semibold border-l-4 border-branding -ml-5 pl-4 mb-3">Latest photos</h2></a>
     {% assign photos = collections.photos | reverse %}
     {% for post in photos limit:3  %}
       <div class="flex-initial {% if forloop.first == true %}w-full{% else %}w-full md:w-1/2{% endif %}">

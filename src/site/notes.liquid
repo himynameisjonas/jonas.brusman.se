@@ -5,7 +5,9 @@ title: Notes
 ---
 
 <div class="flex flex-wrap w-content">
-  {% for post in collections.notes reversed %}
-    {% include "list_note_post" %}
-  {% endfor %}
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10">
+    {% for post in collections.notes reversed %}
+      {% include "list_note_post" %}
+    {% endfor %}
+  </div>
 </div>

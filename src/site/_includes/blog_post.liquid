@@ -2,9 +2,11 @@
 layout: layout.njk
 ---
 <article class="flex flex-col h-entry items-center">
-  <h1 class="w-content font-bold leading-none mb-4 md:text-5xl text-3xl text-gray-700 p-name border-b-4 border-branding pb-4">
+  <div class="w-content">
+  <h1 class="font-normal mb-4 md:text-5xl text-3xl text-gray-700 p-name border-l-4 border-branding -ml-5 pl-4">
     {{ headline | default: title }}
   </h1>
+  </div>
 
   {% if photos %}
     <div class="flex -mx-2 justify-center mb-8 flex-col items-center max-w-screen-h">
@@ -21,8 +23,8 @@ layout: layout.njk
   <div class="border-t-2 w-content mb-2 mt-2 pt-2 text-gray-700">
     <dl>
       {% if date %}
-        <dt class="font-medium">Published at</dt>
-        <dd class="mb-1">
+        <dt class="">Published at</dt>
+        <dd class="mb-1 font-light">
           <time class="dt-published" datetime="{{date | date: "%Y-%m-%d" }}">
             <a href="{{page.url}}" class="u-url">{{date | date: "%Y-%m-%d"}}</a>
           </time>
@@ -30,8 +32,8 @@ layout: layout.njk
       {% endif %}
 
       {% if tags.length > 0 %}
-        <dt class="font-medium">Tags</dt>
-        <dd class="mb-1">
+        <dt class="">Tags</dt>
+        <dd class="mb-1 font-light">
           {% for tag in tags %}
             {% unless tag == "blogPost" %}
               <a href="/tags/{{tag}}/" class="prefix-hash link p-category">{{tag}}</a>
@@ -42,8 +44,8 @@ layout: layout.njk
 
       {% assign similar = collections.all | similarPosts: page.inputPath, tags %}
       {% if similar.length > 0 %}
-        <dt class="font-medium">Related posts</dt>
-        <dd class="mb-1">
+        <dt class="">Related posts</dt>
+        <dd class="mb-1 font-light">
           {% for similarPost in similar limit: 3 %}<a href="{{ similarPost.url }}" class="link">{{similarPost.data.title}}</a> {% endfor %}
         </dd>
       {% endif %}

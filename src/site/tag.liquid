@@ -20,7 +20,7 @@ eleventyExcludeFromCollections: true
 
 {% if tagged_notes.size > 0 %}
   <div class="w-content">
-    <h2 class="text-3xl leading-tight font-black mb-2">Notes tagged with <span class="prefix-hash">{{ tag }}</span></h2>
+    <h2 class="text-3xl leading-tight font-semibold border-l-4 border-branding -ml-5 pl-4 mb-3">Notes tagged with <span class="prefix-hash">{{ tag }}</span></h2>
     {% for post in tagged_notes reversed %}
       {% unless post.data.photos %}
         {% include "list_note_post" %}
@@ -31,7 +31,7 @@ eleventyExcludeFromCollections: true
 
 {% if tagged_photos.size > 0 %}
   <div class="w-content">
-    <h2 class="text-3xl leading-tight font-black mb-2">Photos tagged with <span class="prefix-hash">{{ tag }}</span></h2>
+    <h2 class="text-3xl leading-tight font-semibold border-l-4 border-branding -ml-5 pl-4 mb-3">Photos tagged with <span class="prefix-hash">{{ tag }}</span></h2>
   </div>
   <div class="flex flex-wrap {% if tagged_photos.size < 3 %}md:justify-center{% endif %} {% if tagged_photos.size < 4 %}lg:justify-center{% endif %}">
     {% for post in tagged_photos reversed %}
