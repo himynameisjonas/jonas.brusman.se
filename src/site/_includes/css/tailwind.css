@@ -44,6 +44,18 @@
   padding-bottom: 0.125rem;
 }
 
+#webmentions .reacts {
+  @apply flex flex-row;
+}
+
+#webmentions .reaction {
+  @apply mr-2 flex flex-row items-center
+}
+
+#webmentions img {
+  @apply h-4 w-4 object-cover mr-0.5;
+}
+
 .markdown {
   @apply text-gray-800 leading-relaxed break-words text-xl;
 }

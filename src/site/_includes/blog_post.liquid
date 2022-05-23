@@ -58,5 +58,8 @@ layout: layout.njk
       {% endif %}
     </dl>
     <a rel="author" class="hidden p-author h-card" href="https://jonas.brusman.se">Jonas Brusman</a>
+
+    <script src="/js/webmention.min.js" data-page-url="https://jonas.brusman.se{{page.url}}" data-add-urls="https://jonas.brusman.se/{{date | date: "%Y-%m-%d"}}-{{page.fileSlug}}/" data-comments-are-reactions=true async></script>
+    <div id="webmentions"></div>
   </div>
 </article>
