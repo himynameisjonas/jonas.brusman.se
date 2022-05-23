@@ -16,6 +16,8 @@ tags:
   - eva
   - vacation
   - beer
+syndications:
+ - https://www.instagram.com/p/Cd6V7OeMcAi/
 ---
 
 Me and the family took the train to Stockholm over the weekend and brought with us my in-laws. Lots of good food, some museums, friends and the occasional beer.
