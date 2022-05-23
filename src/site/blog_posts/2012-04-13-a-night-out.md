@@ -12,6 +12,7 @@ tags:
   - party
   - black & white
   - stockholm
+  - beer
 ---
 
 A night out in July 2011. Emil and my brother David at Bröderna Olsson, Stockholm.
