@@ -49,6 +49,13 @@ layout: layout.njk
           {% for similarPost in similar limit: 3 %}<a href="{{ similarPost.url }}" class="link">{{similarPost.data.title}}</a> {% endfor %}
         </dd>
       {% endif %}
+
+      {% if syndications.length > 0 %}
+        <dt class="hidden">This post elsewhere</dt>
+        <dd class="hidden mb-1 font-light">
+          {% for url in syndications %}<a href="{{ url }}" rel="syndication" class="u-syndication link">{{url}}</a> {% endfor %}
+        </dd>
+      {% endif %}
     </dl>
     <a rel="author" class="hidden p-author h-card" href="https://jonas.brusman.se">Jonas Brusman</a>
   </div>
