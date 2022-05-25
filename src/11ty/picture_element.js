@@ -3,7 +3,7 @@ const imageUrl = require("./image_url")
 module.exports = function (imagePath, alt, imgClass) {
   const widths = [500, 1000, 2000, 3000, 4000];
 
-  return `<picture class="m-2"><img
+  return `<img
   class="${imgClass}"
   alt="${alt}"
   src="${imageUrl.url(imagePath, { width: widths[0] })}"
@@ -16,5 +16,5 @@ module.exports = function (imagePath, alt, imgClass) {
         )} ${width}w`
     )
     .join(", ")}"
-  /></picture>`;
+  />`;
 }
