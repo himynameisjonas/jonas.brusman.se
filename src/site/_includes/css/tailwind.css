@@ -31,6 +31,10 @@
   @apply underline
 }
 
+.title-bg {
+  @apply font-semibold text-white box-decoration-clone bg-branding px-2 py-1
+}
+
 .ar-3x2 {
   height: 0;
   width: 100%;
