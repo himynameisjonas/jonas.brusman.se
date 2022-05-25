@@ -5,7 +5,7 @@
 <div class="ar-3x2">
   <a
     href="{{ post.url }}"
-    class="absolute bg-cover h-full left-0 top-0 w-full rounded text-gray-100 bg-gray-400"
+    class="absolute bg-cover h-full left-0 top-0 w-full rounded-sm overflow-hidden text-gray-100 bg-gray-400"
   >
     <img
       src="{% image_url photo %}"
@@ -13,7 +13,7 @@
       alt="{{post.data.title}}"
       class="absolute h-full inset-0 object-cover w-full"
     >
-    <div class="px-4 inset-0 absolute flex flex-col justify-center text-center rounded bg-gray-700 bg-opacity-25">
+    <div class="px-4 inset-0 absolute flex flex-col justify-center text-center bg-gray-700 bg-opacity-25">
       <h2 class="text-3xl leading-relaxed pb-1 font-bold">
         <span class="font-semibold text-white box-decoration-clone bg-branding px-2 py-1">{{ post.data.title }}</span>
       </h2>
