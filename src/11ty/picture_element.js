@@ -7,7 +7,7 @@ module.exports = function (imagePath, alt, imgClass) {
   class="${imgClass}"
   alt="${alt}"
   src="${imageUrl.url(imagePath, { width: widths[0] })}"
-  sizes="(max-width: 1000px) 100vw, 100vh"
+  sizes="(max-width: 1000px) 100vw, 133vh"
   srcset="${widths
     .map(
       (width) =>
