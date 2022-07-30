@@ -19,6 +19,7 @@ tags:
 syndications:
  - https://www.instagram.com/p/Cf1LdS_jZfQ/
  - https://tacocat.space/@jonas/108644538404749217
+ - https://tacocat.space/@jonas/108737562636456427
 ---
 
 Went to the west coast and Falkenberg. Had a lovely time there. We went crab fishing, swam in the ocean and ate Sweden's best pizza at [Lilla Napoli][1].
