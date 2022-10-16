@@ -8,7 +8,6 @@ photos:
 tags:
   - summer
   - david
-  - emil
   - party
   - black & white
   - stockholm
