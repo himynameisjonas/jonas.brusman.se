@@ -28,6 +28,10 @@ tags:
   - emil
   - joakim
 syndications:
+  - https://tacocat.space/@jonas/109178930862157299
+  - https://twitter.com/himynameisjonas/status/1581688134370488320
+  - https://www.instagram.com/p/CjDf45_jO-J/
+  - https://www.instagram.com/p/CjJPSsVju0h/
 ---
 
 [Teamtailor](https://www.teamtailor.com), the company I work for, brought all employees to Croatia, to a nice hotel on the Rab island. It was four days filled with great company, nice food and parties.
