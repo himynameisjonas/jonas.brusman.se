@@ -10,4 +10,4 @@ tags:
 syndications:
 ---
 
-My pregnant wife Eva rightfully enjoying a late morning in Bed.
+My pregnant wife Eva rightfully enjoying a late morning in bed.
