@@ -1,6 +1,6 @@
 ---
 date: 2022-05-17
-title: "Tacocat.space"
+title: "Mastodon: Tacocat.space"
 tags:
   - mastodon
   - fediverse
