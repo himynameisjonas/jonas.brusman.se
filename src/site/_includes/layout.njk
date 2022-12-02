@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="/css/styles.css">
     {% set page_excerpt %}{% excerpt description, content, title %}{% endset %} <meta name="description" content="{{ page_excerpt | truncate(200) }}">
-    {% if photos.size > 0 -%}
+    {% if photos.length > 0 -%}
       {%- set photo = photos[0] -%} <meta property="og:image" content="{% image_url photo, true %}"/>
       <meta property="og:image:width" content="1200"/>
       <meta property="og:image:height" content="630"/>
