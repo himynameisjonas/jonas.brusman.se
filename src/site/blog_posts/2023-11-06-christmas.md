@@ -10,10 +10,10 @@ photos:
   - /images/DSCF3380.jpeg
 tags:
   - christmas
-  - Lärkstugan
-  - Tor
-  - Arvid
-  - Lasse
+  - lärkstugan
+  - tor
+  - arvid
+  - lasse
 syndications:
   - https://www.instagram.com/p/CmlT7GuD03P/
   - https://tacocat.space/@jonas/109643312918398515
