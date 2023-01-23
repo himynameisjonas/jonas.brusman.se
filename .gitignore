@@ -2,7 +2,7 @@
 
 node_modules/
 /dist
-/src/site/css
+/src/site/css/styles.css
 
 # Local Netlify folder
 .netlify
