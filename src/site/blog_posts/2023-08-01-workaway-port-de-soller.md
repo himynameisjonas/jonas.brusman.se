@@ -25,6 +25,7 @@ tags:
 syndications:
   - https://www.instagram.com/p/CsWnyPqN-a4/
   - https://www.instagram.com/p/CsR0PBWtgO_/
+  - https://tacocat.space/@jonas/110376749099548665
 ---
 
 Port de Sóller, Mallorca, Spain, May 15-17 2023.
