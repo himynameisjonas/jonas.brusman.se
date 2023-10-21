@@ -31,31 +31,31 @@
   dependencies:
     normalize-path "^3.0.0"
 
-"@11ty/eleventy@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-1.0.1.tgz#436a6e01b4c02157cd610351d2cce6dff407662a"
-  integrity sha512-2fJDHVBkRr1SB7CqBexwoLdiOGUE0f22O+Ie1TT/FI65XQZWshgHVZzvmZfmtKvQW4qtaC/FuJG3wMxkXfel7w==
+"@11ty/eleventy@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-1.0.2.tgz#e8dace170a2dd377fb40465b337bb5f0d17ce6bd"
+  integrity sha512-03ER4zukR6BgwppI5DHRE11lc+8B0fWsBrqacVWo3o49QkdEFXnEWjhyI9qd9LrPlgQHK2/MYyxuOvNwecyCLQ==
   dependencies:
     "@11ty/dependency-tree" "^2.0.1"
     "@11ty/eleventy-utils" "^1.0.1"
     "@iarna/toml" "^2.2.5"
     "@sindresorhus/slugify" "^1.1.2"
-    browser-sync "^2.27.9"
+    browser-sync "^2.27.10"
     chokidar "^3.5.3"
     cross-spawn "^7.0.3"
     debug "^4.3.4"
     dependency-graph "^0.11.0"
-    ejs "^3.1.6"
+    ejs "^3.1.8"
     fast-glob "^3.2.11"
     graceful-fs "^4.2.10"
     gray-matter "^4.0.3"
     hamljs "^0.6.2"
     handlebars "^4.7.7"
     is-glob "^4.0.3"
-    kleur "^4.1.4 "
-    liquidjs "^9.36.1"
+    kleur "^4.1.5"
+    liquidjs "^9.40.0"
     lodash "^4.17.21"
-    luxon "^2.3.2"
+    luxon "^2.5.0"
     markdown-it "^12.3.2"
     minimist "^1.2.6"
     moo "^0.5.1"
@@ -63,7 +63,7 @@
     mustache "^4.2.0"
     normalize-path "^3.0.0"
     nunjucks "^3.2.3"
-    path-to-regexp "^6.2.0"
+    path-to-regexp "^6.2.1"
     please-upgrade-node "^3.2.0"
     pretty "^2.0.0"
     pug "^3.0.2"
@@ -3230,7 +3230,7 @@ browser-sync-ui@^2.29.3:
     socket.io-client "^4.4.1"
     stream-throttle "^0.1.3"
 
-browser-sync@^2.27.9:
+browser-sync@^2.27.10:
   version "2.29.3"
   resolved "https://registry.yarnpkg.com/browser-sync/-/browser-sync-2.29.3.tgz#c2a3ff00c659eb87a13cae9d7a427e1b4b580ee1"
   integrity sha512-NiM38O6XU84+MN+gzspVmXV2fTOoe+jBqIBx3IBdhZrdeURr6ZgznJr/p+hQ+KzkKEiGH/GcC4SQFSL0jV49bg==
@@ -4436,7 +4436,7 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
-ejs@^3.1.6:
+ejs@^3.1.8:
   version "3.1.9"
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-3.1.9.tgz#03c9e8777fe12686a9effcef22303ca3d8eeb361"
   integrity sha512-rC+QVNMJWv+MtPgkt0y+0rVEIdbtxVADApW9JXrUVlzHetgcyczP/E7DJmWJ4fJCZF2cPcBk0laWO9ZHMG3DmQ==
@@ -6118,7 +6118,7 @@ kleur@^3.0.3:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
-kleur@^4.0.3, "kleur@^4.1.4 ":
+kleur@^4.0.3, kleur@^4.1.5:
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-4.1.5.tgz#95106101795f7050c6c650f350c683febddb1780"
   integrity sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==
@@ -6218,7 +6218,7 @@ linkify-it@^3.0.1:
   dependencies:
     uc.micro "^1.0.1"
 
-liquidjs@^9.36.1:
+liquidjs@^9.40.0:
   version "9.43.0"
   resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-9.43.0.tgz#69924ed3bbe143c17c13ea675cc70390d72eb307"
   integrity sha512-qZZuL5Emja2UgCqiLewiw9bvwZQwm19TTGFxDkonVzB4YSTOZ8tuTVo/7Uu/AeW1cL2Qb/at3DSoV8wwyFXQCw==
@@ -6398,7 +6398,7 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-luxon@^2.3.2:
+luxon@^2.5.0:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-2.5.2.tgz#17ed497f0277e72d58a4756d6a9abee4681457b6"
   integrity sha512-Yg7/RDp4nedqmLgyH0LwgGRvMEKVzKbUdkBYyCosbHgJ+kaOUx0qzSiSatVc3DFygnirTPYnMM2P5dg2uH1WvA==
@@ -7850,7 +7850,7 @@ path-to-regexp@0.1.7:
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-0.1.7.tgz#df604178005f522f15eb4490e7247a1bfaa67f8c"
   integrity sha512-5DFkuoqlv1uYQKxy8omFBeJPQcdoE07Kv2sferDCrAq1ohOU+MSDswDIbnx3YAM60qIOnYa53wBhXW0EbMonrQ==
 
-path-to-regexp@^6.2.0:
+path-to-regexp@^6.2.1:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-6.2.1.tgz#d54934d6798eb9e5ef14e7af7962c945906918e5"
   integrity sha512-JLyh7xT1kizaEvcaXOQwOc2/Yhw6KZOvPf1S8401UyLk86CU79LN3vl7ztXGm/pZ+YjoyAJ4rxmHwbkBXJX+yw==
