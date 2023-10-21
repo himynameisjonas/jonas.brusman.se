@@ -15,11 +15,8 @@
     "start": "yarn watch"
   },
   "volta": {
-    "node": "18.18.2",
-    "yarn": "1.22.17"
-  },
-  "engines": {
-    "node": ">=18.18.2"
+    "node": "16.20.2",
+    "yarn": "1.22.19"
   },
   "devDependencies": {
     "@11ty/eleventy": "1.0.1",
