@@ -18,6 +18,9 @@
     "node": "18.18.2",
     "yarn": "1.22.17"
   },
+  "engines": {
+    "node": ">=18.18.2"
+  },
   "devDependencies": {
     "@11ty/eleventy": "1.0.1",
     "@11ty/eleventy-plugin-rss": "1.1.2",
