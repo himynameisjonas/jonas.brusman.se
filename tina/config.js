@@ -41,7 +41,7 @@ export default defineConfig({
           {
             label: 'Photos',
             name: 'photos',
-            type: 'string',
+            type: 'image',
             list: true,
           },
           {
