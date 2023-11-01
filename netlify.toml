@@ -2,12 +2,6 @@
 NODE_VERSION = "18.18.2"
 YARN_VERSION = "1.22.17"
 
-[context.deploy-preview.environment]
-IMAGE_HOST = ""
-
-[context.branch-deploy.environment]
-IMAGE_HOST = ""
-
 [[redirects]]
 from = '/api/*'
 status = 200

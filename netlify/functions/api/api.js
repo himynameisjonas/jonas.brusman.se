@@ -10,10 +10,12 @@ const router = Router()
 const mediaHandler = createMediaHandler({
   config: {
     credentials: {
-      accessKeyId: process.env.S3_ACCESS_KEY || '',
-      secretAccessKey: process.env.S3_SECRET_KEY || '',
+      accessKeyId: process.env.S3_ACCESS_KEY_ID || '',
+      secretAccessKey: process.env.S3_SECRET_ACCESS_KEY || '',
     },
     region: process.env.S3_REGION,
+    endpoint: process.env.S3_ENDPOINT,
+    signatureVersion: 'v4',
   },
   bucket: process.env.S3_BUCKET || '',
   authorized: async (req, _res) => {
@@ -30,6 +32,9 @@ const mediaHandler = createMediaHandler({
       return false
     }
   },
+},
+{
+   cdnUrl: "https://photo-storage.brusman.se"
 })
 
 router.get('/s3/media', mediaHandler)

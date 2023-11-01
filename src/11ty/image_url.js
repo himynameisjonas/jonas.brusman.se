@@ -1,12 +1,16 @@
-const url = function (path, {width, height, resize}) {
-  params = [`nf_resize=${resize || 'fit'}`]
+const url = function (path, {width, height, gravity}) {
+  params = ["org_if_sml=1"]
   if (width) {
     params.push(`w=${width}`)
   }
   if (height) {
     params.push(`h=${height}`)
   }
+  if (gravity) {
+    params.push(`gravity=${gravity}`)
+  }
   if (process.env.IMAGE_HOST) {
+    path = path.replace(/^https?:\/\//, '/')
     return `${process.env.IMAGE_HOST}${path}?${params.join('&amp;')}`
 
   } else {
@@ -18,18 +22,18 @@ const shortcode = function (imagePath, sharing) {
   if (sharing) {
     return url(imagePath,
       {
-        resize: "smartcrop",
         width: 1200,
-        height: 630
+        height: 630,
+        gravity: 'smart',
       },
     );
 
   } else {
     return url(imagePath,
       {
-        resize: "smartcrop",
         width: 500,
-        height: 333
+        height: 333,
+        gravity: 'smart',
       },
     );
   }

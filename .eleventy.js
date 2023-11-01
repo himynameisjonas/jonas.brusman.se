@@ -1,4 +1,3 @@
-const addImageHosts = require("./src/11ty/add_image_hosts")
 const extractExcerpt = require("./src/11ty/extract_excerpt")
 const imageUrl = require("./src/11ty/image_url")
 const minifyHtml = require("./src/11ty/minify_html")
@@ -23,7 +22,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({"./src/site/misc": "./"});
   eleventyConfig.addPassthroughCopy("./_redirects");
 
-  eleventyConfig.addTransform('imagehost', addImageHosts);
   eleventyConfig.addTransform('minifyHtml', minifyHtml);
 
   eleventyConfig.addCollection("notes", typeCollection("note"));
