@@ -7,3 +7,11 @@ IMAGE_HOST = ""
 
 [context.branch-deploy.environment]
 IMAGE_HOST = ""
+
+[[redirects]]
+from = '/api/*'
+status = 200
+to = '/.netlify/functions/api/:splat'
+
+[functions]
+node_bundler = 'esbuild'
