@@ -2,10 +2,10 @@
 date: 2018-05-13
 title: Artipelag
 photos:
-  - /images/41357936864.jpg
-  - /images/41357936954.jpg
-  - /images/41357937044.jpg
-  - /images/28204793478.jpg
+  - 'https://photo-storage.brusman.se/41357936864.jpg'
+  - 'https://photo-storage.brusman.se/41357936954.jpg'
+  - 'https://photo-storage.brusman.se/41357937044.jpg'
+  - 'https://photo-storage.brusman.se/28204793478.jpg'
 tags:
   - arvid
   - eva

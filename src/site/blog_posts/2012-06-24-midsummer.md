@@ -2,10 +2,10 @@
 date: 2012-06-24
 title: Midsummer
 photos:
-  - /images/7431028392.jpg
-  - /images/7431030226.jpg
-  - /images/7431032662.jpg
-  - /images/7431034030.jpg
+  - 'https://photo-storage.brusman.se/7431028392.jpg'
+  - 'https://photo-storage.brusman.se/7431030226.jpg'
+  - 'https://photo-storage.brusman.se/7431032662.jpg'
+  - 'https://photo-storage.brusman.se/7431034030.jpg'
 tags:
   - summer
   - sea

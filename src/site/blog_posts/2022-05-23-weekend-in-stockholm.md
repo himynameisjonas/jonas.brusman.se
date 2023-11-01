@@ -2,11 +2,11 @@
 date: 2022-05-23
 title: Weekend in Stockholm
 photos:
-  - /images/1.jpeg
-  - /images/2.jpeg
-  - /images/3.jpeg
-  - /images/4.jpeg
-  - /images/6.jpeg
+  - 'https://photo-storage.brusman.se/1.jpeg'
+  - 'https://photo-storage.brusman.se/2.jpeg'
+  - 'https://photo-storage.brusman.se/3.jpeg'
+  - 'https://photo-storage.brusman.se/4.jpeg'
+  - 'https://photo-storage.brusman.se/6.jpeg'
 tags:
   - stockholm
   - lasse

@@ -2,12 +2,12 @@
 date: 2023-01-06
 title: Christmas Eve 2022
 photos:
-  - /images/DSCF3339.jpeg
-  - /images/DSCF3344.jpeg
-  - /images/DSCF3347.jpeg
-  - /images/DSCF3364.jpeg
-  - /images/DSCF3382.jpeg
-  - /images/DSCF3380.jpeg
+  - 'https://photo-storage.brusman.se/DSCF3339.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF3344.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF3347.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF3364.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF3382.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF3380.jpeg'
 tags:
   - christmas
   - lärkstugan

@@ -2,11 +2,11 @@
 date: 2022-07-30
 title: Falkenberg
 photos:
-  - /images/DSCF2535.jpeg
-  - /images/DSCF2536.jpeg
-  - /images/DSCF2579.jpeg
-  - /images/DSCF2545.jpeg
-  - /images/DSCF2547.jpeg
+  - 'https://photo-storage.brusman.se/DSCF2535.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF2536.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF2579.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF2545.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF2547.jpeg'
 tags:
   - falkenberg
   - arvid

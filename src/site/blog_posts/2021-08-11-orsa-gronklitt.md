@@ -2,10 +2,10 @@
 date: 2021-08-11
 title: Orsa Grönklitt
 photos:
-  - /images/DSCF1441.jpeg
-  - /images/DSCF1442.jpeg
-  - /images/DSCF1453.jpeg
-  - /images/DSCF1439.jpeg
+  - 'https://photo-storage.brusman.se/DSCF1441.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF1442.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF1453.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF1439.jpeg'
 tags:
   - orsa
   - dalarna

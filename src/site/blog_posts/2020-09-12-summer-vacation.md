@@ -2,13 +2,13 @@
 date: 2020-09-12
 title: Summer vacation
 photos:
-  - /images/DSCF6775.jpeg
-  - /images/DSCF6751.jpeg
-  - /images/DSCF6762.jpeg
-  - /images/DSCF6779.jpeg
-  - /images/DSCF6782.jpeg
-  - /images/DSCF6784.jpeg
-  - /images/DSCF6795.jpeg
+  - 'https://photo-storage.brusman.se/DSCF6775.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF6751.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF6762.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF6779.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF6782.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF6784.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF6795.jpeg'
 tags:
   - summer
   - sea

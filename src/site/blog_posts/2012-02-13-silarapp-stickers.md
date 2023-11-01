@@ -2,7 +2,7 @@
 date: 2012-02-13
 title: SilarApp stickers
 photos:
-  - /images/6869124831.jpg
+  - 'https://photo-storage.brusman.se/6869124831.jpg'
 tags:
   - silarapp.com
   - stickers

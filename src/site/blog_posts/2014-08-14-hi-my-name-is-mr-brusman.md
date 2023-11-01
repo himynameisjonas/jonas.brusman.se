@@ -2,7 +2,7 @@
 date: 2014-08-14
 title: "Hi my name is Mr. Brusman"
 photos:
-  - /images/14731693270.jpg
+  - 'https://photo-storage.brusman.se/14731693270.jpg'
 tags:
   - wedding
   - married

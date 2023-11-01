@@ -2,9 +2,9 @@
 date: 2019-02-04
 title: Snow
 photos:
-  - /images/DSCF5280.jpg
-  - /images/DSCF5282.jpg
-  - /images/DSCF5283.jpg
+  - 'https://photo-storage.brusman.se/DSCF5280.jpg'
+  - 'https://photo-storage.brusman.se/DSCF5282.jpg'
+  - 'https://photo-storage.brusman.se/DSCF5283.jpg'
 tags:
   - snow
   - lake
