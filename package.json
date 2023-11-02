@@ -12,7 +12,8 @@
     "watch": "npm-run-all --parallel watch:css watch:html",
     "watch:css": "yarn build:css --watch",
     "watch:html": "eleventy --serve",
-    "start": "yarn tinacms dev -c 'yarn watch'"
+    "start": "yarn tinacms dev -c 'yarn watch'",
+    "start:netlify": "volta run --node=18.18.2 netlify dev --no-open --target-port 8082 -c 'yarn start'"
   },
   "volta": {
     "node": "18.18.2",
@@ -25,6 +26,7 @@
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-rss": "1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "4.0.0",
+    "@11ty/eleventy-img": "^3.1.8",
     "autoprefixer": "10.4.7",
     "cssnano": "5.1.9",
     "html-minifier": "4.0.0",
