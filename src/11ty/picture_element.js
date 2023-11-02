@@ -1,7 +1,7 @@
 const Image = require("@11ty/eleventy-img");
 
 module.exports = async function (imagePath, alt, imgClass) {
-  const widths = [500, 1000, 2000, 3000, 4000];
+  const widths = [500, 1200, 2000, 3000, 4000];
   let stats = await Image(imagePath, {
     widths
   });
