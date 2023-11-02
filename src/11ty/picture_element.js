@@ -6,10 +6,14 @@ module.exports = async function (imagePath, alt, imgClass) {
     widths
   });
 
+  largestVariant = stats.jpeg[stats.jpeg.length - 1];
+
   return `<img
   class="${imgClass}"
   alt="${alt}"
-  src="${stats.jpeg[0].url}"
+  src="${largestVariant.url}"
+  width="${largestVariant.width}"
+  height="${largestVariant.height}"
   sizes="(max-width: 1000px) 100vw, 133vh"
   srcset="${stats.jpeg.map(entry => entry.srcset).join(", ")}"
   />`;
