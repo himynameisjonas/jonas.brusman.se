@@ -23,12 +23,12 @@ input_boolean:
     icon: mdi:account
 ```
 And here is how it looks in Home assistant:
-![Home assistant helpers configuration](/images/home-assistant-helpers.png)
+![Home assistant helpers configuration](https://photo-storage.brusman.se/home-assistant-helpers.png)
 
 ### Home (Homekit)
 
 First, make sure you have enable and setup [the Homekit integration][2] in Home assistant. You then need to setup some automations. One that turns the helper off when the person leaves and one that turns the helper on when they arrive home. Repeat that for every person in the household.
-![Home app automations on Mac OS](/images/homekit-automations.png)
+![Home app automations on Mac OS](https://photo-storage.brusman.se/homekit-automations.png)
 
 ### Device tracker and Persons
 By now we have a working solution that we can use in our automations. But i'm not quite happy just yet, I want to connect these input helpers as [device trackers][3] and add them to my [persons in Home assistant][4].
@@ -59,7 +59,7 @@ You can create an automation in Home assistant that maps the input helpers state
 You can now assign the new device tracker to the corresponding person in home assistant. First you have to make sure that you have triggered the input boolean once first to force the automation to create the new device trackers. You can toggle the inputs in the Home app on your iPhone/Mac instead of leaving your house for real.
 
 Here's the final result on my lovelace dashboard:
-![Home assistant persons overview](/images/home-assistant-overview.png)
+![Home assistant persons overview](https://photo-storage.brusman.se/home-assistant-overview.png)
 
 [1]: https://www.home-assistant.io
 [2]: https://www.home-assistant.io/integrations/homekit/
