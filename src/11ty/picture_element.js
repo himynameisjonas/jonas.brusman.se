@@ -8,13 +8,19 @@ module.exports = async function (imagePath, alt, imgClass) {
 
   largestVariant = stats.jpeg[stats.jpeg.length - 1];
 
-  return `<img
-  class="${imgClass}"
-  alt="${alt}"
-  src="${largestVariant.url}"
-  width="${largestVariant.width}"
-  height="${largestVariant.height}"
-  sizes="(max-width: 1000px) 100vw, 133vh"
-  srcset="${stats.jpeg.map(entry => entry.srcset).join(", ")}"
-  />`;
+  return `<picture>
+    <source
+      type="image/webp"
+      sizes="(max-width: 1000px) 100vw, 133vh"
+      srcset="${stats.webp.map(entry => entry.srcset).join(", ")}" />
+    <img
+      srcset="${stats.jpeg.map(entry => entry.srcset).join(", ")}"
+      sizes="(max-width: 1000px) 100vw, 133vh"
+      src="${largestVariant.url}"
+      alt="${alt}"
+      class="${imgClass}"
+      width="${largestVariant.width}"
+      height="${largestVariant.height}"
+  />
+  </picture>`
 }
