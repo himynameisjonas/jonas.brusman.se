@@ -8,7 +8,6 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const trackingScript = require("./src/11ty/tracking_script")
 const typeCollection = require("./src/11ty/type_collection")
 
-
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -17,6 +16,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
 
   eleventyConfig.addPassthroughCopy("./src/site/css");
+  eleventyConfig.addPassthroughCopy("./img");
   eleventyConfig.addPassthroughCopy("./src/site/js");
   eleventyConfig.addPassthroughCopy({"./src/site/misc": "./"});
   eleventyConfig.addPassthroughCopy("./_redirects");
