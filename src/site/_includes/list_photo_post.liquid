@@ -2,7 +2,7 @@
   {% assign photo = post.data.photos | first %}
 {% endif %}
 
-<div class="ar-3x2">
+<div class="ar-3x2 group">
   <a
     href="{{ post.url }}"
     class="absolute bg-cover h-full left-0 top-0 w-full text-gray-100 bg-gray-400"
@@ -11,7 +11,7 @@
       src="{% image_url photo %}"
       loading="lazy"
       alt="{{post.data.title}}"
-      class="absolute h-full inset-0 object-cover w-full"
+      class="absolute h-full inset-0 object-cover w-full group-hover:scale-105 transition-transform duration-700 ease-out"
     >
     <div class="px-4 inset-0 absolute flex flex-col justify-center text-center bg-gray-700 bg-opacity-25">
       <h2 class="text-3xl leading-relaxed pb-1 font-bold">
