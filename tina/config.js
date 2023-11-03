@@ -18,6 +18,11 @@ export default defineConfig({
       return pack.TinaCloudS3MediaStore
     },
   },
+  search: {
+    tina: {
+      indexerToken: process.env.TINA_SEARCH_TOKEN,
+    },
+  },
   schema: {
     collections: [
       {
@@ -37,6 +42,10 @@ export default defineConfig({
             name: "date",
             label: "Date",
             required: true,
+            ui: {
+              dateFormat: 'YYYY-MM-DD',
+              parse: (value) => value && value.format('YYYY-MM-DD'),
+            },
           },
           {
             label: 'Photos',
@@ -49,6 +58,9 @@ export default defineConfig({
             name: 'tags',
             type: 'string',
             list: true,
+            ui: {
+              component: 'tags',
+            }
           },
           {
             label: 'Syndications',
@@ -63,6 +75,20 @@ export default defineConfig({
             isBody: true,
           },
         ],
+        defaultItem: () => {
+          return {
+            date: new Date(),
+          }
+        },
+        ui: {
+          filename: {
+            slugify: (values) => {
+              const date = new Date(values.date).toISOString().substring(0, 10);
+              const title = values.title?.replace(/ /g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase();
+              return [date, title].filter(Boolean).join('-');
+            },
+          },
+        },
       },
     ],
   },
