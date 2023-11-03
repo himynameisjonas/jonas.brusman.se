@@ -2,8 +2,19 @@
 NODE_VERSION = "18.18.2"
 YARN_VERSION = "1.22.17"
 
-[context.deploy-preview.environment]
-IMAGE_HOST = ""
+[[redirects]]
+from = '/api/*'
+status = 200
+to = '/.netlify/functions/api/:splat'
 
-[context.branch-deploy.environment]
-IMAGE_HOST = ""
+[functions]
+node_bundler = 'esbuild'
+
+[[plugins]]
+package = "netlify-plugin-cache"
+
+[plugins.inputs]
+paths = [
+  "img", # Eleventy Image Disk Cache
+  ".cache", # Remote Asset Cache
+]

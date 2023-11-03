@@ -1,4 +1,3 @@
-const addImageHosts = require("./src/11ty/add_image_hosts")
 const extractExcerpt = require("./src/11ty/extract_excerpt")
 const imageUrl = require("./src/11ty/image_url")
 const minifyHtml = require("./src/11ty/minify_html")
@@ -9,7 +8,6 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const trackingScript = require("./src/11ty/tracking_script")
 const typeCollection = require("./src/11ty/type_collection")
 
-
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -17,13 +15,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.setUseGitIgnore(false);
 
-  eleventyConfig.addPassthroughCopy("./src/site/images");
   eleventyConfig.addPassthroughCopy("./src/site/css");
+  eleventyConfig.addPassthroughCopy("./img");
   eleventyConfig.addPassthroughCopy("./src/site/js");
   eleventyConfig.addPassthroughCopy({"./src/site/misc": "./"});
   eleventyConfig.addPassthroughCopy("./_redirects");
 
-  eleventyConfig.addTransform('imagehost', addImageHosts);
   eleventyConfig.addTransform('minifyHtml', minifyHtml);
 
   eleventyConfig.addCollection("notes", typeCollection("note"));

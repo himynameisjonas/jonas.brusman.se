@@ -9,16 +9,16 @@ tags:
   - square
 ---
 
-![Stekarveven](/images/0053.gif)
+![Stekarveven](https://photo-storage.brusman.se/0053.gif)
 
-![:D](/images/0048.gif)
+![:D](https://photo-storage.brusman.se/0048.gif)
 
-![Kickoff](/images/0034.gif)
+![Kickoff](https://photo-storage.brusman.se/0034.gif)
 
-![Kickoff](/images/0033.gif)
+![Kickoff](https://photo-storage.brusman.se/0033.gif)
 
-![RC-car](/images/0043.gif)
+![RC-car](https://photo-storage.brusman.se/0043.gif)
 
-![Nordic Ruby](/images/0011.gif)
+![Nordic Ruby](https://photo-storage.brusman.se/0011.gif)
 
 Having fun with [Loopcam](http://loopc.am/himynameisjonas).

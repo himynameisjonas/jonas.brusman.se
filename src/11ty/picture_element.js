@@ -1,20 +1,26 @@
-const imageUrl = require("./image_url")
+const Image = require("@11ty/eleventy-img");
 
-module.exports = function (imagePath, alt, imgClass) {
-  const widths = [500, 1000, 2000, 3000, 4000];
+module.exports = async function (imagePath, alt, imgClass) {
+  const widths = [1200, 2000, 3000, 4000];
+  let stats = await Image(imagePath, {
+    widths
+  });
 
-  return `<img
-  class="${imgClass}"
-  alt="${alt}"
-  src="${imageUrl.url(imagePath, { width: widths[0] })}"
-  sizes="(max-width: 1000px) 100vw, 133vh"
-  srcset="${widths
-    .map(
-      (width) =>
-        `${imageUrl.url(imagePath,
-          { width },
-        )} ${width}w`
-    )
-    .join(", ")}"
-  />`;
+  largestVariant = stats.jpeg[stats.jpeg.length - 1];
+
+  return `<picture>
+    <source
+      type="image/webp"
+      sizes="(max-width: 1000px) 100vw, 133vh"
+      srcset="${stats.webp.map(entry => entry.srcset).join(", ")}" />
+    <img
+      srcset="${stats.jpeg.map(entry => entry.srcset).join(", ")}"
+      sizes="(max-width: 1000px) 100vw, 133vh"
+      src="${largestVariant.url}"
+      alt="${alt}"
+      class="${imgClass}"
+      width="${largestVariant.width}"
+      height="${largestVariant.height}"
+  />
+  </picture>`
 }

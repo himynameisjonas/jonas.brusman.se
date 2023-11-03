@@ -2,10 +2,10 @@
 date: 2012-01-21
 title: 24 Hour Business Camp
 photos:
-  - /images/6337662490.jpg
-  - /images/6336910521.jpg
-  - /images/6336910929.jpg
-  - /images/6337669900.jpg
+  - 'https://photo-storage.brusman.se/6337662490.jpg'
+  - 'https://photo-storage.brusman.se/6336910521.jpg'
+  - 'https://photo-storage.brusman.se/6336910929.jpg'
+  - 'https://photo-storage.brusman.se/6337669900.jpg'
 tags:
   - 24hbc
   - silarapp.com

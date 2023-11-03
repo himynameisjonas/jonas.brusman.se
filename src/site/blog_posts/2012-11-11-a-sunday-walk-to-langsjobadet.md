@@ -2,7 +2,7 @@
 date: 2012-11-11
 title: "A sunday walk to Långsjöbadet"
 photos:
-  - /images/8175492824.jpg
+  - 'https://photo-storage.brusman.se/8175492824.jpg'
 tags:
   - älvsjö
   - lake

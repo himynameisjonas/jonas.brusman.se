@@ -2,16 +2,16 @@
 date: 2021-02-08
 title: Snow and fire
 photos:
-  - /images/DSCF7181.jpeg
-  - /images/DSCF7210.jpeg
-  - /images/DSCF7177.jpeg
-  - /images/DSCF7204.jpeg
-  - /images/DSCF7191.jpeg
-  - /images/DSCF7193.jpeg
-  - /images/DSCF7203.jpeg
-  - /images/DSCF7206.jpeg
-  - /images/DSCF7212.jpeg
-  - /images/DSCF7216.jpeg
+  - 'https://photo-storage.brusman.se/DSCF7181.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF7210.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF7177.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF7204.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF7191.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF7193.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF7203.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF7206.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF7212.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF7216.jpeg'
 tags:
   - snow
   - eva

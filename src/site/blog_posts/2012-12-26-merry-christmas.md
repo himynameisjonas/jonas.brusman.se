@@ -2,7 +2,7 @@
 date: 2012-12-26
 title: "Merry Christmas"
 photos:
-  - /images/8306372905.jpg
+  - 'https://photo-storage.brusman.se/8306372905.jpg'
 tags:
   - snow
   - fire

@@ -1,41 +1,14 @@
-const url = function (path, {width, height, resize}) {
-  params = [`nf_resize=${resize || 'fit'}`]
-  if (width) {
-    params.push(`w=${width}`)
-  }
-  if (height) {
-    params.push(`h=${height}`)
-  }
-  if (process.env.IMAGE_HOST) {
-    return `${process.env.IMAGE_HOST}${path}?${params.join('&amp;')}`
+const Image = require("@11ty/eleventy-img");
 
-  } else {
-    return `${path}?${params.join('&amp;')}`
-  }
-}
+const shortcode = async function (imagePath, sharing) {
+  let stats = await Image(imagePath, {
+    widths: [1200],
+  });
 
-const shortcode = function (imagePath, sharing) {
-  if (sharing) {
-    return url(imagePath,
-      {
-        resize: "smartcrop",
-        width: 1200,
-        height: 630
-      },
-    );
+  return stats.jpeg[0].url;
 
-  } else {
-    return url(imagePath,
-      {
-        resize: "smartcrop",
-        width: 500,
-        height: 333
-      },
-    );
-  }
 }
 
 module.exports = {
-  url,
   shortcode
 }

@@ -81,9 +81,9 @@ Finally, the last step is to add one or more photos to your post:
 ---
 title: A blog post with photos from flickr
 photos:
-  - /images/6167152072.jpg
-  - /images/6167152448.jpg
-  - /images/6167153574.jpg
+  - 'https://photo-storage.brusman.se/6167152072.jpg'
+  - 'https://photo-storage.brusman.se/6167152448.jpg'
+  - 'https://photo-storage.brusman.se/6167153574.jpg'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor

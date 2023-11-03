@@ -2,18 +2,18 @@
 date: 2023-08-01
 title: Port de Sóller
 photos:
-  - /images/DSCF3707.jpeg
-  - /images/DSCF3697.jpeg
-  - /images/DSCF3758.jpeg
-  - /images/DSCF3759.jpeg
-  - /images/DSCF3763.jpeg
-  - /images/DSCF3735.jpeg
-  - /images/DSCF3721.jpeg
-  - /images/DSCF3738.jpeg
-  - /images/DSCF3678.jpeg
-  - /images/DSCF3808.jpeg
-  - /images/DSCF3831.jpeg
-  - /images/DSCF3813.jpeg
+  - 'https://photo-storage.brusman.se/DSCF3707.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF3697.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF3758.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF3759.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF3763.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF3735.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF3721.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF3738.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF3678.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF3808.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF3831.jpeg'
+  - 'https://photo-storage.brusman.se/DSCF3813.jpeg'
 tags:
   - summer
   - mallorca

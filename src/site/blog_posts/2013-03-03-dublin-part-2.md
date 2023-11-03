@@ -2,8 +2,8 @@
 date: 2013-03-03
 title: "Dublin – part 2"
 photos:
-  - /images/8268423768.jpg
-  - /images/8524398850.jpg
+  - 'https://photo-storage.brusman.se/8268423768.jpg'
+  - 'https://photo-storage.brusman.se/8524398850.jpg'
 tags:
   - dublin
   - magnus

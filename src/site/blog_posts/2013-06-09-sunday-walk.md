@@ -2,10 +2,10 @@
 date: 2013-06-09
 title: "Sunday walk"
 photos:
-  - /images/8999349250.jpg
-  - /images/8999332624.jpg
-  - /images/8998130893.jpg
-  - /images/8998116791.jpg
+  - 'https://photo-storage.brusman.se/8999349250.jpg'
+  - 'https://photo-storage.brusman.se/8999332624.jpg'
+  - 'https://photo-storage.brusman.se/8998130893.jpg'
+  - 'https://photo-storage.brusman.se/8998116791.jpg'
 tags:
   - eva
   - stockholm

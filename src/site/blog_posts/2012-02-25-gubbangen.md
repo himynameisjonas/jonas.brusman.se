@@ -2,7 +2,7 @@
 date: 2012-02-25
 title: Gubbängen
 photos:
-  - /images/4351905289.jpg
+  - 'https://photo-storage.brusman.se/4351905289.jpg'
 tags:
   - white
   - snow
