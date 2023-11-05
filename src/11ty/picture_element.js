@@ -21,6 +21,7 @@ module.exports = async function (imagePath, alt, imgClass, sizes = "(max-width: 
       class="${imgClass}"
       width="${largestVariant.width}"
       height="${largestVariant.height}"
+      loading="lazy"
   />
   </picture>`
 }
