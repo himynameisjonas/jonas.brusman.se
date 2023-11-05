@@ -7,12 +7,7 @@
     href="{{ post.url }}"
     class="absolute bg-cover h-full left-0 top-0 w-full text-gray-100 bg-gray-400"
   >
-    <img
-      src="{% image_url photo %}"
-      loading="lazy"
-      alt="{{post.data.title}}"
-      class="absolute h-full inset-0 object-cover w-full group-hover:scale-105 transition-transform duration-700 ease-out"
-    >
+    {%  picture_element photo post.data.title "absolute h-full inset-0 object-cover w-full group-hover:scale-105 transition-transform duration-700 ease-out" "600px" %}
     <div class="px-4 inset-0 absolute flex flex-col justify-center text-center bg-gray-700 bg-opacity-25">
       <h2 class="text-3xl leading-relaxed pb-1 font-bold">
         <span class="title-bg">{{ post.data.title }}</span>
