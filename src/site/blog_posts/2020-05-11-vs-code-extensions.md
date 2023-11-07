@@ -1,7 +1,8 @@
 ---
-date: 2020-05-11
-title: "Visual Studio Code: Some extensions"
+title: 'Visual Studio Code: Some extensions'
+date: 2020-05-11T00:00:00.000Z
 tags:
+  - list
   - programming
   - vscode
 ---
@@ -18,11 +19,11 @@ A must-have when working with Ember.js, which I do for a living at [Teamtailor](
 
 #### [change-case](https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case)
 
-Quickly toggle between camelCase and snake_case. Or between over ten other cases.
+Quickly toggle between camelCase and snake\_case. Or between over ten other cases.
 
 #### [Transformer](https://marketplace.visualstudio.com/items?itemName=dakara.transformer)
 
-I use the _unique lines_ feature quite often.
+I use the *unique lines* feature quite often.
 
 #### [vscode-run-rspec-file](https://marketplace.visualstudio.com/items?itemName=Thadeu.vscode-run-rspec-file)
 
