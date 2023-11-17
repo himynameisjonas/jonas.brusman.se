@@ -2983,9 +2983,9 @@
     zod "^3.14.3"
 
 "@tinacms/auth@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@tinacms/auth/-/auth-1.0.3.tgz#059063bb95bb68ef66411c588d83ae0c6954d8b6"
-  integrity sha512-puhv86VFbyzw7DLx1odcvx5p2LvX8UcJMW+UXA85mkRi032DLLZA9v643hcaI4P5jgQgB5Ztarj0tppK3/G8Zg==
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@tinacms/auth/-/auth-1.0.4.tgz#d4eb9d978feae63d8ec908ef7d2dcce63fdc0f64"
+  integrity sha512-M+lX+oIJpmxtyRprQ9hlQk2J/32XduESJDQ0dA3m8g8Z6QhSlP/7Eg09ocgFSCyJDj50tit8hpLTrbtlEpz4+A==
   dependencies:
     fetch-ponyfill "^7.1.0"
 
