@@ -10,4 +10,4 @@ tags:
   - vacation
 ---
 
-Two more photos from [the trip to Dublin](/2012-12-12-dublin) last November.
+Two more photos from [the trip to Dublin](/dublin) last November.

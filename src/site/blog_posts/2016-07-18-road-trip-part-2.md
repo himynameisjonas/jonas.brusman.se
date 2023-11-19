@@ -19,6 +19,6 @@ tags:
   - österlen
 ---
 
-More photos from our [road trip](/2016-07-12-road-trip/).
+More photos from our [road trip](/road-trip/).
 
-See also: [part 1](/2016-07-12-road-trip/)
+See also: [part 1](/road-trip/)

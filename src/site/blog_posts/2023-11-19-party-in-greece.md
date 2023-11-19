@@ -13,6 +13,9 @@ tags:
   - party
   - suzan
   - teamtailor
+  - greece
+syndications:
+  - 'https://www.instagram.com/p/B24LraZCoRe/'
 ---
 
 In 2019, Teamtailor's yearly trip went to Greece. 🥳
