@@ -12,9 +12,11 @@
     {% set page_excerpt %}{% excerpt description, content, title %}{% endset %} <meta name="description" content="{{ page_excerpt | truncate(200) }}">
     {% if photos.length > 0 -%}
       {%- set photo = photos[0] -%} <meta property="og:image" content="{% image_url photo, true %}"/>
-      <meta property="og:image:width" content="1200"/>
-      <meta property="og:image:height" content="630"/>
+    {% else %}
+      <meta property="og:image" content="/og.png"/>
     {% endif -%}
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
     <link rel="webmention" href="https://webmention.io/jonas.brusman.se/webmention"/>
     <link rel="pingback" href="https://webmention.io/jonas.brusman.se/xmlrpc"/>
     <link href="https://twitter.com/himynameisjonas" rel="me">
