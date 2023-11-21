@@ -15,6 +15,7 @@ tags:
   - teamtailor
   - greece
 syndications:
+  - 'https://tacocat.space/@jonas/111447428989989007'
   - 'https://www.instagram.com/p/B24LraZCoRe/'
 ---
 
