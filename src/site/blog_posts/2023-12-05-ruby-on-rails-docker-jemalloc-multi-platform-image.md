@@ -5,6 +5,8 @@ tags:
   - ruby
   - docker
   - programming
+syndications:
+  - 'https://tacocat.space/@jonas/111529611640001919'
 ---
 
 Teamtailor has been [running with jemalloc in production](https://tacocat.space/@jonas/111499803357547924) for a couple of days, [with great success](https://tacocat.space/@jonas/111499996256547764). Today, we wanted to try running the app on AWS's Graviton, their ARM-based CPUs, to see if we could get a better cost/performance ratio.
