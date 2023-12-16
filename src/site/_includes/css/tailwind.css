@@ -51,7 +51,7 @@
 }
 
 .title-bg {
-  @apply font-semibold text-white box-decoration-clone bg-branding px-2 py-1
+  @apply font-semibold text-white dark:text-zinc-800 box-decoration-clone bg-branding dark:bg-branding-600 px-2 py-1
 }
 
 .ar-3x2 {
@@ -80,7 +80,7 @@
 }
 
 .markdown {
-  @apply text-gray-800 leading-relaxed break-words text-xl;
+  @apply text-gray-800 dark:text-zinc-400 leading-relaxed break-words text-xl;
 }
 
 .markdown > * + *, .markdown > p {

@@ -4,9 +4,9 @@ description: Jonas Brusman's blog. Photos and some tech / code stuff.
 title: Blog
 ---
 
-<div class="w-content text-gray-700 grid grid-cols-1 md:grid-cols-2 gap-x-6">
+<div class="w-content text-gray-700 dark:text-zinc-500 grid grid-cols-1 md:grid-cols-2 gap-x-6">
   <div>
-    <a href="/notes"><h2 class="text-3xl leading-tight font-semibold border-l-4 border-branding pl-4 mb-3">Latest notes</h2></a>
+    <a href="/notes"><h2 class="text-3xl leading-tight font-semibold border-l-4 border-branding dark:border-branding-600 pl-4 mb-3">Latest notes</h2></a>
     {% assign notes = collections.notes | reverse %}
     {% for post in notes limit:6  %}
       {% include "list_note_post" %}
@@ -14,7 +14,7 @@ title: Blog
   </div>
 
   <div>
-    <a href="/photos"><h2 class="text-3xl leading-tight font-semibold border-l-4 border-branding pl-4 mb-3">Latest photos</h2></a>
+    <a href="/photos"><h2 class="text-3xl leading-tight font-semibold border-l-4 border-branding dark:border-branding-600 pl-4 mb-3">Latest photos</h2></a>
     <div class="grid grid-cols-1 gap-6">
       {% assign photos = collections.photos | reverse %}
       {% for post in photos limit:4  %}
