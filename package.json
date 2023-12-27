@@ -32,7 +32,7 @@
     "netlify-plugin-cache": "^1.0.3",
     "npm-run-all": "4.1.5",
     "striptags": "3.2.0",
-    "tailwindcss": "3.3.5"
+    "tailwindcss": "3.4.0"
   },
   "dependencies": {
     "@tinacms/auth": "^1.0.3",
