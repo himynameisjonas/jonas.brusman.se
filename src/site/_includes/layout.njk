@@ -26,22 +26,22 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   </head>
-  <body class="flex flex-col p-4 pb-8 bg-white dark:bg-zinc-800 text-gray-700 dark:text-zinc-500">
+  <body class="flex flex-col p-4 pb-8 bg-white dark:bg-neutral-900 text-gray-700 dark:text-neutral-500">
     <header class="flex mb-10 md:mt-6 flex-wrap items-baseline gap-x-6 w-content justify-center md:justify-start">
       <a
         href="/"
         rel="author"
-        class="bg-neutral-100 dark:bg-zinc-700 text-branding dark:text-branding-600 uppercase hover:animate-pulse block
+        class="bg-neutral-100 dark:bg-neutral-800 text-branding dark:text-branding-600 uppercase hover:animate-pulse block
           font-semibold leading-tight md:text-left p-name px-4 py-3 text-3xl mb-2 ">
         Jonas Brusman
       </a>
       <nav class="flex flex-wrap items-baseline gap-x-3 text-xl font-normal">
-        <a href="/" class="{% if page.url == "/" %}text-branding border-branding dark:text-branding-600 dark:border-branding-600{% else %}border-white dark:border-zinc-700 text-gray-700 dark:text-zinc-500{% endif %} hover:border-branding border-b-4 pb-1 hover:text-branding">Home</a>
-        <a href="/photos/" class="{% if page.url == "/photos/" or blogPostType == "photo" %}text-branding border-branding dark:text-branding-600 dark:border-branding-600{% else %}border-white dark:border-zinc-700 text-gray-700 dark:text-zinc-500{% endif %} hover:border-branding border-b-4 pb-1 hover:text-branding">Photos</a>
-        <a href="/notes/" class="{% if page.url == "/notes/" or blogPostType == "note" %}text-branding border-branding dark:text-branding-600 dark:border-branding-600{% else %}border-white dark:border-zinc-700 text-gray-700 dark:text-zinc-500{% endif %} hover:border-branding border-b-4 pb-1 hover:text-branding">
+        <a href="/" class="{% if page.url == "/" %}text-branding border-branding dark:text-branding-600 dark:border-branding-600{% else %}border-white dark:border-neutral-700 text-gray-700 dark:text-neutral-500{% endif %} hover:border-branding border-b-4 pb-1 hover:text-branding">Home</a>
+        <a href="/photos/" class="{% if page.url == "/photos/" or blogPostType == "photo" %}text-branding border-branding dark:text-branding-600 dark:border-branding-600{% else %}border-white dark:border-neutral-700 text-gray-700 dark:text-neutral-500{% endif %} hover:border-branding border-b-4 pb-1 hover:text-branding">Photos</a>
+        <a href="/notes/" class="{% if page.url == "/notes/" or blogPostType == "note" %}text-branding border-branding dark:text-branding-600 dark:border-branding-600{% else %}border-white dark:border-neutral-700 text-gray-700 dark:text-neutral-500{% endif %} hover:border-branding border-b-4 pb-1 hover:text-branding">
           Notes
         </a>
-        <a href="/about/" class="{% if page.url == "/about/" %}text-branding border-branding dark:text-branding-600 dark:border-branding-600{% else %}border-white dark:border-zinc-700 text-gray-700 dark:text-zinc-500{% endif %} hover:border-branding border-b-4 pb-1 hover:text-branding">About</a>
+        <a href="/about/" class="{% if page.url == "/about/" %}text-branding border-branding dark:text-branding-600 dark:border-branding-600{% else %}border-white dark:border-neutral-700 text-gray-700 dark:text-neutral-500{% endif %} hover:border-branding border-b-4 pb-1 hover:text-branding">About</a>
       </nav>
     </header>
     <div class="flex flex-col">
