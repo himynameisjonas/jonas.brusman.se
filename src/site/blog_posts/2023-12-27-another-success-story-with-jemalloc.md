@@ -5,6 +5,10 @@ tags:
   - programming
   - ruby
   - docker
+syndications:
+  - 'https://tacocat.space/@jonas/111654499289851393'
+  - 'https://tacocat.space/@jonas/111499996256547764'
+  - 'https://tacocat.space/@jonas/111499803357547924'
 ---
 
 I recently merged a Pull Request to enable Jemalloc in our (Teamtailor's) production Rails app, and the results were impressive.
