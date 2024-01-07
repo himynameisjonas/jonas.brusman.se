@@ -1,0 +1,14 @@
+dist
+.cache
+.netlify
+
+*.md
+
+tina/__generated__
+tina/tina-lock.json
+src/site/misc/admin/assets
+
+src/site/js/webmention.min.js
+src/site/js/instantpage-5.2.0.js
+src/site/js/count.js
+src/site/_includes/css/prism-okaidia.css

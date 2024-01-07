@@ -5,13 +5,12 @@ const shortcode = async function (imagePath, sharing) {
     widths: [1200],
     cacheOptions: {
       duration: "10y",
-    }
+    },
   });
 
   return stats.jpeg[0].url;
-
-}
+};
 
 module.exports = {
-  shortcode
-}
+  shortcode,
+};

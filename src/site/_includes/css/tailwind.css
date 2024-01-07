@@ -1,4 +1,4 @@
-@import 'prism-okaidia.css';
+@import "prism-okaidia.css";
 
 @tailwind base;
 
@@ -6,23 +6,22 @@
 
 @tailwind utilities;
 
-
 @font-face {
-  font-family: 'Inter var';
+  font-family: "Inter var";
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url('/fonts/Inter-roman.var.woff2?v=3.19') format('woff2');
-  font-named-instance: 'Regular';
+  src: url("/fonts/Inter-roman.var.woff2?v=3.19") format("woff2");
+  font-named-instance: "Regular";
 }
 
 @font-face {
-  font-family: 'Inter var';
+  font-family: "Inter var";
   font-style: italic;
   font-weight: 100 900;
   font-display: swap;
-  src: url('/fonts/Inter-italic.var.woff2?v=3.19') format('woff2');
-  font-named-instance: 'Italic';
+  src: url("/fonts/Inter-italic.var.woff2?v=3.19") format("woff2");
+  font-named-instance: "Italic";
 }
 
 .max-w-screen-h {
@@ -30,15 +29,15 @@
 }
 
 .w-content {
-  @apply max-w-full sm:max-w-xl md:max-w-3xl lg:max-w-4xl w-full self-center
+  @apply max-w-full sm:max-w-xl md:max-w-3xl lg:max-w-4xl w-full self-center;
 }
 
 .link {
-  @apply text-branding underline
+  @apply text-branding underline;
 }
 
 .link:hover {
-  @apply no-underline
+  @apply no-underline;
 }
 
 .prefix-hash:before {
@@ -47,11 +46,11 @@
 }
 
 .hover-wrapper:hover .hover-wrapper__underline {
-  @apply underline
+  @apply underline;
 }
 
 .title-bg {
-  @apply font-semibold text-white dark:text-neutral-800 box-decoration-clone bg-branding dark:bg-branding-600 px-2 py-1
+  @apply font-semibold text-white dark:text-neutral-800 box-decoration-clone bg-branding dark:bg-branding-600 px-2 py-1;
 }
 
 .ar-3x2 {
@@ -72,7 +71,7 @@
 }
 
 #webmentions .reaction {
-  @apply mr-2 flex flex-row items-center
+  @apply mr-2 flex flex-row items-center;
 }
 
 #webmentions img {
@@ -83,7 +82,8 @@
   @apply text-gray-800 dark:text-neutral-400 leading-relaxed break-words text-xl;
 }
 
-.markdown > * + *, .markdown > p {
+.markdown > * + *,
+.markdown > p {
   @apply mt-0 mb-4;
 }
 

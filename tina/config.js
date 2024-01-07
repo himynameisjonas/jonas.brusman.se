@@ -1,7 +1,8 @@
 import { defineConfig } from "tinacms";
 
 // Your hosting provider likely exposes this as an environment variable
-const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "master";
+const branch =
+  process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "master";
 
 export default defineConfig({
   branch,
@@ -14,8 +15,8 @@ export default defineConfig({
   },
   media: {
     loadCustomStore: async () => {
-      const pack = await import('next-tinacms-s3')
-      return pack.TinaCloudS3MediaStore
+      const pack = await import("next-tinacms-s3");
+      return pack.TinaCloudS3MediaStore;
     },
   },
   search: {
@@ -43,29 +44,29 @@ export default defineConfig({
             label: "Date",
             required: true,
             ui: {
-              dateFormat: 'YYYY-MM-DD',
-              parse: (value) => value && value.format('YYYY-MM-DD'),
+              dateFormat: "YYYY-MM-DD",
+              parse: (value) => value && value.format("YYYY-MM-DD"),
             },
           },
           {
-            label: 'Photos',
-            name: 'photos',
-            type: 'image',
+            label: "Photos",
+            name: "photos",
+            type: "image",
             list: true,
           },
           {
-            label: 'Tags',
-            name: 'tags',
-            type: 'string',
+            label: "Tags",
+            name: "tags",
+            type: "string",
             list: true,
             ui: {
-              component: 'tags',
-            }
+              component: "tags",
+            },
           },
           {
-            label: 'Syndications',
-            name: 'syndications',
-            type: 'string',
+            label: "Syndications",
+            name: "syndications",
+            type: "string",
             list: true,
           },
           {
@@ -78,14 +79,17 @@ export default defineConfig({
         defaultItem: () => {
           return {
             date: new Date(),
-          }
+          };
         },
         ui: {
           filename: {
             slugify: (values) => {
               const date = new Date(values.date).toISOString().substring(0, 10);
-              const title = values.title?.replace(/ /g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase();
-              return [date, title].filter(Boolean).join('-');
+              const title = values.title
+                ?.replace(/ /g, "-")
+                .replace(/[^a-zA-Z0-9-]/g, "")
+                .toLowerCase();
+              return [date, title].filter(Boolean).join("-");
             },
           },
         },

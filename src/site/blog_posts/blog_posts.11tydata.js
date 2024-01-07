@@ -1,5 +1,5 @@
 module.exports = {
   eleventyComputed: {
-    blogPostType: data => data.photos ? 'photo' : 'note'
-  }
+    blogPostType: (data) => (data.photos ? "photo" : "note"),
+  },
 };
