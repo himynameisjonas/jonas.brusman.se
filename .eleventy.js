@@ -39,6 +39,5 @@ module.exports = function (eleventyConfig) {
       includes: "_includes",
       output: "dist",
     },
-    passthroughFileCopy: true,
   };
 };
