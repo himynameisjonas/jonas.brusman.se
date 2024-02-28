@@ -47,8 +47,8 @@ jobs:
           accountId: 8dfec48c278d5a97c93de33e072261bd
           projectName: jonas-brusman-se
           directory: dist
-          # Optional: Enable this if you want to have GitHub Deployments triggered
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.head_ref || github.ref_name }}
       - uses: actions/cache/save@v4
         with:
           path: |
