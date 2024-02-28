@@ -49,6 +49,7 @@ jobs:
           directory: dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.head_ref || github.ref_name }}
+          wranglerVersion: "3"
       - uses: actions/cache/save@v4
         with:
           path: |
