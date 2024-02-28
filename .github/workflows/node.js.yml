@@ -1,0 +1,37 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "workflow-test" ]
+  pull_request:
+    branches: [ "workflow-test" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 20.10.0
+        cache: 'yarn'
+    - run: yarn install --frozen-lockfile
+    - uses: actions/cache/restore@v4
+      id: cache
+      with:
+        path: |
+          .cache
+          img
+        key: ${{ runner.os }}-11ty
+    - run: yarn build
+    - uses: actions/cache/save@v4
+      with:
+        path: |
+          .cache
+          img
+        key: ${{ runner.os }}-11ty
