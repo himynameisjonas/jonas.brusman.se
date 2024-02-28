@@ -28,7 +28,8 @@ jobs:
           .cache
           img
         key: ${{ runner.os }}-11ty
-    - run: yarn build
+    - name: Build 11ty site
+      run: yarn build
       env:
         TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
         TINA_SEARCH_TOKEN: ${{ secrets.TINA_SEARCH_TOKEN }}
@@ -39,3 +40,15 @@ jobs:
           .cache
           img
         key: ${{ runner.os }}-11ty
+    - name: Publish to Cloudflare Pages
+      uses: cloudflare/pages-action@v1
+      with:
+        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        accountId: 8dfec48c278d5a97c93de33e072261bd
+        projectName: jonas-brusman-se
+        directory: dist
+        # Optional: Enable this if you want to have GitHub Deployments triggered
+        gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+        # Optional: Switch what branch you are publishing to.
+        # By default this will be the branch which triggered this workflow
+        branch: master
