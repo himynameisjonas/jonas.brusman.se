@@ -27,7 +27,10 @@ jobs:
           path: |
             .cache
             img
-          key: ${{ runner.os }}-11ty
+          key: 11ty-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: |
+            11ty-${{ runner.os }}
+            ${{ runner.os }}-11ty
       - name: Build 11ty site
         run: yarn build
         env:
@@ -39,7 +42,7 @@ jobs:
           path: |
             .cache
             img
-          key: ${{ runner.os }}-11ty
+          key: 11ty-${{ runner.os }}-${{ github.run_id }}
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
