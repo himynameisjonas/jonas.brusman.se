@@ -37,6 +37,7 @@ jobs:
           TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
           TINA_SEARCH_TOKEN: ${{ secrets.TINA_SEARCH_TOKEN }}
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
+          ENABLE_ANALYTICS: ${{ github.ref == 'refs/heads/master' }}
       - uses: actions/cache/save@v4
         with:
           path: |
