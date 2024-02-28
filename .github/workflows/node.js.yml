@@ -29,6 +29,10 @@ jobs:
           img
         key: ${{ runner.os }}-11ty
     - run: yarn build
+      env:
+        TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
+        TINA_SEARCH_TOKEN: ${{ secrets.TINA_SEARCH_TOKEN }}
+        TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
     - uses: actions/cache/save@v4
       with:
         path: |
