@@ -38,12 +38,6 @@ jobs:
           TINA_SEARCH_TOKEN: ${{ secrets.TINA_SEARCH_TOKEN }}
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
           ENABLE_ANALYTICS: ${{ github.ref == 'refs/heads/master' }}
-      - uses: actions/cache/save@v4
-        with:
-          path: |
-            .cache
-            img
-          key: 11ty-${{ runner.os }}-${{ github.run_id }}
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
@@ -53,3 +47,9 @@ jobs:
           directory: dist
           # Optional: Enable this if you want to have GitHub Deployments triggered
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/cache/save@v4
+        with:
+          path: |
+            .cache
+            img
+          key: 11ty-${{ runner.os }}-${{ github.run_id }}
