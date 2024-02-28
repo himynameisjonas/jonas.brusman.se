@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "workflow-test" ]
+    branches: ["workflow-test"]
   pull_request:
-    branches: [ "workflow-test" ]
+    branches: ["workflow-test"]
 
 jobs:
   build:
@@ -15,37 +15,37 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v4
-      with:
-        node-version: 20.10.0
-        cache: 'yarn'
-    - run: yarn install --frozen-lockfile
-    - uses: actions/cache/restore@v4
-      id: cache
-      with:
-        path: |
-          .cache
-          img
-        key: ${{ runner.os }}-11ty
-    - name: Build 11ty site
-      run: yarn build
-      env:
-        TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
-        TINA_SEARCH_TOKEN: ${{ secrets.TINA_SEARCH_TOKEN }}
-        TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
-    - uses: actions/cache/save@v4
-      with:
-        path: |
-          .cache
-          img
-        key: ${{ runner.os }}-11ty
-    - name: Publish to Cloudflare Pages
-      uses: cloudflare/pages-action@v1
-      with:
-        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        accountId: 8dfec48c278d5a97c93de33e072261bd
-        projectName: jonas-brusman-se
-        directory: dist
-        # Optional: Enable this if you want to have GitHub Deployments triggered
-        gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.10.0
+          cache: "yarn"
+      - run: yarn install --frozen-lockfile
+      - uses: actions/cache/restore@v4
+        id: cache
+        with:
+          path: |
+            .cache
+            img
+          key: ${{ runner.os }}-11ty
+      - name: Build 11ty site
+        run: yarn build
+        env:
+          TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
+          TINA_SEARCH_TOKEN: ${{ secrets.TINA_SEARCH_TOKEN }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
+      - uses: actions/cache/save@v4
+        with:
+          path: |
+            .cache
+            img
+          key: ${{ runner.os }}-11ty
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 8dfec48c278d5a97c93de33e072261bd
+          projectName: jonas-brusman-se
+          directory: dist
+          # Optional: Enable this if you want to have GitHub Deployments triggered
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
