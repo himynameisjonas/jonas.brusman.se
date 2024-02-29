@@ -7,7 +7,6 @@ tags:
   - github
   - netlify
   - eleventy
-  - lol
 ---
 
 I have wanted to move this site from *Netlify* for a while now, but the [recent news about their bandwidth pricing](https://www.reddit.com/r/webdev/s/2A07zZuKoQ) made me finally do it. I looked into some alternatives (like Render, Cloudflare, Vercel, etc.) and decided to go with Cloudflare Pages. I liked Cloudflare the best because of their generous free tier.
