@@ -1,12 +1,16 @@
 ---
-title: Deploy an Eleventy site to Cloudflare Pages efficiently with GitHub's action cache
-date: 2024-02-29
+title: >-
+  Deploy an Eleventy site to Cloudflare Pages efficiently with GitHub's action
+  cache
+date: 2024-02-29T00:00:00.000Z
 tags:
   - programming
   - cloudflare
   - github
   - netlify
   - eleventy
+syndications:
+  - 'https://tacocat.space/@jonas/112016732931252162'
 ---
 
 I have wanted to move this site from *Netlify* for a while now, but the [recent news about their bandwidth pricing](https://www.reddit.com/r/webdev/s/2A07zZuKoQ) made me finally do it. I looked into some alternatives (like Render, Cloudflare, Vercel, etc.) and decided to go with Cloudflare Pages. I liked Cloudflare the best because of their generous free tier.
@@ -14,14 +18,17 @@ I have wanted to move this site from *Netlify* for a while now, but the [recent 
 I connected my GitHub repository to Cloudflare Pages and had Cloudflare build and deploy the site. It worked, but was really slow due to the large photos it has to process every time it rebuilds. **It took over 14 minutes to build and deploy the site** 😩. Cloudflare supports build caching, but only for a few specific frameworks, and unfortunately, Eleventy is not one of them.
 
 I remember reading about how [Sophie Koonin deploys her site to NeoCities using GitHub Actions](https://localghost.dev/blog/how-i-deploy-my-eleventy-site-to-neocities/) (go read that; it is a really good write-up of how things work). Knowing that GitHub Actions has support for custom caching, I decided to do the same but with Cloudflare Pages instead of NeoCities.
+
 ## Deploy to Cloudflare Pages with GitHub Actions
 
 I created a GitHub Actions workflow that caches the `node_modules` and `.cache` directories, as well as the `img` directory where the photos are stored. This reduced the build time to **just over 2 minutes, a 7x improvement**!
 
 ### The full workflow
+
 This is the complete workflow as I write this post. I may have updated it since then, so please refer to the [source code](https://github.com/himynameisjonas/jonas.brusman.se/blob/master/.github/workflows/deploy.yml) for the latest version.
 
 {% raw %}
+
 ```yaml
 name: Build and Deploy
 
@@ -83,6 +90,7 @@ jobs:
             img
           key: 11ty-${{ runner.os }}-${{ github.run_id }}
 ```
+
 {% endraw %}
 
 The workflow does the following:
