@@ -1,9 +1,10 @@
 const fs = require("fs");
 const YAML = require("yaml");
+require("dotenv").config();
 
 async function fetchBookmarks() {
-  const collectionId = "40993303";
-  const token = "b0e554ff-80ad-42eb-a06f-6c840479e9b1";
+  const collectionId = process.env.RAINDROP_COLLECTION_ID;
+  const token = process.env.RAINDROP_TOKEN;
   const url = `https://api.raindrop.io/rest/v1/raindrops/${collectionId}`;
   const headers = {
     Authorization: `Bearer ${token}`,
@@ -37,7 +38,6 @@ async function createPost(bookmark) {
 
 async function main() {
   const bookmarks = await fetchBookmarks();
-  console.log(bookmarks);
   bookmarks.forEach((link) => {
     createPost(link);
   });
