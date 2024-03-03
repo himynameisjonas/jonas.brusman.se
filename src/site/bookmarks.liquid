@@ -1,0 +1,17 @@
+---
+layout: layout.njk
+description: Jonas Brusman's bookmarks.
+title: Bookmarks
+---
+
+<div class="flex flex-wrap w-content">
+  <div class="markdown">
+    <p>Here are some of the things I've found interesting lately. I hope you find them interesting too.</p>
+  </div>
+
+  <div class="grid grid-cols-1 gap-x-10">
+    {% for post in collections.bookmarks reversed %}
+      {% include "list_bookmark" %}
+    {% endfor %}
+  </div>
+</div>

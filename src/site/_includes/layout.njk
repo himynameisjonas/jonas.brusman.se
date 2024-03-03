@@ -41,6 +41,9 @@
         <a href="/notes/" class="{% if page.url == "/notes/" or blogPostType == "note" %}text-branding border-branding dark:text-branding-600 dark:border-branding-600{% else %}border-white dark:border-neutral-700 text-gray-700 dark:text-neutral-500{% endif %} hover:border-branding border-b-4 pb-1 hover:text-branding">
           Notes
         </a>
+        <a href="/bookmarks/" class="{% if page.url == "/bookmarks/" or blogPostType == "bookmark" %}text-branding border-branding dark:text-branding-600 dark:border-branding-600{% else %}border-white dark:border-neutral-700 text-gray-700 dark:text-neutral-500{% endif %} hover:border-branding border-b-4 pb-1 hover:text-branding">
+          Bookmarks
+        </a>
         <a href="/about/" class="{% if page.url == "/about/" %}text-branding border-branding dark:text-branding-600 dark:border-branding-600{% else %}border-white dark:border-neutral-700 text-gray-700 dark:text-neutral-500{% endif %} hover:border-branding border-b-4 pb-1 hover:text-branding">About</a>
       </nav>
     </header>

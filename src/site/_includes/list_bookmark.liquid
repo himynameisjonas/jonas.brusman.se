@@ -1,0 +1,27 @@
+<div class="flex-initial mb-9 w-full text-gray-700">
+  <a href="{{ post.data.link }}" class="" rel="noopener">
+    <h2 class="text-2xl leading-relaxed sm:text-lg sm:leading-loose mb-1 hover:scale-105 transition-transform ease-out">
+      <span class="title-bg">{{ post.data.title }}</span>
+    </h2>
+    <span class="text-gray-500 italic link">{{post.data.prettyUrl}}</span>
+  </a>
+  {% if post.content.length > 0 %}
+    <div class="my-1">{{post.content}}</div>
+  {% endif %}
+  {% if post.data.excerpt.length > 1 %}
+    <blockquote class="my-1 italic text-gray-500"><span class="pr-0.5 text-xl">“</span>{{post.data.excerpt}}<span class="pl-0.5 text-xl">”</span></blockquote>
+  {% endif %}
+  <div class="text-gray-500 font-normal">
+    <a href="{{ post.url }}">
+      <time datetime="{{ post.date | date: "%Y-%m-%d" }}" class="text-gray-500 hover:text-branding">
+        {{ post.date | date: "%Y-%m-%d" }}
+      </time>
+    </a>
+    {% if post.data.linkTags.length > 1 %}•{% endif %}
+    {% for tag in post.data.linkTags %}
+      {% unless tag == "blogPost" %}
+        <span class="prefix-hash">{{tag}}</span>
+      {% endunless %}
+    {% endfor %}
+  </div>
+</div>

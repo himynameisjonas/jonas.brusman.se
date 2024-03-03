@@ -9,6 +9,7 @@
     "build": "tinacms build && npm-run-all build:css build:html",
     "build:css": "tailwindcss -i ./src/site/_includes/css/tailwind.css -o ./src/site/css/styles.css --minify",
     "build:html": "eleventy",
+    "fetch_bookmarks": "node ./src/scripts/fetch_bookmarks.js",
     "watch": "npm-run-all --parallel --print-label watch:css watch:html",
     "watch:css": "yarn build:css --watch",
     "watch:html": "eleventy --serve",
@@ -34,7 +35,8 @@
     "npm-run-all2": "5.0.0",
     "prettier": "3.1.1",
     "striptags": "3.2.0",
-    "tailwindcss": "3.4.0"
+    "tailwindcss": "3.4.0",
+    "yaml": "^2.4.0"
   },
   "dependencies": {
     "@tinacms/auth": "^1.0.3",
