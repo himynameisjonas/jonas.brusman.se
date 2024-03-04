@@ -1,9 +1,9 @@
 <div class="flex-initial mb-9 w-full text-gray-700">
   <a href="{{ bookmark.link }}" class="" rel="noopener">
-    <h2 class="text-2xl leading-relaxed sm:text-lg sm:leading-loose mb-1 hover:scale-105 transition-transform ease-out">
+    <h2 class="text-2xl leading-relaxed sm:text-lg sm:leading-loose mb-1 hover:scale-105 transition-transform ease-out inline-block">
       <span class="title-bg">{{ bookmark.title }}</span>
     </h2>
-    <span class="text-gray-500 italic link">{{bookmark.prettyUrl}}</span>
+    <span class="text-gray-500 italic link block">{{bookmark.prettyUrl}}</span>
   </a>
   {% if bookmark.content.length > 0 %}
     <div class="my-1">{{bookmark.content}}</div>
