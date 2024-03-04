@@ -1,5 +1,32 @@
 [
   {
+    "title": "How we migrated our PostgreSQL database with 11 seconds downtime",
+    "link": "https://gds.blog.gov.uk/2024/01/17/how-we-migrated-our-postgresql-database-with-11-seconds-downtime/",
+    "excerpt": "GOV.UK Notify recently migrated our production database. Find out how we did it with the least possible disruption to our users.",
+    "tags": [
+      "database",
+      "postgres"
+    ],
+    "date": "2024-03-04T19:11:47.328Z",
+    "content": "",
+    "prettyUrl": "gds.blog.gov.uk/2024/01/17/how-we-migrated-our-postgresql-database-with-11-seconds-downtime/",
+    "permalink": "/bookmarks/2024-03-04-gds-blog-gov-uk-2024-01-17-how-we-migrated-our-postgresql-database-with-11-seconds-downtime"
+  },
+  {
+    "title": "PgBouncer is useful, important, and fraught with peril",
+    "link": "https://jpcamara.com/2023/04/12/pgbouncer-is-useful.html",
+    "excerpt": "To start, I want to say that I’m appreciative that PgBouncer exists and the work its open source maintainers put into it. I also love working with PostgreSQL, and I’m thankful for the incredible amount of work and improvements that go into it as well.\nI also think community and industry enthusiasm around Postgres is at an all time high. There are more managed hosting options than ever (Crunchy Data, Render, Fly.",
+    "tags": [
+      "database",
+      "postgres",
+      "pgbouncer"
+    ],
+    "date": "2024-03-04T17:09:32.927Z",
+    "content": "",
+    "prettyUrl": "jpcamara.com/2023/04/12/pgbouncer-is-useful.html",
+    "permalink": "/bookmarks/2024-03-04-jpcamara-com-2023-04-12-pgbouncer-is-useful-html"
+  },
+  {
     "title": "RsS iS dEaD LOL",
     "link": "https://rss-is-dead.lol/",
     "excerpt": "Explore RSS feeds in your network.",
