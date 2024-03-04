@@ -1,0 +1,42 @@
+---json
+{
+  "permalink": "bookmarks/feed",
+  "eleventyExcludeFromCollections": true,
+  "metadata": {
+    "title": "Jonas Brusman's Bookmarks",
+    "subtitle": "A collection of interesting links and articles I've found on the web.",
+    "url": "https://jonas.brusman.se/",
+    "feedUrl": "https://jonas.brusman.se/bookmarks/feed",
+    "author": {
+      "name": "Jonas Brusman"
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.subtitle }}</subtitle>
+  <link href="{{ metadata.feedUrl }}" rel="self"/>
+  <link href="{{ metadata.url }}"/>
+  <updated>{{ bookmarks[0].date }}</updated>
+  <id>{{ metadata.url }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+  </author>
+  {%- for bookmark in bookmarks %}
+    {% set absolutePostUrl %}{{ bookmark.permalink | url | absoluteUrl(metadata.url) }}{% endset %}
+    <entry>
+      <title>{{ bookmark.title }}</title>
+      <link href="{{ absolutePostUrl }}"/>
+      <updated>{{ bookmark.date }}</updated>
+      <id>{{ absolutePostUrl }}</id>
+      <content type="html">
+        <![CDATA[
+        <p><a href="{{- bookmark.link -}}">{{- bookmark.prettyUrl -}}</p>
+        <p>{{- bookmark.content | safe -}}</p>
+        <blockquote>{{- bookmark.excerpt | safe -}}</blockquote>]]>
+      </content>
+    </entry>
+  {%- endfor %}
+</feed>
