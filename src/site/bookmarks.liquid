@@ -10,7 +10,7 @@ title: Bookmarks
   </div>
 
   <div class="grid grid-cols-1 gap-x-10">
-    {% for post in collections.bookmarks reversed %}
+    {% for bookmark in bookmarks %}
       {% include "list_bookmark" %}
     {% endfor %}
   </div>
