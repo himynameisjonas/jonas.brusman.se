@@ -7,12 +7,12 @@
       {% if title %}
         |
       {% endif %}Jonas Brusman</title>
-    <link rel="alternate" type="application/atom+xml" title="Jonas Brusman's blog" href="https://jonas.brusman.se/feed"/>
+    <link rel="alternate" type="application/atom+xml" title="Jonas Brusman's blog" href="https://jonas.brusman.se/rss.xml"/>
     <link
       rel="alternate"
       type="application/atom+xml"
       title="Jonas Brusman's bookmarks"
-      href="https://jonas.brusman.se/bookmarks/feed"/>
+      href="https://jonas.brusman.se/bookmarks/rss.xml"/>
     <link rel="stylesheet" href="/css/styles.css">
     {% set page_excerpt %}{% excerpt description, content, title %}{% endset %} <meta name="description" content="{{ page_excerpt | truncate(200) }}">
     {% if photos.length > 0 -%}
