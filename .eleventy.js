@@ -25,7 +25,6 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("notes", typeCollection("note"));
   eleventyConfig.addCollection("photos", typeCollection("photo"));
-  eleventyConfig.addCollection("bookmarks", typeCollection("bookmark"));
 
   eleventyConfig.addFilter("similarPosts", similarPosts);
 
