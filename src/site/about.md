@@ -7,7 +7,18 @@ photos:
   - 'https://photo-storage.brusman.se/DSCF0712.jpeg'
 ---
 
-I like to do high fives, take photographs and build stuff with Ruby and JavaScript. You can find me elsewhere at [Instagram](https://www.instagram.com/himynameisjonas/), [Github](https://github.com/himynameisjonas), and [Mastodon/Fediverse](https://tacocat.space/@jonas).
+I enjoy giving high fives, [taking photographs](/photos) and build stuff with Ruby and JavaScript. I work as a full-stack developer at [Teamtailor](https://www.teamtailor.com) and I'm based in Linköping, Sweden.
 
 
-This site is build with [Eleventy](https://www.11ty.dev) with the [source code on Github](https://github.com/himynameisjonas/jonas.brusman.se) and then hosted on [Cloudflare](https://pages.cloudflare.com).
+## Me elsewhere
+* [Mastodon / Fediverse](https://tacocat.space/@jonas)
+* [Instagram](https://www.instagram.com/himynameisjonas/)
+* [Github](https://github.com/himynameisjonas)
+
+## About this site
+
+This site is built with [Eleventy](https://www.11ty.dev) and the [source code is on Github](https://github.com/himynameisjonas/jonas.brusman.se). It is [deployed with Github actions to Cloudflare Pages](/deploy-eleventy-to-cloudflare-with-githubs-action-cache/).
+
+## RSS feeds
+I have two RSS feeds: one for [blog posts](/rss.xml) and one for [bookmarks](/bookmarks/rss.xml).
+```
