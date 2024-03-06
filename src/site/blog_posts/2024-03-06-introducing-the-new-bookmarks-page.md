@@ -5,6 +5,8 @@ tags:
   - links
   - bookmarks
   - meta
+syndications:
+ - https://tacocat.space/@jonas/112047740533763268
 ---
 
 I have added a new page to this site: [Bookmarks](/bookmarks), where I will share links I find interesting or good. You can subscribe to it with its [new RSS feed](/bookmarks/rss.xml).
