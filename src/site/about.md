@@ -5,6 +5,8 @@ layout: blog_post.liquid
 description: About Jonas Brusman.
 photos:
   - 'https://photo-storage.brusman.se/DSCF0712.jpeg'
+date: "git Last Modified"
+date_desc: "Last updated"
 ---
 
 I enjoy giving high fives, [taking photographs](/photos) and build stuff with Ruby and JavaScript. I work as a full-stack developer at [Teamtailor](https://www.teamtailor.com) and I'm based in Linköping, Sweden.

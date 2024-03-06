@@ -22,11 +22,11 @@ layout: layout.njk
 
   <div class="border-t-4 border-branding w-content mb-2 mt-2 pt-2 text-gray-700 dark:text-neutral-500">
     <dl>
-      {% if date %}
-        <dt class="">Published at</dt>
+      {% if page.date %}
+        <dt class="">{{date_desc | default: "Published at"}}</dt>
         <dd class="mb-1 font-light">
-          <time class="dt-published" datetime="{{date | date: "%Y-%m-%d" }}">
-            <a href="{{page.url}}" class="u-url">{{date | date: "%Y-%m-%d"}}</a>
+          <time class="dt-published" page.datetime="{{page.date | date: "%Y-%m-%d" }}">
+            <a href="{{page.url}}" class="u-url">{{page.date | date: "%Y-%m-%d"}}</a>
           </time>
         </dd>
       {% endif %}
