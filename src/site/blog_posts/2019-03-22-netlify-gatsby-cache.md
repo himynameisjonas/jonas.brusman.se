@@ -5,6 +5,7 @@ tags:
   - programming
   - netlify
   - gatsby
+  - meta
 ---
 
 When I started moving this site from Jekyll to [Gatsby](https://www.gatsbyjs.org/) I noticed that my deploys to [Netlify](https://www.netlify.com) was very slow. Mostly because I have a lot of large photos that need to be converted and optimized to different sizes. I experienced deploy times over 10 minutes and thought that there must be something to do to speed things up.
