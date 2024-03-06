@@ -21,4 +21,3 @@ This site is built with [Eleventy](https://www.11ty.dev) and the [source code is
 
 ## RSS feeds
 I have two RSS feeds: one for [blog posts](/rss.xml) and one for [bookmarks](/bookmarks/rss.xml).
-```
