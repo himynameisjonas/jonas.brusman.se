@@ -18,6 +18,13 @@
       >
         {{ post.date | date: "%Y-%m-%d" }}
       </time>
+      {% if post.data.photos.size > 1 %}
+        <div class="absolute bottom-0 right-0 mb-2 mr-2 pb-1 pr-1 border-gray-100 border-r border-b">
+          <div class="px-1 font-medium text-gray-100 dark:text-neutral-300 border-gray-100 border">
+            {{post.data.photos.size}}
+          </div>
+        </div>
+      {% endif %}
     </div>
   </a>
 </div>
