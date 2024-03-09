@@ -18,9 +18,9 @@
   },
   "volta": {
     "node": "20.10.0",
-    "yarn": "1.22.17"
+    "yarn": "1.22.22"
   },
-  "packageManager": "yarn@1.22.17",
+  "packageManager": "yarn@1.22.22",
   "engines": {
     "node": ">=18.18.2"
   },
