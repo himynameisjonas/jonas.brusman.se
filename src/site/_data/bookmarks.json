@@ -1,5 +1,20 @@
 [
   {
+    "title": "JSON Canvas",
+    "link": "https://jsoncanvas.org/",
+    "excerpt": "An open file format for infinite canvas data.",
+    "tags": [
+      "spec",
+      "json",
+      "canvas",
+      "obsidian"
+    ],
+    "date": "2024-03-12T19:05:33.158Z",
+    "content": "",
+    "prettyUrl": "jsoncanvas.org",
+    "permalink": "/bookmarks/2024-03-12-jsoncanvas-org"
+  },
+  {
     "title": "bruno",
     "link": "https://www.usebruno.com/",
     "excerpt": "",
