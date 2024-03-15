@@ -1,5 +1,18 @@
 [
   {
+    "title": "How Figma's Databases Team Lived to Tell the Scale | Figma Blog",
+    "link": "https://www.figma.com/blog/how-figmas-databases-team-lived-to-tell-the-scale/",
+    "excerpt": "Our nine month journey to horizontally shard Figma’s Postgres stack, and the key to unlocking (nearly) infinite scalability.",
+    "tags": [
+      "database",
+      "postgres"
+    ],
+    "date": "2024-03-15T09:01:52.959Z",
+    "content": "",
+    "prettyUrl": "www.figma.com/blog/how-figmas-databases-team-lived-to-tell-the-scale/",
+    "permalink": "/bookmarks/2024-03-15-www-figma-com-blog-how-figmas-databases-team-lived-to-tell-the-scale"
+  },
+  {
     "title": "JSON Canvas",
     "link": "https://jsoncanvas.org/",
     "excerpt": "An open file format for infinite canvas data.",
