@@ -1,5 +1,20 @@
 [
   {
+    "title": "N₁₀ - Attention Management App for Mac",
+    "link": "https://n10.app/",
+    "excerpt": "For all of us who get stuck, feel overwhelmed, lose track of time, forget what we’re working on, or could just use a little help concentrating.",
+    "tags": [
+      "todo",
+      "app",
+      "focus",
+      "indie"
+    ],
+    "date": "2024-03-20T05:36:40.272Z",
+    "content": "",
+    "prettyUrl": "n10.app",
+    "permalink": "/bookmarks/2024-03-20-n10-app"
+  },
+  {
     "title": "How Figma's Databases Team Lived to Tell the Scale | Figma Blog",
     "link": "https://www.figma.com/blog/how-figmas-databases-team-lived-to-tell-the-scale/",
     "excerpt": "Our nine month journey to horizontally shard Figma’s Postgres stack, and the key to unlocking (nearly) infinite scalability.",
