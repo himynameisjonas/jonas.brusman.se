@@ -1,0 +1,35 @@
+{% if post.data.photos.size > 0 %}
+  {% assign photo = post.data.photos | first %}
+{% endif %}
+
+<div class="flex flex-col gap-2 grid-item w-full {% unless fullWidth %}md:w-1/2 xl:w-1/3 2-xl:w-1/4 p-4{% endunless %} pb-6">
+  <div class="ar-3x2 group">
+    <a
+      href="{{ post.url }}"
+      class="absolute bg-cover h-full left-0 top-0 w-full bg-gray-400"
+    >
+      {% picture_element photo post.data.title "absolute h-full inset-0 object-cover w-full group-hover:scale-105 transition-transform duration-700 ease-out" "(max-width: 640px) calc(100vw - 32px), 436px" %}
+      <div class="px-4 inset-0 absolute flex flex-col justify-center text-center bg-gray-700 bg-opacity-25">
+        <h2 class="text-3xl leading-relaxed pb-1 font-bold">
+          <span class="title-bg">{{ post.data.title }}</span>
+        </h2>
+        <time
+          datetime="{{ post.date | date: "%Y-%m-%d" }}"
+          class="font-medium text-gray-100 dark:text-neutral-300"
+        >
+          {{ post.date | date: "%Y-%m-%d" }}
+        </time>
+      </div>
+    </a>
+  </div>
+  <div class="grid grid-cols-3 2-xl:grid-cols-4 gap-2">
+    {% for photo in post.data.photos offset:1 %}
+      <div class="ar-3x2 group">
+        <a
+        href="{{ post.url }}">
+          {% picture_element photo post.data.title "absolute h-full inset-0 object-cover w-full group-hover:scale-105 transition-transform duration-700 ease-out" "(min-width: 1700px) 103px, (min-width: 1040px) 140px, (min-width: 780px) calc(1.67vw + 102px), (min-width: 640px) 187px, calc(33.44vw - 16px)" %}
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
