@@ -66,6 +66,9 @@
   padding-bottom: 0.125rem;
 }
 
+#webmentions h2 {
+  @apply hidden;
+}
 #webmentions .reacts {
   @apply flex flex-row;
 }
@@ -76,6 +79,14 @@
 
 #webmentions img {
   @apply h-4 w-4 object-cover mr-0.5;
+}
+
+.js-dt-webmentions {
+  @apply hidden;
+}
+
+.js-dt-webmentions:has(+ #webmentions .reacts) {
+  @apply block;
 }
 
 .markdown {
