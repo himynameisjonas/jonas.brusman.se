@@ -35,7 +35,7 @@
     "npm-run-all2": "5.0.0",
     "prettier": "3.1.1",
     "striptags": "3.2.0",
-    "tailwindcss": "3.4.0"
+    "tailwindcss": "3.4.1"
   },
   "dependencies": {
     "@tinacms/auth": "^1.0.3",
