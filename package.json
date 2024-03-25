@@ -30,7 +30,7 @@
     "@11ty/eleventy-plugin-rss": "1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "5.0.0",
     "html-minifier": "4.0.0",
-    "jsdom": "19.0.0",
+    "jsdom": "24.0.0",
     "netlify-plugin-cache": "^1.0.3",
     "npm-run-all2": "5.0.0",
     "prettier": "3.1.1",
