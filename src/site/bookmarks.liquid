@@ -3,7 +3,6 @@ layout: layout.njk
 description: Jonas Brusman's bookmarks.
 title: Bookmarks
 ---
-
 <div class="flex flex-wrap w-content">
   <div class="w-content mb-8">
     <h2 class="text-3xl leading-tight font-semibold border-l-4 border-branding -ml-5 pl-4 mb-3">Bookmarks</h2>
@@ -14,7 +13,7 @@ title: Bookmarks
 
   <div class="grid grid-cols-1 gap-x-10">
     {% for bookmark in bookmarks %}
-      {% include "list_bookmark" %}
+      {% include 'list_bookmark' %}
     {% endfor %}
   </div>
 </div>

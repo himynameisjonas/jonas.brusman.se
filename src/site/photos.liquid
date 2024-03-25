@@ -5,8 +5,11 @@ title: Photos
 ---
 <script defer src="/js/masonry.pkgd.min.js"></script>
 
-<div class="flex flex-wrap" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-item", "percentPosition": true }'>
+<div
+  class="flex flex-wrap"
+  data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-item", "percentPosition": true }'
+>
   {% for post in collections.photos reversed %}
-    {% include "list_photos_post" %}
+    {% include 'list_photos_post' %}
   {% endfor %}
 </div>

@@ -6,8 +6,6 @@ pagination:
     alias: bookmark
 permalink: "{{ bookmark.permalink }}/"
 ---
-
-
 <article class="flex flex-col h-entry">
   <a href="{{ bookmark.link }}" class="w-content" rel="noopener">
     <h1 class="md:text-5xl md:leading-relaxed leading-relaxed text-3xl text-white font-semibold p-name text-balance">
@@ -16,14 +14,19 @@ permalink: "{{ bookmark.permalink }}/"
       </span>
     </h1>
   </a>
-  <a href={{bookmark.link}} class="link text-gray-500 italic w-content mb-4" rel="noopener">{{bookmark.prettyUrl}}</a>
+  <a href="{{bookmark.link}}" class="link text-gray-500 italic w-content mb-4" rel="noopener">
+    {{- bookmark.prettyUrl -}}
+  </a>
 
   <div class="markdown w-content e-content">
-    {{bookmark.content}}
+    {{ bookmark.content }}
   </div>
 
   {% if bookmark.excerpt.length > 1 %}
-    <blockquote class="mb-4 italic w-content e-content text-gray-500"><span class="pr-0.5 text-xl">“</span>{{bookmark.excerpt}}<span class="pl-0.5 text-xl">”</span></blockquote>
+    <blockquote class="mb-4 italic w-content e-content text-gray-500">
+      <span class="pr-0.5 text-xl">“</span>{{ bookmark.excerpt -}}
+      <span class="pl-0.5 text-xl">”</span>
+    </blockquote>
   {% endif %}
 
   <div class="border-t-4 border-branding w-content mb-2 mt-2 pt-2 text-gray-700 dark:text-neutral-500">
@@ -32,7 +35,7 @@ permalink: "{{ bookmark.permalink }}/"
         <dt class="">Published at</dt>
         <dd class="mb-1 font-light">
           <time class="dt-published" datetime="{{bookmark.date | date: "%Y-%m-%d" }}">
-            <a href="{{page.url}}" class="u-url">{{bookmark.date | date: "%Y-%m-%d"}}</a>
+            <a href="{{page.url}}" class="u-url">{{ bookmark.date | date: '%Y-%m-%d' }}</a>
           </time>
         </dd>
       {% endif %}
@@ -41,8 +44,8 @@ permalink: "{{ bookmark.permalink }}/"
         <dt class="">Tags</dt>
         <dd class="mb-1 font-light">
           {% for tag in bookmark.tags %}
-            {% unless tag == "blogPost" %}
-              <span class="prefix-hash">{{tag}}</span>
+            {% unless tag == 'blogPost' %}
+              <span class="prefix-hash">{{ tag }}</span>
             {% endunless %}
           {% endfor %}
         </dd>

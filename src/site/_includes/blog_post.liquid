@@ -11,22 +11,28 @@ layout: layout.njk
   {% if photos %}
     <div class="flex -mx-2 justify-center mb-8 flex-col items-center max-w-screen-h">
       {% for photo in photos %}
-        <img src="{{ photo }}" alt="{{ title }}" eleventy:widths="800,1200,2000,3000,4000" sizes="(max-width: 1000px) 100vw, 133vh" class="max-h-screen py-3 u-photo bg-clip-content bg-neutral-100 dark:bg-neutral-900 min-h-[4em] min-w-[4em] w-auto">
+        <img
+          src="{{ photo }}"
+          alt="{{ title }}"
+          eleventy:widths="800,1200,2000,3000,4000"
+          sizes="(max-width: 1000px) 100vw, 133vh"
+          class="max-h-screen py-3 u-photo bg-clip-content bg-neutral-100 dark:bg-neutral-900 min-h-[4em] min-w-[4em] w-auto"
+        >
       {% endfor %}
     </div>
   {% endif %}
 
   <div class="markdown w-content e-content">
-    {{content}}
+    {{ content }}
   </div>
 
   <div class="border-t-4 border-branding w-content mb-2 mt-2 pt-2 text-gray-700 dark:text-neutral-500">
     <dl>
       {% if page.date %}
-        <dt class="">{{date_desc | default: "Published at"}}</dt>
+        <dt class="">{{ date_desc | default: 'Published at' }}</dt>
         <dd class="mb-1 font-light">
           <time class="dt-published" page.datetime="{{page.date | date: "%Y-%m-%d" }}">
-            <a href="{{page.url}}" class="u-url">{{page.date | date: "%Y-%m-%d"}}</a>
+            <a href="{{page.url}}" class="u-url">{{ page.date | date: '%Y-%m-%d' }}</a>
           </time>
         </dd>
       {% endif %}
@@ -35,8 +41,8 @@ layout: layout.njk
         <dt class="">Tags</dt>
         <dd class="mb-1 font-light">
           {% for tag in tags %}
-            {% unless tag == "blogPost" %}
-              <a href="/tags/{{tag}}/" class="prefix-hash link p-category">{{tag}}</a>
+            {% unless tag == 'blogPost' %}
+              <a href="/tags/{{tag}}/" class="prefix-hash link p-category">{{ tag }}</a>
             {% endunless %}
           {% endfor %}
         </dd>
@@ -46,20 +52,30 @@ layout: layout.njk
       {% if similar.length > 0 %}
         <dt class="">Related posts</dt>
         <dd class="mb-1 font-light">
-          {% for similarPost in similar limit: 3 %}<a href="{{ similarPost.url }}" class="link">{{similarPost.data.title}}</a> {% endfor %}
+          {% for similarPost in similar limit: 3 -%}
+            <a href="{{ similarPost.url }}" class="link">{{ similarPost.data.title }}</a>
+          {% endfor %}
         </dd>
       {% endif %}
 
       {% if syndications.length > 0 %}
         <dt class="hidden">This post elsewhere</dt>
         <dd class="hidden mb-1 font-light">
-          {% for url in syndications %}<a href="{{ url }}" rel="syndication" class="u-syndication link">{{url}}</a> {% endfor %}
+          {% for url in syndications -%}
+            <a href="{{ url }}" rel="syndication" class="u-syndication link">{{ url }}</a>
+          {% endfor %}
         </dd>
       {% endif %}
     </dl>
     <a rel="author" class="hidden p-author h-card" href="https://jonas.brusman.se">Jonas Brusman</a>
 
-    <script src="/js/webmention.min.js" data-page-url="https://jonas.brusman.se{{page.url}}" data-add-urls="https://jonas.brusman.se/{{date | date: "%Y-%m-%d"}}-{{page.fileSlug}}/" data-comments-are-reactions=true async></script>
+    <script
+      src="/js/webmention.min.js"
+      data-page-url="https://jonas.brusman.se{{page.url}}"
+      data-add-urls="https://jonas.brusman.se/{{date | date: "%Y-%m-%d"}}-{{page.fileSlug}}/"
+      data-comments-are-reactions="true"
+      async
+    ></script>
     <div id="webmentions"></div>
   </div>
 </article>

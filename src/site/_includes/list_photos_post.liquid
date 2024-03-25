@@ -4,7 +4,13 @@
       href="{{ post.url }}"
       class="absolute bg-cover h-full left-0 top-0 w-full bg-gray-400"
     >
-      <img src="{{ post.data.photos | first }}" alt="{{ post.data.title }}" eleventy:widths="400,800,1200,2000,3000,4000" sizes="(max-width: 640px) calc(100vw - 32px), 436px" class="absolute h-full inset-0 object-cover w-full group-hover:scale-105 transition-transform duration-700 ease-out">
+      <img
+        src="{{ post.data.photos | first }}"
+        alt="{{ post.data.title }}"
+        eleventy:widths="400,800,1200,2000,3000,4000"
+        sizes="(max-width: 640px) calc(100vw - 32px), 436px"
+        class="absolute h-full inset-0 object-cover w-full group-hover:scale-105 transition-transform duration-700 ease-out"
+      >
       <div class="px-4 inset-0 absolute flex flex-col justify-center text-center bg-gray-700 bg-opacity-25">
         <h2 class="text-3xl leading-relaxed pb-1 font-bold">
           <span class="title-bg">{{ post.data.title }}</span>
@@ -13,17 +19,24 @@
           datetime="{{ post.date | date: "%Y-%m-%d" }}"
           class="font-medium text-gray-100 dark:text-neutral-300"
         >
-          {{ post.date | date: "%Y-%m-%d" }}
+          {{ post.date | date: '%Y-%m-%d' }}
         </time>
       </div>
     </a>
   </div>
   <div class="grid grid-cols-3 2-xl:grid-cols-4 gap-2">
-    {% for photo in post.data.photos offset:1 %}
+    {% for photo in post.data.photos offset: 1 %}
       <div class="ar-3x2 group">
         <a
-        href="{{ post.url }}">
-          <img src="{{ photo }}" alt="{{ post.data.title }}" eleventy:widths="400,800,1200,2000,3000,4000" sizes="(min-width: 1700px) 103px, (min-width: 1040px) 140px, (min-width: 780px) calc(1.67vw + 102px), (min-width: 640px) 187px, calc(33.44vw - 16px)" class="absolute h-full inset-0 object-cover w-full group-hover:scale-105 transition-transform duration-700 ease-out">
+          href="{{ post.url }}"
+        >
+          <img
+            src="{{ photo }}"
+            alt="{{ post.data.title }}"
+            eleventy:widths="400,800,1200,2000,3000,4000"
+            sizes="(min-width: 1700px) 103px, (min-width: 1040px) 140px, (min-width: 780px) calc(1.67vw + 102px), (min-width: 640px) 187px, calc(33.44vw - 16px)"
+            class="absolute h-full inset-0 object-cover w-full group-hover:scale-105 transition-transform duration-700 ease-out"
+          >
         </a>
       </div>
     {% endfor %}

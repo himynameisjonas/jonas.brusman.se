@@ -3,11 +3,10 @@ layout: layout.njk
 description: Jonas Brusman's notes.
 title: Notes
 ---
-
 <div class="flex flex-wrap w-content">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10">
     {% for post in collections.notes reversed %}
-      {% include "list_note_post" %}
+      {% include 'list_note_post' %}
     {% endfor %}
   </div>
 </div>

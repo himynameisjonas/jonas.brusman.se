@@ -3,24 +3,27 @@
     <h2 class="text-2xl leading-relaxed sm:text-lg sm:leading-loose mb-1 hover:scale-105 transition-transform ease-out inline-block">
       <span class="title-bg">{{ bookmark.title }}</span>
     </h2>
-    <span class="text-gray-500 italic link block">{{bookmark.prettyUrl}}</span>
+    <span class="text-gray-500 italic link block">{{ bookmark.prettyUrl }}</span>
   </a>
   {% if bookmark.content.length > 0 %}
-    <div class="my-1">{{bookmark.content}}</div>
+    <div class="my-1">{{ bookmark.content }}</div>
   {% endif %}
   {% if bookmark.excerpt.length > 1 %}
-    <blockquote class="my-1 italic text-gray-500"><span class="pr-0.5 text-xl">“</span>{{bookmark.excerpt}}<span class="pl-0.5 text-xl">”</span></blockquote>
+    <blockquote class="my-1 italic text-gray-500">
+      <span class="pr-0.5 text-xl">“</span>{{ bookmark.excerpt -}}
+      <span class="pl-0.5 text-xl">”</span>
+    </blockquote>
   {% endif %}
   <div class="text-gray-500 font-normal">
     <a href="{{ bookmark.permalink }}">
       <time datetime="{{ bookmark.date | date: "%Y-%m-%d" }}" class="text-gray-500 hover:text-branding">
-        {{ bookmark.date | date: "%Y-%m-%d" }}
+        {{ bookmark.date | date: '%Y-%m-%d' }}
       </time>
     </a>
     {% if bookmark.tags.length > 0 %}•{% endif %}
     {% for tag in bookmark.tags %}
-      {% unless tag == "blogPost" %}
-        <span class="prefix-hash">{{tag}}</span>
+      {% unless tag == 'blogPost' %}
+        <span class="prefix-hash">{{ tag }}</span>
       {% endunless %}
     {% endfor %}
   </div>
