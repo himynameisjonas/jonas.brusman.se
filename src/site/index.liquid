@@ -17,7 +17,7 @@ title: Blog
     <a href="/photos"><h2 class="text-3xl leading-tight font-semibold border-l-4 border-branding dark:border-branding-600 pl-4 mb-3">Latest photos</h2></a>
     <div class="grid grid-cols-1 gap-6">
       {% assign photos = collections.photos | reverse %}
-      {% assign fullWidth = true %}
+      {% assign photoWidths = "w-full" %}
       {% for post in photos limit:4  %}
         {% include "list_photos_post" %}
       {% endfor %}
