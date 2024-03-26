@@ -33,7 +33,7 @@
     "@shopify/prettier-plugin-liquid": "^1.4.4",
     "html-minifier": "4.0.0",
     "netlify-plugin-cache": "^1.0.3",
-    "npm-run-all2": "5.0.2",
+    "npm-run-all2": "6.1.2",
     "prettier": "^3.1.1",
     "striptags": "3.2.0",
     "tailwindcss": "3.4.1"
