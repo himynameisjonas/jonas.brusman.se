@@ -11,23 +11,22 @@ const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
-	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-		extensions: "html",
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    extensions: "html",
 
     cacheOptions: {
       duration: "10y",
     },
-		formats: ["webp", "jpeg"],
+    formats: ["webp", "jpeg"],
 
-		widths: ["auto"],
+    widths: ["auto"],
 
     urlPath: "/img/",
-		defaultAttributes: {
-			loading: "lazy",
-			decoding: "async"
-		}
-	});
-
+    defaultAttributes: {
+      loading: "lazy",
+      decoding: "async",
+    },
+  });
 
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.setUseGitIgnore(false);
