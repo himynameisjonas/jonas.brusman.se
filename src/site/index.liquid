@@ -14,6 +14,12 @@ title: Blog
     {% for post in notes limit: 6 %}
       {% include 'list_note_post' %}
     {% endfor %}
+
+    <div class="border-t-4 border-branding mb-2 mt-2 pt-2">
+      <a href="/notes" class="link block text-center">
+        <span class="text-sm">View all notes</span>
+      </a>
+    </div>
   </div>
 
   <div>
@@ -28,6 +34,11 @@ title: Blog
       {% for post in photos limit: 4 %}
         {% include 'list_photos_post' %}
       {% endfor %}
+    </div>
+    <div class="border-t-4 border-branding mb-2 mt-2 pt-2">
+      <a href="/photos" class="link block text-center">
+        <span class="text-sm">View all photos</span>
+      </a>
     </div>
   </div>
 </div>
