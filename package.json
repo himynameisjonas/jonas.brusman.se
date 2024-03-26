@@ -6,7 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "tinacms build && npm-run-all build:css build:html",
+    "prebuild": "if [ -n \"$TINA_TOKEN\" ]; then tinacms build; fi",
+    "build": "npm-run-all build:css build:html",
     "build:css": "tailwindcss -i ./src/site/_includes/css/tailwind.css -o ./src/site/css/styles.css --minify",
     "build:html": "eleventy",
     "fetch_bookmarks": "node ./src/scripts/fetch_bookmarks.js",
