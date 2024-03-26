@@ -2,7 +2,7 @@
   <div class="ar-3x2 group">
     <a
       href="{{ post.url }}"
-      class="absolute bg-cover h-full left-0 top-0 w-full bg-gray-400"
+      class="absolute h-full left-0 top-0 w-full bg-gray-500"
     >
       <img
         src="{{ post.data.photos | first }}"
@@ -29,13 +29,14 @@
       <div class="ar-3x2 group">
         <a
           href="{{ post.url }}"
+          class="bg-gray-500"
         >
           <img
             src="{{ photo }}"
             alt="{{ post.data.title }}"
             eleventy:widths="400,800,1200,2000,3000,4000"
             sizes="(min-width: 1700px) 103px, (min-width: 1040px) 140px, (min-width: 780px) calc(1.67vw + 102px), (min-width: 640px) 187px, calc(33.44vw - 16px)"
-            class="absolute h-full inset-0 object-cover w-full group-hover:scale-105 transition-transform duration-700 ease-out"
+            class="bg-gray-500 absolute h-full inset-0 object-cover w-full group-hover:scale-105 transition-transform duration-700 ease-out"
           >
         </a>
       </div>
