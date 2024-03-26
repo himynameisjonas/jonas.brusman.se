@@ -7,7 +7,7 @@ pagination:
 permalink: "{{ bookmark.permalink }}/"
 ---
 <article class="flex flex-col h-entry">
-  <a href="{{ bookmark.link }}" class="w-content" rel="noopener">
+  <a href="{{ bookmark.link }}" class="u-bookmark-of w-content" rel="noopener">
     <h1 class="md:text-5xl md:leading-relaxed leading-relaxed text-3xl text-white font-semibold p-name text-balance">
       <span class="title-bg">
         {{ bookmark.title }}
@@ -23,7 +23,7 @@ permalink: "{{ bookmark.permalink }}/"
   </div>
 
   {% if bookmark.excerpt.length > 1 %}
-    <blockquote class="mb-4 italic w-content e-content text-gray-500">
+    <blockquote class="h-cite mb-4 italic w-content e-content text-gray-500">
       <span class="pr-0.5 text-xl">“</span>{{ bookmark.excerpt -}}
       <span class="pl-0.5 text-xl">”</span>
     </blockquote>
