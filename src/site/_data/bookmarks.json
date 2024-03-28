@@ -1,5 +1,20 @@
 [
   {
+    "title": "Fedify",
+    "link": "https://fedify.dev/",
+    "excerpt": "Fedify is a Deno/TypeScript library for building federated server apps powered by ActivityPub and other standards, so-called fediverse.",
+    "tags": [
+      "fediverse",
+      "typescript",
+      "framework",
+      "deno"
+    ],
+    "date": "2024-03-27T11:01:36.381Z",
+    "content": "",
+    "prettyUrl": "fedify.dev",
+    "permalink": "/bookmarks/2024-03-27-fedify-dev"
+  },
+  {
     "title": "Hey Guys",
     "link": "https://heyguys.cc/",
     "excerpt": "“Hey guys” is a common salutation, but it’s not gender neutral. People who aren’t men can feel excluded when addressed as “guys,” even if that is not the intent.",
