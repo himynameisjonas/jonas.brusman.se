@@ -1,5 +1,18 @@
 [
   {
+    "title": "An IndieWeb Webring",
+    "link": "https://xn--sr8hvo.ws/terms",
+    "excerpt": "",
+    "tags": [
+      "webring",
+      "indieweb"
+    ],
+    "date": "2024-03-29T07:13:45.344Z",
+    "content": "",
+    "prettyUrl": "xn--sr8hvo.ws/terms",
+    "permalink": "/bookmarks/2024-03-29-xn-sr8hvo-ws-terms"
+  },
+  {
     "title": "Fedify",
     "link": "https://fedify.dev/",
     "excerpt": "Fedify is a Deno/TypeScript library for building federated server apps powered by ActivityPub and other standards, so-called fediverse.",
