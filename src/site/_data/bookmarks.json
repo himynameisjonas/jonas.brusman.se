@@ -1,5 +1,32 @@
 [
   {
+    "title": "Connect APIs, Remarkably Fast - Pipedream",
+    "link": "https://pipedream.com/",
+    "excerpt": "Stop writing boilerplate code, struggling with auth and managing infrastructure. Connect APIs with code when you need it and no code when you don&#39;t.",
+    "tags": [
+      "workflow",
+      "automation"
+    ],
+    "date": "2024-03-29T11:54:57.160Z",
+    "content": "",
+    "prettyUrl": "pipedream.com",
+    "permalink": "/bookmarks/2024-03-29-pipedream-com"
+  },
+  {
+    "title": "Decap CMS | Open-Source Content Management System",
+    "link": "https://decapcms.org/",
+    "excerpt": "Open source content management for your Git workflow",
+    "tags": [
+      "cms",
+      "git",
+      "ssg"
+    ],
+    "date": "2024-03-29T11:53:33.694Z",
+    "content": "",
+    "prettyUrl": "decapcms.org",
+    "permalink": "/bookmarks/2024-03-29-decapcms-org"
+  },
+  {
     "title": "An IndieWeb Webring",
     "link": "https://xn--sr8hvo.ws/terms",
     "excerpt": "",
