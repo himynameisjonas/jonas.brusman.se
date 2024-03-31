@@ -27,53 +27,71 @@ layout: layout.njk
   </div>
   {% unless no_footer %}
     <div class="border-t-4 border-branding w-content mb-2 mt-2 pt-2 text-gray-700 dark:text-neutral-500">
-      <dl class="grid gap-x-4 gap-y-1 auto-cols-max">
+      <table class="w-full">
         {% if page.date %}
-          <dt class="col-start-1">{{ date_desc | default: 'Published at' }}</dt>
-          <dd class="mb-1 font-light col-start-2">
-            <time class="dt-published" page.datetime="{{page.date | date: "%Y-%m-%d" }}">
-              <a href="{{page.url}}" class="u-url">{{ page.date | date: '%Y-%m-%d' }}</a>
-            </time>
-          </dd>
+          <tr>
+            <th class="align-baseline text-left font-normal pr-2 pb-2">{{ date_desc | default: 'Published at' }}</th>
+            <td class="font-light align-baseline pb-2">
+              <time class="dt-published" page.datetime="{{page.date | date: "%Y-%m-%d" }}">
+                <a href="{{page.url}}" class="u-url">{{ page.date | date: '%Y-%m-%d' }}</a>
+              </time>
+            </td>
+          </tr>
         {% endif %}
 
         {% if tags.length > 0 %}
-          <dt class="col-start-1">Tags</dt>
-          <dd class="mb-1 font-light col-start-2">
-            {% for tag in tags %}
-              {% unless tag == 'blogPost' %}
-                <a href="/tags/{{tag}}/" class="prefix-hash link p-category">{{ tag }}</a>
-              {% endunless %}
-            {% endfor %}
-          </dd>
+          <tr>
+            <th class="align-baseline text-left font-normal whitespace-nowrap pr-2 pb-2">Tags</th>
+            <td class="font-light align-baseline pb-2">
+              {% for tag in tags %}
+                {% unless tag == 'blogPost' %}
+                  <a href="/tags/{{tag}}/" class="prefix-hash link p-category">{{ tag }}</a>
+                {% endunless %}
+              {% endfor %}
+            </td>
+          </tr>
         {% endif %}
 
         {% assign similar = collections.all | similarPosts: page.inputPath, tags %}
         {% if similar.length > 0 %}
-          <dt class="col-start-1">Related posts</dt>
-          <dd class="mb-1 font-light col-start-2 flex flex-col">
-            {% for similarPost in similar limit: 3 -%}
-              <a href="{{ similarPost.url }}" class="link">{{ similarPost.data.title }}</a>
-            {% endfor %}
-          </dd>
+          <tr>
+            <th class="align-baseline text-left font-normal whitespace-nowrap pr-2 pb-2">Related posts</th>
+            <td class="font-light align-baseline pb-2">
+              <ul class="list-disc list-inside">
+                {% for similarPost in similar limit: 3 -%}
+                  <li class="mb-1">
+                    <a href="{{ similarPost.url }}" class="link">{{ similarPost.data.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </td>
+          </tr>
         {% endif %}
 
         {% if syndications.length > 0 %}
-          <dt class="hidden">This post elsewhere</dt>
-          <dd class="hidden mb-1 font-light col-start-2">
-            {% for url in syndications -%}
-              <a href="{{ url }}" rel="syndication" class="u-syndication link">{{ url }}</a>
-            {% endfor %}
-          </dd>
+          <tr>
+            <th class="align-baseline text-left font-normal whitespace-nowrap pr-2 pb-2 hidden">This post elsewhere</th>
+            <td class="hidden font-light align-baseline">
+              {% for url in syndications -%}
+                <a href="{{ url }}" rel="syndication" class="u-syndication link">{{ url }}</a>
+              {% endfor %}
+            </td>
+          </tr>
         {% endif %}
-        <dt class="col-start-1">Have some thoughts?</dt>
-        <dd class="mb-1 font-light col-start-2">
-          <a href="mailto:blog@brusman.se?subject=Re: {{title}}" class="link">Reply by email</a>
-        </dd>
 
-        <dt class="col-start-1 js-dt-webmentions">Reactions</dt>
-        <dd id="webmentions" class="mb-1 font-light col-start-2 flex flex-col"></dd>
-      </dl>
+        <tr>
+          <th class="align-baseline text-left font-normal pr-2 pb-2">Have some thoughts?</th>
+          <td class="font-light align-baseline pb-2">
+            <a href="mailto:blog@brusman.se?subject=Re: {{title}}" class="link">Reply by email</a>
+          </td>
+        </tr>
+
+        <tr class="js-tr-webmentions">
+          <th class="align-baseline text-left font-normal whitespace-nowrap pr-2 pb-2">Reactions</th>
+          <td id="webmentions" class="font-light align-baseline pb-2 flex flex-col"></td>
+        </tr>
+      </table>
+
       <a rel="author" class="hidden p-author h-card" href="https://jonas.brusman.se">Jonas Brusman</a>
       <script
         src="/js/webmention.min.js"
