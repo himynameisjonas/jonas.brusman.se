@@ -186,3 +186,16 @@
 .markdown img {
   @apply m-auto bg-neutral-900;
 }
+
+open-heart:not([disabled]):hover,
+open-heart:not([disabled]):focus {
+  @apply bg-branding cursor-pointer text-white;
+}
+
+open-heart[disabled] {
+  @apply cursor-not-allowed;
+}
+
+open-heart[count]:not([count="0"])::after {
+  content: attr(count);
+}
