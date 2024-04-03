@@ -36,6 +36,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/site/js");
   eleventyConfig.addPassthroughCopy({ "./src/site/misc": "./" });
   eleventyConfig.addPassthroughCopy("./_redirects");
+  eleventyConfig.addPassthroughCopy("./functions");
 
   eleventyConfig.addTransform("minifyHtml", minifyHtml);
 
