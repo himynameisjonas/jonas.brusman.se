@@ -1,5 +1,19 @@
 [
   {
+    "title": "Self-Hosted Applications and Alternatives",
+    "link": "https://selfh.st/apps/",
+    "excerpt": "A directory of self-hosted software and applications for easy browsing",
+    "tags": [
+      "selfhosting",
+      "list",
+      "recommendation"
+    ],
+    "date": "2024-04-04T17:13:01.570Z",
+    "content": "",
+    "prettyUrl": "selfh.st/apps/",
+    "permalink": "/bookmarks/2024-04-04-selfh-st-apps"
+  },
+  {
     "title": "Connect APIs, Remarkably Fast - Pipedream",
     "link": "https://pipedream.com/",
     "excerpt": "Stop writing boilerplate code, struggling with auth and managing infrastructure. Connect APIs with code when you need it and no code when you don&#39;t.",
