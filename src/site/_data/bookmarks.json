@@ -1,5 +1,20 @@
 [
   {
+    "title": "Home | Tabby",
+    "link": "https://tabby.tabbyml.com/",
+    "excerpt": "Description will go into a meta tag in head /",
+    "tags": [
+      "ml",
+      "selfhosting",
+      "llm",
+      "autocompletion"
+    ],
+    "date": "2024-04-06T15:05:17.409Z",
+    "content": "Opensource, self-hosted AI coding assistant",
+    "prettyUrl": "tabby.tabbyml.com",
+    "permalink": "/bookmarks/2024-04-06-tabby-tabbyml-com"
+  },
+  {
     "title": "s l o w r o a d s",
     "link": "https://slowroads.io/",
     "excerpt": "endless driving zen in your browser",
