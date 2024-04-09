@@ -1,5 +1,20 @@
 [
   {
+    "title": "Tembo: Goodbye Database Sprawl, Hello Postgres",
+    "link": "https://tembo.io/",
+    "excerpt": "Tembo is the Postgres developer platform for building every application and data service. Collapse the database sprawl of the modern data stack with a unified developer platform.",
+    "tags": [
+      "postgres",
+      "database",
+      "hosting",
+      "daas"
+    ],
+    "date": "2024-04-09T07:52:28.460Z",
+    "content": "",
+    "prettyUrl": "tembo.io",
+    "permalink": "/bookmarks/2024-04-09-tembo-io"
+  },
+  {
     "title": "Home | Tabby",
     "link": "https://tabby.tabbyml.com/",
     "excerpt": "Description will go into a meta tag in head /",
