@@ -7,21 +7,23 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Inter var";
+  font-family: 'Tropi Land';
+  src: url('/fonts/TropiLandRegular.woff2') format('woff2'),
+    url('/fonts/TropiLandRegular.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
-  font-weight: 100 900;
   font-display: swap;
-  src: url("/fonts/Inter-roman.var.woff2?v=3.19") format("woff2");
-  font-named-instance: "Regular";
+  size-adjust: 125%;
 }
 
-@font-face {
-  font-family: "Inter var";
-  font-style: italic;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("/fonts/Inter-italic.var.woff2?v=3.19") format("woff2");
-  font-named-instance: "Italic";
+@layer components {
+  .header-block {
+    @apply font-tropic uppercase text-3xl leading-tight font-semibold text-salmon bg-gradient-purple_heart rounded-t py-7 px-6;
+  }
+
+  .title-bg {
+    @apply font-semibold text-salmon-200 box-decoration-clone bg-gradient-purple_heart px-2 py-1;
+  }
 }
 
 .max-w-screen-h {
@@ -29,15 +31,29 @@
 }
 
 .w-content {
-  @apply max-w-full sm:max-w-xl md:max-w-3xl lg:max-w-4xl w-full self-center;
+  @apply max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl w-full self-center;
+}
+
+.bg-gradient-salmon {
+  background-image: linear-gradient(to right bottom, #fff1f2, #ffeeef, #ffebec, #ffe7e9, #ffe4e6);
+}
+
+.bg-gradient-purple_heart {
+  background-image: linear-gradient(to left bottom, #47149e, #4914a3, #4b14a8, #4c14ae, #4e14b3);
+}
+
+.child {
+  width: 100vw;
+  position: relative;
+  left: calc(-50vw + 50%);
 }
 
 .link {
-  @apply text-branding underline;
+  @apply text-salmon-400 underline;
 }
 
 .link:hover {
-  @apply no-underline;
+  @apply no-underline text-salmon-300;
 }
 
 .prefix-hash:before {
@@ -49,9 +65,6 @@
   @apply underline;
 }
 
-.title-bg {
-  @apply font-semibold text-white dark:text-neutral-800 box-decoration-clone bg-branding dark:bg-branding-600 px-2 py-1;
-}
 
 .ar-3x2 {
   height: 0;
@@ -90,7 +103,7 @@
 }
 
 .markdown {
-  @apply text-gray-800 dark:text-neutral-400 leading-relaxed break-words text-xl;
+  @apply leading-relaxed break-words text-xl;
 }
 
 .markdown > * + *,
@@ -184,12 +197,12 @@
 }
 
 .markdown img {
-  @apply m-auto bg-neutral-900;
+  @apply m-auto bg-white;
 }
 
 open-heart:not([disabled]):hover,
 open-heart:not([disabled]):focus {
-  @apply bg-branding cursor-pointer text-white;
+  @apply bg-salmon cursor-pointer text-white;
 }
 
 open-heart[disabled] {

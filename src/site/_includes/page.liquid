@@ -1,23 +1,20 @@
 ---
 layout: layout.njk
 ---
-<article class="flex flex-col h-entry items-center">
-  <h1 class="font-tropic w-content py-12 px-10 md:text-5xl leading-relaxed text-3xl p-name text-balance text-salmon bg-purple_heart rounded-t-lg">
-    {{ headline | default: title | replace: 'Ö', 'ö' }}
-  </h1>
 
-  <div class="markdown w-content e-content bg-white">
-    <div class="px-4 py-5 sm:p-6">
+<div class="flex flex-col w-content bg-white">
+  <h1 class="header-block">{{ headline | default: title }}</h1>
+  <div class="px-4 py-5 sm:p-6 markdown">
       {% if photos %}
         {% for photo in photos %}
-          <div class="child flex flex-col items-center">
+          <div class="flex flex-col items-center">
             <div class="mb-10 max-w-screen-h">
               <img
                 src="{{ photo }}"
                 alt="{{ title }}"
                 eleventy:widths="800,1200,2000,3000,4000"
                 sizes="(max-width: 1000px) 100vw, 133vh"
-                class="u-photo max-h-screen object-contain p-6 bg-white"
+                class="u-photo max-h-screen object-contain bg-white"
               >
             </div>
           </div>
