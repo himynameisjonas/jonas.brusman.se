@@ -41,10 +41,10 @@ layout: layout.njk
         <table class="w-full">
           {% if page.date %}
             <tr>
-              <th class="text-purple_heart font-bold align-baseline text-left pr-2 pb-2">
+              <th class="footer-header">
                 {{ date_desc | default: 'Published at' }}
               </th>
-              <td class="align-baseline pb-2">
+              <td class="footer-data">
                 <time class="dt-published" page.datetime="{{page.date | date: "%Y-%m-%d" }}">
                   <a href="{{page.url}}" class="u-url">{{ page.date | date: '%Y-%m-%d' }}</a>
                 </time>
@@ -54,8 +54,8 @@ layout: layout.njk
 
           {% if tags.length > 0 %}
             <tr>
-              <th class="text-purple_heart font-bold align-baseline text-left whitespace-nowrap pr-2 pb-2">Tags</th>
-              <td class="align-baseline pb-2">
+              <th class="footer-header">Tags</th>
+              <td class="footer-data">
                 {% for tag in tags %}
                   {% unless tag == 'blogPost' %}
                     <a href="/tags/{{tag}}/" class="prefix-hash link p-category">{{ tag }}</a>
@@ -68,10 +68,8 @@ layout: layout.njk
           {% assign similar = collections.all | similarPosts: page.inputPath, tags %}
           {% if similar.length > 0 %}
             <tr>
-              <th class="text-purple_heart font-bold align-baseline text-left whitespace-nowrap pr-2 pb-2">
-                Related posts
-              </th>
-              <td class="align-baseline pb-2">
+              <th class="footer-header whitespace-nowrap">Related posts</th>
+              <td class="footer-data">
                 <ul class="list-disc list-inside">
                   {% for similarPost in similar limit: 3 -%}
                     <li class="mb-1">
@@ -85,9 +83,7 @@ layout: layout.njk
 
           {% if syndications.length > 0 %}
             <tr>
-              <th class="text-purple_heart font-bold align-baseline text-left whitespace-nowrap pr-2 pb-2 hidden">
-                This post elsewhere
-              </th>
+              <th class="footer-header hidden">This post elsewhere</th>
               <td class="hidden align-baseline">
                 {% for url in syndications -%}
                   <a href="{{ url }}" rel="syndication" class="u-syndication link">{{ url }}</a>
@@ -97,15 +93,15 @@ layout: layout.njk
           {% endif %}
 
           <tr>
-            <th class="text-purple_heart font-bold align-baseline text-left pr-2 pb-2">Have some thoughts?</th>
-            <td class="align-baseline pb-2">
+            <th class="footer-header">Have some thoughts?</th>
+            <td class="footer-data">
               <a href="mailto:blog@brusman.se?subject=Re: {{title}}" class="link">Reply by email</a>
             </td>
           </tr>
 
           <tr class="js-tr-webmentions">
-            <th class="text-purple_heart font-bold align-baseline text-left whitespace-nowrap pr-2 pb-2">Reactions</th>
-            <td id="webmentions" class="align-baseline pb-2 flex flex-col"></td>
+            <th class="footer-header">Reactions</th>
+            <td id="webmentions" class="footer-data flex flex-col"></td>
           </tr>
         </table>
 

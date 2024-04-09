@@ -24,6 +24,14 @@
   .title-bg {
     @apply font-semibold text-salmon-200 box-decoration-clone bg-gradient-purple_heart px-2 py-1;
   }
+
+  .footer-header {
+    @apply text-purple_heart font-bold align-baseline text-left pr-2 pb-2 w-1/4;
+  }
+
+  .footer-data {
+    @apply align-baseline pb-2;
+  }
 }
 
 .max-w-screen-h {
