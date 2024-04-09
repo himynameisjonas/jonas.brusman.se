@@ -9,9 +9,8 @@
     <div class="my-1">{{ bookmark.content }}</div>
   {% endif %}
   {% if bookmark.excerpt.length > 1 %}
-    <blockquote class="my-1 italic text-gray-500">
-      <span class="pr-0.5 text-xl">“</span>{{ bookmark.excerpt -}}
-      <span class="pl-0.5 text-xl">”</span>
+    <blockquote class="border-l-4 border-salmon my-2 pl-4 pr-4 text-gray-600">
+      {{ bookmark.excerpt -}}
     </blockquote>
   {% endif %}
   <div class="text-gray-500 font-normal">

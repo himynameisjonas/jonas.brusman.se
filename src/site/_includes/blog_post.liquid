@@ -6,8 +6,8 @@ layout: layout.njk
     {{ headline | default: title | replace: 'Ö', 'ö' }}
   </h1>
 
-  <div class="markdown w-content e-content bg-white">
-    <div class="px-4 py-5 sm:p-6">
+  <div class="w-content e-content bg-white">
+    <div class="px-4 py-5 sm:p-6 markdown">
       {% if photos %}
         {% for photo in photos %}
           <div class="child flex flex-col items-center">
@@ -30,8 +30,9 @@ layout: layout.njk
         class="mx-auto my-3 block w-fit rounded px-2 py-1"
         href="https://emojis.jonas-brusman-se.pages.dev/open_heart?id={{page.url}}"
         emoji="❤️"
-        >❤️</open-heart
       >
+        ❤️
+      </open-heart>
     </div>
   </div>
   {% unless no_footer %}
@@ -40,8 +41,10 @@ layout: layout.njk
         <table class="w-full">
           {% if page.date %}
             <tr>
-              <th class="align-baseline text-left font-normal pr-2 pb-2">{{ date_desc | default: 'Published at' }}</th>
-              <td class="font-light align-baseline pb-2">
+              <th class="text-purple_heart font-bold align-baseline text-left pr-2 pb-2">
+                {{ date_desc | default: 'Published at' }}
+              </th>
+              <td class="align-baseline pb-2">
                 <time class="dt-published" page.datetime="{{page.date | date: "%Y-%m-%d" }}">
                   <a href="{{page.url}}" class="u-url">{{ page.date | date: '%Y-%m-%d' }}</a>
                 </time>
@@ -51,8 +54,8 @@ layout: layout.njk
 
           {% if tags.length > 0 %}
             <tr>
-              <th class="align-baseline text-left font-normal whitespace-nowrap pr-2 pb-2">Tags</th>
-              <td class="font-light align-baseline pb-2">
+              <th class="text-purple_heart font-bold align-baseline text-left whitespace-nowrap pr-2 pb-2">Tags</th>
+              <td class="align-baseline pb-2">
                 {% for tag in tags %}
                   {% unless tag == 'blogPost' %}
                     <a href="/tags/{{tag}}/" class="prefix-hash link p-category">{{ tag }}</a>
@@ -65,8 +68,10 @@ layout: layout.njk
           {% assign similar = collections.all | similarPosts: page.inputPath, tags %}
           {% if similar.length > 0 %}
             <tr>
-              <th class="align-baseline text-left font-normal whitespace-nowrap pr-2 pb-2">Related posts</th>
-              <td class="font-light align-baseline pb-2">
+              <th class="text-purple_heart font-bold align-baseline text-left whitespace-nowrap pr-2 pb-2">
+                Related posts
+              </th>
+              <td class="align-baseline pb-2">
                 <ul class="list-disc list-inside">
                   {% for similarPost in similar limit: 3 -%}
                     <li class="mb-1">
@@ -80,10 +85,10 @@ layout: layout.njk
 
           {% if syndications.length > 0 %}
             <tr>
-              <th class="align-baseline text-left font-normal whitespace-nowrap pr-2 pb-2 hidden">
+              <th class="text-purple_heart font-bold align-baseline text-left whitespace-nowrap pr-2 pb-2 hidden">
                 This post elsewhere
               </th>
-              <td class="hidden font-light align-baseline">
+              <td class="hidden align-baseline">
                 {% for url in syndications -%}
                   <a href="{{ url }}" rel="syndication" class="u-syndication link">{{ url }}</a>
                 {% endfor %}
@@ -92,15 +97,15 @@ layout: layout.njk
           {% endif %}
 
           <tr>
-            <th class="align-baseline text-left font-normal pr-2 pb-2">Have some thoughts?</th>
-            <td class="font-light align-baseline pb-2">
+            <th class="text-purple_heart font-bold align-baseline text-left pr-2 pb-2">Have some thoughts?</th>
+            <td class="align-baseline pb-2">
               <a href="mailto:blog@brusman.se?subject=Re: {{title}}" class="link">Reply by email</a>
             </td>
           </tr>
 
           <tr class="js-tr-webmentions">
-            <th class="align-baseline text-left font-normal whitespace-nowrap pr-2 pb-2">Reactions</th>
-            <td id="webmentions" class="font-light align-baseline pb-2 flex flex-col"></td>
+            <th class="text-purple_heart font-bold align-baseline text-left whitespace-nowrap pr-2 pb-2">Reactions</th>
+            <td id="webmentions" class="align-baseline pb-2 flex flex-col"></td>
           </tr>
         </table>
 
