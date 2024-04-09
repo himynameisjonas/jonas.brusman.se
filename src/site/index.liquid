@@ -3,42 +3,42 @@ layout: layout.njk
 description: Jonas Brusman's blog. Photos and some tech / code stuff.
 title: Blog
 ---
-<div class="w-content text-gray-700 dark:text-neutral-500 grid grid-cols-1 md:grid-cols-2 gap-x-6">
-  <div>
+<div class="w-content text-gray-700 grid grid-cols-1 md:grid-cols-2 gap-x-6">
+  <div class="bg-white">
     <a href="/notes">
-      <h2 class="text-3xl leading-tight font-semibold border-l-4 border-branding dark:border-branding-600 pl-4 mb-3">
-        Latest notes
-      </h2>
+      <h2 class="header-block">Blog posts</h2>
     </a>
-    {% assign notes = collections.notes | reverse %}
-    {% for post in notes limit: 6 %}
-      {% include 'list_note_post' %}
-    {% endfor %}
+    <div class="px-4 py-5 sm:p-6">
+      {% assign notes = collections.notes | reverse %}
+      {% for post in notes limit: 6 %}
+        {% include 'list_note_post' %}
+      {% endfor %}
 
-    <div class="border-t-4 border-branding mb-2 mt-2 pt-2">
-      <a href="/notes" class="link block text-center">
-        <span class="text-sm">View all notes</span>
-      </a>
+      <div class="border-t-4 border-purple_heart mb-2 mt-2 pt-2">
+        <a href="/notes" class="link block text-center">
+          <span class="text-sm">View all notes</span>
+        </a>
+      </div>
     </div>
   </div>
 
-  <div>
+  <div class="bg-white">
     <a href="/photos">
-      <h2 class="text-3xl leading-tight font-semibold border-l-4 border-branding dark:border-branding-600 pl-4 mb-3">
-        Latest photos
-      </h2>
+      <h2 class="header-block">Photo posts</h2>
     </a>
-    <div class="grid grid-cols-1 gap-6">
-      {% assign photos = collections.photos | reverse %}
-      {% assign photoWidths = 'w-full' %}
-      {% for post in photos limit: 4 %}
-        {% include 'list_photos_post' %}
-      {% endfor %}
-    </div>
-    <div class="border-t-4 border-branding mb-2 mt-2 pt-2">
-      <a href="/photos" class="link block text-center">
-        <span class="text-sm">View all photos</span>
-      </a>
+    <div class="px-4 py-5 sm:p-6">
+      <div class="grid grid-cols-1 gap-6">
+        {% assign photos = collections.photos | reverse %}
+        {% assign photoWidths = 'w-full' %}
+        {% for post in photos limit: 4 %}
+          {% include 'list_photos_post' %}
+        {% endfor %}
+      </div>
+      <div class="border-t-4 border-purple_heart mb-2 mt-2 pt-2">
+        <a href="/photos" class="link block text-center">
+          <span class="text-sm">View all photos</span>
+        </a>
+      </div>
     </div>
   </div>
 </div>

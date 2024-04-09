@@ -6,51 +6,58 @@ pagination:
     alias: bookmark
 permalink: "{{ bookmark.permalink }}/"
 ---
-<article class="flex flex-col h-entry">
-  <a href="{{ bookmark.link }}" class="u-bookmark-of w-content" rel="noopener">
-    <h1 class="md:text-5xl md:leading-relaxed leading-relaxed text-3xl text-white font-semibold p-name text-balance">
-      <span class="title-bg">
-        {{ bookmark.title }}
-      </span>
-    </h1>
-  </a>
-  <a href="{{bookmark.link}}" class="link text-gray-500 italic w-content mb-4" rel="noopener">
-    {{- bookmark.prettyUrl -}}
-  </a>
-
-  <div class="markdown w-content e-content">
-    {{ bookmark.content }}
+<article class="flex flex-col h-entry items-center">
+  <div class="w-content py-12 px-10 text-salmon bg-purple_heart rounded-t-lg">
+    <a
+      href="{{ bookmark.link }}"
+      class="u-bookmark-of "
+      rel="noopener"
+    >
+      <h1 class="font-tropic md:text-5xl leading-relaxed text-3xl p-name text-balance ">
+        {{ bookmark.title | default: title | replace: 'Ö', 'ö' }}
+      </h1>
+    </a>
+    <a href="{{bookmark.link}}" class="text-salmon italic w-content mt-4 block" rel="noopener">
+      {{- bookmark.prettyUrl -}}
+    </a>
   </div>
 
-  {% if bookmark.excerpt.length > 1 %}
-    <blockquote class="h-cite mb-4 italic w-content e-content text-gray-500">
-      <span class="pr-0.5 text-xl">“</span>{{ bookmark.excerpt -}}
-      <span class="pl-0.5 text-xl">”</span>
-    </blockquote>
-  {% endif %}
+  <div class="markdown w-content e-content bg-white">
+    <div class="px-4 py-5 sm:p-6">
+      <p>{{ bookmark.content }}</p>
 
-  <div class="border-t-4 border-branding w-content mb-2 mt-2 pt-2 text-gray-700 dark:text-neutral-500">
-    <dl>
-      {% if bookmark.date %}
-        <dt class="">Published at</dt>
-        <dd class="mb-1 font-light">
-          <time class="dt-published" datetime="{{bookmark.date | date: "%Y-%m-%d" }}">
-            <a href="{{page.url}}" class="u-url">{{ bookmark.date | date: '%Y-%m-%d' }}</a>
-          </time>
-        </dd>
+      {% if bookmark.excerpt.length > 1 %}
+        <blockquote class="h-cite italic w-content e-content text-gray-500">
+          {{ bookmark.excerpt -}}
+        </blockquote>
       {% endif %}
+    </div>
+  </div>
 
-      {% if bookmark.tags.length > 0 %}
-        <dt class="">Tags</dt>
-        <dd class="mb-1 font-light">
-          {% for tag in bookmark.tags %}
-            {% unless tag == 'blogPost' %}
-              <span class="prefix-hash">{{ tag }}</span>
-            {% endunless %}
-          {% endfor %}
-        </dd>
-      {% endif %}
-    </dl>
-    <a rel="author" class="hidden p-author h-card" href="https://jonas.brusman.se">Jonas Brusman</a>
+  <div class="w-content mb-2 text-gray-700 bg-salmon-200">
+    <div class="px-4 py-5 sm:p-6">
+      <dl>
+        {% if bookmark.date %}
+          <dt class="">Published at</dt>
+          <dd class="mb-1 font-light">
+            <time class="dt-published" datetime="{{bookmark.date | date: "%Y-%m-%d" }}">
+              <a href="{{page.url}}" class="u-url">{{ bookmark.date | date: '%Y-%m-%d' }}</a>
+            </time>
+          </dd>
+        {% endif %}
+
+        {% if bookmark.tags.length > 0 %}
+          <dt class="">Tags</dt>
+          <dd class="mb-1 font-light">
+            {% for tag in bookmark.tags %}
+              {% unless tag == 'blogPost' %}
+                <span class="prefix-hash">{{ tag }}</span>
+              {% endunless %}
+            {% endfor %}
+          </dd>
+        {% endif %}
+      </dl>
+      <a rel="author" class="hidden p-author h-card" href="https://jonas.brusman.se">Jonas Brusman</a>
+    </div>
   </div>
 </article>

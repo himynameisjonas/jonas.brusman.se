@@ -1,7 +1,7 @@
 ---
 title: About
 headline: Hi my name is Jonas
-layout: blog_post.liquid
+layout: page.liquid
 description: About Jonas Brusman.
 photos:
   - 'https://photo-storage.brusman.se/DSCF0712.jpeg'
