@@ -112,7 +112,7 @@
 }
 
 .markdown li + li {
-  @apply mt-1;
+  @apply mt-2;
 }
 
 .markdown li > p + p {
@@ -136,31 +136,31 @@
 }
 
 .markdown h1 {
-  @apply font-semibold leading-relaxed text-balance text-5xl mb-2 mt-6;
+  @apply text-purple_heart font-semibold leading-relaxed text-balance text-5xl mb-2 mt-6;
 }
 
 .markdown h2 {
-  @apply font-semibold leading-relaxed text-balance text-4xl mb-2 mt-6;
+  @apply text-purple_heart font-semibold leading-relaxed text-balance text-4xl mb-2 mt-6;
 }
 
 .markdown h3 {
-  @apply font-semibold leading-relaxed text-balance text-3xl mb-2 mt-6;
+  @apply text-purple_heart font-semibold leading-relaxed text-balance text-3xl mb-2 mt-6;
 }
 
 .markdown h4 {
-  @apply font-semibold leading-relaxed text-balance text-xl mb-4 mt-6;
+  @apply text-purple_heart font-semibold leading-relaxed text-balance text-xl mb-4 mt-6;
 }
 
 .markdown h5 {
-  @apply leading-tight text-lg font-normal mb-4 mt-6;
+  @apply text-purple_heart leading-tight text-lg font-normal mb-4 mt-6;
 }
 
 .markdown h6 {
-  @apply leading-tight text-lg font-normal text-gray-600 mb-4 mt-6;
+  @apply text-purple_heart leading-tight text-lg font-normal text-gray-600 mb-4 mt-6;
 }
 
 .markdown blockquote {
-  @apply text-xl border-l-4 border-gray-300 pl-4 pr-4 text-gray-600;
+  @apply text-xl border-l-4 border-purple_heart pl-4 pr-4 text-gray-600;
 }
 
 .markdown ul {
@@ -169,6 +169,9 @@
 
 .markdown ol {
   @apply text-xl pl-8 list-decimal;
+}
+.markdown ol, .markdown ul {
+  @apply marker:text-purple_heart marker:font-bold;
 }
 
 .markdown kbd {
