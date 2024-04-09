@@ -43,8 +43,8 @@
       <nav class="flex flex-wrap items-baseline gap-x-6 md:gap-x-3 gap-y-4 text-xl justify-center font-normal">
         <a href="/" class="{% if page.url == "/" %}text-purple_heart border-purple_heart {% else %}border-transparent text-gray-700{% endif %} hover:border-salmon border-b-4 pb-1 hover:text-purple_heart">Home</a>
         <a href="/photos/" class="{% if page.url == "/photos/" or blogPostType == "photo" %}text-purple_heart border-purple_heart {% else %}border-transparent text-gray-700{% endif %} hover:border-salmon border-b-4 pb-1 hover:text-purple_heart">Photos</a>
-        <a href="/notes/" class="{% if page.url == "/notes/" or blogPostType == "note" %}text-purple_heart border-purple_heart {% else %}border-transparent text-gray-700{% endif %} hover:border-salmon border-b-4 pb-1 hover:text-purple_heart">
-          Notes
+        <a href="/texts/" class="{% if page.url == "/texts/" or blogPostType == "text" %}text-purple_heart border-purple_heart {% else %}border-transparent text-gray-700{% endif %} hover:border-salmon border-b-4 pb-1 hover:text-purple_heart">
+          Texts
         </a>
         {% set bookmarksRegex = r/\/bookmarks\//g %}
         <a href="/bookmarks/" class="{% if bookmarksRegex.test(page.url) %}text-purple_heart border-purple_heart {% else %}border-transparent text-gray-700{% endif %} hover:border-salmon border-b-4 pb-1 hover:text-purple_heart">

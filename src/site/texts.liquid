@@ -1,0 +1,13 @@
+---
+layout: layout.njk
+description: Jonas Brusman's text posts.
+title: Text posts
+---
+<div class="flex flex-col w-content bg-white">
+  <h2 class="header-block">Text posts</h2>
+  <div class="px-4 py-5 sm:p-6">
+    {% for post in collections.texts reversed %}
+      {% include 'list_text_post' %}
+    {% endfor %}
+  </div>
+</div>

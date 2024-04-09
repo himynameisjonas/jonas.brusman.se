@@ -40,7 +40,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addTransform("minifyHtml", minifyHtml);
 
-  eleventyConfig.addCollection("notes", typeCollection("note"));
+  eleventyConfig.addCollection("texts", typeCollection("text"));
   eleventyConfig.addCollection("photos", typeCollection("photo"));
 
   eleventyConfig.addFilter("similarPosts", similarPosts);
