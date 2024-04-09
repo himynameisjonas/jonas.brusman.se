@@ -1,6 +1,8 @@
 ---
 date: 2012-01-13
 title: Hello World!
+tags:
+ - meta
 ---
 Hello world! The must-have post of a blog. I don't know how many blogs i have started but if I know myself this isn't the last one. Sadly...
 
