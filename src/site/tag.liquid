@@ -14,18 +14,18 @@ eleventyComputed:
 eleventyExcludeFromCollections: true
 ---
 {% assign tagged_posts = collections[tag] %}
-{% assign tagged_notes = tagged_posts | where: 'data.blogPostType', 'note' %}
+{% assign tagged_texts = tagged_posts | where: 'data.blogPostType', 'text' %}
 {% assign tagged_photos = tagged_posts | where: 'data.blogPostType', 'photo' %}
 
-{% if tagged_notes.size > 0 %}
+{% if tagged_texts.size > 0 %}
   <div class="flex flex-col w-content bg-white">
     <h2 class="text-3xl leading-tight font-semibold text-salmon bg-purple_heart rounded-t py-7 px-6">
-      Notes tagged with <span class="prefix-hash">{{ tag }}</span>
+      Texts tagged with <span class="prefix-hash">{{ tag }}</span>
     </h2>
     <div class="px-4 py-5 sm:p-6">
-      {% for post in tagged_notes reversed %}
+      {% for post in tagged_texts reversed %}
         {% unless post.data.photos %}
-          {% include 'list_note_post' %}
+          {% include 'list_text_post' %}
         {% endunless %}
       {% endfor %}
     </div>
@@ -34,7 +34,7 @@ eleventyExcludeFromCollections: true
 
 {% if tagged_photos.size > 0 %}
   <script defer src="/js/masonry.pkgd.min.js"></script>
-  <div class="flex flex-col w-content bg-white {% if tagged_notes.size > 0 %}mt-5{% endif %}">
+  <div class="flex flex-col w-content bg-white {% if tagged_texts.size > 0 %}mt-5{% endif %}">
     <h2 class="text-3xl leading-tight font-semibold text-salmon bg-purple_heart rounded-t py-7 px-6">
       Photos tagged with <span class="prefix-hash">{{ tag }}</span>
     </h2>
