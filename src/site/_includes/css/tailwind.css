@@ -22,7 +22,7 @@
   }
 
   .header-icon {
-    @apply w-8 h-8 sm:w-10 sm:h-10;
+    @apply w-8 h-8 sm:w-9 sm:h-9;
   }
 
   .title-bg {
@@ -38,10 +38,10 @@
   }
 
   .nav-link {
-    @apply flex items-center gap-1 hover:border-salmon border-b-4 pb-1 hover:text-purple_heart border-transparent text-gray-700;
+    @apply flex items-center gap-1 hover:border-salmon border-b-4 pb-1 hover:text-purple_heart border-transparent text-gray-700 px-1;
   }
   .nav-link--active {
-    @apply !text-purple_heart !border-purple_heart;
+    @apply !text-purple_heart !border-purple_heart hover:!border-salmon;
   }
 }
 
