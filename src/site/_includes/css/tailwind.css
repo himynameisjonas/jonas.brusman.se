@@ -18,7 +18,11 @@
 
 @layer components {
   .header-block {
-    @apply font-tropic uppercase text-3xl leading-tight font-semibold text-salmon bg-gradient-purple_heart rounded-t py-7 px-6;
+    @apply font-tropic uppercase text-3xl leading-tight font-semibold text-salmon bg-gradient-purple_heart rounded-t py-7 px-6 flex justify-between items-center text-balance;
+  }
+
+  .header-icon {
+    @apply w-8 h-8 sm:w-10 sm:h-10;
   }
 
   .title-bg {
@@ -31,6 +35,13 @@
 
   .footer-data {
     @apply align-baseline pb-2;
+  }
+
+  .nav-link {
+    @apply flex items-center gap-1 hover:border-salmon border-b-4 pb-1 hover:text-purple_heart border-transparent text-gray-700;
+  }
+  .nav-link--active {
+    @apply !text-purple_heart !border-purple_heart;
   }
 }
 
