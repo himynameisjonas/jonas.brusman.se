@@ -1,0 +1,46 @@
+---
+layout: layout.njk
+description: Jonas Brusman's photo feed.
+title: Photo feed
+pagination:
+  data: collections.photoFeed
+  size: 200
+  alias: photoFeed
+
+---
+<div class="flex flex-col w-content bg-white">
+  <h2 class="header-block">Photo feed</h2>
+  <div class="w-content e-content bg-white">
+    <div class="px-4 py-5 sm:p-10 markdown">
+      {% for photo in photoFeed %}
+        <div class="flex flex-col items-center">
+          <div class="mb-10 max-w-screen-h">
+            <img
+              src="{{ photo }}"
+              alt="{{ title }}"
+              eleventy:widths="800,1200,2000,3000,4000"
+              sizes="(max-width: 1000px) 100vw, 133vh"
+              class="u-photo max-h-screen object-contain bg-white"
+            >
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <nav aria-labelledby="my-pagination">
+    <h2 id="my-pagination">This is my Pagination</h2>
+    <ol>
+      {%- for pageEntry in pagination.pages %}
+        <li>
+          <a
+            href="{{ pagination.hrefs[ forloop.index0 ] }}"
+            {% if page.url == pagination.hrefs[forloop.index0] %}
+              aria-current="page"
+            {% endif %}
+            >Page {{ forloop.index -}}
+          </a>
+        </li>
+      {%- endfor %}
+    </ol>
+  </nav>
+</div>

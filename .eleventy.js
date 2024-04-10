@@ -42,6 +42,13 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("texts", typeCollection("text"));
   eleventyConfig.addCollection("photos", typeCollection("photo"));
+  eleventyConfig.addCollection("photoFeed", (collection) => {
+    return collection
+      .getAll()
+      .filter((item) => item.data.blogPostType == "photo")
+      .reverse()
+      .flatMap((item) => item.data.photos);
+  });
 
   eleventyConfig.addFilter("similarPosts", similarPosts);
 
