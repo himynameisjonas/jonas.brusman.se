@@ -3,27 +3,38 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ title }}
-      {% if title %}
-        |
-      {% endif %}Jonas Brusman</title>
-    <link rel="alternate" type="application/atom+xml" title="Jonas Brusman's blog" href="https://jonas.brusman.se/rss.xml"/>
+    <title>
+      {{ title }}
+      {% if title %} | {% endif %}
+      Jonas Brusman
+    </title>
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Jonas Brusman's blog"
+      href="https://jonas.brusman.se/rss.xml"
+    >
     <link
       rel="alternate"
       type="application/atom+xml"
       title="Jonas Brusman's bookmarks"
-      href="https://jonas.brusman.se/bookmarks/rss.xml"/>
+      href="https://jonas.brusman.se/bookmarks/rss.xml"
+    >
     <link rel="stylesheet" href="/css/styles.css">
-    {% set page_excerpt %}{% excerpt description, content, title %}{% endset %} <meta name="description" content="{{ page_excerpt | truncate(200) }}">
+    {% capture page_excerpt %}
+    {% excerpt description, content, title %}
+    {% endcapture %}
+    <meta name="description" content="{{ page_excerpt | truncate: 200 }}">
     {% if photos.length > 0 -%}
-      {%- set photo = photos[0] -%} <meta property="og:image" content="{% image_url photo, true %}"/>
+      {%- assign photo = photos[0] -%}
+      <meta property="og:image" content="{% image_url photo, true %}">
     {% else %}
-      <meta property="og:image" content="/og.png"/>
+      <meta property="og:image" content="/og.png">
     {% endif -%}
-    <meta property="og:image:width" content="1200"/>
-    <meta property="og:image:height" content="630"/>
-    <link rel="webmention" href="https://webmention.io/jonas.brusman.se/webmention"/>
-    <link rel="pingback" href="https://webmention.io/jonas.brusman.se/xmlrpc"/>
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <link rel="webmention" href="https://webmention.io/jonas.brusman.se/webmention">
+    <link rel="pingback" href="https://webmention.io/jonas.brusman.se/xmlrpc">
     <link href="https://twitter.com/himynameisjonas" rel="me">
     <link href="https://github.com/himynameisjonas" rel="me">
     <link href="https://tacocat.space/@jonas" rel="me">
@@ -36,19 +47,23 @@
       <a
         href="/"
         rel="author"
-        class=" text-purple_heart hover:text-salmon uppercase hover:animate-pulse block font-semibold leading-tight md:text-left
-          p-name text-3xl font-tropic">
+        class="
+          text-purple_heart hover:text-salmon uppercase hover:animate-pulse block font-semibold leading-tight md:text-left
+          p-name text-3xl font-tropic
+        "
+      >
         Jonas Brusman
       </a>
       <nav class="flex flex-wrap items-baseline gap-x-6 md:gap-x-6 gap-y-4 text-xl justify-center font-normal">
-        <a href="/" class="nav-link {% if page.url == " /" %}nav-link--active{% endif %}">
+        <a href="/" class="nav-link {% if page.url == "/" %}nav-link--active{% endif %}">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewbox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6">
+            class="w-6 h-6"
+          >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -63,16 +78,16 @@
         </a>
         <a
           href="/photos/"
-          class="nav-link {% if page.url == "
-          /photos/" or blogPostType == "
-          photo" %}nav-link--active{% endif %}">
+          class="nav-link {% if page.url == "/photos/" or blogPostType == "photo" %}nav-link--active{% endif %}"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewbox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6">
+            class="w-6 h-6"
+          >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -84,16 +99,16 @@
         </a>
         <a
           href="/texts/"
-          class="nav-link {% if page.url == "
-          /texts/" or blogPostType == "
-          text" %}nav-link--active{% endif %}">
+          class="nav-link {% if page.url == "/texts/" or blogPostType == "text" %}nav-link--active{% endif %}"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewbox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6">
+            class="w-6 h-6"
+          >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -103,15 +118,15 @@
           </svg>
           Texts
         </a>
-        {% set bookmarksRegex = r/\/bookmarks\//g %}
-        <a href="/bookmarks/" class="nav-link {% if bookmarksRegex.test(page.url) %}nav-link--active{% endif %}">
+        <a href="/bookmarks/" class="nav-link {% if page.url contains "/bookmarks/" %}nav-link--active{% endif %}">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewbox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6">
+            class="w-6 h-6"
+          >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -120,14 +135,15 @@
           </svg>
           Bookmarks
         </a>
-        <a href="/about/" class="nav-link {% if page.url == " /about/" %}nav-link--active{% endif %}">
+        <a href="/about/" class="nav-link {% if page.url == "/about/" %}nav-link--active{% endif %}">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewbox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6">
+            class="w-6 h-6"
+          >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -140,7 +156,7 @@
       </nav>
     </header>
     <div class="flex flex-col">
-      {{ content | safe }}
+      {{ content }}
     </div>
     {% tracking_script -%}
     <script src="/js/instantpage-5.2.0.js" type="module" defer></script>
