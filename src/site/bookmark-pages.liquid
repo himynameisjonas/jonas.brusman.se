@@ -13,7 +13,7 @@ permalink: "{{ bookmark.permalink }}/"
       class="u-bookmark-of "
       rel="noopener"
     >
-      <h1 class="font-tropic md:text-5xl leading-relaxed text-3xl p-name text-balance ">
+      <h1 class="font-tropic md:text-5xl leading-relaxed text-3xl p-name text-balance">
         {{ bookmark.title | default: title | replace: 'Ö', 'ö' }}
       </h1>
     </a>

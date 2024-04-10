@@ -111,7 +111,7 @@
 }
 
 .markdown {
-  @apply leading-relaxed break-words text-xl;
+  @apply leading-relaxed break-words text-lg sm:text-xl;
 }
 
 .markdown > * + *,
@@ -144,19 +144,19 @@
 }
 
 .markdown h1 {
-  @apply text-purple_heart font-semibold leading-relaxed text-balance text-5xl mb-2 mt-6;
+  @apply text-purple_heart font-semibold leading-relaxed text-balance text-4xl sm:text-5xl mb-2 mt-6;
 }
 
 .markdown h2 {
-  @apply text-purple_heart font-semibold leading-relaxed text-balance text-4xl mb-2 mt-6;
+  @apply text-purple_heart font-semibold leading-relaxed text-balance text-3xl sm:text-4xl mb-2 mt-6;
 }
 
 .markdown h3 {
-  @apply text-purple_heart font-semibold leading-relaxed text-balance text-3xl mb-2 mt-6;
+  @apply text-purple_heart font-semibold leading-relaxed text-balance text-2xl sm:text-3xl mb-2 mt-6;
 }
 
 .markdown h4 {
-  @apply text-purple_heart font-semibold leading-relaxed text-balance text-xl mb-4 mt-6;
+  @apply text-purple_heart font-semibold leading-relaxed text-balance text-lg sm:text-xl mb-4 mt-6;
 }
 
 .markdown h5 {
