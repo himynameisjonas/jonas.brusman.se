@@ -54,7 +54,7 @@
 }
 
 .bg-gradient-salmon {
-  background-image: linear-gradient(to right bottom, #fff1f2, #ffeeef, #ffebec, #ffe7e9, #ffe4e6);
+  background-image: linear-gradient(to bottom, #fff1f2, #ffeeef, #ffebec, #ffe7e9, #ffe4e6);
 }
 
 .bg-gradient-purple_heart {
