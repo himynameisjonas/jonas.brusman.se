@@ -7,8 +7,10 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const trackingScript = require("./src/11ty/tracking_script");
 const typeCollection = require("./src/11ty/type_collection");
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite");
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(EleventyVitePlugin);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {

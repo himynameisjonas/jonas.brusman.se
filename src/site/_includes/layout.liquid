@@ -20,7 +20,7 @@
       title="Jonas Brusman's bookmarks"
       href="https://jonas.brusman.se/bookmarks/rss.xml"
     >
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/index.css">
     {% capture page_excerpt %}
     {% excerpt description, content, title %}
     {% endcapture %}
@@ -43,7 +43,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <meta name="theme-color" content="#fff1f2">
   </head>
-  <body class="flex flex-col p-4 pb-8 bg-gradient-salmon text-gray-700 min-h-screen">
+  <body id="swup" class="flex flex-col p-4 pb-8 bg-gradient-salmon text-gray-700 min-h-screen">
     <header class="flex mb-10 mt-3 md:mt-6 flex-wrap gap-x-10 gap-y-3 w-content justify-center md:justify-between">
       <a
         href="/"
@@ -155,7 +155,7 @@
     <div class="flex flex-col">
       {{ content }}
     </div>
+    <script src="/js/index.js" type="module" defer></script>
     {% tracking_script -%}
-    <script src="/js/instantpage-5.2.0.js" type="module" defer></script>
   </body>
 </html>

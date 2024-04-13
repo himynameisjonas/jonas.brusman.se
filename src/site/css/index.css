@@ -1,9 +1,6 @@
 @import "prism-okaidia.css";
-
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
 
 @font-face {
@@ -14,6 +11,16 @@
   font-style: normal;
   font-display: block;
   size-adjust: 125%;
+}
+
+html.is-changing .transition-fade {
+  transition: opacity 0.25s;
+  opacity: 1;
+}
+
+/* Define the styles for the unloaded pages */
+html.is-animating .transition-fade {
+  opacity: 0;
 }
 
 @layer components {
