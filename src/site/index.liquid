@@ -40,7 +40,7 @@ title: Blog
       <div class="grid grid-cols-1 gap-6">
         {% assign photos = collections.photos | reverse %}
         {% assign photoWidths = 'w-full' %}
-        {% for post in photos limit: 4 %}
+        {% for post in photos limit: 3 %}
           {% include 'list_photos_post' %}
         {% endfor %}
       </div>
