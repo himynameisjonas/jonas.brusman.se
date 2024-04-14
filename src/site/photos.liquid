@@ -3,7 +3,6 @@ layout: layout.liquid
 description: Jonas Brusman's photos.
 title: Photos
 ---
-<script defer src="/js/masonry.pkgd.min.js"></script>
 <div class="flex flex-col w-content bg-white">
   <h2 class="header-block">
     Photo posts
@@ -14,8 +13,7 @@ title: Photos
   </h2>
 
   <div
-    class="flex flex-wrap"
-    data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-item", "percentPosition": true }'
+    class="flex flex-wrap photos-grid"
   >
     {% for post in collections.photos reversed %}
       {% include 'list_photos_post' %}
