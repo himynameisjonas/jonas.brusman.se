@@ -14,7 +14,7 @@ swup.hooks.on("page:view", () => {
   });
 });
 
-const triggerMasonary = () => {
+function triggerMasonary() {
   var elem = document.querySelector(".photos-grid");
   if (!elem) return;
 
@@ -25,9 +25,26 @@ const triggerMasonary = () => {
       percentPosition: true,
     });
   });
-};
+}
 
 triggerMasonary();
 swup.hooks.on("page:view", () => {
   triggerMasonary();
+});
+
+function fetchHeartCounts() {
+  console.log("fetchHeartCounts");
+  for (const oh of document.querySelectorAll("open-heart")) {
+    console.log("open-heart", oh);
+    oh.getCount();
+  }
+}
+
+fetchHeartCounts();
+swup.hooks.on("page:view", () => {
+  fetchHeartCounts();
+});
+
+window.addEventListener("open-heart", (e) => {
+  e && e.target && e.target.getCount && e.target.getCount();
 });
