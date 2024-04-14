@@ -13,14 +13,21 @@
   size-adjust: 125%;
 }
 
+main {
+  transition: opacity 0.1s;
+}
+
 html.is-changing .transition-fade {
-  transition: opacity 0.25s;
-  opacity: 1;
+  main {
+    opacity: 1;
+  }
 }
 
 /* Define the styles for the unloaded pages */
 html.is-animating .transition-fade {
-  opacity: 0;
+  main {
+    opacity: 0;
+  }
 }
 
 @layer components {
