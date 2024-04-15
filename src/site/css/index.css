@@ -59,7 +59,7 @@ html.is-animating .transition-fade {
   }
 
   .link {
-    @apply text-salmon-500 underline;
+    @apply text-purple_heart underline;
   }
 
   .link:hover {
@@ -170,27 +170,27 @@ html.is-animating .transition-fade {
 }
 
 .markdown h1 {
-  @apply text-purple_heart font-semibold leading-relaxed text-balance text-4xl sm:text-5xl mb-2 mt-6;
+  @apply text-salmon-300 font-semibold leading-relaxed text-balance text-4xl sm:text-5xl mb-2 mt-6;
 }
 
 .markdown h2 {
-  @apply text-purple_heart font-semibold leading-relaxed text-balance text-3xl sm:text-4xl mb-2 mt-6;
+  @apply text-salmon-300 font-semibold leading-relaxed text-balance text-3xl sm:text-4xl mb-2 mt-6;
 }
 
 .markdown h3 {
-  @apply text-purple_heart font-semibold leading-relaxed text-balance text-2xl sm:text-3xl mb-2 mt-6;
+  @apply text-salmon-300 font-semibold leading-relaxed text-balance text-2xl sm:text-3xl mb-2 mt-6;
 }
 
 .markdown h4 {
-  @apply text-purple_heart font-semibold leading-relaxed text-balance text-lg sm:text-xl mb-4 mt-6;
+  @apply text-salmon-300 font-semibold leading-relaxed text-balance text-lg sm:text-xl mb-4 mt-6;
 }
 
 .markdown h5 {
-  @apply text-purple_heart leading-tight text-lg font-normal mb-4 mt-6;
+  @apply text-salmon-300 leading-tight text-lg font-normal mb-4 mt-6;
 }
 
 .markdown h6 {
-  @apply text-purple_heart leading-tight text-lg font-normal text-gray-600 mb-4 mt-6;
+  @apply text-salmon-300 leading-tight text-lg font-normal text-gray-600 mb-4 mt-6;
 }
 
 .markdown blockquote {
