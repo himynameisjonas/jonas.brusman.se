@@ -15,6 +15,7 @@ layout: layout.liquid
               <img
                 src="{{ photo }}"
                 alt="{{ title }}"
+                loading="{% if forloop.index == 1 %}eager{% else %}lazy{% endif %}"
                 eleventy:widths="800,1200,2000,3000,4000"
                 sizes="(max-width: 1000px) 100vw, 133vh"
                 class="u-photo max-h-screen object-contain p-6 bg-white"
