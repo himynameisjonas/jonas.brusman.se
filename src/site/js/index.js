@@ -1,19 +1,3 @@
-import Swup from "swup";
-import SwupPreloadPlugin from "@swup/preload-plugin";
-import "./open_heart_element";
-
-const swup = new Swup({
-  plugins: [new SwupPreloadPlugin()],
-});
-
-swup.hooks.on("page:view", () => {
-  if (!window.goatcounter) return;
-
-  window.goatcounter.count({
-    path: location.pathname + location.search + location.hash,
-  });
-});
-
 function triggerMasonary() {
   var elem = document.querySelector(".photos-grid");
   if (!elem) return;
@@ -27,24 +11,53 @@ function triggerMasonary() {
   });
 }
 
-triggerMasonary();
-swup.hooks.on("page:view", () => {
-  triggerMasonary();
-});
+async function initSwup() {
+  const Swup = await import("swup");
+  const SwupPreloadPlugin = await import("@swup/preload-plugin");
+
+  const swup = new Swup.default({
+    plugins: [new SwupPreloadPlugin.default()],
+  });
+
+  swup.hooks.on("page:view", () => {
+    fetchHeartCounts();
+    triggerMasonary();
+
+    if (!window.goatcounter) return;
+    window.goatcounter.count({
+      path: location.pathname + location.search + location.hash,
+    });
+  });
+}
 
 function fetchHeartCounts() {
-  console.log("fetchHeartCounts");
   for (const oh of document.querySelectorAll("open-heart")) {
-    console.log("open-heart", oh);
     oh.getCount();
   }
 }
 
-fetchHeartCounts();
-swup.hooks.on("page:view", () => {
-  fetchHeartCounts();
-});
+async function initOpenHeart() {
+  await import("/js/open_heart_element.js");
+  window.customElements.whenDefined("open-heart").then(() => {
+    fetchHeartCounts();
+  });
 
-window.addEventListener("open-heart", (e) => {
-  e && e.target && e.target.getCount && e.target.getCount();
-});
+  window.addEventListener("open-heart", (e) => {
+    e && e.target && e.target.getCount && e.target.getCount();
+  });
+}
+
+function init() {
+  triggerMasonary();
+  initOpenHeart();
+  initSwup();
+}
+
+if (
+  document.readyState === "complete" ||
+  (document.readyState !== "loading" && !document.documentElement.doScroll)
+) {
+  init();
+} else {
+  document.addEventListener("DOMContentLoaded", init);
+}
