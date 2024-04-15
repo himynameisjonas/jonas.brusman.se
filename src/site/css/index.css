@@ -57,6 +57,14 @@ html.is-animating .transition-fade {
   .nav-link--active {
     @apply !text-purple_heart !border-purple_heart hover:!border-salmon;
   }
+
+  .link {
+    @apply text-salmon-500 underline;
+  }
+
+  .link:hover {
+    @apply no-underline text-salmon-400;
+  }
 }
 
 .max-w-screen-h {
@@ -81,13 +89,6 @@ html.is-animating .transition-fade {
   left: calc(-50vw + 50%);
 }
 
-.link {
-  @apply text-salmon-400 underline;
-}
-
-.link:hover {
-  @apply no-underline text-salmon-300;
-}
 
 .prefix-hash:before {
   content: "#";
