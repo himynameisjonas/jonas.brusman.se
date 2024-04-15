@@ -1,13 +1,13 @@
-function triggerMasonary() {
+async function triggerMasonary() {
   var elem = document.querySelector(".photos-grid");
   if (!elem) return;
 
-  import("/js/masonry.pkgd.min.js").then(() => {
-    new Masonry(elem, {
-      itemSelector: ".grid-item",
-      columnWidth: ".grid-item",
-      percentPosition: true,
-    });
+  const Masonry = await import("masonry-layout").then((m) => m.default);
+
+  new Masonry(elem, {
+    itemSelector: ".grid-item",
+    columnWidth: ".grid-item",
+    percentPosition: true,
   });
 }
 
