@@ -12,9 +12,7 @@ title: Photos
     </svg>
   </h2>
 
-  <div
-    class="flex flex-wrap photos-grid"
-  >
+  <div class="flex flex-wrap photos-grid">
     {% for post in collections.photos reversed %}
       {% include 'list_photos_post' %}
     {% endfor %}
