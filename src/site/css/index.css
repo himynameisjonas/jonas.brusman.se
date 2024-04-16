@@ -248,4 +248,5 @@ open-heart[disabled] {
 
 open-heart[count]:not([count="0"])::after {
   content: attr(count);
+  @apply pl-1;
 }
