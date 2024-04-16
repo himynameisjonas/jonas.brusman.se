@@ -11,25 +11,6 @@ async function triggerMasonary() {
   });
 }
 
-async function initSwup() {
-  const Swup = await import("swup");
-  const SwupPreloadPlugin = await import("@swup/preload-plugin");
-
-  const swup = new Swup.default({
-    plugins: [new SwupPreloadPlugin.default()],
-  });
-
-  swup.hooks.on("page:view", () => {
-    fetchHeartCounts();
-    triggerMasonary();
-
-    if (!window.goatcounter) return;
-    window.goatcounter.count({
-      path: location.pathname + location.search + location.hash,
-    });
-  });
-}
-
 function fetchHeartCounts() {
   for (const oh of document.querySelectorAll("open-heart")) {
     oh.getCount();
@@ -50,7 +31,6 @@ async function initOpenHeart() {
 function init() {
   triggerMasonary();
   initOpenHeart();
-  initSwup();
 }
 
 if (

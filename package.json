@@ -35,7 +35,6 @@
   },
   "dependencies": {
     "@11ty/eleventy-plugin-vite": "^4.0.0",
-    "@swup/preload-plugin": "^3.2.10",
     "@tinacms/auth": "*",
     "@tinacms/cli": "^1.5.42",
     "autoprefixer": "^10.4.19",
@@ -44,7 +43,6 @@
     "next-tinacms-s3": "^2.0.0",
     "postcss": "^8.4.38",
     "serverless-http": "^3.2.0",
-    "swup": "^4.6.1",
     "tinacms": "*"
   }
 }

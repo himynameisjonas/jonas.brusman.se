@@ -13,23 +13,6 @@
   size-adjust: 125%;
 }
 
-main {
-  transition: opacity 0.1s;
-}
-
-html.is-changing .transition-fade {
-  main {
-    opacity: 1;
-  }
-}
-
-/* Define the styles for the unloaded pages */
-html.is-animating .transition-fade {
-  main {
-    opacity: 0;
-  }
-}
-
 @layer components {
   .header-block {
     @apply font-tropic uppercase text-3xl leading-tight font-semibold text-salmon bg-gradient-purple_heart rounded-t py-7 px-6 flex justify-between items-center text-balance;
