@@ -4,7 +4,7 @@ description: Jonas Brusman's blog. Photos and some tech / code stuff.
 title: Blog
 ---
 <div class="w-content text-gray-700 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-10 items-start">
-  <div class="bg-white">
+  <div>
     <a href="/texts/">
       <h2 class="header-block">
         Text posts
@@ -14,19 +14,21 @@ title: Blog
         </svg>
       </h2>
     </a>
-    <div class="px-4 py-5 sm:p-6">
-      {% assign texts = collections.texts | reverse %}
-      {% for post in texts limit: 6 %}
-        {% include 'list_text_post' %}
-      {% endfor %}
+    <div class="bg-white">
+      <div class="px-4 py-5 sm:p-6">
+        {% assign texts = collections.texts | reverse %}
+        {% for post in texts limit: 6 %}
+          {% include 'list_text_post' %}
+        {% endfor %}
 
-      <div class="border-t-4 border-purple_heart mb-2 mt-2 pt-2">
-        <a href="/texts/" class="link block text-center">View all texts</a>
+        <div class="border-t-4 border-purple_heart mb-2 mt-2 pt-2">
+          <a href="/texts/" class="link block text-center">View all texts</a>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="bg-white">
+  <div>
     <a href="/photos">
       <h2 class="header-block">
         Photo posts
@@ -36,16 +38,18 @@ title: Blog
         </svg>
       </h2>
     </a>
-    <div class="px-4 py-5 sm:p-6">
-      <div class="grid grid-cols-1 gap-6">
-        {% assign photos = collections.photos | reverse %}
-        {% assign photoWidths = 'w-full' %}
-        {% for post in photos limit: 3 %}
-          {% include 'list_photos_post' %}
-        {% endfor %}
-      </div>
-      <div class="border-t-4 border-purple_heart mb-2 mt-2 pt-2">
-        <a href="/photos/" class="link block text-center">View all photos</a>
+    <div class="bg-white">
+      <div class="px-4 py-5 sm:p-6">
+        <div class="grid grid-cols-1 gap-6">
+          {% assign photos = collections.photos | reverse %}
+          {% assign photoWidths = 'w-full' %}
+          {% for post in photos limit: 3 %}
+            {% include 'list_photos_post' %}
+          {% endfor %}
+        </div>
+        <div class="border-t-4 border-purple_heart mb-2 mt-2 pt-2">
+          <a href="/photos/" class="link block text-center">View all photos</a>
+        </div>
       </div>
     </div>
   </div>
