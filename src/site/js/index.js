@@ -1,3 +1,5 @@
+import { listen } from "quicklink";
+
 async function triggerMasonary() {
   var elem = document.querySelector(".photos-grid");
   if (!elem) return;
@@ -28,9 +30,18 @@ async function initOpenHeart() {
   });
 }
 
+function initQuicklink() {
+  listen({
+    throttle: 5,
+    limit: 10,
+    ignores: [/\/bookmarks\//],
+  });
+}
+
 function init() {
   triggerMasonary();
   initOpenHeart();
+  initQuicklink();
 }
 
 if (
