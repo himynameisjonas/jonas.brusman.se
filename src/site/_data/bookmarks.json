@@ -1,5 +1,34 @@
 [
   {
+    "title": "Your (Graph) Data Fits in Memory",
+    "link": "https://jazco.dev/2024/04/15/in-memory-graphs/",
+    "excerpt": "We need a fast way to query multiple potentially large sets of data on-demand at interactive speeds. Sometimes the easiest solution to a hard problem is to build the right tool for the job.",
+    "tags": [
+      "graph",
+      "database",
+      "rust",
+      "data"
+    ],
+    "date": "2024-04-16T11:38:11.720Z",
+    "content": "",
+    "prettyUrl": "jazco.dev/2024/04/15/in-memory-graphs/",
+    "permalink": "/bookmarks/2024-04-16-jazco-dev-2024-04-15-in-memory-graphs"
+  },
+  {
+    "title": "Hono - Ultrafast web framework for the Edges",
+    "link": "https://hono.dev/",
+    "excerpt": "Hono is a small, simple, and ultrafast web framework for the Edges. It works on Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Netlify, AWS Lambda, Lambda@Edge, and Node.js. Fast, but not only fast.",
+    "tags": [
+      "javascript",
+      "framework",
+      "edge"
+    ],
+    "date": "2024-04-16T08:35:33.389Z",
+    "content": "",
+    "prettyUrl": "hono.dev",
+    "permalink": "/bookmarks/2024-04-16-hono-dev"
+  },
+  {
     "title": "Tembo: Goodbye Database Sprawl, Hello Postgres",
     "link": "https://tembo.io/",
     "excerpt": "Tembo is the Postgres developer platform for building every application and data service. Collapse the database sprawl of the modern data stack with a unified developer platform.",
