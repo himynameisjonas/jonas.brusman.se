@@ -18,3 +18,4 @@ I got, *as usual*, bored with the previous design of this site, so I decided to 
 * Renamed Notes to [Texts](/texts/), not sure if that will stick but notes sounded too much like short posts. Maybe it will come back, but as a syndication of the notes I post on [Mastodon](https://tacocat.space/@jonas).
 * Sprinkled some [icons from Heroicons](http://heroicons.com) to the main elements/navigation.
 * Replaced [Instantpage](https://instant.page) with [Quicklink](https://getquick.link) for prefetching links.
+* Setup [Vite](https://vitejs.dev) for js bundling with [eleventy-plugin-vite](https://github.com/11ty/eleventy-plugin-vite).
