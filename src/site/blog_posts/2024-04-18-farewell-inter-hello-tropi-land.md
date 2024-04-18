@@ -1,6 +1,6 @@
 ---
 title: Farewell Inter, Hello Tropi Land
-date: 2024-03-18T07:35:00Z
+date: 2024-03-18T08:00:00Z
 tags:
   - meta
   - eleventy
