@@ -21,6 +21,7 @@
   "engines": {
     "node": ">=18.18.2"
   },
+  "type": "module",
   "devDependencies": {
     "@11ty/eleventy": "3.0.0-alpha.5",
     "@11ty/eleventy-img": "^4.0.2",
