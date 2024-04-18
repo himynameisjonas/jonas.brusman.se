@@ -137,8 +137,8 @@
   @apply mt-0 mb-4;
 }
 
-.markdown li + li {
-  @apply mt-4;
+.markdown li + li, .markdown li>ol, .markdown li>ul {
+  @apply mt-3;
 }
 
 .markdown li > p + p {
