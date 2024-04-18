@@ -129,7 +129,7 @@
 }
 
 .markdown {
-  @apply leading-relaxed break-words text-lg sm:text-xl;
+  @apply leading-relaxed break-words text-lg sm:text-xl lg:text-2xl;
 }
 
 .markdown > * + *,
@@ -138,7 +138,7 @@
 }
 
 .markdown li + li {
-  @apply mt-2;
+  @apply mt-4;
 }
 
 .markdown li > p + p {
@@ -186,15 +186,15 @@
 }
 
 .markdown blockquote {
-  @apply text-xl border-l-4 border-purple_heart pl-4 pr-4 text-gray-600;
+  @apply text-lg sm:text-xl lg:text-2xl border-l-4 border-purple_heart pl-4 pr-4 text-gray-600;
 }
 
 .markdown ul {
-  @apply text-xl pl-8 list-disc;
+  @apply text-lg sm:text-xl lg:text-2xl pl-8 list-disc;
 }
 
 .markdown ol {
-  @apply text-xl pl-8 list-decimal;
+  @apply text-lg sm:text-xl lg:text-2xl pl-8 list-decimal;
 }
 .markdown ol, .markdown ul {
   @apply marker:text-purple_heart marker:font-bold;
@@ -205,7 +205,7 @@
 }
 
 .markdown table {
-  @apply text-xl border-gray-600;
+  @apply text-lg sm:text-xl lg:text-2xl border-gray-600;
 }
 
 .markdown th {
