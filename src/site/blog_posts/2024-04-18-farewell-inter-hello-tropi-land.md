@@ -1,6 +1,6 @@
 ---
-title: A new design
-date: 2024-03-16T20:32:00.154Z
+title: Farewell Inter, Hello Tropi Land
+date: 2024-03-18T07:35:00Z
 tags:
   - meta
   - eleventy
