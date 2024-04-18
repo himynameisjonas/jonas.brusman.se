@@ -23,7 +23,7 @@
   }
 
   .title-bg {
-    @apply font-semibold text-salmon-200 box-decoration-clone bg-gradient-purple_heart px-2 py-1;
+    @apply font-semibold text-salmon-200 box-decoration-clone bg-purple_heart px-2 py-1;
   }
 
   .footer-header {
