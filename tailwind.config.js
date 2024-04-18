@@ -33,6 +33,7 @@ module.exports = {
         },
       },
       fontFamily: {
+        sans: ["Overpass", ...defaultTheme.fontFamily.sans],
         tropic: ["Tropi Land", ...defaultTheme.fontFamily.sans],
       },
     },
