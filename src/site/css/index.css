@@ -24,7 +24,7 @@
 
 @layer components {
   .header-block {
-    @apply text-3xl leading-tight font-black text-salmon bg-gradient-purple_heart rounded-t py-5 px-6 flex justify-between items-center text-balance;
+    @apply text-3xl leading-tight font-black text-salmon-200 bg-gradient-purple_heart rounded-t py-5 px-6 flex justify-between items-center text-balance;
   }
 
   .header-icon {
