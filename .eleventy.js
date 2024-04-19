@@ -42,7 +42,7 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addTransform("minifyHtml", minifyHtml);
 
-  eleventyConfig.addCollection("texts", typeCollection("text"));
+  eleventyConfig.addCollection("articles", typeCollection("article"));
   eleventyConfig.addCollection("photos", typeCollection("photo"));
 
   eleventyConfig.addFilter("similarPosts", similarPosts);
