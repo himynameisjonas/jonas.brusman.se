@@ -11,7 +11,7 @@ export default defineConfig({
 
   build: {
     outputFolder: "admin",
-    publicFolder: "src/site/misc",
+    publicFolder: "public",
   },
   media: {
     loadCustomStore: async () => {
