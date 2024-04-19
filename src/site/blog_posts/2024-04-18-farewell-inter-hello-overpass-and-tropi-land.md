@@ -6,6 +6,7 @@ tags:
   - eleventy
   - design
 syndications:
+  - https://tacocat.space/@jonas/112298255735690570
 ---
 
 I got, *as usual*, bored with the previous design of this site, so I decided to change it. This is something that happens from time to time and it gives me the chance to experiment with new things.
