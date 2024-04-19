@@ -87,22 +87,12 @@
   display: inline;
 }
 
-.hover-wrapper:hover .hover-wrapper__underline {
-  @apply underline;
-}
-
-
 .ar-3x2 {
   height: 0;
   width: 100%;
   position: relative;
   overflow: hidden;
   padding-bottom: 66.66666666666667%;
-}
-
-.py-05 {
-  padding-top: 0.125rem;
-  padding-bottom: 0.125rem;
 }
 
 #webmentions h2 {
@@ -201,7 +191,7 @@
 }
 
 .markdown kbd {
-  @apply text-xs inline-block rounded border px-1 py-05 align-middle font-normal font-mono shadow;
+  @apply text-xs inline-block rounded border px-1 py-1 align-middle font-normal font-mono shadow;
 }
 
 .markdown table {
