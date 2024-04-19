@@ -1,0 +1,244 @@
+@import "prism-okaidia.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Tropi Land";
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  size-adjust: 125%;
+  src: url(/fonts/TropiLand-L3MPg-subset.woff2) format("woff2"), url(/fonts/TropiLand-L3MPg-subset.zopfli.woff) format("woff");
+  unicode-range: U+20, U+41, U+42, U+4A, U+4D-4F, U+52, U+53, U+55;
+}
+
+@font-face {
+  font-family: Overpass;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: block;
+  src: url(/fonts/Overpass-VariableFont_wght-subset.woff2) format("woff2"), url(/fonts/Overpass-VariableFont_wght-subset.zopfli.woff) format("woff");
+  unicode-range: U+A, U+20-7E, U+C4, U+C5, U+D6, U+E4, U+E5, U+F3, U+F6, U+2013, U+2014, U+2019, U+201C, U+201D, U+2022, U+2026, U+2080, U+2081, U+2764, U+FE0F, U+1F465, U+1F629;
+}
+
+@layer components {
+  .header-block {
+    @apply text-3xl leading-tight font-black text-salmon-200 bg-gradient-purple_heart rounded-t py-5 px-6 flex justify-between items-center text-balance;
+  }
+
+  .header-icon {
+    @apply w-8 h-8 sm:w-9 sm:h-9;
+  }
+
+  .list-title {
+    @apply text-2xl sm:text-3xl leading-relaxed mb-1 text-purple_heart hover:text-salmon;
+  }
+
+  .footer-header {
+    @apply text-purple_heart font-bold align-baseline text-left pr-2 pb-2 w-1/4;
+  }
+
+  .footer-data {
+    @apply align-baseline pb-2;
+  }
+
+  .nav-link {
+    @apply flex items-center gap-1 hover:border-salmon border-b-4 pb-1 hover:text-purple_heart border-transparent text-gray-700 px-1;
+  }
+  .nav-link--active {
+    @apply !text-purple_heart !border-purple_heart hover:!border-salmon;
+  }
+
+  .link {
+    @apply text-purple_heart underline;
+  }
+
+  .link:hover {
+    @apply no-underline text-salmon-400;
+  }
+}
+
+.max-w-screen-h {
+  max-width: 133vh;
+}
+
+.w-content {
+  @apply max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl w-full self-center;
+}
+
+.bg-gradient-salmon {
+  background-image: linear-gradient(to bottom, #fff1f2, #ffe8ea, #ffdfe2, #ffd6da, #fecdd3);
+}
+
+.bg-gradient-purple_heart {
+  background-image: linear-gradient(to left bottom, #47149e, #4914a3, #4b14a8, #4c14ae, #4e14b3);
+}
+
+.child {
+  width: 100vw;
+  position: relative;
+  left: calc(-50vw + 50%);
+}
+
+
+.prefix-hash:before {
+  content: "#";
+  display: inline;
+}
+
+.hover-wrapper:hover .hover-wrapper__underline {
+  @apply underline;
+}
+
+
+.ar-3x2 {
+  height: 0;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 66.66666666666667%;
+}
+
+.py-05 {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
+#webmentions h2 {
+  @apply hidden;
+}
+#webmentions .reacts {
+  @apply flex flex-row flex-wrap;
+}
+
+#webmentions .reaction {
+  @apply mr-2 flex flex-row items-center;
+}
+
+#webmentions img {
+  @apply h-4 w-4 object-cover mr-0.5;
+}
+
+.js-tr-webmentions {
+  @apply hidden;
+}
+
+.js-tr-webmentions:has(#webmentions .reacts) {
+  @apply table-row;
+}
+
+.markdown {
+  @apply leading-relaxed break-words text-lg sm:text-xl lg:text-2xl;
+}
+
+.markdown > * + *,
+.markdown > p {
+  @apply mt-0 mb-4;
+}
+
+.markdown li + li, .markdown li>ol, .markdown li>ul {
+  @apply mt-3;
+}
+
+.markdown li > p + p {
+  @apply mt-6;
+}
+
+.markdown strong {
+  @apply font-semibold;
+}
+
+.markdown a {
+  @apply link;
+}
+
+.markdown a:hover {
+  @apply no-underline;
+}
+
+.markdown strong a {
+  @apply font-bold;
+}
+
+.markdown h1 {
+  @apply text-salmon-300 font-semibold leading-relaxed text-balance text-4xl sm:text-5xl mb-2 mt-6;
+}
+
+.markdown h2 {
+  @apply text-salmon-300 font-semibold leading-relaxed text-balance text-3xl sm:text-4xl mb-2 mt-6;
+}
+
+.markdown h3 {
+  @apply text-salmon-300 font-semibold leading-relaxed text-balance text-2xl sm:text-3xl mb-2 mt-6;
+}
+
+.markdown h4 {
+  @apply text-salmon-300 font-semibold leading-relaxed text-balance text-lg sm:text-xl mb-4 mt-6;
+}
+
+.markdown h5 {
+  @apply text-salmon-300 leading-tight text-lg font-normal mb-4 mt-6;
+}
+
+.markdown h6 {
+  @apply text-salmon-300 leading-tight text-lg font-normal text-gray-600 mb-4 mt-6;
+}
+
+.markdown blockquote {
+  @apply text-lg sm:text-xl lg:text-2xl border-l-4 border-purple_heart pl-4 pr-4 text-gray-600;
+}
+
+.markdown ul {
+  @apply text-lg sm:text-xl lg:text-2xl pl-8 list-disc;
+}
+
+.markdown ol {
+  @apply text-lg sm:text-xl lg:text-2xl pl-8 list-decimal;
+}
+.markdown ol, .markdown ul {
+  @apply marker:text-purple_heart marker:font-bold;
+}
+
+.markdown kbd {
+  @apply text-xs inline-block rounded border px-1 py-05 align-middle font-normal font-mono shadow;
+}
+
+.markdown table {
+  @apply text-lg sm:text-xl lg:text-2xl border-gray-600;
+}
+
+.markdown th {
+  @apply border py-1 px-3;
+}
+
+.markdown td {
+  @apply border py-1 px-3;
+}
+
+.markdown p > code {
+  @apply bg-neutral-100 px-2 py-1 rounded;
+}
+
+/* Override pygments style background color. */
+.markdown .highlight pre {
+  @apply bg-gray-100 !important;
+}
+
+.markdown img {
+  @apply m-auto bg-white;
+}
+
+open-heart:not([disabled]):hover,
+open-heart:not([disabled]):focus {
+  @apply bg-salmon cursor-pointer text-white;
+}
+
+open-heart[disabled] {
+  @apply cursor-not-allowed;
+}
+
+open-heart[count]:not([count="0"])::after {
+  content: attr(count);
+  @apply pl-1;
+}

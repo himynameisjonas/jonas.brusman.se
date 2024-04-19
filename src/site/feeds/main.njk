@@ -36,7 +36,7 @@
         {%- for image in post.data.photos -%}
           <img src="{% image_url image %}">
         {% endfor -%}
-        {{- post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | safe -}}
+        {# {{- post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | safe -}} #}
         <hr><p>Have some thoughts? <a href="mailto:blog@brusman.se?subject=Re: {{ post.data.title }}">Send me an email.</a></p>
         ]]>
       </content>

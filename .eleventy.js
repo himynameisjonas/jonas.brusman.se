@@ -1,14 +1,16 @@
-const extractExcerpt = require("./src/11ty/extract_excerpt");
-const imageUrl = require("./src/11ty/image_url");
-const minifyHtml = require("./src/11ty/minify_html");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const similarPosts = require("./src/11ty/similar_posts");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const trackingScript = require("./src/11ty/tracking_script");
-const typeCollection = require("./src/11ty/type_collection");
-const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+import extractExcerpt from "./src/11ty/extract_excerpt.cjs";
+import imageUrl from "./src/11ty/image_url.cjs";
+import minifyHtml from "./src/11ty/minify_html.cjs";
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import similarPosts from "./src/11ty/similar_posts.cjs";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import trackingScript from "./src/11ty/tracking_script.cjs";
+import typeCollection from "./src/11ty/type_collection.cjs";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
 
-module.exports = function (eleventyConfig) {
+export default async function (eleventyConfig) {
+  eleventyConfig.addPlugin(EleventyVitePlugin);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
@@ -36,10 +38,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/site/js");
   eleventyConfig.addPassthroughCopy({ "./src/site/misc": "./" });
   eleventyConfig.addPassthroughCopy("./_redirects");
+  eleventyConfig.addPassthroughCopy("./functions");
 
   eleventyConfig.addTransform("minifyHtml", minifyHtml);
 
-  eleventyConfig.addCollection("notes", typeCollection("note"));
+  eleventyConfig.addCollection("articles", typeCollection("article"));
   eleventyConfig.addCollection("photos", typeCollection("photo"));
 
   eleventyConfig.addFilter("similarPosts", similarPosts);
@@ -55,4 +58,4 @@ module.exports = function (eleventyConfig) {
       output: "dist",
     },
   };
-};
+}

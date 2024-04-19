@@ -1,7 +1,7 @@
 ---
 title: About
 headline: Hi my name is Jonas
-layout: blog_post.liquid
+layout: page.liquid
 description: About Jonas Brusman.
 photos:
   - 'https://photo-storage.brusman.se/DSCF0712.jpeg'
@@ -16,6 +16,7 @@ I enjoy giving high fives, [taking photographs](/photos) and build stuff with Ru
 * [Mastodon / Fediverse](https://tacocat.space/@jonas)
 * [Instagram](https://www.instagram.com/himynameisjonas/)
 * [Github](https://github.com/himynameisjonas)
+* [Last.fm](https://www.last.fm/user/himynameisjonas)
 
 ## About this site
 

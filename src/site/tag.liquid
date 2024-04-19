@@ -1,5 +1,5 @@
 ---
-layout: layout.njk
+layout: layout.liquid
 pagination:
   data: collections
   size: 1
@@ -14,37 +14,62 @@ eleventyComputed:
 eleventyExcludeFromCollections: true
 ---
 {% assign tagged_posts = collections[tag] %}
-{% assign tagged_notes = tagged_posts | where: 'data.blogPostType', 'note' %}
+{% assign tagged_articles = tagged_posts | where: 'data.blogPostType', 'article' %}
 {% assign tagged_photos = tagged_posts | where: 'data.blogPostType', 'photo' %}
 
-{% if tagged_notes.size > 0 %}
-  <div class="w-content">
-    <h2 class="text-3xl leading-tight font-semibold border-l-4 border-branding -ml-5 pl-4 mb-3">
-      Notes tagged with <span class="prefix-hash">{{ tag }}</span>
+{% if tagged_articles.size > 0 %}
+  <div class="flex flex-col w-content bg-white">
+    <h2 class="header-block">
+      <span>
+        Articles tagged with <span class="prefix-hash">{{ tag }}</span>
+      </span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="header-icon"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z" />
+      </svg>
     </h2>
-    {% for post in tagged_notes reversed %}
-      {% unless post.data.photos %}
-        {% include 'list_note_post' %}
-      {% endunless %}
-    {% endfor %}
+    <div class="px-4 py-5 sm:p-6">
+      {% for post in tagged_articles reversed %}
+        {% unless post.data.photos %}
+          {% include 'list_article' %}
+        {% endunless %}
+      {% endfor %}
+    </div>
   </div>
 {% endif %}
 
 {% if tagged_photos.size > 0 %}
-  <script defer src="/js/masonry.pkgd.min.js"></script>
-
-  <div class="w-content">
-    <h2 class="text-3xl leading-tight font-semibold border-l-4 border-branding -ml-5 pl-4 mb-3">
-      Photos tagged with <span class="prefix-hash">{{ tag }}</span>
+  <div class="flex flex-col w-content bg-white {% if tagged_articles.size > 0 %}mt-5{% endif %}">
+    <h2 class="header-block">
+      <span>
+        Photos tagged with <span class="prefix-hash">{{ tag }}</span>
+      </span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="header-icon"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z" />
+      </svg>
     </h2>
-    <div
-      class="flex flex-wrap -mx-4"
-      data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-item", "percentPosition": true }'
-    >
-      {% assign photoWidths = 'w-full md:w-1/2 xl:w-1/2 p-4' %}
-      {% for post in tagged_photos reversed %}
-        {% include 'list_photos_post' %}
-      {% endfor %}
+    <div class="px-4 py-5 sm:p-6">
+      <div class="flex flex-wrap -mx-4 photos-grid">
+        {% assign photoWidths = 'w-full md:w-1/2 xl:w-1/2 p-4' %}
+        {% for post in tagged_photos reversed %}
+          {% include 'list_photos_post' %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 {% endif %}

@@ -40,7 +40,7 @@ function permalink(bookmark, prettyUrl) {
     lower: true,
     strict: true,
   });
-  return `/bookmarks/${date}-${slug}`;
+  return `/bookmarks/${date}-${slug}/`;
 }
 
 function prettyUrl(bookmark) {

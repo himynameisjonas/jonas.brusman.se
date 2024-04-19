@@ -1,105 +1,120 @@
 ---
-layout: layout.njk
+layout: layout.liquid
 ---
 <article class="flex flex-col h-entry items-center">
-  <h1 class="w-content mb-4 md:text-5xl md:leading-relaxed leading-relaxed text-3xl text-white font-semibold p-name text-balance">
-    <span class="title-bg">
-      {{ headline | default: title }}
-    </span>
+  <h1 class="font-black w-content py-6 sm:py-6 px-6 sm:px-8 text-3xl sm:text-4xl md:text-5xl tracking-tight leading-normal sm:leading-normal md:leading-normal p-name text-balance text-salmon-200 bg-purple_heart rounded-t-lg">
+    {{ headline | default: title }}
   </h1>
 
-  {% if photos %}
-    <div class="-mx-2 mb-8 max-w-screen-h flex flex-col gap-2 items-center">
-      {% for photo in photos %}
-        <img
-          src="{{ photo }}"
-          alt="{{ title }}"
-          eleventy:widths="800,1200,2000,3000,4000"
-          sizes="(max-width: 1000px) 100vw, 133vh"
-          class="u-photo max-h-screen object-contain py-2"
-        >
-      {% endfor %}
-    </div>
-  {% endif %}
+  <div class="w-content e-content bg-white">
+    <div class="px-4 py-5 sm:p-6 markdown">
+      {% if photos %}
+        {% for photo in photos %}
+          <div class="child flex flex-col items-center">
+            <div class="mb-10 max-w-screen-h">
+              <img
+                src="{{ photo }}"
+                alt="{{ title }}"
+                loading="{% if forloop.index == 1 %}eager{% else %}lazy{% endif %}"
+                eleventy:widths="800,1200,2000,3000,4000"
+                sizes="(max-width: 1000px) 100vw, 133vh"
+                class="u-photo max-h-screen object-contain p-6 bg-white"
+              >
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
 
-  <div class="markdown w-content e-content">
-    {{ content }}
+      {{ content }}
+
+      <open-heart
+        class="mx-auto my-3 block w-fit rounded-full px-2 py-1"
+        href="/open_heart?id={{page.url}}"
+        emoji="❤️"
+      >
+        ❤️
+      </open-heart>
+    </div>
   </div>
   {% unless no_footer %}
-    <div class="border-t-4 border-branding w-content mb-2 mt-2 pt-2 text-gray-700 dark:text-neutral-500">
-      <table class="w-full">
-        {% if page.date %}
-          <tr>
-            <th class="align-baseline text-left font-normal pr-2 pb-2">{{ date_desc | default: 'Published at' }}</th>
-            <td class="font-light align-baseline pb-2">
-              <time class="dt-published" page.datetime="{{page.date | date: "%Y-%m-%d" }}">
-                <a href="{{page.url}}" class="u-url">{{ page.date | date: '%Y-%m-%d' }}</a>
-              </time>
-            </td>
-          </tr>
-        {% endif %}
+    <div class="w-content mb-2 text-gray-700 bg-salmon-200 shadow-inner">
+      <div class="px-4 py-5 sm:p-6">
+        <table class="w-full">
+          {% if page.date %}
+            <tr>
+              <th class="footer-header">
+                {{ date_desc | default: 'Published at' }}
+              </th>
+              <td class="footer-data">
+                <time class="dt-published" page.datetime="{{page.date | date: "%Y-%m-%d" }}">
+                  <a href="{{page.url}}" class="u-url">{{ page.date | date: '%Y-%m-%d' }}</a>
+                </time>
+              </td>
+            </tr>
+          {% endif %}
 
-        {% if tags.length > 0 %}
-          <tr>
-            <th class="align-baseline text-left font-normal whitespace-nowrap pr-2 pb-2">Tags</th>
-            <td class="font-light align-baseline pb-2">
-              {% for tag in tags %}
-                {% unless tag == 'blogPost' %}
-                  <a href="/tags/{{tag}}/" class="prefix-hash link p-category">{{ tag }}</a>
-                {% endunless %}
-              {% endfor %}
-            </td>
-          </tr>
-        {% endif %}
-
-        {% assign similar = collections.all | similarPosts: page.inputPath, tags %}
-        {% if similar.length > 0 %}
-          <tr>
-            <th class="align-baseline text-left font-normal whitespace-nowrap pr-2 pb-2">Related posts</th>
-            <td class="font-light align-baseline pb-2">
-              <ul class="list-disc list-inside">
-                {% for similarPost in similar limit: 3 -%}
-                  <li class="mb-1">
-                    <a href="{{ similarPost.url }}" class="link">{{ similarPost.data.title }}</a>
-                  </li>
+          {% if tags.length > 0 %}
+            <tr>
+              <th class="footer-header">Tags</th>
+              <td class="footer-data">
+                {% for tag in tags %}
+                  {% unless tag == 'blogPost' %}
+                    <a href="/tags/{{tag}}/" class="prefix-hash link p-category">{{ tag }}</a>
+                  {% endunless %}
                 {% endfor %}
-              </ul>
-            </td>
-          </tr>
-        {% endif %}
+              </td>
+            </tr>
+          {% endif %}
 
-        {% if syndications.length > 0 %}
+          {% assign similar = collections.all | similarPosts: page.inputPath, tags %}
+          {% if similar.length > 0 %}
+            <tr>
+              <th class="footer-header whitespace-nowrap">Related posts</th>
+              <td class="footer-data">
+                <ul class="list-disc list-inside">
+                  {% for similarPost in similar limit: 3 -%}
+                    <li class="mb-1">
+                      <a href="{{ similarPost.url }}" class="link">{{ similarPost.data.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </td>
+            </tr>
+          {% endif %}
+
+          {% if syndications.length > 0 %}
+            <tr>
+              <th class="footer-header hidden">This post elsewhere</th>
+              <td class="hidden align-baseline">
+                {% for url in syndications -%}
+                  <a href="{{ url }}" rel="syndication" class="u-syndication link">{{ url }}</a>
+                {% endfor %}
+              </td>
+            </tr>
+          {% endif %}
+
           <tr>
-            <th class="align-baseline text-left font-normal whitespace-nowrap pr-2 pb-2 hidden">This post elsewhere</th>
-            <td class="hidden font-light align-baseline">
-              {% for url in syndications -%}
-                <a href="{{ url }}" rel="syndication" class="u-syndication link">{{ url }}</a>
-              {% endfor %}
+            <th class="footer-header">Have some thoughts?</th>
+            <td class="footer-data">
+              <a href="mailto:blog@brusman.se?subject=Re: {{title}}" class="link">Reply by email</a>
             </td>
           </tr>
-        {% endif %}
 
-        <tr>
-          <th class="align-baseline text-left font-normal pr-2 pb-2">Have some thoughts?</th>
-          <td class="font-light align-baseline pb-2">
-            <a href="mailto:blog@brusman.se?subject=Re: {{title}}" class="link">Reply by email</a>
-          </td>
-        </tr>
+          <tr class="js-tr-webmentions">
+            <th class="footer-header">Reactions elsewhere</th>
+            <td id="webmentions" class="footer-data flex flex-col"></td>
+          </tr>
+        </table>
 
-        <tr class="js-tr-webmentions">
-          <th class="align-baseline text-left font-normal whitespace-nowrap pr-2 pb-2">Reactions</th>
-          <td id="webmentions" class="font-light align-baseline pb-2 flex flex-col"></td>
-        </tr>
-      </table>
-
-      <a rel="author" class="hidden p-author h-card" href="https://jonas.brusman.se">Jonas Brusman</a>
-      <script
-        src="/js/webmention.min.js"
-        data-page-url="https://jonas.brusman.se{{page.url}}"
-        data-add-urls="https://jonas.brusman.se/{{date | date: "%Y-%m-%d"}}-{{page.fileSlug}}/"
-        data-comments-are-reactions="true"
-        async
-      ></script>
+        <a rel="author" class="hidden p-author h-card" href="https://jonas.brusman.se">Jonas Brusman</a>
+        <script
+          src="/js/webmention.min.js"
+          data-page-url="https://jonas.brusman.se{{page.url}}"
+          data-add-urls="https://jonas.brusman.se/{{date | date: "%Y-%m-%d"}}-{{page.fileSlug}}/"
+          data-comments-are-reactions="true"
+          async
+        ></script>
+      </div>
     </div>
   {% endunless %}
 </article>
