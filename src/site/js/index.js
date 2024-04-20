@@ -1,4 +1,5 @@
 import { listen } from "quicklink";
+let masonry;
 
 async function triggerMasonary() {
   var elem = document.querySelector(".photos-grid");
@@ -6,7 +7,7 @@ async function triggerMasonary() {
 
   const Masonry = await import("masonry-layout").then((m) => m.default);
 
-  new Masonry(elem, {
+  masonry = new Masonry(elem, {
     itemSelector: ".grid-item",
     columnWidth: ".grid-item",
     percentPosition: true,
@@ -38,10 +39,47 @@ function initQuicklink() {
   });
 }
 
+function initInfiniteScroll() {
+  const loadMore = document.querySelector(".js-photos-next");
+  if (!loadMore) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting) {
+        const url = loadMore.getAttribute("href");
+        fetch(url)
+          .then((response) => response.text())
+          .then((html) => {
+            const parser = new DOMParser();
+            const newDoc = parser.parseFromString(html, "text/html");
+            const newPhotos = newDoc.querySelectorAll(
+              ".photos-grid .grid-item",
+            );
+            const newLoadMore = newDoc.querySelector(".js-photos-next");
+
+            if (newPhotos) {
+              document.querySelector(".photos-grid").append(...newPhotos);
+              masonry.appended(newPhotos);
+            }
+            if (newLoadMore) {
+              loadMore.setAttribute("href", newLoadMore.getAttribute("href"));
+            } else {
+              loadMore.closest("nav").remove();
+            }
+          });
+      }
+    },
+    { threshold: 0 },
+  );
+
+  observer.observe(loadMore);
+}
+
 function init() {
   triggerMasonary();
   initOpenHeart();
   initQuicklink();
+  initInfiniteScroll();
 }
 
 if (
