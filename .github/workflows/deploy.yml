@@ -43,8 +43,9 @@ jobs:
         with:
           path: |
             .cache
-            img
-            dist/img
+            ./img
+            dist/assets/*.jpeg
+            dist/assets/*.webp
           key: 11ty-${{ runner.os }}-${{ github.run_id }}
           restore-keys: |
             11ty-${{ runner.os }}
@@ -86,6 +87,7 @@ jobs:
         with:
           path: |
             .cache
-            img
-            dist/img
+            ./img
+            dist/assets/*.jpeg
+            dist/assets/*.webp
           key: 11ty-${{ runner.os }}-${{ github.run_id }}
