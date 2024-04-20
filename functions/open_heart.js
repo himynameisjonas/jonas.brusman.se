@@ -35,6 +35,7 @@ async function storeEmoji(context, id, emoji) {
 
   const currentCount = Number((await context.env.EMOJIS.get(key)) || 0);
   await context.env.EMOJIS.put(key, currentCount + 1);
+  await context.env.EMOJIS.put(`${id}:last`, new Date().toISOString());
 
   return new Response("ok");
 }
