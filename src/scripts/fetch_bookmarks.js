@@ -1,6 +1,8 @@
-const fs = require("fs");
-const slugify = require("slugify");
-require("dotenv").config();
+import fs from "fs";
+import slugify from "slugify";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 async function fetchBookmarks() {
   let page = 0;
@@ -46,7 +48,7 @@ function permalink(bookmark, prettyUrl) {
 function prettyUrl(bookmark) {
   let url = bookmark.link;
   url = url.replace(/(^\w+:|^)\/\//, "");
-  numberOfSlashes = (url.match(/\//g) || []).length;
+  let numberOfSlashes = (url.match(/\//g) || []).length;
   if (numberOfSlashes == 1) {
     url = url.replace(/\/$/, "");
   }
