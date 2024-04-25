@@ -1,5 +1,19 @@
 [
   {
+    "title": "Atuin - Magical Shell History",
+    "link": "https://atuin.sh/",
+    "excerpt": "Sync, search and backup shell history with Atuin",
+    "tags": [
+      "shell",
+      "terminal",
+      "history"
+    ],
+    "date": "2024-04-24T14:17:50.389Z",
+    "content": "",
+    "prettyUrl": "atuin.sh",
+    "permalink": "/bookmarks/2024-04-24-atuin-sh/"
+  },
+  {
     "title": "Discover the IndieWeb, one blog post at a time.",
     "link": "https://indieblog.page/",
     "excerpt": "A website to randomly explore the IndieWeb. Simply click a button and you will be redirected to a random post from a personal blog.",
