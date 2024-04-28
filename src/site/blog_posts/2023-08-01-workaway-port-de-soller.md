@@ -20,6 +20,7 @@ tags:
   - teamtailor
   - vacation
   - water
+  - pool
   - joakim
   - emil
 syndications:
