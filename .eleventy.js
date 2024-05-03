@@ -10,8 +10,8 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
 
 export default async function (eleventyConfig) {
-  eleventyConfig.addPlugin(EleventyVitePlugin);
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(EleventyVitePlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     extensions: "html",
@@ -34,7 +34,6 @@ export default async function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
 
   eleventyConfig.addPassthroughCopy("./src/site/css");
-  eleventyConfig.addPassthroughCopy("./img");
   eleventyConfig.addPassthroughCopy("./src/site/js");
   eleventyConfig.addPassthroughCopy("./public");
 
