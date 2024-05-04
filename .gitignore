@@ -10,3 +10,4 @@ node_modules/
 .cache
 /img
 .wrangler
+public/img/*.jpeg
