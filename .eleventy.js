@@ -11,7 +11,31 @@ import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
 
 export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(EleventyVitePlugin);
+  eleventyConfig.addPlugin(EleventyVitePlugin, {
+    viteOptions: {
+      build: {
+        rollupOptions: {
+          output: {
+            assetFileNames: (assetInfo) => {
+              const imageExtensions = [
+                ".webp",
+                ".jpeg",
+                ".png",
+                ".svg",
+                ".gif",
+                ".jpg",
+              ];
+              if (imageExtensions.some((ext) => assetInfo.name.endsWith(ext))) {
+                console.log("hej", assetInfo);
+                return `img/${assetInfo.name}`;
+              }
+              return "assets/css/main.[hash].css";
+            },
+          },
+        },
+      },
+    },
+  });
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     extensions: "html",

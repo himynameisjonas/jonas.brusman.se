@@ -7,8 +7,6 @@ const shortcode = async function (imagePath, sharing) {
     cacheOptions: {
       duration: "10y",
     },
-    urlPath: "/img/",
-    outputDir: "./public/img/",
   });
 
   return stats.jpeg[0].url;
