@@ -33,6 +33,8 @@
     {% endif -%}
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    {% if title %}<meta property="og:title" content="{{title}}">{% endif %}
+    {% if page.url %}<meta property="og:url" content="https://jonas.brusman.se{{page.url}}">{% endif %}
     <link rel="webmention" href="https://webmention.io/jonas.brusman.se/webmention">
     <link rel="pingback" href="https://webmention.io/jonas.brusman.se/xmlrpc">
     <link href="https://twitter.com/himynameisjonas" rel="me">
