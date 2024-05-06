@@ -31,6 +31,10 @@ async function initOpenHeart() {
   });
 }
 
+async function initMastodonPost() {
+  await import("/js/mastodon_post.js");
+}
+
 function initQuicklink() {
   listen({
     throttle: 5,
@@ -80,6 +84,7 @@ function init() {
   initOpenHeart();
   initQuicklink();
   initInfiniteScroll();
+  initMastodonPost();
 }
 
 if (

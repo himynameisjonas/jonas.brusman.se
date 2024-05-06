@@ -95,29 +95,6 @@
   padding-bottom: 66.66666666666667%;
 }
 
-#webmentions h2 {
-  @apply hidden;
-}
-#webmentions .reacts {
-  @apply flex flex-row flex-wrap;
-}
-
-#webmentions .reaction {
-  @apply mr-2 flex flex-row items-center;
-}
-
-#webmentions img {
-  @apply h-4 w-4 object-cover mr-0.5;
-}
-
-.js-tr-webmentions {
-  @apply hidden;
-}
-
-.js-tr-webmentions:has(#webmentions .reacts) {
-  @apply table-row;
-}
-
 .markdown {
   @apply leading-relaxed break-words text-lg sm:text-xl lg:text-2xl;
 }

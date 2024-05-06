@@ -8,7 +8,6 @@ tina/__generated__
 tina/tina-lock.json
 src/site/misc/admin/assets
 
-src/site/js/webmention.min.js
 src/site/js/count.js
 src/site/js/open_heart_element.js
 src/site/_includes/css/prism-okaidia.css

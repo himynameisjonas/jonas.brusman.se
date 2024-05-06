@@ -96,11 +96,6 @@ layout: layout.liquid
             <a href="mailto:blog@brusman.se?subject=Re: {{title}}" class="link">Reply by email</a>
           </td>
         </tr>
-
-        <tr class="js-tr-webmentions">
-          <th class="footer-header">Reactions</th>
-          <td id="webmentions" class="footer-data flex flex-col"></td>
-        </tr>
       </table>
 
       <script>
@@ -115,13 +110,6 @@ layout: layout.liquid
       </script>
 
       <a rel="author" class="hidden p-author h-card" href="https://jonas.brusman.se">Jonas Brusman</a>
-      <script
-        src="/js/webmention.min.js"
-        data-page-url="https://jonas.brusman.se{{page.url}}"
-        data-add-urls="https://jonas.brusman.se/{{date | date: "%Y-%m-%d"}}-{{page.fileSlug}}/"
-        data-comments-are-reactions="true"
-        async
-      ></script>
     </div>
   </div>
 {% endunless %}

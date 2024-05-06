@@ -37,6 +37,23 @@ layout: layout.liquid
     </div>
   </div>
   {% unless no_footer %}
+    {% if mastodonPost %}
+      <template id="mastodon-post-template">
+        <div>
+          <a data-key="url" class="font-medium">Reposts</a>
+          <span data-key="reblogs_count"></span>
+        </div>
+        <div>
+          <a data-key="url" class="font-medium">Replies</a>
+          <span data-key="replies_count"></span>
+        </div>
+        <div>
+          <a data-key="url" class="font-medium">Favourites</a>
+          <span data-key="favourites_count"></span>
+        </div>
+      </template>
+    {% endif %}
+
     <div class="w-content mb-2 text-gray-700 bg-salmon-200 shadow-inner">
       <div class="px-4 py-5 sm:p-6">
         <table class="w-full">
@@ -94,26 +111,31 @@ layout: layout.liquid
           {% endif %}
 
           <tr>
-            <th class="footer-header">Have some thoughts?</th>
+            <th
+              class="footer-header"
+              {% if mastodonPost %}
+                rowspan="2"
+              {% endif %}
+            >
+              Have some thoughts?
+            </th>
             <td class="footer-data">
               <a href="mailto:blog@brusman.se?subject=Re: {{title}}" class="link">Reply by email</a>
             </td>
           </tr>
 
-          <tr class="js-tr-webmentions">
-            <th class="footer-header">Reactions elsewhere</th>
-            <td id="webmentions" class="footer-data flex flex-col"></td>
-          </tr>
+          {% if mastodonPost %}
+            <tr>
+              <td class="footer-data">
+                <mastodon-post class="grid grid-flow-col auto-cols-max gap-2">
+                  <a href="{{mastodonPost}}" class="link whitespace-nowrap">Discuss on Mastodon</a>
+                </mastodon-post>
+              </td>
+            </tr>
+          {% endif %}
         </table>
 
         <a rel="author" class="hidden p-author h-card" href="https://jonas.brusman.se">Jonas Brusman</a>
-        <script
-          src="/js/webmention.min.js"
-          data-page-url="https://jonas.brusman.se{{page.url}}"
-          data-add-urls="https://jonas.brusman.se/{{date | date: "%Y-%m-%d"}}-{{page.fileSlug}}/"
-          data-comments-are-reactions="true"
-          async
-        ></script>
       </div>
     </div>
   {% endunless %}
