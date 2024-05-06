@@ -14,6 +14,7 @@ tags:
   - emil
   - car
 syndications:
+  - https://tacocat.space/@jonas/112390026341518587
 ---
 
 Went for a walk around Port de Sóller on [the work-away trip two of weeks ago](/back-in-port-de-soller/).
