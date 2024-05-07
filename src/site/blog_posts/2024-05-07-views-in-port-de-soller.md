@@ -18,6 +18,6 @@ tags:
 syndications:
 ---
 
-Third post from this years trip to Mallorca.
+Third post from this year's trip to Mallorca.
 
 See also [A walk in Port de Sóller](/a-walk-in-port-de-soller/) and [Back in Port de Sóller](/back-in-port-de-soller/).
