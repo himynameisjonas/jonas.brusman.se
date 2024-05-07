@@ -26,7 +26,6 @@ export default async function (eleventyConfig) {
                 ".jpg",
               ];
               if (imageExtensions.some((ext) => assetInfo.name.endsWith(ext))) {
-                console.log("hej", assetInfo);
                 return `img/${assetInfo.name}`;
               }
               return "assets/css/main.[hash].css";
