@@ -9,7 +9,7 @@ date: "git Last Modified"
 date_desc: "Last updated"
 ---
 
-I enjoy giving high fives, [taking photographs](/photos) and build stuff with Ruby and JavaScript. I work as a full-stack developer at [Teamtailor](https://www.teamtailor.com) and I'm based in Linköping, Sweden.
+I enjoy giving high fives, [taking photographs](/photos/) and build stuff with Ruby and JavaScript. I work as a full-stack developer at [Teamtailor](https://www.teamtailor.com) and I'm based in Linköping, Sweden.
 
 
 ## Me elsewhere
