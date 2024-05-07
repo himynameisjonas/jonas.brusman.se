@@ -12,6 +12,7 @@ tags:
   - vacation
   - water
   - pool
+  - landscape
 syndications:
   - https://tacocat.space/@jonas/112353179407035147
 ---
