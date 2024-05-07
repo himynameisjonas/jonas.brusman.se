@@ -64,7 +64,18 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addCollection("articles", typeCollection("article"));
   eleventyConfig.addCollection("photos", typeCollection("photo"));
-
+  eleventyConfig.addCollection("tagList", (collection) => {
+    const tagsSet = new Set();
+    collection.getAll().forEach((item) => {
+      if (!item.data.tags) return;
+      item.data.tags
+        .filter((tag) => !["posts", "all", "blogPost"].includes(tag))
+        .forEach((tag) => {
+          tagsSet.add(tag);
+        });
+    });
+    return Array.from(tagsSet).sort();
+  });
   eleventyConfig.addFilter("similarPosts", similarPosts);
 
   eleventyConfig.addShortcode("excerpt", extractExcerpt);
