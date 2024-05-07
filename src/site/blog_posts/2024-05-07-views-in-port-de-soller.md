@@ -16,6 +16,7 @@ tags:
   - people
   - landscape
 syndications:
+  - https://tacocat.space/@jonas/112401675179415410
 ---
 
 Third post from this year's trip to Mallorca.
