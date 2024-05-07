@@ -10,19 +10,20 @@ layout: layout.liquid
     <div class="px-4 py-5 sm:p-6 markdown">
       {% if photos %}
         {% for photo in photos %}
-          <div class="child flex flex-col items-center">
-            <div class="mb-10 max-w-screen-h">
+          <div class="child">
+            <div class="">
               <img
                 src="{{ photo }}"
                 alt="{{ title }}"
                 loading="{% if forloop.index == 1 %}eager{% else %}lazy{% endif %}"
                 eleventy:widths="800,1200,2000,3000,4000"
                 sizes="(max-width: 1000px) 100vw, 133vh"
-                class="u-photo max-h-screen object-contain p-6 bg-white"
+                class="u-photo block max-h-screen object-contain p-4 lg:p-6 w-auto bg-white"
               >
             </div>
           </div>
         {% endfor %}
+        <hr class="border-none mb-4 md:mb-8">
       {% endif %}
 
       {{ content }}

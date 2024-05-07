@@ -99,7 +99,6 @@
   @apply leading-relaxed break-words text-lg sm:text-xl lg:text-2xl;
 }
 
-.markdown > * + *,
 .markdown > p {
   @apply mt-0 mb-4;
 }
