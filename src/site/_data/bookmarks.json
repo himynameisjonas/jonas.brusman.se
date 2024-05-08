@@ -1,5 +1,17 @@
 [
   {
+    "title": "Phosphor Icons",
+    "link": "https://phosphoricons.com/",
+    "excerpt": "A flexible icon family for interfaces, diagrams, presentations — whatever, really.",
+    "tags": [
+      "icons"
+    ],
+    "date": "2024-05-08T06:51:29.490Z",
+    "content": "",
+    "prettyUrl": "phosphoricons.com",
+    "permalink": "/bookmarks/2024-05-08-phosphoricons-com/"
+  },
+  {
     "title": "Atuin - Magical Shell History",
     "link": "https://atuin.sh/",
     "excerpt": "Sync, search and backup shell history with Atuin",
