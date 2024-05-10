@@ -18,7 +18,7 @@ tags:
 - sea
 syndications:
 - https://www.instagram.com/p/Cf1LdS_jZfQ/
-- https://tacocat.space/@jonas/108644538404749217
+- https://tacocat.space/@jonas/108644538404749217#lol
 - https://tacocat.space/@jonas/108737562636456427
 - https://twitter.com/himynameisjonas/status/1553440329013010433
 ---
