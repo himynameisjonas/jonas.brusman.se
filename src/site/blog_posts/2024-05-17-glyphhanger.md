@@ -7,6 +7,7 @@ tags:
   - design
   - programming
 syndications:
+  - https://tacocat.space/@jonas/112456948190033463
 ---
 
 This site uses two custom fonts, and I wanted to see if I could make them smaller to improve loading times. I found a tool called [Glyphhanger](https://www.zachleat.com/web/glyphhanger/) that does just that: subsetting fonts to only include the characters needed.
