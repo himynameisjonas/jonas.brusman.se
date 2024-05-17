@@ -10,6 +10,7 @@ tags:
   - netlify
   - eleventy
   - meta
+  - webdev
 syndications:
   - 'https://tacocat.space/@jonas/112016732931252162'
 ---
