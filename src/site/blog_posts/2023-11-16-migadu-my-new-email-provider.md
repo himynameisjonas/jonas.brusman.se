@@ -8,7 +8,7 @@ syndications:
   - 'https://tacocat.space/@jonas/111432891825584631'
 ---
 
-You might have noticed in [my last post](my-default-apps-at-the-end-of-2023/) that I am using [Migadu](https://www.migadu.com/) as my email service provider. Back in June, I changed my domains DNS to point to Migadu instead of Fastmail has been as worry-free as Fastmail, just cheaper. The main domain I use is based on my wife's family name, and we've got a few folks who would love to have their own *firstname\@lastname* email addresses. Unfortunately, it became quite costly with my previous provider, Fastmail. So, I began exploring other options.
+You might have noticed in [my last post](/my-default-apps-at-the-end-of-2023/) that I am using [Migadu](https://www.migadu.com/) as my email service provider. Back in June, I changed my domains DNS to point to Migadu instead of Fastmail has been as worry-free as Fastmail, just cheaper. The main domain I use is based on my wife's family name, and we've got a few folks who would love to have their own *firstname\@lastname* email addresses. Unfortunately, it became quite costly with my previous provider, Fastmail. So, I began exploring other options.
 
 ## The big win
 
