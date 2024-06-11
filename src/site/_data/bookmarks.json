@@ -1,5 +1,18 @@
 [
   {
+    "title": "GitButler | Git Branching, Refined",
+    "link": "https://gitbutler.com/",
+    "excerpt": "A Git client for simultaneous branches on top of your existing workflow..",
+    "tags": [
+      "git",
+      "app"
+    ],
+    "date": "2024-06-10T12:01:23.348Z",
+    "content": "",
+    "prettyUrl": "gitbutler.com",
+    "permalink": "/bookmarks/2024-06-10-gitbutler-com/"
+  },
+  {
     "title": "Phosphor Icons",
     "link": "https://phosphoricons.com/",
     "excerpt": "A flexible icon family for interfaces, diagrams, presentations — whatever, really.",
