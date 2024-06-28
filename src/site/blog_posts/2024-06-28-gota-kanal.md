@@ -15,6 +15,7 @@ tags:
   - tor
   - landscape
 syndications:
+  - https://tacocat.space/@jonas/112693827266564391
 ---
 
 The traditional bicycle trip along the picturesque Göta Canal to my mom's place for a family picnic takes place every year on the Sunday after Midsummer.
