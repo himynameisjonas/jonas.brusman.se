@@ -28,13 +28,15 @@ layout: layout.liquid
 
       {{ content }}
 
-      <open-heart
-        class="mx-auto my-3 block w-fit rounded-md bg-white px-2.5 py-1.5 pb-1 text-lg font-semibold text-salmon-600 shadow-sm ring-1 ring-inset ring-salmon-300 hover:bg-salmon-50"
-        href="/open_heart?id={{page.url}}"
-        emoji="❤️"
-      >
-        ❤️
-      </open-heart>
+      {% unless no_heart %}
+        <open-heart
+            class="mx-auto my-3 block w-fit rounded-md bg-white px-2.5 py-1.5 pb-1 text-lg font-semibold text-salmon-600 shadow-sm ring-1 ring-inset ring-salmon-300 hover:bg-salmon-50"
+            href="/open_heart?id={{page.url}}"
+            emoji="❤️"
+        >
+            ❤️
+        </open-heart>
+      {% endunless %}
     </div>
   </div>
   {% unless no_footer %}

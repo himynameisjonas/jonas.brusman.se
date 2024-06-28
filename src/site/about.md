@@ -23,4 +23,4 @@ I enjoy giving high fives, [taking photographs](/photos/) and build stuff with R
 This site is built with [Eleventy](https://www.11ty.dev) and the [source code is on Github](https://github.com/himynameisjonas/jonas.brusman.se). It is [deployed with Github actions to Cloudflare Pages](/deploy-eleventy-to-cloudflare-with-githubs-action-cache/).
 
 ## RSS feeds
-I have two RSS feeds: one for [blog posts](/rss.xml) and one for [bookmarks](/bookmarks/rss.xml).
+I have a couple of [RSS feeds](/feeds/) for this site. Add to your reader of choice.
