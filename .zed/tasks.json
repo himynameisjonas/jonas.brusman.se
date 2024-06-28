@@ -3,7 +3,7 @@
 // Example:
 [
   {
-    "label": "Elventy",
+    "label": "Eleventy",
     "command": "npm start",
     //"args": [],
     // Env overrides for the command, will be appended to the terminal's environment from the settings.
