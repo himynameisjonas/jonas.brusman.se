@@ -9,7 +9,9 @@
   font-style: normal;
   font-display: block;
   size-adjust: 125%;
-  src: url(/fonts/TropiLand-L3MPg-subset.woff2) format("woff2"), url(/fonts/TropiLand-L3MPg-subset.zopfli.woff) format("woff");
+  src:
+    url(/fonts/TropiLand-L3MPg-subset.woff2) format("woff2"),
+    url(/fonts/TropiLand-L3MPg-subset.zopfli.woff) format("woff");
   unicode-range: U+20, U+41, U+42, U+4A, U+4D-4F, U+52, U+53, U+55;
 }
 
@@ -18,8 +20,12 @@
   font-style: normal;
   font-weight: 100 900;
   font-display: block;
-  src: url(/fonts/Overpass-VariableFont_wght-subset.woff2) format("woff2"), url(/fonts/Overpass-VariableFont_wght-subset.zopfli.woff) format("woff");
-  unicode-range: U+A, U+20-7E, U+C4, U+C5, U+D6, U+E4, U+E5, U+F3, U+F6, U+2013, U+2014, U+2019, U+201C, U+201D, U+2022, U+2026, U+2080, U+2081, U+2764, U+FE0F, U+1F465, U+1F629;
+  src:
+    url(/fonts/Overpass-VariableFont_wght-subset.woff2) format("woff2"),
+    url(/fonts/Overpass-VariableFont_wght-subset.zopfli.woff) format("woff");
+  unicode-range: U+A, U+20-7E, U+C4, U+C5, U+D6, U+E4, U+E5, U+F3, U+F6, U+2013,
+    U+2014, U+2019, U+201C, U+201D, U+2022, U+2026, U+2080, U+2081, U+2764,
+    U+FE0F, U+1F465, U+1F629;
 }
 
 @layer components {
@@ -68,11 +74,25 @@
 }
 
 .bg-gradient-salmon {
-  background-image: linear-gradient(to bottom, #fff1f2, #ffe8ea, #ffdfe2, #ffd6da, #fecdd3);
+  background-image: linear-gradient(
+    to bottom,
+    #fff1f2,
+    #ffe8ea,
+    #ffdfe2,
+    #ffd6da,
+    #fecdd3
+  );
 }
 
 .bg-gradient-purple_heart {
-  background-image: linear-gradient(to left bottom, #47149e, #4914a3, #4b14a8, #4c14ae, #4e14b3);
+  background-image: linear-gradient(
+    to left bottom,
+    #47149e,
+    #4914a3,
+    #4b14a8,
+    #4c14ae,
+    #4e14b3
+  );
 }
 
 .child {
@@ -80,7 +100,6 @@
   position: relative;
   left: calc(-50vw + 50%);
 }
-
 
 .prefix-hash:before {
   content: "#";
@@ -103,7 +122,9 @@
   @apply mt-0 mb-4;
 }
 
-.markdown li + li, .markdown li>ol, .markdown li>ul {
+.markdown li + li,
+.markdown li > ol,
+.markdown li > ul {
   @apply mt-3;
 }
 
@@ -162,7 +183,8 @@
 .markdown ol {
   @apply text-lg sm:text-xl lg:text-2xl pl-8 list-decimal;
 }
-.markdown ol, .markdown ul {
+.markdown ol,
+.markdown ul {
   @apply marker:text-purple_heart marker:font-bold;
 }
 

@@ -6,6 +6,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "prettier": "prettier --write .",
     "prebuild": "if [ -n \"$TINA_TOKEN\" ]; then tinacms build; fi",
     "build": "eleventy",
     "fetch_bookmarks": "node ./src/scripts/fetch_bookmarks.js",
