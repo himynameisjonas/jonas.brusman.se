@@ -5,6 +5,7 @@ tags:
   - list
   - programming
   - vscode
+  - editor
 ---
 
 Why not blog about some VS Code extensions I'm using, maybe it can inspire someone. I tried to focus on the more unique and fun ones.
