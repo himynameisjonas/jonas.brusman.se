@@ -1,5 +1,18 @@
 [
   {
+    "title": "An IndieWeb Webring",
+    "link": "https://xn--sr8hvo.ws/",
+    "excerpt": "",
+    "tags": [
+      "webring",
+      "indieweb"
+    ],
+    "date": "2024-07-01T14:00:49.481Z",
+    "content": "",
+    "prettyUrl": "xn--sr8hvo.ws",
+    "permalink": "/bookmarks/2024-07-01-xn-sr8hvo-ws/"
+  },
+  {
     "title": "GitButler | Git Branching, Refined",
     "link": "https://gitbutler.com/",
     "excerpt": "A Git client for simultaneous branches on top of your existing workflow..",
