@@ -11,5 +11,5 @@ src/site/misc/admin/assets
 public/js/count.js
 src/site/js/open_heart_element.js
 src/site/_includes/css/prism-okaidia.css
-
+src/site/_data/bookmarks.json
 public/admin
