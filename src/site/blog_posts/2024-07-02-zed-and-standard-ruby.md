@@ -7,6 +7,7 @@ tags:
   - editor
   - programming
 syndications:
+  - https://tacocat.space/@jonas/112718460575519913
 ---
 
 I’ve been using **[Zed](https://zed.dev)** as my main editor for the last two weeks or so. It feels great, lean, and fast compared to VS Code that I’ve been using for years. Last time I tried Zed, there were no possibilities to install extensions or add/customize language servers, [but this has changed](https://zed.dev/blog/language-extensions-part-1), and there are more and more extensions being built.
