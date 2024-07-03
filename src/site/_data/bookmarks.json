@@ -1,5 +1,19 @@
 [
   {
+    "title": "Hoarder",
+    "link": "https://hoarder.app/",
+    "excerpt": "The Bookmark Everything app. Hoard links, notes, and images and they will get automatically tagged AI.",
+    "tags": [
+      "selfhosting",
+      "bookmarking",
+      "bookmarks"
+    ],
+    "date": "2024-07-02T21:33:16.289Z",
+    "content": "",
+    "prettyUrl": "hoarder.app",
+    "permalink": "/bookmarks/2024-07-02-hoarder-app/"
+  },
+  {
     "title": "An IndieWeb Webring",
     "link": "https://xn--sr8hvo.ws/",
     "excerpt": "",
