@@ -1,5 +1,21 @@
 [
   {
+    "title": "FindMyCat - The Open-Source Pet Tracker",
+    "link": "https://www.findmycat.io/",
+    "excerpt": "",
+    "tags": [
+      "pets",
+      "tracking",
+      "hardware",
+      "opensource",
+      "tracker"
+    ],
+    "date": "2024-07-30T16:45:55.234Z",
+    "content": "",
+    "prettyUrl": "www.findmycat.io",
+    "permalink": "/bookmarks/2024-07-30-www-findmycat-io/"
+  },
+  {
     "title": "Hoarder",
     "link": "https://hoarder.app/",
     "excerpt": "The Bookmark Everything app. Hoard links, notes, and images and they will get automatically tagged AI.",
