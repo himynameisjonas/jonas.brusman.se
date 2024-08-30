@@ -10,6 +10,32 @@ syndications:
   - https://tacocat.space/@jonas/112718460575519913
 ---
 
+### Update 2024-08-30
+You can enable Standard formatting with the built in ruby-lsp extension in Zed. Just add this to your `config.json`:
+
+```json
+"languages": {
+  "Ruby": {
+    "language_servers": ["ruby-lsp", "!solargraph", "!rubocop"],
+    "formatter": "language_server"
+  },
+},
+"lsp": {
+  "ruby-lsp": {
+    "initialization_options": {
+      "enabledFeatures": {
+        "diagnostics": false,
+        "formatting": true
+      },
+      "formatter": "standard"
+    }
+  }
+}
+
+```
+
+# Zed and Standard Ruby
+
 I’ve been using **[Zed](https://zed.dev)** as my main editor for the last two weeks or so. It feels great, lean, and fast compared to VS Code that I’ve been using for years. Last time I tried Zed, there were no possibilities to install extensions or add/customize language servers, [but this has changed](https://zed.dev/blog/language-extensions-part-1), and there are more and more extensions being built.
 
 I missed one particular feature while working with Ruby code, **formatting with [Standard](https://github.com/standardrb/standard)** (*"…a linter & formatter built on RuboCop…"*) so I set out on a mission to try to create one, *how hard can it be?*

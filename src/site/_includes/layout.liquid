@@ -24,7 +24,7 @@
     {% capture page_excerpt %}
     {% excerpt description, content, title %}
     {% endcapture %}
-    <meta name="description" content="{{ page_excerpt | truncate: 200 }}">
+    <meta name="description" content="{{ page_excerpt | escape_once | truncate: 200 }}">
     {% if photos.length > 0 -%}
       {%- assign photo = photos[0] -%}
       <meta property="og:image" content="{% image_url photo, true %}">
