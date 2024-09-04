@@ -38,7 +38,7 @@
   "dependencies": {
     "@11ty/eleventy-plugin-vite": "^5.0.0-alpha.1",
     "@tinacms/auth": "*",
-    "@tinacms/cli": "^1.5.42",
+    "@tinacms/cli": "^1.5.53",
     "autoprefixer": "^10.4.19",
     "express": "^4.18.2",
     "masonry-layout": "^4.2.2",
