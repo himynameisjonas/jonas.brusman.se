@@ -1,5 +1,20 @@
 [
   {
+    "title": "The StoryGraph",
+    "link": "https://thestorygraph.com/",
+    "excerpt": "We'll help you track your reading and choose your next book.",
+    "tags": [
+      "books",
+      "tracker",
+      "tracking",
+      "recommendation"
+    ],
+    "date": "2024-09-13T06:32:56.798Z",
+    "content": "",
+    "prettyUrl": "thestorygraph.com",
+    "permalink": "/bookmarks/2024-09-13-thestorygraph-com/"
+  },
+  {
     "title": "FindMyCat - The Open-Source Pet Tracker",
     "link": "https://www.findmycat.io/",
     "excerpt": "",
