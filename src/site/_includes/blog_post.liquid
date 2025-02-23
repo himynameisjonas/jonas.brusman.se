@@ -1,36 +1,35 @@
 ---
 layout: layout.liquid
 ---
-<article class="flex flex-col h-entry items-center">
-  <h1 class="font-black w-content py-6 sm:py-6 px-6 sm:px-8 text-3xl sm:text-4xl md:text-5xl tracking-tight leading-normal sm:leading-normal md:leading-normal p-name text-balance text-salmon-200 bg-purple_heart rounded-t">
+<article class="h-entry flex flex-col items-center overflow-auto">
+  <h1 class="w-content p-name px-4 text-4xl leading-normal font-black tracking-tight text-balance text-salmon-400 sm:px-0 sm:text-5xl sm:leading-normal md:text-6xl md:leading-normal">
     {{ headline | default: title }}
   </h1>
 
   <div class="w-content e-content bg-white">
-    <div class="px-4 py-5 sm:p-6 markdown">
+    <div class="markdown px-4 py-5 sm:p-6">
       {% if photos %}
-        {% for photo in photos %}
-          <div class="child">
-            <div class="">
-              <img
-                src="{{ photo }}"
-                alt="{{ title }}"
-                loading="{% if forloop.index == 1 %}eager{% else %}lazy{% endif %}"
-                eleventy:widths="800,1200,2000,3000,4000"
-                sizes="(max-width: 1000px) 100vw, 133vh"
-                class="u-photo block max-h-screen object-contain p-4 lg:p-6 w-auto bg-white"
-              >
-            </div>
-          </div>
-        {% endfor %}
-        <hr class="border-none mb-4 md:mb-8">
+        <div class="js-gallery">
+          {% for photo in photos %}
+            {% lightbox_link photo %}
+            <img
+              src="{{ photo }}"
+              alt="{{ title }}"
+              loading="{% if forloop.index == 1 %}eager{% else %}lazy{% endif %}"
+              eleventy:widths="800,1200,2000,3000,4000"
+              sizes="(max-width: 1000px) 100vw, 133vh"
+              class="u-photo block max-h-screen w-auto bg-white object-contain pb-4 lg:pb-6"
+            >
+            {% endlightbox_link %}
+          {% endfor %}
+        </div>
       {% endif %}
 
       {{ content }}
 
       {% unless no_heart %}
         <open-heart
-          class="mx-auto my-3 block w-fit rounded-md bg-white px-2.5 py-1.5 pb-1 text-lg font-semibold text-salmon-600 shadow-sm ring-1 ring-inset ring-salmon-300 hover:bg-salmon-50"
+          class="mx-auto my-3 block w-fit rounded-md bg-white px-2.5 py-1.5 pb-1 text-lg font-semibold text-salmon-600 shadow-xs ring-1 ring-salmon-300 ring-inset hover:bg-salmon-50"
           href="/open_heart?id={{page.url}}"
           emoji="❤️"
         >
@@ -57,7 +56,7 @@ layout: layout.liquid
       </template>
     {% endif %}
 
-    <div class="w-content mb-2 text-gray-700 bg-salmon-200 shadow-inner">
+    <div class="w-content mb-2 bg-salmon-100 text-gray-700 shadow-inner">
       <div class="px-4 py-5 sm:p-6">
         <table class="w-full">
           {% if page.date %}
@@ -79,7 +78,7 @@ layout: layout.liquid
               <td class="footer-data">
                 {% for tag in tags %}
                   {% unless tag == 'blogPost' %}
-                    <a href="/tags/{{tag}}/" class="prefix-hash link p-category">{{ tag }}</a>
+                    <a href="/tags/{{tag}}/" class="prefix-hash p-category link">{{ tag }}</a>
                   {% endunless %}
                 {% endfor %}
               </td>
@@ -91,7 +90,7 @@ layout: layout.liquid
             <tr>
               <th class="footer-header whitespace-nowrap">Related posts</th>
               <td class="footer-data">
-                <ul class="list-disc list-inside">
+                <ul class="list-inside list-disc">
                   {% for similarPost in similar limit: 3 -%}
                     <li class="mb-1">
                       <a href="{{ similarPost.url }}" class="link">{{ similarPost.data.title }}</a>
@@ -104,7 +103,7 @@ layout: layout.liquid
 
           {% if syndications.length > 0 %}
             <tr>
-              <th class="footer-header hidden">This post elsewhere</th>
+              <th class="hidden footer-header">This post elsewhere</th>
               <td class="hidden align-baseline">
                 {% for url in syndications -%}
                   <a href="{{ url }}" rel="syndication" class="u-syndication link">{{ url }}</a>
@@ -130,15 +129,15 @@ layout: layout.liquid
           {% if mastodonPost %}
             <tr>
               <td class="footer-data">
-                <mastodon-post class="flex flex-wrap gap-y-1 gap-x-3">
-                  <a href="{{mastodonPost}}" class="link whitespace-nowrap">Discuss on Mastodon</a>
+                <mastodon-post class="flex flex-wrap gap-x-3 gap-y-1">
+                  <a href="{{mastodonPost}}" class="whitespace-nowrap link">Discuss on Mastodon</a>
                 </mastodon-post>
               </td>
             </tr>
           {% endif %}
         </table>
 
-        <a rel="author" class="hidden p-author h-card" href="https://jonas.brusman.se">Jonas Brusman</a>
+        <a rel="author" class="p-author h-card hidden" href="https://jonas.brusman.se">Jonas Brusman</a>
       </div>
     </div>
   {% endunless %}

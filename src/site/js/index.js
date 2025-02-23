@@ -1,18 +1,13 @@
 import { listen } from "quicklink";
-let masonry;
+import PhotoSwipeLightbox from "photoswipe/lightbox";
+import "photoswipe/style.css";
 
-async function triggerMasonary() {
-  var elem = document.querySelector(".photos-grid");
-  if (!elem) return;
-
-  const Masonry = await import("masonry-layout").then((m) => m.default);
-
-  masonry = new Masonry(elem, {
-    itemSelector: ".grid-item",
-    columnWidth: ".grid-item",
-    percentPosition: true,
-  });
-}
+const lightbox = new PhotoSwipeLightbox({
+  gallery: ".js-gallery",
+  children: "a",
+  pswpModule: () => import("photoswipe"),
+});
+lightbox.init();
 
 function fetchHeartCounts() {
   for (const oh of document.querySelectorAll("open-heart")) {
@@ -63,7 +58,6 @@ function initInfiniteScroll() {
 
             if (newPhotos) {
               document.querySelector(".photos-grid").append(...newPhotos);
-              masonry.appended(newPhotos);
             }
             if (newLoadMore) {
               loadMore.setAttribute("href", newLoadMore.getAttribute("href"));
@@ -80,7 +74,6 @@ function initInfiniteScroll() {
 }
 
 function init() {
-  triggerMasonary();
   initOpenHeart();
   initQuicklink();
   initInfiniteScroll();

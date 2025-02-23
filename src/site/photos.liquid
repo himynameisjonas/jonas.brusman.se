@@ -8,7 +8,7 @@ pagination:
   alias: posts
   reverse: true
 ---
-<div class="flex flex-col w-content bg-white">
+<div class="w-content flex flex-col">
   <h2 class="header-block">
     Photo posts
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="header-icon">
@@ -17,24 +17,24 @@ pagination:
     </svg>
   </h2>
 
-  <div class="flex flex-wrap photos-grid">
+  <div class="photos-grid flex flex-wrap bg-white px-2 py-2">
     {% for post in posts %}
       {% include 'list_photos_post' %}
     {% endfor %}
   </div>
 
-  <nav class="border-t-4 border-purple_heart mb-2 mt-2 pt-2">
+  <nav class="mt-2 mb-2 border-t-4 border-purple_heart pt-2">
     <ol class="flex justify-center">
       {% if pagination.href.previous -%}
         <li>
-          <a href="{{ pagination.href.previous }}" class="link py-1 px-2 flex gap-1 items-center">
+          <a href="{{ pagination.href.previous }}" class="flex items-center gap-1 px-2 py-1 link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-4 h-4"
+              class="h-4 w-4"
             >
               <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
             </svg>
@@ -45,7 +45,7 @@ pagination:
       {%- endif %}
       {% if pagination.href.next -%}
         <li>
-          <a href="{{ pagination.href.next }}" class="link py-1 px-2 flex gap-1 items-center js-photos-next">
+          <a href="{{ pagination.href.next }}" class="js-photos-next flex items-center gap-1 px-2 py-1 link">
             Next
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ pagination:
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-4 h-4"
+              class="h-4 w-4"
             >
               <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
             </svg>
