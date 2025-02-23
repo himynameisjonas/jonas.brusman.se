@@ -1,117 +1,119 @@
 ---
 layout: layout.liquid
 ---
-<div class="flex flex-col w-content bg-white">
-  <h1 class="header-block">
-    {{ headline | default: title }}
-    {{
-      icon
-      | default: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="header-icon"> <path fill-rule="evenodd" d="M4.5 3.75a3 3 0 0 0-3 3v10.5a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V6.75a3 3 0 0 0-3-3h-15Zm4.125 3a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Zm-3.873 8.703a4.126 4.126 0 0 1 7.746 0 .75.75 0 0 1-.351.92 7.47 7.47 0 0 1-3.522.877 7.47 7.47 0 0 1-3.522-.877.75.75 0 0 1-.351-.92ZM15 8.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15ZM14.25 12a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H15a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15Z" clip-rule="evenodd" /> </svg>'
-    }}
-  </h1>
-  <div class="px-4 py-5 sm:p-6 markdown">
-    {% if photos %}
-      {% for photo in photos %}
-        <div class="flex flex-col items-center">
-          <div class="mb-10 max-w-screen-h">
-            <img
-              src="{{ photo }}"
-              alt="{{ title }}"
-              eleventy:widths="800,1200,2000,3000,4000"
-              sizes="(max-width: 1000px) 100vw, 133vh"
-              class="u-photo max-h-screen object-contain bg-white"
-            >
+<article class="flex flex-col h-entry items-center">
+  <div class="flex flex-col w-content">
+    <h1 class="header-block">
+      {{ headline | default: title }}
+      {{
+        icon
+        | default: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="header-icon"> <path fill-rule="evenodd" d="M4.5 3.75a3 3 0 0 0-3 3v10.5a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V6.75a3 3 0 0 0-3-3h-15Zm4.125 3a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Zm-3.873 8.703a4.126 4.126 0 0 1 7.746 0 .75.75 0 0 1-.351.92 7.47 7.47 0 0 1-3.522.877 7.47 7.47 0 0 1-3.522-.877.75.75 0 0 1-.351-.92ZM15 8.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15ZM14.25 12a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H15a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15Z" clip-rule="evenodd" /> </svg>'
+      }}
+    </h1>
+    <div class="px-4 py-5 sm:p-6 markdown bg-white">
+      {% if photos %}
+        {% for photo in photos %}
+          <div class="flex flex-col items-center">
+            <div class="mb-10 max-w-[theme(screens.h)]">
+              <img
+                src="{{ photo }}"
+                alt="{{ title }}"
+                eleventy:widths="800,1200,2000,3000,4000"
+                sizes="(max-width: 1000px) 100vw, 133vh"
+                class="u-photo max-h-screen object-contain bg-white"
+              >
+            </div>
           </div>
-        </div>
-      {% endfor %}
-    {% endif %}
+        {% endfor %}
+      {% endif %}
 
-    {{ content }}
-    {% unless no_heart %}
-      <open-heart
-        class="mx-auto my-3 block w-fit rounded px-2 py-1"
-        href="https://emojis.jonas-brusman-se.pages.dev/open_heart?id={{page.url}}"
-        emoji="❤️"
-        >❤️</open-heart
-      >
-    {% endunless %}
-  </div>
-</div>
-{% unless no_footer %}
-  <div class="w-content mb-2 text-gray-700 bg-salmon-200 shadow-inner">
-    <div class="px-4 py-5 sm:p-6">
-      <table class="w-full">
-        {% if page.date %}
-          <tr>
-            <th class="footer-header">{{ date_desc | default: 'Published at' }}</th>
-            <td class="footer-data">
-              <time class="dt-published" page.datetime="{{page.date | date: "%Y-%m-%d" }}">
-                <a href="{{page.url}}" class="u-url">{{ page.date | date: '%Y-%m-%d' }}</a>
-              </time>
-            </td>
-          </tr>
-        {% endif %}
-
-        {% if tags.length > 0 %}
-          <tr>
-            <th class="footer-header">Tags</th>
-            <td class="footer-data">
-              {% for tag in tags %}
-                {% unless tag == 'blogPost' %}
-                  <a href="/tags/{{tag}}/" class="prefix-hash link p-category">{{ tag }}</a>
-                {% endunless %}
-              {% endfor %}
-            </td>
-          </tr>
-        {% endif %}
-
-        {% assign similar = collections.all | similarPosts: page.inputPath, tags %}
-        {% if similar.length > 0 %}
-          <tr>
-            <th class="footer-header">Related posts</th>
-            <td class="footer-data">
-              <ul class="list-disc list-inside">
-                {% for similarPost in similar limit: 3 -%}
-                  <li class="mb-1">
-                    <a href="{{ similarPost.url }}" class="link">{{ similarPost.data.title }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </td>
-          </tr>
-        {% endif %}
-
-        {% if syndications.length > 0 %}
-          <tr>
-            <th class="footer-header hidden">This post elsewhere</th>
-            <td class="hidden font-light align-baseline">
-              {% for url in syndications -%}
-                <a href="{{ url }}" rel="syndication" class="u-syndication link">{{ url }}</a>
-              {% endfor %}
-            </td>
-          </tr>
-        {% endif %}
-
-        <tr>
-          <th class="footer-header">Have some thoughts?</th>
-          <td class="footer-data">
-            <a href="mailto:blog@brusman.se?subject=Re: {{title}}" class="link">Reply by email</a>
-          </td>
-        </tr>
-      </table>
-
-      <script>
-        window.customElements.whenDefined('open-heart').then(() => {
-          for (const oh of document.querySelectorAll('open-heart')) {
-            oh.getCount();
-          }
-        });
-        window.addEventListener('open-heart', (e) => {
-          e && e.target && e.target.getCount && e.target.getCount();
-        });
-      </script>
-
-      <a rel="author" class="hidden p-author h-card" href="https://jonas.brusman.se">Jonas Brusman</a>
+      {{ content }}
+      {% unless no_heart %}
+        <open-heart
+          class="mx-auto my-3 block w-fit rounded-sm px-2 py-1"
+          href="https://emojis.jonas-brusman-se.pages.dev/open_heart?id={{page.url}}"
+          emoji="❤️"
+          >❤️</open-heart
+        >
+      {% endunless %}
     </div>
   </div>
-{% endunless %}
+  {% unless no_footer %}
+    <div class="w-content mb-2 text-gray-700 bg-salmon-200 shadow-inner">
+      <div class="px-4 py-5 sm:p-6">
+        <table class="w-full">
+          {% if page.date %}
+            <tr>
+              <th class="footer-header">{{ date_desc | default: 'Published at' }}</th>
+              <td class="footer-data">
+                <time class="dt-published" page.datetime="{{page.date | date: "%Y-%m-%d" }}">
+                  <a href="{{page.url}}" class="u-url">{{ page.date | date: '%Y-%m-%d' }}</a>
+                </time>
+              </td>
+            </tr>
+          {% endif %}
+
+          {% if tags.length > 0 %}
+            <tr>
+              <th class="footer-header">Tags</th>
+              <td class="footer-data">
+                {% for tag in tags %}
+                  {% unless tag == 'blogPost' %}
+                    <a href="/tags/{{tag}}/" class="prefix-hash link p-category">{{ tag }}</a>
+                  {% endunless %}
+                {% endfor %}
+              </td>
+            </tr>
+          {% endif %}
+
+          {% assign similar = collections.all | similarPosts: page.inputPath, tags %}
+          {% if similar.length > 0 %}
+            <tr>
+              <th class="footer-header">Related posts</th>
+              <td class="footer-data">
+                <ul class="list-disc list-inside">
+                  {% for similarPost in similar limit: 3 -%}
+                    <li class="mb-1">
+                      <a href="{{ similarPost.url }}" class="link">{{ similarPost.data.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </td>
+            </tr>
+          {% endif %}
+
+          {% if syndications.length > 0 %}
+            <tr>
+              <th class="footer-header hidden">This post elsewhere</th>
+              <td class="hidden font-light align-baseline">
+                {% for url in syndications -%}
+                  <a href="{{ url }}" rel="syndication" class="u-syndication link">{{ url }}</a>
+                {% endfor %}
+              </td>
+            </tr>
+          {% endif %}
+
+          <tr>
+            <th class="footer-header">Have some thoughts?</th>
+            <td class="footer-data">
+              <a href="mailto:blog@brusman.se?subject=Re: {{title}}" class="link">Reply by email</a>
+            </td>
+          </tr>
+        </table>
+
+        <script>
+          window.customElements.whenDefined('open-heart').then(() => {
+            for (const oh of document.querySelectorAll('open-heart')) {
+              oh.getCount();
+            }
+          });
+          window.addEventListener('open-heart', (e) => {
+            e && e.target && e.target.getCount && e.target.getCount();
+          });
+        </script>
+
+        <a rel="author" class="hidden p-author h-card" href="https://jonas.brusman.se">Jonas Brusman</a>
+      </div>
+    </div>
+  {% endunless %}
+</article>

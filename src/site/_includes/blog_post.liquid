@@ -2,27 +2,27 @@
 layout: layout.liquid
 ---
 <article class="flex flex-col h-entry items-center">
-  <h1 class="font-black w-content py-6 sm:py-6 px-6 sm:px-8 text-3xl sm:text-4xl md:text-5xl tracking-tight leading-normal sm:leading-normal md:leading-normal p-name text-balance text-salmon-200 bg-purple_heart rounded-t">
+  <h1 class="font-black w-content text-4xl sm:text-5xl md:text-6xl tracking-tight leading-normal sm:leading-normal md:leading-normal p-name text-balance text-salmon-400">
     {{ headline | default: title }}
   </h1>
 
   <div class="w-content e-content bg-white">
     <div class="px-4 py-5 sm:p-6 markdown">
       {% if photos %}
-        {% for photo in photos %}
-          <div class="child">
-            <div class="">
-              <img
-                src="{{ photo }}"
-                alt="{{ title }}"
-                loading="{% if forloop.index == 1 %}eager{% else %}lazy{% endif %}"
-                eleventy:widths="800,1200,2000,3000,4000"
-                sizes="(max-width: 1000px) 100vw, 133vh"
-                class="u-photo block max-h-screen object-contain p-4 lg:p-6 w-auto bg-white"
-              >
-            </div>
-          </div>
-        {% endfor %}
+        <div class="js-gallery">
+          {% for photo in photos %}
+            {% lightbox_link photo %}
+            <img
+              src="{{ photo }}"
+              alt="{{ title }}"
+              loading="{% if forloop.index == 1 %}eager{% else %}lazy{% endif %}"
+              eleventy:widths="800,1200,2000,3000,4000"
+              sizes="(max-width: 1000px) 100vw, 133vh"
+              class="u-photo block max-h-screen object-contain pb-4 lg:pb-6 w-auto bg-white"
+            >
+            {% endlightbox_link %}
+          {% endfor %}
+        </div>
         <hr class="border-none mb-4 md:mb-8">
       {% endif %}
 
@@ -30,7 +30,7 @@ layout: layout.liquid
 
       {% unless no_heart %}
         <open-heart
-          class="mx-auto my-3 block w-fit rounded-md bg-white px-2.5 py-1.5 pb-1 text-lg font-semibold text-salmon-600 shadow-sm ring-1 ring-inset ring-salmon-300 hover:bg-salmon-50"
+          class="mx-auto my-3 block w-fit rounded-md bg-white px-2.5 py-1.5 pb-1 text-lg font-semibold text-salmon-600 shadow-xs ring-1 ring-inset ring-salmon-300 hover:bg-salmon-50"
           href="/open_heart?id={{page.url}}"
           emoji="❤️"
         >

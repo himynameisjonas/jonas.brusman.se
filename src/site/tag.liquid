@@ -18,7 +18,7 @@ eleventyExcludeFromCollections: true
 {% assign tagged_photos = tagged_posts | where: 'data.blogPostType', 'photo' %}
 
 {% if tagged_articles.size > 0 %}
-  <div class="flex flex-col w-content bg-white">
+  <div class="flex flex-col w-content">
     <h2 class="header-block">
       <span>
         Articles tagged with <span class="prefix-hash">{{ tag }}</span>
@@ -35,7 +35,7 @@ eleventyExcludeFromCollections: true
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z" />
       </svg>
     </h2>
-    <div class="px-4 py-5 sm:p-6">
+    <div class="px-4 py-5 sm:p-6 bg-white">
       {% for post in tagged_articles reversed %}
         {% unless post.data.photos %}
           {% include 'list_article' %}
@@ -46,7 +46,7 @@ eleventyExcludeFromCollections: true
 {% endif %}
 
 {% if tagged_photos.size > 0 %}
-  <div class="flex flex-col w-content bg-white {% if tagged_articles.size > 0 %}mt-5{% endif %}">
+  <div class="flex flex-col w-content {% if tagged_articles.size > 0 %}mt-5{% endif %}">
     <h2 class="header-block">
       <span>
         Photos tagged with <span class="prefix-hash">{{ tag }}</span>
@@ -63,7 +63,7 @@ eleventyExcludeFromCollections: true
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z" />
       </svg>
     </h2>
-    <div class="px-4 py-5 sm:p-6">
+    <div class="px-4 py-5 sm:p-6 bg-white">
       <div class="flex flex-wrap -mx-4 photos-grid">
         {% assign photoWidths = 'w-full md:w-1/2 xl:w-1/2 p-4' %}
         {% for post in tagged_photos reversed %}

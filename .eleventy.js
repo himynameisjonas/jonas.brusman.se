@@ -1,5 +1,5 @@
 import extractExcerpt from "./src/11ty/extract_excerpt.cjs";
-import imageUrl from "./src/11ty/image_url.cjs";
+import { imageUrl, lightboxLink } from "./src/11ty/image_url.cjs";
 import minifyHtml from "./src/11ty/minify_html.cjs";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import similarPosts from "./src/11ty/similar_posts.cjs";
@@ -79,7 +79,9 @@ export default async function (eleventyConfig) {
   eleventyConfig.addFilter("similarPosts", similarPosts);
 
   eleventyConfig.addShortcode("excerpt", extractExcerpt);
-  eleventyConfig.addShortcode("image_url", imageUrl.shortcode);
+
+  eleventyConfig.addShortcode("image_url", imageUrl);
+  eleventyConfig.addPairedShortcode("lightbox_link", lightboxLink);
   eleventyConfig.addShortcode("tracking_script", trackingScript);
 
   return {

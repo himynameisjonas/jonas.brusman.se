@@ -6,8 +6,8 @@ pagination:
     alias: bookmark
 permalink: "{{ bookmark.permalink }}/"
 ---
-<article class="flex flex-col h-entry items-center">
-  <div class="w-content py-6 px-8 text-salmon bg-purple_heart rounded-t-lg">
+<article class="flex flex-col h-entry w-content">
+  <div class="header-block flex flex-col items-start">
     <a
       href="{{ bookmark.link }}"
       class="u-bookmark-of "
@@ -17,24 +17,24 @@ permalink: "{{ bookmark.permalink }}/"
         {{ bookmark.title | default: title | replace: 'Ö', 'ö' }}
       </h1>
     </a>
-    <a href="{{bookmark.link}}" class="text-salmon w-content mt-4 block text-xl" rel="noopener">
+    <a href="{{bookmark.link}}" class="text-salmon mt-2 block text-xl" rel="noopener">
       {{- bookmark.prettyUrl -}}
     </a>
   </div>
 
-  <div class="markdown w-content e-content bg-white">
+  <div class="markdown e-content bg-white">
     <div class="px-4 py-5 sm:p-6">
       <p>{{ bookmark.content }}</p>
 
       {% if bookmark.excerpt.length > 1 %}
-        <blockquote class="h-cite font-light w-content e-content text-gray-500">
+        <blockquote class="h-cite font-light e-content text-gray-500">
           {{ bookmark.excerpt -}}
         </blockquote>
       {% endif %}
     </div>
   </div>
 
-  <div class="w-content mb-2 text-gray-700 bg-salmon-200">
+  <div class="mb-2 text-gray-700 bg-salmon-200">
     <div class="px-4 py-5 sm:p-6">
       <table class="w-full">
         {% if bookmark.date %}

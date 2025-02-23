@@ -47,8 +47,8 @@
     <meta name="generator" content="{{ eleventy.generator }}">
     <link rel="authorization_endpoint" href="https://indieauth.com/auth">
   </head>
-  <body class="font-light flex flex-col sm:p-4 pb-8 bg-gradient-salmon bg-fixed text-gray-700 min-h-screen transition-fade">
-    <header class="flex px-4 sm:px-0 mb-10 mt-3 md:mt-6 flex-wrap gap-x-10 gap-y-6 w-content justify-center md:justify-between">
+  <body class="font-light flex gap-10 sm:p-8 pb-8 bg-linear-to-b from-salmon-50 to-white bg-fixed text-gray-700 min-h-screen transition-fade">
+    <header class="flex flex-col mb-10 mt-3 gap-4 justify-start">
       <a
         href="/"
         rel="author"
@@ -57,9 +57,10 @@
           p-name text-3xl font-tropic
         "
       >
-        Jonas Brusman
+        Jonas<br>
+        Brusman
       </a>
-      <nav class="flex flex-wrap items-baseline gap-x-6 md:gap-x-6 gap-y-4 text-xl justify-center">
+      <nav class="flex flex-col flex-wrap items-baseline gap-3 text-xl">
         <a href="/" class="nav-link {% if page.url == "/" %}nav-link--active{% endif %}">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -156,9 +157,7 @@
         </a>
       </nav>
     </header>
-    <main class="flex flex-col">
-      {{ content }}
-    </main>
+    {{ content }}
     <script src="/js/index.js" type="module" defer></script>
     {% tracking_script -%}
   </body>

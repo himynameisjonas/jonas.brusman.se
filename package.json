@@ -29,20 +29,20 @@
     "@11ty/eleventy-plugin-rss": "1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "5.0.0",
     "@shopify/prettier-plugin-liquid": "^1.4.4",
+    "@tailwindcss/postcss": "^4.0.8",
     "html-minifier": "4.0.0",
     "npm-run-all2": "6.1.2",
     "prettier": "^3.1.1",
     "striptags": "3.2.0",
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "^4.0.8"
   },
   "dependencies": {
     "@11ty/eleventy-plugin-vite": "^5.0.0-alpha.1",
     "@tinacms/auth": "*",
     "@tinacms/cli": "^1.5.42",
-    "autoprefixer": "^10.4.19",
     "express": "^4.18.2",
-    "masonry-layout": "^4.2.2",
     "next-tinacms-s3": "^2.0.0",
+    "photoswipe": "^5.4.4",
     "postcss": "^8.4.38",
     "quicklink": "^2.3.0",
     "serverless-http": "^3.2.0",

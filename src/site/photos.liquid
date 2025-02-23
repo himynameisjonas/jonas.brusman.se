@@ -8,7 +8,7 @@ pagination:
   alias: posts
   reverse: true
 ---
-<div class="flex flex-col w-content bg-white">
+<div class="flex flex-col w-content">
   <h2 class="header-block">
     Photo posts
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="header-icon">
@@ -17,7 +17,7 @@ pagination:
     </svg>
   </h2>
 
-  <div class="flex flex-wrap photos-grid">
+  <div class="flex flex-wrap photos-grid bg-white px-2 py-2">
     {% for post in posts %}
       {% include 'list_photos_post' %}
     {% endfor %}

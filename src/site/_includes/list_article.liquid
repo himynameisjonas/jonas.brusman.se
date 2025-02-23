@@ -13,7 +13,7 @@
     •
     {% for tag in post.data.tags %}
       {% unless tag == 'blogPost' %}
-        <a href="/tags/{{tag}}" class="prefix-hash hover:text-salmon">{{ tag }}</a>
+        <a href="/tags/{{tag}}/" class="prefix-hash hover:text-salmon">{{ tag }}</a>
       {% endunless %}
     {% endfor %}
   </div>
