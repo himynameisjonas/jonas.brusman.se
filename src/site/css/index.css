@@ -20,12 +20,10 @@
   --color-salmon-950: oklch(26.94% 0.0987 13.06);
   --color-salmon: oklch(79.13% 0.1334 12.73);
 
-  --font-sans:
-    Overpass, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-tropic:
-    Tropi Land, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: Overpass, ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-tropic: Tropi Land, ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 @utility header-block {
@@ -85,10 +83,9 @@
     src:
       url(/fonts/Overpass-VariableFont_wght-subset.woff2) format("woff2"),
       url(/fonts/Overpass-VariableFont_wght-subset.zopfli.woff) format("woff");
-    unicode-range:
-      U+A, U+20-7E, U+C4, U+C5, U+D6, U+E4, U+E5, U+F3, U+F6, U+2013, U+2014,
-      U+2019, U+201C, U+201D, U+2022, U+2026, U+2080, U+2081, U+2764, U+FE0F,
-      U+1F465, U+1F629;
+    unicode-range: U+A, U+20-7E, U+C4, U+C5, U+D6, U+E4, U+E5, U+F3, U+F6,
+      U+2013, U+2014, U+2019, U+201C, U+201D, U+2022, U+2026, U+2080, U+2081,
+      U+2764, U+FE0F, U+1F465, U+1F629;
   }
 }
 
@@ -97,7 +94,7 @@
 }
 
 .w-content {
-  @apply w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl;
+  @apply w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-4xl;
 }
 
 .prefix-hash:before {
