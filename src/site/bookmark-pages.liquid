@@ -6,18 +6,18 @@ pagination:
     alias: bookmark
 permalink: "{{ bookmark.permalink }}/"
 ---
-<article class="flex flex-col h-entry w-content">
+<article class="h-entry w-content flex flex-col">
   <div class="header-block flex flex-col items-start">
     <a
       href="{{ bookmark.link }}"
       class="u-bookmark-of "
       rel="noopener"
     >
-      <h1 class="font-black text-3xl sm:text-4xl md:text-5xl tracking-tight leading-normal sm:leading-normal md:leading-normal text-balance">
+      <h1 class="text-3xl leading-normal font-black tracking-tight text-balance sm:text-4xl sm:leading-normal md:text-5xl md:leading-normal">
         {{ bookmark.title | default: title | replace: 'Ö', 'ö' }}
       </h1>
     </a>
-    <a href="{{bookmark.link}}" class="text-salmon mt-2 block text-xl" rel="noopener">
+    <a href="{{bookmark.link}}" class="mt-2 block text-xl text-salmon" rel="noopener">
       {{- bookmark.prettyUrl -}}
     </a>
   </div>
@@ -27,14 +27,14 @@ permalink: "{{ bookmark.permalink }}/"
       <p>{{ bookmark.content }}</p>
 
       {% if bookmark.excerpt.length > 1 %}
-        <blockquote class="h-cite font-light e-content text-gray-500">
+        <blockquote class="h-cite e-content font-light text-gray-500">
           {{ bookmark.excerpt -}}
         </blockquote>
       {% endif %}
     </div>
   </div>
 
-  <div class="mb-2 text-gray-700 bg-salmon-200">
+  <div class="mb-2 bg-salmon-200 text-gray-700">
     <div class="px-4 py-5 sm:p-6">
       <table class="w-full">
         {% if bookmark.date %}
@@ -61,7 +61,7 @@ permalink: "{{ bookmark.permalink }}/"
           </tr>
         {% endif %}
       </table>
-      <a rel="author" class="hidden p-author h-card" href="https://jonas.brusman.se">Jonas Brusman</a>
+      <a rel="author" class="p-author h-card hidden" href="https://jonas.brusman.se">Jonas Brusman</a>
     </div>
   </div>
 </article>

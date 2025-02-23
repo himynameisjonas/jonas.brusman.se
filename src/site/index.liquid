@@ -3,7 +3,7 @@ layout: layout.liquid
 description: Jonas Brusman's blog. Photos and some tech / code stuff.
 title: Blog
 ---
-<div class="text-gray-700 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 items-start max-w-5xl">
+<div class="grid max-w-5xl grid-cols-1 items-start gap-x-8 gap-y-10 text-gray-700 md:grid-cols-2">
   <div>
     <a href="/articles/">
       <h2 class="header-block">
@@ -21,8 +21,8 @@ title: Blog
           {% include 'list_article' %}
         {% endfor %}
 
-        <div class="border-t-4 border-purple_heart mb-2 mt-2 pt-2">
-          <a href="/articles/" class="link block text-center">View all articles</a>
+        <div class="mt-2 mb-2 border-t-4 border-purple_heart pt-2">
+          <a href="/articles/" class="block text-center link">View all articles</a>
         </div>
       </div>
     </div>
@@ -47,14 +47,14 @@ title: Blog
             {% include 'list_photos_post' %}
           {% endfor %}
         </div>
-        <div class="border-t-4 border-purple_heart mb-2 mt-2 pt-2">
-          <a href="/photos/" class="link block text-center">View all photos</a>
+        <div class="mt-2 mb-2 border-t-4 border-purple_heart pt-2">
+          <a href="/photos/" class="block text-center link">View all photos</a>
         </div>
       </div>
     </div>
   </div>
-  <div class="bg-white md:col-span-2 text-sm">
-    <div class="px-4 py-5 sm:p-6 flex justify-center divide-x divide-solid divide-purple_heart">
+  <div class="bg-white text-sm md:col-span-2">
+    <div class="flex justify-center divide-x divide-solid divide-purple_heart px-4 py-5 sm:p-6">
       <div class="px-4">Made with ❤️ in Sweden</div>
 
       <div class="px-4">
@@ -73,7 +73,7 @@ title: Blog
   </div>
 </div>
 
-<div class="hidden h-card">
+<div class="h-card hidden">
   <a class="p-name u-url" rel="me" href="https://jonas.brusman.se/">Jonas Brusman</a>
   <span class="p-nickname">himynameisjonas</span>
   <p class="p-note">

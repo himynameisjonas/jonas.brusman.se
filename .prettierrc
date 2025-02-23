@@ -1,3 +1,4 @@
 {
-  "plugins": ["@shopify/prettier-plugin-liquid"]
+  "plugins": ["@shopify/prettier-plugin-liquid", "prettier-plugin-tailwindcss"],
+  "tailwindStylesheet": "./src/site/css/index.css"
 }

@@ -47,19 +47,19 @@
     <meta name="generator" content="{{ eleventy.generator }}">
     <link rel="authorization_endpoint" href="https://indieauth.com/auth">
   </head>
-  <body class="font-light flex flex-col sm:flex-row gap-2 sm:gap-10 sm:p-8 pb-8 bg-linear-to-b from-salmon-50 to-white bg-fixed text-gray-700 min-h-screen transition-fade">
-    <header class="flex flex-col p-4 sm:p-0 mt-3 gap-6 justify-start">
+  <body class="transition-fade flex min-h-screen flex-col gap-2 bg-linear-to-b from-salmon-50 to-white bg-fixed pb-8 font-light text-gray-700 sm:flex-row sm:gap-10 sm:p-8">
+    <header class="mt-3 flex flex-col justify-start gap-6 p-4 sm:p-0">
       <a
         href="/"
         rel="author"
         class="
-          text-purple_heart hover:text-salmon uppercase hover:animate-pulse block font-semibold leading-tight md:text-left
-          p-name text-3xl font-tropic sm:max-w-40
+          p-name block font-tropic text-3xl leading-tight font-semibold text-purple_heart uppercase
+          hover:animate-pulse hover:text-salmon sm:max-w-40 md:text-left
         "
       >
         Jonas Brusman
       </a>
-      <nav class="flex flex-row sm:flex-col flex-wrap items-baseline gap-3 text-xl text-balance">
+      <nav class="flex flex-row flex-wrap items-baseline gap-3 text-xl text-balance sm:flex-col">
         <a href="/" class="nav-link {% if page.url == "/" %}nav-link--active{% endif %}">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@
             viewbox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-5 h-5 mb-1"
+            class="mb-1 h-5 w-5"
           >
             <path
               stroke-linecap="round"
@@ -91,7 +91,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-5 h-5 mb-1"
+            class="mb-1 h-5 w-5"
           >
             <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z" />
             <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z" />
@@ -108,7 +108,7 @@
             viewbox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-5 h-5 mb-1"
+            class="mb-1 h-5 w-5"
           >
             <path
               stroke-linecap="round"
@@ -126,7 +126,7 @@
             viewbox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-5 h-5 mb-1"
+            class="mb-1 h-5 w-5"
           >
             <path
               stroke-linecap="round"
@@ -143,7 +143,7 @@
             viewbox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-5 h-5 mb-1"
+            class="mb-1 h-5 w-5"
           >
             <path
               stroke-linecap="round"
