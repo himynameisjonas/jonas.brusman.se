@@ -2,6 +2,7 @@
 title: Feeds
 headline: Feeds
 layout: page.liquid
+permalink: /feeds/
 description: Jonas Brusman's feeds.
 date: "git Last Modified"
 date_desc: "Last updated"
