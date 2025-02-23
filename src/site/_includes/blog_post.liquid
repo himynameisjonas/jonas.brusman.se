@@ -1,8 +1,8 @@
 ---
 layout: layout.liquid
 ---
-<article class="flex flex-col h-entry items-center">
-  <h1 class="font-black w-content text-4xl sm:text-5xl md:text-6xl tracking-tight leading-normal sm:leading-normal md:leading-normal p-name text-balance text-salmon-400">
+<article class="flex flex-col h-entry items-center overflow-auto">
+  <h1 class="px-4 sm:px-0 font-black w-content text-4xl sm:text-5xl md:text-6xl tracking-tight leading-normal sm:leading-normal md:leading-normal p-name text-balance text-salmon-400">
     {{ headline | default: title }}
   </h1>
 
@@ -23,7 +23,6 @@ layout: layout.liquid
             {% endlightbox_link %}
           {% endfor %}
         </div>
-        <hr class="border-none mb-4 md:mb-8">
       {% endif %}
 
       {{ content }}
@@ -57,7 +56,7 @@ layout: layout.liquid
       </template>
     {% endif %}
 
-    <div class="w-content mb-2 text-gray-700 bg-salmon-200 shadow-inner">
+    <div class="w-content mb-2 text-gray-700 bg-salmon-100 shadow-inner">
       <div class="px-4 py-5 sm:p-6">
         <table class="w-full">
           {% if page.date %}

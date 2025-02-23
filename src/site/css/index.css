@@ -27,11 +27,11 @@
 }
 
 @utility header-block {
-  @apply flex justify-between items-center font-black text-2xl sm:text-3xl md:text-4xl tracking-tight leading-normal sm:leading-normal md:leading-normal text-balance text-salmon-400;
+  @apply px-4 sm:px-0 flex justify-between items-center font-black text-2xl sm:text-3xl md:text-3xl lg:text-4xl tracking-tight leading-normal sm:leading-normal md:leading-normal text-balance text-salmon-400;
 }
 
 @utility header-icon {
-  @apply w-8 h-8 sm:w-9 sm:h-9;
+  @apply w-6 h-6 sm:w-9 sm:h-9;
 }
 
 @utility list-title {
