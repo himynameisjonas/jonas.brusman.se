@@ -187,6 +187,15 @@
   @apply marker:font-bold marker:text-purple_heart;
 }
 
+.markdown > ol,
+.markdown > ul {
+  @apply mb-4;
+}
+
+.markdown hr {
+  @apply mb-4 border-b-2 border-gray-600;
+}
+
 .markdown kbd {
   @apply inline-block rounded-sm border px-1 py-1 align-middle font-mono text-xs font-normal shadow-sm;
 }
