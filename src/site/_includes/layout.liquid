@@ -59,7 +59,7 @@
       >
         Jonas Brusman
       </a>
-      <nav class="flex flex-row flex-wrap items-baseline gap-3 text-xl text-balance sm:flex-col">
+      <nav class="flex flex-row flex-wrap items-baseline gap-3 text-xl sm:flex-col">
         <a href="/" class="nav-link {% if page.url == "/" %}nav-link--active{% endif %}">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +119,10 @@
           </svg>
           Articles
         </a>
-        <a href="/bookmarks/" class="nav-link {% if page.url contains "/bookmarks/" %}nav-link--active{% endif %}">
+        <a
+          href="/bookmarks/"
+          class="nav-link sm:mt-2 {% if page.url contains "/bookmarks/" %}nav-link--active{% endif %}"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -136,7 +139,20 @@
           </svg>
           Bookmarks
         </a>
-        <a href="/about/" class="nav-link {% if page.url == "/about/" %}nav-link--active{% endif %}">
+        <a href="/now/" class="nav-link {% if page.url == "/now/" %}nav-link--active{% endif %}">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="mb-1 h-5 w-5"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+          </svg>
+          Now
+        </a>
+        <a href="/about/" class="nav-link sm:mt-2 {% if page.url == "/about/" %}nav-link--active{% endif %}">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
