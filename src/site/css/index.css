@@ -28,6 +28,27 @@
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+body {
+  --bg-animation: backgroundAnimation 15s cubic-bezier(0.37, 0, 0.63, 1)
+    infinite;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 11% 0%;
+  }
+  50% {
+    background-position: 90% 100%;
+  }
+  100% {
+    background-position: 11% 0%;
+  }
+}
+
+.bg-super-large {
+  background-size: 600% 600%;
+}
+
 @utility header-block {
   @apply flex items-center justify-between px-4 text-2xl leading-normal font-black tracking-tight text-balance text-salmon-400 sm:px-0 sm:text-3xl sm:leading-normal md:text-3xl md:leading-normal lg:text-4xl;
 }
