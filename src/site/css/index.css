@@ -92,6 +92,18 @@
   }
 }
 
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-group(header) {
+  animation: none;
+}
+
+header {
+  view-transition-name: header;
+}
+
 .max-w-screen-h {
   max-width: 133vh;
 }

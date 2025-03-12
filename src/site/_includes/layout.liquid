@@ -48,7 +48,8 @@
     <link rel="authorization_endpoint" href="https://indieauth.com/auth">
   </head>
   <body class="transition-fade flex min-h-screen flex-col gap-2 bg-linear-to-b from-salmon-50 to-white bg-fixed pb-8 font-light text-gray-700 sm:flex-row sm:gap-10 sm:p-8">
-    <header class="mt-3 flex flex-col justify-start gap-6 p-4 sm:p-0">
+      <div class="mt-3 flex flex-col justify-start gap-6 p-4 sm:p-0">
+    <header >
       <a
         href="/"
         rel="author"
@@ -59,6 +60,7 @@
       >
         Jonas Brusman
       </a>
+    </header>
       <nav class="flex flex-row flex-wrap items-baseline gap-2 text-xl sm:flex-col">
         <a href="/" class="nav-link {% if page.url == "/" %}nav-link--active{% endif %}">
           <svg
@@ -176,7 +178,7 @@
           About
         </a>
       </nav>
-    </header>
+    </div>
     {{ content }}
     <script src="/js/index.js" type="module" defer></script>
     {% tracking_script -%}
