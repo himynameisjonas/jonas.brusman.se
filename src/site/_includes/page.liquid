@@ -10,7 +10,7 @@ layout: layout.liquid
         | default: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="header-icon"> <path fill-rule="evenodd" d="M4.5 3.75a3 3 0 0 0-3 3v10.5a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V6.75a3 3 0 0 0-3-3h-15Zm4.125 3a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Zm-3.873 8.703a4.126 4.126 0 0 1 7.746 0 .75.75 0 0 1-.351.92 7.47 7.47 0 0 1-3.522.877 7.47 7.47 0 0 1-3.522-.877.75.75 0 0 1-.351-.92ZM15 8.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15ZM14.25 12a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H15a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15Z" clip-rule="evenodd" /> </svg>'
       }}
     </h1>
-    <div class="markdown bg-white px-4 py-5 sm:p-6">
+    <div class="markdown py-5">
       {% if photos %}
         {% for photo in photos %}
           <div class="flex flex-col items-center">
@@ -20,7 +20,7 @@ layout: layout.liquid
                 alt="{{ title }}"
                 eleventy:widths="800,1200,2000,3000,4000"
                 sizes="(max-width: 1000px) 100vw, 133vh"
-                class="u-photo max-h-screen bg-white object-contain"
+                class="u-photo max-h-screen object-contain"
               >
             </div>
           </div>
@@ -39,8 +39,8 @@ layout: layout.liquid
     </div>
   </div>
   {% unless no_footer %}
-    <div class="w-content mb-2 bg-salmon-200 text-gray-700 shadow-inner">
-      <div class="px-4 py-5 sm:p-6">
+    <div class="w-content mb-2 border-t-4 border-salmon-400">
+      <div class="py-5">
         <table class="w-full">
           {% if page.date %}
             <tr>

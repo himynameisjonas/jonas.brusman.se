@@ -17,13 +17,14 @@ pagination:
     </svg>
   </h2>
 
-  <div class="photos-grid flex flex-wrap bg-white px-2 py-2">
+  <div class="photos-grid grid grid-flow-row auto-rows-min grid-cols-2 gap-4 py-2">
+    {% assign photoWidths = 'w-full' %}
     {% for post in posts %}
       {% include 'list_photos_post' %}
     {% endfor %}
   </div>
 
-  <nav class="mt-2 mb-2 border-t-4 border-purple_heart pt-2">
+  <nav class="border-salmon-4000 mt-2 mb-2 border-t-4 pt-2">
     <ol class="flex justify-center">
       {% if pagination.href.previous -%}
         <li>

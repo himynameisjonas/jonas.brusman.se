@@ -21,8 +21,8 @@
   --color-salmon: oklch(79.13% 0.1334 12.73);
 
   --font-sans:
-    Overpass, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    "iA Writer Quattro", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-tropic:
     Tropi Land, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -50,7 +50,7 @@ body {
 }
 
 @utility header-block {
-  @apply flex items-center justify-between px-4 text-2xl leading-normal font-black tracking-tight text-balance text-salmon-400 sm:px-0 sm:text-3xl sm:leading-normal md:text-3xl md:leading-normal lg:text-4xl;
+  @apply flex items-center justify-between text-2xl leading-normal font-black tracking-tight text-balance text-salmon-400 sm:text-3xl sm:leading-normal md:text-3xl md:leading-normal lg:text-4xl;
 }
 
 @utility header-icon {
@@ -58,11 +58,11 @@ body {
 }
 
 @utility list-title {
-  @apply mb-1 text-2xl leading-relaxed text-purple_heart hover:text-salmon sm:text-3xl;
+  @apply mb-1 text-xl/7 font-semibold hover:text-salmon-400 sm:text-3xl/10;
 }
 
 @utility footer-header {
-  @apply w-1/4 pr-2 pb-2 text-left align-baseline font-bold text-purple_heart;
+  @apply w-1/4 pr-2 pb-2 text-left align-baseline font-bold;
 }
 
 @utility footer-data {
@@ -70,18 +70,18 @@ body {
 }
 
 @utility nav-link {
-  @apply flex items-center gap-1 border-b-4 border-transparent px-1 text-gray-700 hover:border-salmon hover:text-purple_heart;
+  @apply flex items-center gap-1 border-b-4 border-transparent px-1 text-gray-700 hover:border-salmon hover:text-salmon-400;
 }
 
 @utility nav-link--active {
-  @apply border-salmon! text-purple_heart! hover:border-salmon!;
+  @apply font-semibold hover:border-salmon!;
 }
 
 @utility link {
-  @apply text-purple_heart underline;
+  @apply text-salmon-400 underline;
 
   &:hover {
-    @apply text-salmon-400 no-underline;
+    @apply text-salmon no-underline;
   }
 }
 
@@ -99,17 +99,23 @@ body {
   }
 
   @font-face {
-    font-family: Overpass;
+    font-family: iA Writer Quattro;
     font-style: normal;
     font-weight: 100 900;
     font-display: block;
     src:
-      url(/fonts/Overpass-VariableFont_wght-subset.woff2) format("woff2"),
-      url(/fonts/Overpass-VariableFont_wght-subset.zopfli.woff) format("woff");
-    unicode-range:
-      U+A, U+20-7E, U+C4, U+C5, U+D6, U+E4, U+E5, U+F3, U+F6, U+2013, U+2014,
-      U+2019, U+201C, U+201D, U+2022, U+2026, U+2080, U+2081, U+2764, U+FE0F,
-      U+1F465, U+1F629;
+      url(/fonts/iAWriterQuattroV-subset.woff2) format("woff2"),
+      url(/fonts/iAWriterQuattroV-subset.zopfli.woff) format("woff");
+  }
+
+  @font-face {
+    font-family: iA Writer Quattro;
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: block;
+    src:
+      url(/fonts/iAWriterQuattroV-Italic-subset.woff2) format("woff2"),
+      url(/fonts/iAWriterQuattroV-Italic-subset.zopfli.woff) format("woff");
   }
 }
 
@@ -181,43 +187,43 @@ header {
 }
 
 .markdown h1 {
-  @apply mt-6 mb-2 text-4xl leading-relaxed font-semibold text-balance text-salmon-300 sm:text-5xl;
+  @apply mt-6 mb-2 text-4xl leading-relaxed font-semibold text-balance text-salmon-400 sm:text-5xl;
 }
 
 .markdown h2 {
-  @apply mt-6 mb-2 text-3xl leading-relaxed font-semibold text-balance text-salmon-300 sm:text-4xl;
+  @apply mt-6 mb-2 text-3xl leading-relaxed font-semibold text-balance text-salmon-400 sm:text-4xl;
 }
 
 .markdown h3 {
-  @apply mt-6 mb-2 text-2xl leading-relaxed font-semibold text-balance text-salmon-300 sm:text-3xl;
+  @apply mt-6 mb-2 text-2xl leading-relaxed font-semibold text-balance text-salmon-400 sm:text-3xl;
 }
 
 .markdown h4 {
-  @apply mt-6 mb-4 text-lg leading-relaxed font-semibold text-balance text-salmon-300 sm:text-xl;
+  @apply mt-6 mb-4 text-lg leading-relaxed font-semibold text-balance text-salmon-400 sm:text-xl;
 }
 
 .markdown h5 {
-  @apply mt-6 mb-4 text-lg leading-tight font-normal text-salmon-300;
+  @apply mt-6 mb-4 text-lg leading-tight font-normal text-salmon-400;
 }
 
 .markdown h6 {
-  @apply mt-6 mb-4 text-lg leading-tight font-normal text-gray-600 text-salmon-300;
+  @apply mt-6 mb-4 text-lg leading-tight font-normal text-gray-600 text-salmon-400;
 }
 
 .markdown blockquote {
-  @apply border-l-4 border-purple_heart pr-4 pl-4 text-lg text-gray-600 sm:text-xl lg:text-2xl;
+  @apply border-l-4 border-salmon-400 pr-4 pl-4 text-lg text-gray-600 sm:text-xl lg:text-2xl;
 }
 
 .markdown ul {
-  @apply list-disc pl-8 text-lg sm:text-xl lg:text-2xl;
+  @apply list-disc pl-10 text-lg sm:text-xl lg:text-2xl;
 }
 
 .markdown ol {
-  @apply list-decimal pl-8 text-lg sm:text-xl lg:text-2xl;
+  @apply list-decimal pl-15 text-lg sm:text-xl lg:text-2xl;
 }
 .markdown ol,
 .markdown ul {
-  @apply marker:font-bold marker:text-purple_heart;
+  @apply marker:font-bold marker:text-salmon-400;
 }
 
 .markdown > ol,
@@ -255,7 +261,7 @@ header {
 }
 
 .markdown img {
-  @apply m-auto bg-white;
+  @apply m-auto;
 }
 
 open-heart:not([disabled]):hover,

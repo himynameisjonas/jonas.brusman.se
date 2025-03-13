@@ -1,4 +1,4 @@
-<div class="grid-item flex flex-col gap-2 {{ photoWidths | default: 'w-full md:w-1/2 p-4' }} bg-white pb-6">
+<div class="grid-item flex flex-col gap-2 {{ photoWidths | default: 'w-full md:w-1/2' }} pb-6">
   <a
     href="{{ post.url }}"
     class="ar-3x2 group absolute top-0 left-0 h-full w-full bg-gray-500"
@@ -12,8 +12,8 @@
       class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
     >
     <div class="absolute inset-0 flex flex-col justify-center bg-gray-700/15 px-4 text-center">
-      <h2 class="pb-1 text-3xl leading-relaxed text-balance">
-        <span class="bg-purple_heart/85 box-decoration-clone px-2 py-1 pt-2 font-black text-salmon-200">
+      <h2 class="pb-1 text-3xl/14 font-bold text-balance">
+        <span class="bg-neutral-100/65 box-decoration-clone px-2 py-1 pt-2 font-black text-neutral-700 transition-colors group-hover:bg-neutral-100/85">
           {{- post.data.title -}}
         </span>
       </h2>

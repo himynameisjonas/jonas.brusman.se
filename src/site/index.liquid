@@ -14,16 +14,14 @@ title: Blog
         </svg>
       </h2>
     </a>
-    <div class="bg-white">
-      <div class="px-4 py-5 sm:p-6">
-        {% assign articles = collections.articles | reverse %}
-        {% for post in articles limit: 6 %}
-          {% include 'list_article' %}
-        {% endfor %}
+    <div class="sm:py-5">
+      {% assign articles = collections.articles | reverse %}
+      {% for post in articles limit: 6 %}
+        {% include 'list_article' %}
+      {% endfor %}
 
-        <div class="mt-2 mb-2 border-t-4 border-purple_heart pt-2">
-          <a href="/articles/" class="block text-center link">View all articles</a>
-        </div>
+      <div class="mt-2 mb-2 border-t-4 border-salmon-400 pt-2">
+        <a href="/articles/" class="block text-center link">View all articles</a>
       </div>
     </div>
   </div>
@@ -38,23 +36,21 @@ title: Blog
         </svg>
       </h2>
     </a>
-    <div class="bg-white">
-      <div class="px-4 py-5 sm:p-6">
-        <div class="grid grid-cols-1 gap-6">
-          {% assign photos = collections.photos | reverse %}
-          {% assign photoWidths = 'w-full' %}
-          {% for post in photos limit: 3 %}
-            {% include 'list_photos_post' %}
-          {% endfor %}
-        </div>
-        <div class="mt-2 mb-2 border-t-4 border-purple_heart pt-2">
-          <a href="/photos/" class="block text-center link">View all photos</a>
-        </div>
+    <div class="py-5">
+      <div class="grid grid-cols-1 gap-6">
+        {% assign photos = collections.photos | reverse %}
+        {% assign photoWidths = 'w-full' %}
+        {% for post in photos limit: 3 %}
+          {% include 'list_photos_post' %}
+        {% endfor %}
+      </div>
+      <div class="mt-2 mb-2 border-t-4 border-salmon-400 pt-2">
+        <a href="/photos/" class="block text-center link">View all photos</a>
       </div>
     </div>
   </div>
-  <div class="bg-white text-sm md:col-span-2">
-    <div class="flex justify-center divide-x divide-solid divide-purple_heart px-4 py-5 sm:p-6">
+  <div class="text-sm md:col-span-2">
+    <div class="flex justify-center divide-x divide-solid divide-salmon-400 py-5">
       <div class="px-4 text-balance">Made with ❤️ in Sweden</div>
 
       <div class="px-4">
