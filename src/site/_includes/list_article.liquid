@@ -6,14 +6,14 @@
   </a>
   <div class="font-normal text-gray-500">
     <a href="{{ post.url }}">
-      <time datetime="{{ post.date | date: "%Y-%m-%d" }}" class="text-gray-500 hover:text-salmon">
+      <time datetime="{{ post.date | date: "%Y-%m-%d" }}" class="text-gray-500 hover:text-salmon-400">
         {{ post.date | date: '%Y-%m-%d' }}
       </time>
     </a>
     •
     {% for tag in post.data.tags %}
       {% unless tag == 'blogPost' %}
-        <a href="/tags/{{tag}}/" class="prefix-hash hover:text-salmon">{{ tag }}</a>
+        <a href="/tags/{{tag}}/" class="prefix-hash hover:text-salmon-400">{{ tag }}</a>
       {% endunless %}
     {% endfor %}
   </div>
