@@ -17,7 +17,7 @@ permalink: "{{ bookmark.permalink }}/"
         {{ bookmark.title | default: title | replace: 'Ö', 'ö' }}
       </h1>
     </a>
-    <a href="{{bookmark.link}}" class="mt-2 block text-xl text-salmon-500" rel="noopener">
+    <a href="{{bookmark.link}}" class="mt-2 block text-xl text-salmon-500 dark:text-salmon-600" rel="noopener">
       {{- bookmark.prettyUrl -}}
     </a>
   </div>
@@ -34,7 +34,7 @@ permalink: "{{ bookmark.permalink }}/"
     </div>
   </div>
 
-  <div class="w-content mb-2 border-t-4 border-salmon-500">
+  <div class="w-content mb-2 border-t-4 border-salmon-500 dark:border-salmon-600">
     <div class="py-5">
       <table class="w-full">
         {% if bookmark.date %}

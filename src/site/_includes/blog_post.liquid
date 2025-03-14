@@ -2,7 +2,7 @@
 layout: layout.liquid
 ---
 <article class="h-entry flex flex-col items-center overflow-auto">
-  <h1 class="w-content p-name text-4xl font-black tracking-tight text-balance text-salmon-500 sm:text-5xl/14 md:text-6xl/17">
+  <h1 class="w-content p-name text-4xl font-black tracking-tight text-balance text-salmon-500 sm:text-5xl/14 md:text-6xl/17 dark:text-salmon-600">
     {{ headline | default: title }}
   </h1>
 
@@ -18,7 +18,7 @@ layout: layout.liquid
               loading="{% if forloop.index == 1 %}eager{% else %}lazy{% endif %}"
               eleventy:widths="800,1200,2000,3000,4000"
               sizes="(max-width: 1000px) 100vw, 133vh"
-              class="u-photo block max-h-screen w-auto bg-neutral-50 object-contain pb-4 lg:pb-6"
+              class="u-photo block max-h-screen w-auto bg-transparent object-contain pb-4 lg:pb-6"
             >
             {% endlightbox_link %}
           {% endfor %}
@@ -43,20 +43,20 @@ layout: layout.liquid
       <template id="mastodon-post-template">
         <a data-key="url">
           Reposts
-          <span class="font-medium text-salmon-500" data-key="reblogs_count"></span>
+          <span class="font-medium text-salmon-500 dark:text-salmon-600" data-key="reblogs_count"></span>
         </a>
         <a data-key="url">
           Replies
-          <span class="font-medium text-salmon-500" data-key="replies_count"></span>
+          <span class="font-medium text-salmon-500 dark:text-salmon-600" data-key="replies_count"></span>
         </a>
         <a data-key="url">
           Favourites
-          <span class="font-medium text-salmon-500" data-key="favourites_count"></span>
+          <span class="font-medium text-salmon-500 dark:text-salmon-600" data-key="favourites_count"></span>
         </a>
       </template>
     {% endif %}
 
-    <div class="w-content mb-2 border-t-4 border-salmon-500">
+    <div class="w-content mb-2 border-t-4 border-salmon-50 dark:border-salmon-600">
       <div class="py-5">
         <table class="w-full">
           {% if page.date %}

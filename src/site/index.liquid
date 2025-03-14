@@ -3,7 +3,7 @@ layout: layout.liquid
 description: Jonas Brusman's blog. Photos and some tech / code stuff.
 title: Blog
 ---
-<div class="grid max-w-5xl grid-cols-1 items-start gap-x-8 gap-y-10 text-gray-700 md:grid-cols-2">
+<div class="grid max-w-5xl grid-cols-1 items-start gap-x-8 gap-y-10 md:grid-cols-2">
   <div>
     <a href="/articles/">
       <h2 class="header-block">
@@ -20,7 +20,7 @@ title: Blog
         {% include 'list_article' %}
       {% endfor %}
 
-      <div class="mt-2 mb-2 border-t-4 border-salmon-500 pt-2 text-xl font-semibold">
+      <div class="mt-2 mb-2 border-t-4 border-salmon-500 pt-2 text-xl font-semibold dark:border-salmon-600">
         <a href="/articles/" class="block text-center link text-inherit">View all articles</a>
       </div>
     </div>
@@ -44,12 +44,12 @@ title: Blog
           {% include 'list_photos_post' %}
         {% endfor %}
       </div>
-      <div class="mt-2 mb-2 border-t-4 border-salmon-500 pt-2 text-xl font-semibold">
+      <div class="mt-2 mb-2 border-t-4 border-salmon-500 pt-2 text-xl font-semibold dark:border-salmon-600">
         <a href="/photos/" class="block text-center link text-inherit">View all photos</a>
       </div>
     </div>
   </div>
-  <div class="text-small flex flex-col justify-center divide-solid divide-salmon-500 py-5 text-center sm:flex-row sm:divide-x md:col-span-2">
+  <div class="text-small flex flex-col justify-center divide-solid divide-salmon-500 py-5 text-center sm:flex-row sm:divide-x md:col-span-2 dark:divide-salmon-600">
     <div class="px-2 py-1 text-balance sm:py-0">Made with ❤️ in Sweden</div>
 
     <div class="px-2 py-1 sm:py-0">

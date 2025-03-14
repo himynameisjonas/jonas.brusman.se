@@ -17,7 +17,7 @@ eleventyExcludeFromCollections: true
 {% assign tagged_articles = tagged_posts | where: 'data.blogPostType', 'article' %}
 {% assign tagged_photos = tagged_posts | where: 'data.blogPostType', 'photo' %}
 
-<div class="grid max-w-5xl grid-cols-1 items-start gap-x-8 gap-y-10 text-gray-700 md:grid-cols-2">
+<div class="grid max-w-5xl grid-cols-1 items-start gap-x-8 gap-y-10 md:grid-cols-2">
   {% if tagged_articles.size > 0 %}
     <div class="">
       <h2 class="header-block">
@@ -72,7 +72,7 @@ eleventyExcludeFromCollections: true
             {% include 'list_photos_post' %}
           {% endfor %}
         </div>
-        <div class="mt-2 mb-2 border-t-4 border-salmon-500 pt-2">
+        <div class="mt-2 mb-2 border-t-4 border-salmon-500 pt-2 dark:border-salmon-600">
           <a href="/photos/" class="block text-center link">View all photos</a>
         </div>
       </div>
