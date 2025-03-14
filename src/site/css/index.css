@@ -11,7 +11,7 @@
   --color-salmon-100: oklch(94.14% 0.0335 12.58);
   --color-salmon-200: oklch(89.24% 0.062 10);
   --color-salmon-300: oklch(79.13% 0.1334 12.73);
-  --color-salmon-400: oklch(71.91% 0.1751 13.64);
+  --color-salmon-500: oklch(71.91% 0.1751 13.64);
   --color-salmon-500: oklch(64.4% 0.2136 16.85);
   --color-salmon-600: oklch(58.3% 0.2194 17.89);
   --color-salmon-700: oklch(51.26% 0.1965 17.27);
@@ -58,7 +58,7 @@ body {
 }
 
 @utility list-title {
-  @apply mb-1 text-xl/7 font-semibold hover:text-salmon-400 sm:text-3xl/10;
+  @apply mb-1 text-xl/7 font-semibold hover:text-salmon-500 sm:text-3xl/10;
 }
 
 @utility footer-header {
@@ -70,7 +70,7 @@ body {
 }
 
 @utility nav-link {
-  @apply flex items-center gap-1 border-b-4 border-transparent px-1 text-gray-700 hover:border-salmon hover:text-salmon-400;
+  @apply flex items-center gap-1 border-b-4 border-transparent px-1 text-gray-700 hover:border-salmon hover:text-salmon-500;
 }
 
 @utility nav-link--active {
@@ -81,7 +81,7 @@ body {
   @apply text-salmon-500 underline;
 
   &:hover {
-    @apply text-salmon-400 no-underline;
+    @apply text-salmon-500 no-underline;
   }
 }
 
@@ -187,31 +187,31 @@ header {
 }
 
 .markdown h1 {
-  @apply mt-6 mb-2 text-4xl leading-relaxed font-semibold text-balance text-salmon-400 sm:text-5xl;
+  @apply mt-6 mb-2 text-4xl leading-relaxed font-semibold text-balance text-salmon-500 sm:text-5xl;
 }
 
 .markdown h2 {
-  @apply mt-6 mb-2 text-3xl leading-relaxed font-semibold text-balance text-salmon-400 sm:text-4xl;
+  @apply mt-6 mb-2 text-3xl leading-relaxed font-semibold text-balance text-salmon-500 sm:text-4xl;
 }
 
 .markdown h3 {
-  @apply mt-6 mb-2 text-2xl leading-relaxed font-semibold text-balance text-salmon-400 sm:text-3xl;
+  @apply mt-6 mb-2 text-2xl leading-relaxed font-semibold text-balance text-salmon-500 sm:text-3xl;
 }
 
 .markdown h4 {
-  @apply mt-6 mb-4 text-lg leading-relaxed font-semibold text-balance text-salmon-400 sm:text-xl;
+  @apply mt-6 mb-4 text-lg leading-relaxed font-semibold text-balance text-salmon-500 sm:text-xl;
 }
 
 .markdown h5 {
-  @apply mt-6 mb-4 text-lg leading-tight font-normal text-salmon-400;
+  @apply mt-6 mb-4 text-lg leading-tight font-normal text-salmon-500;
 }
 
 .markdown h6 {
-  @apply mt-6 mb-4 text-lg leading-tight font-normal text-gray-600 text-salmon-400;
+  @apply mt-6 mb-4 text-lg leading-tight font-normal text-gray-600 text-salmon-500;
 }
 
 .markdown blockquote {
-  @apply border-l-4 border-salmon-400 pr-4 pl-4 text-lg text-gray-600 sm:text-xl lg:text-2xl;
+  @apply border-l-4 border-salmon-500 pr-4 pl-4 text-lg text-gray-600 sm:text-xl lg:text-2xl;
 }
 
 .markdown ul {
@@ -223,7 +223,7 @@ header {
 }
 .markdown ol,
 .markdown ul {
-  @apply marker:font-bold marker:text-salmon-400;
+  @apply marker:font-bold marker:text-salmon-500;
 }
 
 .markdown > ol,
