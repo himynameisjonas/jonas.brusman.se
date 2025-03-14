@@ -207,7 +207,7 @@ header {
 }
 
 .markdown h6 {
-  @apply mt-6 mb-4 text-lg leading-tight font-normal text-gray-600 text-salmon-500;
+  @apply mt-6 mb-4 text-lg leading-tight font-normal text-salmon-500;
 }
 
 .markdown blockquote {
