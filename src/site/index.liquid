@@ -49,22 +49,20 @@ title: Blog
       </div>
     </div>
   </div>
-  <div class="text-sm md:col-span-2">
-    <div class="flex justify-center divide-x divide-solid divide-salmon-400 py-5">
-      <div class="px-4 text-balance">Made with ❤️ in Sweden</div>
+  <div class="text-small flex flex-col justify-center divide-solid divide-salmon-400 py-5 text-center sm:flex-row sm:divide-x md:col-span-2">
+    <div class="px-2 py-1 text-balance sm:py-0">Made with ❤️ in Sweden</div>
 
-      <div class="px-4">
-        <a href="https://xn--sr8hvo.ws/previous">←</a>
-        <a href="https://xn--sr8hvo.ws" title="An IndieWeb Webring">🕸💍</a>
-        <a href="https://xn--sr8hvo.ws/next">→</a>
-      </div>
+    <div class="px-2 py-1 sm:py-0">
+      <a class="p-2" href="https://xn--sr8hvo.ws/previous">←</a>
+      <a class="p-2 sm:p-0" href="https://xn--sr8hvo.ws" title="An IndieWeb Webring">🕸💍</a>
+      <a class="p-2" href="https://xn--sr8hvo.ws/next">→</a>
+    </div>
 
-      <div class="px-4">
-        Last updated
-        <time class="dt-published" page.datetime="{{page.date | date: "%Y-%m-%d" }}">
-          <a href="{{page.url}}" class="u-url">{{ page.date | date: '%Y-%m-%d' }}</a>
-        </time>
-      </div>
+    <div class="px-2 py-1 sm:py-0">
+      Last updated
+      <time class="dt-published" page.datetime="{{page.date | date: "%Y-%m-%d" }}">
+        <a href="{{page.url}}" class="u-url">{{ page.date | date: '%Y-%m-%d' }}</a>
+      </time>
     </div>
   </div>
 </div>
