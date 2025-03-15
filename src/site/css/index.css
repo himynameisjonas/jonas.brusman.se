@@ -50,7 +50,7 @@ body {
 }
 
 @utility header-block {
-  @apply flex items-center justify-between text-2xl leading-normal font-black tracking-tight text-balance text-salmon-500 sm:text-3xl sm:leading-normal md:text-3xl md:leading-normal lg:text-4xl dark:text-salmon-600;
+  @apply flex items-center justify-between text-2xl leading-normal font-black tracking-tight text-balance sm:text-3xl sm:leading-normal md:text-3xl md:leading-normal lg:text-4xl;
 }
 
 @utility header-icon {
@@ -58,7 +58,7 @@ body {
 }
 
 @utility list-title {
-  @apply mb-1 text-xl/7 font-semibold hover:text-salmon-500 sm:text-3xl/10 dark:hover:text-salmon-600;
+  @apply mb-1 text-xl/7 hover:text-salmon-500 sm:text-3xl/10 dark:hover:text-salmon-600;
 }
 
 @utility footer-header {
@@ -187,27 +187,27 @@ header {
 }
 
 .markdown h1 {
-  @apply mt-6 mb-2 text-4xl leading-relaxed font-semibold text-balance text-salmon-500 sm:text-5xl dark:text-salmon-600;
+  @apply mt-6 mb-2 text-4xl leading-relaxed font-semibold text-balance sm:text-5xl;
 }
 
 .markdown h2 {
-  @apply mt-6 mb-2 text-3xl leading-relaxed font-semibold text-balance text-salmon-500 sm:text-4xl dark:text-salmon-600;
+  @apply mt-6 mb-2 text-3xl leading-relaxed font-semibold text-balance sm:text-4xl;
 }
 
 .markdown h3 {
-  @apply mt-6 mb-2 text-2xl leading-relaxed font-semibold text-balance text-salmon-500 sm:text-3xl dark:text-salmon-600;
+  @apply mt-6 mb-2 text-2xl leading-relaxed font-semibold text-balance sm:text-3xl;
 }
 
 .markdown h4 {
-  @apply mt-6 mb-4 text-lg leading-relaxed font-semibold text-balance text-salmon-500 sm:text-xl dark:text-salmon-600;
+  @apply mt-6 mb-4 text-lg leading-relaxed font-semibold text-balance sm:text-xl;
 }
 
 .markdown h5 {
-  @apply mt-6 mb-4 text-lg leading-tight font-normal text-salmon-500 dark:text-salmon-600;
+  @apply mt-6 mb-4 text-lg leading-tight font-normal;
 }
 
 .markdown h6 {
-  @apply mt-6 mb-4 text-lg leading-tight font-normal text-salmon-500 dark:text-salmon-600;
+  @apply mt-6 mb-4 text-lg leading-tight font-normal;
 }
 
 .markdown blockquote {
