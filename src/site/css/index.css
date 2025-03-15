@@ -156,7 +156,8 @@ header {
   @apply text-lg leading-relaxed break-words sm:text-xl lg:text-2xl;
 }
 
-.markdown > p {
+.markdown > p,
+.markdown > blockquote {
   @apply mt-0 mb-4;
 }
 
@@ -211,7 +212,7 @@ header {
 }
 
 .markdown blockquote {
-  @apply border-l-4 border-salmon-500 pr-4 pl-4 text-lg text-gray-600 sm:text-xl lg:text-2xl;
+  @apply border-l-4 border-salmon-500 pr-4 pl-4 text-lg text-gray-500 sm:text-xl lg:text-2xl dark:text-gray-400;
 }
 
 .markdown ul {
