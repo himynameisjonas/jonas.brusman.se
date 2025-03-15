@@ -5,6 +5,7 @@ tags:
   - gaming
   - minecraft
 syndications:
+  - https://tacocat.space/@jonas/114167693689730169
 ---
 
 My wife, friends, and I used to play Minecraft together, but we haven't done that in years, like since we had kids. Now the kids are old enough to play Minecraft themselves, and we want to play together again as a family.
