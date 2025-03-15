@@ -5,6 +5,7 @@ import pluginRss from "@11ty/eleventy-plugin-rss";
 import similarPosts from "./src/11ty/similar_posts.cjs";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import trackingScript from "./src/11ty/tracking_script.cjs";
+import webmentions from "./src/11ty/webmentions.cjs";
 import typeCollection from "./src/11ty/type_collection.cjs";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
@@ -77,12 +78,18 @@ export default async function (eleventyConfig) {
     return Array.from(tagsSet).sort();
   });
   eleventyConfig.addFilter("similarPosts", similarPosts);
+  eleventyConfig.addFilter("getPostWebmentions", function (mentions, url) {
+    const data = mentions.get(`https://jonas.brusman.se${url}`);
+    return Boolean(data) ? data : undefined;
+  });
 
   eleventyConfig.addShortcode("excerpt", extractExcerpt);
 
   eleventyConfig.addShortcode("image_url", imageUrl);
   eleventyConfig.addPairedShortcode("lightbox_link", lightboxLink);
   eleventyConfig.addShortcode("tracking_script", trackingScript);
+
+  eleventyConfig.addShortcode("webmentionIcon", webmentions);
 
   return {
     dir: {

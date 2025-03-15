@@ -252,7 +252,7 @@ header {
 }
 
 .markdown p > code {
-  @apply rounded-sm bg-neutral-100 px-2 py-1;
+  @apply rounded-sm bg-neutral-100 px-2 py-1 dark:bg-neutral-700;
 }
 
 /* Override pygments style background color. */

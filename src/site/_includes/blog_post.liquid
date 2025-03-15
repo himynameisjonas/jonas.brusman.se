@@ -29,7 +29,7 @@ layout: layout.liquid
 
       {% unless no_heart %}
         <open-heart
-          class="mx-auto my-3 block w-fit rounded-md bg-white px-2.5 py-1.5 pb-1 text-lg font-semibold text-salmon-600 shadow-xs ring-1 ring-salmon-300 ring-inset hover:bg-salmon-50"
+          class="mx-auto my-3 block w-fit rounded-md bg-white px-2.5 py-1.5 pb-1 text-lg font-semibold text-salmon-600 shadow-xs ring-1 ring-salmon-300 ring-inset hover:bg-salmon-50 dark:bg-neutral-700 "
           href="/open_heart?id={{page.url}}"
           emoji="❤️"
         >
@@ -112,10 +112,14 @@ layout: layout.liquid
             </tr>
           {% endif %}
 
+          {% assign postMentions = webmentions | getPostWebmentions: page.url %}
+
           <tr>
             <th
               class="footer-header"
-              {% if mastodonPost %}
+              {% if mastodonPost and postMentions %}
+                rowspan="3"
+              {% elsif mastodonPost or postMentions %}
                 rowspan="2"
               {% endif %}
             >
@@ -125,13 +129,19 @@ layout: layout.liquid
               <a href="mailto:blog@brusman.se?subject=Re: {{title}}" class="link">Reply by email</a>
             </td>
           </tr>
-
           {% if mastodonPost %}
             <tr>
               <td class="footer-data">
-                <mastodon-post class="flex flex-wrap gap-x-3 gap-y-1">
-                  <a href="{{mastodonPost}}" class="whitespace-nowrap link">Discuss on Mastodon</a>
-                </mastodon-post>
+                <a href="{{mastodonPost}}" class="whitespace-nowrap link">Discuss on Mastodon</a>
+              </td>
+            </tr>
+          {% endif %}
+          {% if postMentions %}
+            <tr>
+              <td class="flex gap-2 footer-data">
+                {% for postMention in postMentions %}
+                  {% webmentionIcon postMention %}
+                {% endfor %}
               </td>
             </tr>
           {% endif %}

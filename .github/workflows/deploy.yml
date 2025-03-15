@@ -57,6 +57,7 @@ jobs:
           TINA_SEARCH_TOKEN: ${{ secrets.TINA_SEARCH_TOKEN }}
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
           ENABLE_ANALYTICS: ${{ github.ref == 'refs/heads/master' }}
+          WM_TOKEN: ${{ secrets.WM_TOKEN }}
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         id: cloudflare
