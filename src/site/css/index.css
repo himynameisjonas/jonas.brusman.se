@@ -50,7 +50,7 @@ body {
 }
 
 @utility header-block {
-  @apply flex items-center justify-between text-2xl leading-normal font-black tracking-tight text-balance sm:text-3xl sm:leading-normal md:text-3xl md:leading-normal lg:text-4xl;
+  @apply flex items-center justify-between text-2xl leading-normal font-semibold tracking-tight text-balance sm:text-3xl sm:leading-normal md:text-3xl md:leading-normal lg:text-4xl;
 }
 
 @utility header-icon {
