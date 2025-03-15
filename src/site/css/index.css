@@ -38,7 +38,7 @@ body {
     background-position: 11% 0%;
   }
   50% {
-    background-position: 90% 100%;
+    background-position: 95% 100%;
   }
   100% {
     background-position: 11% 0%;
@@ -70,7 +70,7 @@ body {
 }
 
 @utility nav-link {
-  @apply flex items-center gap-1 border-b-4 border-transparent px-1 hover:border-salmon-500 hover:text-salmon-500 dark:text-neutral-400 dark:hover:border-salmon-600 dark:hover:text-salmon-600;
+  @apply flex items-center gap-1 border-b-4 border-transparent hover:border-salmon-500 hover:text-salmon-500 dark:text-neutral-400 dark:hover:border-salmon-600 dark:hover:text-salmon-600;
 }
 
 @utility nav-link--active {
