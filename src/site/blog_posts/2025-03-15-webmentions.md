@@ -5,6 +5,7 @@ tags:
   - meta
   - eleventy
 syndications:
+  - https://tacocat.space/@jonas/114165612618690047
 ---
 
 I came across a [blog post by Tom where he discusses his simple webmention implementation in Eleventy](https://ttntm.me/blog/implementing-webmentions/).
