@@ -152,117 +152,119 @@ header {
   padding-bottom: 66.66666666666667%;
 }
 
-.markdown {
-  @apply text-lg leading-relaxed break-words sm:text-xl lg:text-2xl;
-}
+@layer base {
+  .markdown {
+    @apply text-lg leading-relaxed break-words sm:text-xl lg:text-2xl;
+  }
 
-.markdown > p,
-.markdown > blockquote {
-  @apply mt-0 mb-4;
-}
+  .markdown > p,
+  .markdown > blockquote {
+    @apply mt-0 mb-4;
+  }
 
-.markdown li + li,
-.markdown li > ol,
-.markdown li > ul {
-  @apply mt-3;
-}
+  .markdown li + li,
+  .markdown li > ol,
+  .markdown li > ul {
+    @apply mt-3;
+  }
 
-.markdown li > p + p {
-  @apply mt-6;
-}
+  .markdown li > p + p {
+    @apply mt-6;
+  }
 
-.markdown strong {
-  @apply font-semibold;
-}
+  .markdown strong {
+    @apply font-semibold;
+  }
 
-.markdown a {
-  @apply link;
-}
+  .markdown a {
+    @apply link;
+  }
 
-.markdown a:hover {
-  @apply no-underline;
-}
+  .markdown a:hover {
+    @apply no-underline;
+  }
 
-.markdown strong a {
-  @apply font-bold;
-}
+  .markdown strong a {
+    @apply font-bold;
+  }
 
-.markdown h1 {
-  @apply mt-6 mb-2 text-4xl leading-relaxed font-semibold text-balance sm:text-5xl;
-}
+  .markdown h1 {
+    @apply mt-6 mb-2 text-4xl leading-relaxed font-semibold text-balance sm:text-5xl;
+  }
 
-.markdown h2 {
-  @apply mt-6 mb-2 text-3xl leading-relaxed font-semibold text-balance sm:text-4xl;
-}
+  .markdown h2 {
+    @apply mt-6 mb-2 text-3xl leading-relaxed font-semibold text-balance sm:text-4xl;
+  }
 
-.markdown h3 {
-  @apply mt-6 mb-2 text-2xl leading-relaxed font-semibold text-balance sm:text-3xl;
-}
+  .markdown h3 {
+    @apply mt-6 mb-2 text-2xl leading-relaxed font-semibold text-balance sm:text-3xl;
+  }
 
-.markdown h4 {
-  @apply mt-6 mb-4 text-lg leading-relaxed font-semibold text-balance sm:text-xl;
-}
+  .markdown h4 {
+    @apply mt-6 mb-4 text-lg leading-relaxed font-semibold text-balance sm:text-xl;
+  }
 
-.markdown h5 {
-  @apply mt-6 mb-4 text-lg leading-tight font-normal;
-}
+  .markdown h5 {
+    @apply mt-6 mb-4 text-lg leading-tight font-normal;
+  }
 
-.markdown h6 {
-  @apply mt-6 mb-4 text-lg leading-tight font-normal;
-}
+  .markdown h6 {
+    @apply mt-6 mb-4 text-lg leading-tight font-normal;
+  }
 
-.markdown blockquote {
-  @apply border-l-4 border-salmon-500 pr-4 pl-4 text-lg text-gray-500 sm:text-xl lg:text-2xl dark:text-gray-400;
-}
+  .markdown blockquote {
+    @apply border-l-4 border-salmon-500 pr-4 pl-4 text-lg text-gray-500 sm:text-xl lg:text-2xl dark:text-gray-400;
+  }
 
-.markdown ul {
-  @apply list-disc pl-10 text-lg sm:text-xl lg:text-2xl;
-}
+  .markdown ul {
+    @apply list-disc pl-10 text-lg sm:text-xl lg:text-2xl;
+  }
 
-.markdown ol {
-  @apply list-decimal pl-15 text-lg sm:text-xl lg:text-2xl;
-}
-.markdown ol,
-.markdown ul {
-  @apply marker:font-bold marker:text-salmon-500;
-}
+  .markdown ol {
+    @apply list-decimal pl-15 text-lg sm:text-xl lg:text-2xl;
+  }
+  .markdown ol,
+  .markdown ul {
+    @apply marker:font-bold marker:text-salmon-500;
+  }
 
-.markdown > ol,
-.markdown > ul {
-  @apply mb-4;
-}
+  .markdown > ol,
+  .markdown > ul {
+    @apply mb-4;
+  }
 
-.markdown hr {
-  @apply mb-4 border-b-2 border-gray-600;
-}
+  .markdown hr {
+    @apply mb-4 border-b-2 border-gray-600;
+  }
 
-.markdown kbd {
-  @apply inline-block rounded-sm border px-1 py-1 align-middle font-mono text-xs font-normal shadow-sm;
-}
+  .markdown kbd {
+    @apply inline-block rounded-sm border px-1 py-1 align-middle font-mono text-xs font-normal shadow-sm;
+  }
 
-.markdown table {
-  @apply border-gray-600 text-lg sm:text-xl lg:text-2xl;
-}
+  .markdown table {
+    @apply border-gray-600 text-lg sm:text-xl lg:text-2xl;
+  }
 
-.markdown th {
-  @apply border px-3 py-1;
-}
+  .markdown th {
+    @apply border px-3 py-1;
+  }
 
-.markdown td {
-  @apply border px-3 py-1;
-}
+  .markdown td {
+    @apply border px-3 py-1;
+  }
 
-.markdown p > code {
-  @apply rounded-sm bg-neutral-100 px-2 py-1 dark:bg-neutral-700;
-}
+  .markdown p > code {
+    @apply rounded-sm bg-neutral-100 px-2 py-1 dark:bg-neutral-700;
+  }
 
-/* Override pygments style background color. */
-.markdown .highlight pre {
-  @apply bg-gray-100!;
-}
+  /* Override pygments style background color. */
+  .markdown .highlight pre {
+    @apply bg-gray-100!;
+  }
 
-.markdown img {
-  @apply m-auto;
+  .markdown img {
+    @apply m-auto;
+  }
 }
 
 open-heart:not([disabled]):hover,
