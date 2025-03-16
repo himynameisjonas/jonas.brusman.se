@@ -21,6 +21,7 @@ tags:
   - winter
   - fire
   - tractor
+  - lärkstugan
 ---
 
 Went out into the snow and the magical winter landscape. Lit a warming campfire, grilled some sausages, and drank hot chocolate.
