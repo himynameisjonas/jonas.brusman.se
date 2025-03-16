@@ -15,6 +15,7 @@ tags:
   - square
   - spring
 syndications:
+  - https://tacocat.space/@jonas/114171423559148874
 ---
 
 My kids and I visited my brother-in-law, and I took a walk with my youngest in the stroller.
