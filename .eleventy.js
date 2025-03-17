@@ -46,6 +46,9 @@ export default async function (eleventyConfig) {
     formats: ["webp", "jpeg"],
 
     widths: ["auto"],
+    sharpOptions: {
+      animated: true,
+    },
 
     urlPath: "/img/",
     defaultAttributes: {
