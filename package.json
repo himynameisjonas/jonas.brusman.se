@@ -10,6 +10,7 @@
     "prebuild": "if [ -n \"$TINA_TOKEN\" ]; then tinacms build; fi",
     "build": "eleventy",
     "fetch_bookmarks": "node ./src/scripts/fetch_bookmarks.js",
+    "fetch_books": "node ./src/scripts/fetch_books.js",
     "watch": "eleventy --serve",
     "watch:html": "eleventy --serve",
     "start": "npm run watch"
