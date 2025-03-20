@@ -80,6 +80,13 @@ export default async function (eleventyConfig) {
     });
     return Array.from(tagsSet).sort();
   });
+
+  eleventyConfig.addFilter("booksCurrentlyReading", function (books) {
+    return books.filter((book) => {
+      return book.status == "reading";
+    });
+  });
+
   eleventyConfig.addFilter("similarPosts", similarPosts);
   eleventyConfig.addFilter("getPostWebmentions", function (mentions, url) {
     const data = mentions.get(`https://jonas.brusman.se${url}`);

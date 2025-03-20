@@ -8,10 +8,7 @@
     "pages": 338,
     "releaseDate": "2014-01-01",
     "releaseYear": 2014,
-    "authors": [
-      "Rob Thomas",
-      "Jennifer Graham"
-    ],
+    "authors": ["Rob Thomas", "Jennifer Graham"],
     "coverImage": "https://assets.hardcover.app/external_data/35473551/377fdcb352628197ec37c4b600eeeea40e458fda.jpeg",
     "series": [
       {
@@ -54,9 +51,7 @@
         "mysterious",
         "relaxing"
       ],
-      "Pace": [
-        "fast"
-      ],
+      "Pace": ["fast"],
       "Tag": [
         "A mix driven",
         "Weak Character Development",
@@ -80,10 +75,7 @@
     "pages": 156,
     "releaseDate": "1975-01-01",
     "releaseYear": 1975,
-    "authors": [
-      "Charles Bukowski",
-      "Peter   Stewart"
-    ],
+    "authors": ["Charles Bukowski", "Peter   Stewart"],
     "coverImage": "https://assets.hardcover.app/external_data/60089518/252ed7fcf8f38ca48124b26712eb8de10135ccdd.jpeg",
     "series": [],
     "tags": [
@@ -101,20 +93,9 @@
       "Alcoholics"
     ],
     "tagsByCategory": {
-      "Genre": [
-        "Classics",
-        "Fiction",
-        "Beat generation",
-        "Alcoholics"
-      ],
-      "Mood": [
-        "challenging",
-        "dark",
-        "funny"
-      ],
-      "Pace": [
-        "fast"
-      ],
+      "Genre": ["Classics", "Fiction", "Beat generation", "Alcoholics"],
+      "Mood": ["challenging", "dark", "funny"],
+      "Pace": ["fast"],
       "Tag": [
         "Character driven",
         "Weak Character Development",
@@ -145,18 +126,10 @@
     "pages": 360,
     "releaseDate": "1982-01-01",
     "releaseYear": 1982,
-    "authors": [
-      "Charles Bukowski"
-    ],
+    "authors": ["Charles Bukowski"],
     "coverImage": "https://assets.hardcover.app/edition/27968853/26fa9bce6d3356cb4b68f1c66a4ba52d6db7736a.jpeg",
     "series": [],
-    "tags": [
-      "Classics",
-      "Young Adult",
-      "Fiction",
-      "Broadsides",
-      "Literature"
-    ],
+    "tags": ["Classics", "Young Adult", "Fiction", "Broadsides", "Literature"],
     "tagsByCategory": {
       "Genre": [
         "Classics",
@@ -189,9 +162,7 @@
     "pages": 384,
     "releaseDate": "2008-01-01",
     "releaseYear": 2008,
-    "authors": [
-      "Ernest Cline"
-    ],
+    "authors": ["Ernest Cline"],
     "coverImage": "https://assets.hardcover.app/edition/30406910/65eeb4f6a207a3a4907739f7fea3d8622f7a5462.jpeg",
     "series": [
       {
@@ -564,10 +535,7 @@
     "pages": 352,
     "releaseDate": "2018-01-01",
     "releaseYear": 2018,
-    "authors": [
-      "Tara Westover",
-      "Peter Staffansson"
-    ],
+    "authors": ["Tara Westover", "Peter Staffansson"],
     "coverImage": "https://assets.hardcover.app/editions/31733517/3870058826804042.jpg",
     "series": [],
     "tags": [
@@ -840,11 +808,7 @@
         "Abusive relationship",
         "Toxic relationship"
       ],
-      "Tag": [
-        "religion",
-        "Academic",
-        "Family dynamics"
-      ]
+      "Tag": ["religion", "Academic", "Family dynamics"]
     },
     "isbn10": "9127150895",
     "isbn13": "9789127150898",
@@ -862,9 +826,7 @@
     "pages": 273,
     "releaseDate": "2018-01-01",
     "releaseYear": 2018,
-    "authors": [
-      "Sally Rooney"
-    ],
+    "authors": ["Sally Rooney"],
     "coverImage": "https://assets.hardcover.app/editions/30402559/2802629647590855.jpeg",
     "series": [
       {
@@ -1577,9 +1539,7 @@
     "pages": 380,
     "releaseDate": "2001-02-04",
     "releaseYear": 2001,
-    "authors": [
-      "Charles Bukowski"
-    ],
+    "authors": ["Charles Bukowski"],
     "coverImage": "https://assets.hardcover.app/edition/27060234/826328-L.jpg",
     "series": [],
     "tags": [],
@@ -1607,9 +1567,7 @@
     "pages": 437,
     "releaseDate": "2000-01-01",
     "releaseYear": 2000,
-    "authors": [
-      "Dave Eggers"
-    ],
+    "authors": ["Dave Eggers"],
     "coverImage": "https://assets.hardcover.app/edition/15243157/9ad4972a90ddd4c883bae2d460609357528db9d8.jpeg",
     "series": [],
     "tags": [
@@ -1644,9 +1602,7 @@
     "pages": 548,
     "releaseDate": "2002-01-01",
     "releaseYear": 2002,
-    "authors": [
-      "Jeffrey Eugenides"
-    ],
+    "authors": ["Jeffrey Eugenides"],
     "coverImage": "https://assets.hardcover.app/edition/16000591/765b7a54e7c036066462907e2f1819b470cffb1b.jpeg",
     "series": [],
     "tags": [
@@ -1747,14 +1703,7 @@
         "hopeful",
         "reflective"
       ],
-      "Pace": [
-        "medium",
-        "slow",
-        "slow",
-        "slow",
-        "slow",
-        "medium"
-      ],
+      "Pace": ["medium", "slow", "slow", "slow", "slow", "medium"],
       "Tag": [
         "A mix driven",
         "Strong Character Development",
@@ -1814,10 +1763,7 @@
     "pages": 209,
     "releaseDate": "1935-01-01",
     "releaseYear": 1935,
-    "authors": [
-      "John Steinbeck",
-      "Thomas C. Fensch"
-    ],
+    "authors": ["John Steinbeck", "Thomas C. Fensch"],
     "coverImage": "https://assets.hardcover.app/edition/6741585/8ad10127bee55bc2717613e454ecc5c74520e912.jpeg",
     "series": [],
     "tags": [
@@ -1841,10 +1787,7 @@
         "Literature & Fiction",
         "Genre Fiction"
       ],
-      "Mood": [
-        "Witty",
-        "funny"
-      ]
+      "Mood": ["Witty", "funny"]
     },
     "isbn10": "0140187405",
     "isbn13": "9780140187403",
@@ -1862,9 +1805,7 @@
     "pages": 304,
     "releaseDate": "2013-01-01",
     "releaseYear": 2013,
-    "authors": [
-      "Graeme Simsion"
-    ],
+    "authors": ["Graeme Simsion"],
     "coverImage": "https://assets.hardcover.app/edition/30399465/131eb50c7ee758a9e72fa35952cde8ec06f960a8.jpeg",
     "series": [
       {
@@ -1919,12 +1860,7 @@
       "emotional"
     ],
     "tagsByCategory": {
-      "Genre": [
-        "Fiction",
-        "Romance",
-        "Fiction",
-        "Australian fiction"
-      ],
+      "Genre": ["Fiction", "Romance", "Fiction", "Australian fiction"],
       "Mood": [
         "Adventurous",
         "emotional",
@@ -1949,13 +1885,7 @@
         "funny",
         "emotional"
       ],
-      "Pace": [
-        "medium",
-        "medium",
-        "medium",
-        "fast",
-        "medium"
-      ],
+      "Pace": ["medium", "medium", "medium", "fast", "medium"],
       "Tag": [
         "Plot driven",
         "Strong Character Development",
@@ -1987,10 +1917,7 @@
     "pages": null,
     "releaseDate": "1987-01-01",
     "releaseYear": 1987,
-    "authors": [
-      "Douglas Adams",
-      "Stephen Mangan"
-    ],
+    "authors": ["Douglas Adams", "Stephen Mangan"],
     "coverImage": "https://assets.hardcover.app/external_data/60966794/eb09d6599e4e2db75fdda58807b21419c1fd9b3e.jpeg",
     "series": [
       {
@@ -2062,10 +1989,7 @@
         "mysterious",
         "Adventurous"
       ],
-      "Pace": [
-        "fast",
-        "medium"
-      ],
+      "Pace": ["fast", "medium"],
       "Tag": [
         "A mix driven",
         "Weak Character Development",
@@ -2089,9 +2013,7 @@
     "pages": 307,
     "releaseDate": "1998-01-01",
     "releaseYear": 1998,
-    "authors": [
-      "Nick Hornby"
-    ],
+    "authors": ["Nick Hornby"],
     "coverImage": "https://assets.hardcover.app/edition/29423616/fe39496a1a8c92c1a0c129906b4547585edb322b.jpeg",
     "series": [],
     "tags": [
@@ -2126,9 +2048,7 @@
         "Literature & Fiction",
         "Genre Fiction"
       ],
-      "Mood": [
-        "funny"
-      ]
+      "Mood": ["funny"]
     },
     "isbn10": "0140285679",
     "isbn13": "9780140285673",
@@ -2153,9 +2073,7 @@
     "pages": 244,
     "releaseDate": "2003-01-01",
     "releaseYear": 2003,
-    "authors": [
-      "Douglas Coupland"
-    ],
+    "authors": ["Douglas Coupland"],
     "coverImage": "https://assets.hardcover.app/external_data/35422972/ba38271a04257c5df8fc07fbe9643b3eebe5c5a7.jpeg",
     "series": [],
     "tags": [],
@@ -2183,9 +2101,7 @@
     "pages": 720,
     "releaseDate": "2015-01-01",
     "releaseYear": 2015,
-    "authors": [
-      "Hanya Yanagihara"
-    ],
+    "authors": ["Hanya Yanagihara"],
     "coverImage": "https://assets.hardcover.app/edition/774817/0bdba65a5c5c95da0a4a2cac8c6eeb447d6d5947.jpeg",
     "series": [],
     "tags": [
@@ -3124,9 +3040,7 @@
     "pages": 208,
     "releaseDate": "2014-01-01",
     "releaseYear": 2014,
-    "authors": [
-      "Jeff VanderMeer"
-    ],
+    "authors": ["Jeff VanderMeer"],
     "coverImage": "https://assets.hardcover.app/external_data/61104538/b91d0115043c247a33f6cea3d9aa571ff85721df.jpeg",
     "series": [
       {
@@ -3473,10 +3387,7 @@
     "pages": 370,
     "releaseDate": "1964-01-01",
     "releaseYear": 1964,
-    "authors": [
-      "Tony Parsons",
-      "Cecilia Franklin"
-    ],
+    "authors": ["Tony Parsons", "Cecilia Franklin"],
     "coverImage": "https://assets.hardcover.app/edition/10746376/472320-L.jpg",
     "series": [
       {
@@ -3485,15 +3396,9 @@
         "position": 1
       }
     ],
-    "tags": [
-      "Adult children of aging parents",
-      "Fiction"
-    ],
+    "tags": ["Adult children of aging parents", "Fiction"],
     "tagsByCategory": {
-      "Genre": [
-        "Adult children of aging parents",
-        "Fiction"
-      ]
+      "Genre": ["Adult children of aging parents", "Fiction"]
     },
     "isbn10": "9172633778",
     "isbn13": "9789172633773",
@@ -3518,9 +3423,7 @@
     "pages": 288,
     "releaseDate": "1998-01-01",
     "releaseYear": 1998,
-    "authors": [
-      "Douglas Coupland"
-    ],
+    "authors": ["Douglas Coupland"],
     "coverImage": "https://assets.hardcover.app/edition/18360065/25535-L.jpg",
     "series": [],
     "tags": [],
@@ -3548,9 +3451,7 @@
     "pages": 292,
     "releaseDate": "2018-01-01",
     "releaseYear": 2018,
-    "authors": [
-      "Tommy Orange"
-    ],
+    "authors": ["Tommy Orange"],
     "coverImage": "https://assets.hardcover.app/edition/30404859/38c2c5e2c2ba5cf0f6438f738d86c76ab5113e4f.jpeg",
     "series": [],
     "tags": [
@@ -3734,12 +3635,7 @@
         "Unloveable Characters",
         "Diverse Characters"
       ],
-      "Content Warning": [
-        "Alcoholism",
-        "Rape",
-        "Gun violence",
-        "death"
-      ]
+      "Content Warning": ["Alcoholism", "Rape", "Gun violence", "death"]
     },
     "isbn10": "0525436146",
     "isbn13": "9780525436140",
@@ -3764,9 +3660,7 @@
     "pages": 288,
     "releaseDate": "2002-01-01",
     "releaseYear": 2002,
-    "authors": [
-      "Jonathan Safran Foer"
-    ],
+    "authors": ["Jonathan Safran Foer"],
     "coverImage": "https://assets.hardcover.app/edition/8508062/9679616-L.jpg",
     "series": [],
     "tags": [
@@ -3794,14 +3688,7 @@
       "Not Diverse Characters"
     ],
     "tagsByCategory": {
-      "Genre": [
-        "War",
-        "Classics",
-        "Humor",
-        "Fiction",
-        "Literature",
-        "History"
-      ],
+      "Genre": ["War", "Classics", "Humor", "Fiction", "Literature", "History"],
       "Mood": [
         "reflective",
         "funny",
@@ -3810,10 +3697,7 @@
         "emotional",
         "challenging"
       ],
-      "Pace": [
-        "medium",
-        "slow"
-      ],
+      "Pace": ["medium", "slow"],
       "Tag": [
         "A mix driven",
         "Strong Character Development",
@@ -3848,10 +3732,7 @@
     "pages": 309,
     "releaseDate": "1997-01-01",
     "releaseYear": 1997,
-    "authors": [
-      "J. K. Rowling",
-      "Mary GrandPré"
-    ],
+    "authors": ["J. K. Rowling", "Mary GrandPré"],
     "coverImage": "https://assets.hardcover.app/editions/3890025/4883525795702759-58613380.jpg",
     "series": [
       {
@@ -4794,9 +4675,7 @@
         "medium",
         "fast"
       ],
-      "Member": [
-        "Joshua"
-      ]
+      "Member": ["Joshua"]
     },
     "isbn10": null,
     "isbn13": null,
@@ -4827,9 +4706,7 @@
     "pages": null,
     "releaseDate": null,
     "releaseYear": null,
-    "authors": [
-      "Douglas Coupland"
-    ],
+    "authors": ["Douglas Coupland"],
     "coverImage": "https://assets.hardcover.app/books/368093/3845696-L.jpg",
     "series": [],
     "tags": [],
@@ -4880,11 +4757,7 @@
       "medium"
     ],
     "tagsByCategory": {
-      "Genre": [
-        "Adventure",
-        "Classics",
-        "Young Adult"
-      ],
+      "Genre": ["Adventure", "Classics", "Young Adult"],
       "Mood": [
         "Adventurous",
         "emotional",
@@ -4896,9 +4769,7 @@
         "emotional",
         "sad"
       ],
-      "Pace": [
-        "medium"
-      ]
+      "Pace": ["medium"]
     },
     "isbn10": "067942850X",
     "isbn13": "9780679428503",
@@ -4916,18 +4787,12 @@
     "pages": 221,
     "releaseDate": "1983-01-01",
     "releaseYear": 1983,
-    "authors": [
-      "Charles Bukowski"
-    ],
+    "authors": ["Charles Bukowski"],
     "coverImage": "https://assets.hardcover.app/edition/9037781/4227685-L.jpg",
     "series": [],
-    "tags": [
-      "Classics"
-    ],
+    "tags": ["Classics"],
     "tagsByCategory": {
-      "Genre": [
-        "Classics"
-      ]
+      "Genre": ["Classics"]
     },
     "isbn10": "0876855966",
     "isbn13": "9780876855980",
@@ -4952,9 +4817,7 @@
     "pages": 656,
     "releaseDate": "2011-01-01",
     "releaseYear": 2011,
-    "authors": [
-      "Walter Isaacson"
-    ],
+    "authors": ["Walter Isaacson"],
     "coverImage": "https://assets.hardcover.app/editions/3137059/3507667057272976-61d7gLTQ4bL._SL1000_.jpg",
     "series": [],
     "tags": [
@@ -4994,18 +4857,9 @@
         "Biography",
         "Biography"
       ],
-      "Mood": [
-        "informative",
-        "reflective"
-      ],
-      "Pace": [
-        "slow"
-      ],
-      "Tag": [
-        "stevejobs",
-        "apple",
-        "biography"
-      ]
+      "Mood": ["informative", "reflective"],
+      "Pace": ["slow"],
+      "Tag": ["stevejobs", "apple", "biography"]
     },
     "isbn10": "1451648537",
     "isbn13": "9781451648539",
@@ -5030,9 +4884,7 @@
     "pages": 547,
     "releaseDate": "0008-01-01",
     "releaseYear": 8,
-    "authors": [
-      "J. K. Rowling"
-    ],
+    "authors": ["J. K. Rowling"],
     "coverImage": "https://assets.hardcover.app/editions/29858357/2484661554595800.jpg",
     "series": [
       {
@@ -5700,9 +5552,7 @@
     "pages": 328,
     "releaseDate": "1949-01-01",
     "releaseYear": 1949,
-    "authors": [
-      "George Orwell"
-    ],
+    "authors": ["George Orwell"],
     "coverImage": "https://assets.hardcover.app/editions/4675245/7315391130042195-lf.jpeg",
     "series": [],
     "tags": [
@@ -6826,10 +6676,7 @@
     "pages": 279,
     "releaseDate": "2010-01-01",
     "releaseYear": 2010,
-    "authors": [
-      "Jason Fried",
-      "David Heinemeier Hansson"
-    ],
+    "authors": ["Jason Fried", "David Heinemeier Hansson"],
     "coverImage": "https://assets.hardcover.app/book_mappings/7332994/0e611199f4df02f6e0553bc336f34e68d3d17e70.jpeg",
     "series": [],
     "tags": [
@@ -6870,13 +6717,8 @@
         "Business Development & Entrepreneurship",
         "Motivation & Self-Improvement"
       ],
-      "Mood": [
-        "informative",
-        "inspiring"
-      ],
-      "Pace": [
-        "fast"
-      ]
+      "Mood": ["informative", "inspiring"],
+      "Pace": ["fast"]
     },
     "isbn10": "0307463745",
     "isbn13": "9780307463746",
@@ -6894,9 +6736,7 @@
     "pages": 541,
     "releaseDate": "2006-01-01",
     "releaseYear": 2006,
-    "authors": [
-      "Chimamanda Ngozi Adichie"
-    ],
+    "authors": ["Chimamanda Ngozi Adichie"],
     "coverImage": "https://assets.hardcover.app/edition/2830886/59de7fb4f0128021efaafb18753229377507e7ee.jpeg",
     "series": [],
     "tags": [
@@ -6952,10 +6792,7 @@
         "reflective",
         "emotional"
       ],
-      "Pace": [
-        "medium",
-        "medium"
-      ],
+      "Pace": ["medium", "medium"],
       "Tag": [
         "A mix driven",
         "Strong Character Development",
@@ -6979,10 +6816,7 @@
     "pages": 784,
     "releaseDate": "0008-01-01",
     "releaseYear": 8,
-    "authors": [
-      "J. K. Rowling",
-      "Lena Fries-Gedin"
-    ],
+    "authors": ["J. K. Rowling", "Lena Fries-Gedin"],
     "coverImage": "https://assets.hardcover.app/editions/14019917/7017379795452299-58613224.jpg",
     "series": [
       {
@@ -7572,9 +7406,7 @@
     "pages": 370,
     "releaseDate": "2017-01-01",
     "releaseYear": 2017,
-    "authors": [
-      "Celeste Ng"
-    ],
+    "authors": ["Celeste Ng"],
     "coverImage": "https://assets.hardcover.app/editions/30399704/4364405759474168-34273236.jpeg",
     "series": [],
     "tags": [
@@ -7787,11 +7619,7 @@
     "pages": 752,
     "releaseDate": "0019-01-01",
     "releaseYear": 19,
-    "authors": [
-      "J. K. Rowling",
-      "Mary GrandPré",
-      "Lena Fries-Gedin"
-    ],
+    "authors": ["J. K. Rowling", "Mary GrandPré", "Lena Fries-Gedin"],
     "coverImage": "https://assets.hardcover.app/editions/16055859/5358972612351229-49130.jpg",
     "series": [
       {
@@ -8347,11 +8175,7 @@
     "pages": 374,
     "releaseDate": "1978-01-01",
     "releaseYear": 1978,
-    "authors": [
-      "John Kennedy Toole",
-      "Walker Percy",
-      "Einar Heckscher"
-    ],
+    "authors": ["John Kennedy Toole", "Walker Percy", "Einar Heckscher"],
     "coverImage": "https://assets.hardcover.app/external_data/60119313/ed473dbbdba6069a291c6f0f5a5025f7879e43b2.jpeg",
     "series": [],
     "tags": [
@@ -8405,24 +8229,12 @@
     "pages": 255,
     "releaseDate": "2011-11-01",
     "releaseYear": 2011,
-    "authors": [
-      "Daniel Goldberg",
-      "Linus Larsson",
-      "Jennifer Hawkins"
-    ],
+    "authors": ["Daniel Goldberg", "Linus Larsson", "Jennifer Hawkins"],
     "coverImage": "https://assets.hardcover.app/edition/26329083/4c4d024dba9c119da705ae673edd2d2a9ed06033.jpeg",
     "series": [],
-    "tags": [
-      "Young Adult",
-      "Computer games",
-      "Biography & Autobiography"
-    ],
+    "tags": ["Young Adult", "Computer games", "Biography & Autobiography"],
     "tagsByCategory": {
-      "Genre": [
-        "Young Adult",
-        "Computer games",
-        "Biography & Autobiography"
-      ]
+      "Genre": ["Young Adult", "Computer games", "Biography & Autobiography"]
     },
     "isbn10": "1609805372",
     "isbn13": "9781609805371",
@@ -8447,11 +8259,7 @@
     "pages": 896,
     "releaseDate": "0008-01-01",
     "releaseYear": 8,
-    "authors": [
-      "J. K. Rowling",
-      "Mary GrandPré",
-      "Lena Fries-Gedin"
-    ],
+    "authors": ["J. K. Rowling", "Mary GrandPré", "Lena Fries-Gedin"],
     "coverImage": "https://assets.hardcover.app/editions/29262698/2170450621507933-58613451.jpg",
     "series": [
       {
@@ -9001,10 +8809,7 @@
     "pages": 672,
     "releaseDate": "0008-01-01",
     "releaseYear": 8,
-    "authors": [
-      "J. K. Rowling",
-      "Lena Fries-Gedin"
-    ],
+    "authors": ["J. K. Rowling", "Lena Fries-Gedin"],
     "coverImage": "https://assets.hardcover.app/editions/19724535/8038369521613846-58613345.jpg",
     "series": [
       {
@@ -9652,20 +9457,12 @@
     "pages": 256,
     "releaseDate": "2013-01-01",
     "releaseYear": 2013,
-    "authors": [
-      "Jason Fried",
-      "David Heinemeier Hansson",
-      "Rebecca Lowman"
-    ],
+    "authors": ["Jason Fried", "David Heinemeier Hansson", "Rebecca Lowman"],
     "coverImage": "https://assets.hardcover.app/external_data/59815037/d40f636df70241dd294d39304a6bddaff13d2f68.jpeg",
     "series": [],
-    "tags": [
-      "Business & Economics"
-    ],
+    "tags": ["Business & Economics"],
     "tagsByCategory": {
-      "Genre": [
-        "Business & Economics"
-      ]
+      "Genre": ["Business & Economics"]
     },
     "isbn10": "0804148996",
     "isbn13": "9780804148993",
@@ -9690,10 +9487,7 @@
     "pages": 332,
     "releaseDate": "1998-01-01",
     "releaseYear": 1998,
-    "authors": [
-      "J. K. Rowling",
-      "Lena Fries-Gedin"
-    ],
+    "authors": ["J. K. Rowling", "Lena Fries-Gedin"],
     "coverImage": "https://assets.hardcover.app/editions/25614271/4833571895209920-lf.jpeg",
     "series": [
       {
@@ -10373,10 +10167,7 @@
     "pages": null,
     "releaseDate": null,
     "releaseYear": null,
-    "authors": [
-      "Mats Strandberg",
-      "Sara Bergmark Elfgren"
-    ],
+    "authors": ["Mats Strandberg", "Sara Bergmark Elfgren"],
     "coverImage": "https://assets.hardcover.app/edition/30400053/18114350._SX98_.jpg",
     "series": [
       {
@@ -10385,17 +10176,9 @@
         "position": 2
       }
     ],
-    "tags": [
-      "Fantasy",
-      "Young Adult",
-      "LGBTQ"
-    ],
+    "tags": ["Fantasy", "Young Adult", "LGBTQ"],
     "tagsByCategory": {
-      "Genre": [
-        "Fantasy",
-        "Young Adult",
-        "LGBTQ"
-      ]
+      "Genre": ["Fantasy", "Young Adult", "LGBTQ"]
     },
     "isbn10": null,
     "isbn13": "9789129684094",
@@ -10420,11 +10203,7 @@
     "pages": 515,
     "releaseDate": "2011-04-15",
     "releaseYear": 2011,
-    "authors": [
-      "Mats Strandberg",
-      "Sara Bergmark Elfgren",
-      "Sara B. Elfgren"
-    ],
+    "authors": ["Mats Strandberg", "Sara Bergmark Elfgren", "Sara B. Elfgren"],
     "coverImage": "https://assets.hardcover.app/edition/30400056/11010899._SX98_.jpg",
     "series": [
       {
@@ -10433,17 +10212,9 @@
         "position": 1
       }
     ],
-    "tags": [
-      "Fantasy",
-      "Young Adult",
-      "LGBTQ"
-    ],
+    "tags": ["Fantasy", "Young Adult", "LGBTQ"],
     "tagsByCategory": {
-      "Genre": [
-        "Fantasy",
-        "Young Adult",
-        "LGBTQ"
-      ]
+      "Genre": ["Fantasy", "Young Adult", "LGBTQ"]
     },
     "isbn10": "9129676053",
     "isbn13": "9788375544510",
@@ -10468,10 +10239,7 @@
     "pages": 610,
     "releaseDate": "1978-01-01",
     "releaseYear": 1978,
-    "authors": [
-      "John Irving",
-      "Caj Lundgren"
-    ],
+    "authors": ["John Irving", "Caj Lundgren"],
     "coverImage": "https://assets.hardcover.app/editions/3873171/9763406516864734.jpg",
     "series": [],
     "tags": [
@@ -10519,10 +10287,7 @@
     "pages": 188,
     "releaseDate": "2007-01-01",
     "releaseYear": 2007,
-    "authors": [
-      "Han Kang",
-      "Deborah     Smith"
-    ],
+    "authors": ["Han Kang", "Deborah     Smith"],
     "coverImage": "https://assets.hardcover.app/edition/30559491/60248f711728e342dfd34dc10f9ac47a3089a262.jpeg",
     "series": [],
     "tags": [
@@ -10773,10 +10538,7 @@
     "pages": 352,
     "releaseDate": "2019-01-01",
     "releaseYear": 2019,
-    "authors": [
-      "Fredrik Backman",
-      "Neil   Smith"
-    ],
+    "authors": ["Fredrik Backman", "Neil   Smith"],
     "coverImage": "https://assets.hardcover.app/external_data/35781842/272920532c001c02fa7b7b7696bc1295959e3b3c.jpeg",
     "series": [],
     "tags": [
@@ -11339,13 +11101,7 @@
         "Loveable Characters",
         "Diverse Characters"
       ],
-      "Genre": [
-        "Fiction",
-        "Fiction",
-        "Fiction",
-        "LGBTQ",
-        "City and town life"
-      ],
+      "Genre": ["Fiction", "Fiction", "Fiction", "LGBTQ", "City and town life"],
       "Content Warning": [
         "suicidal thoughts",
         "suicide",
@@ -11390,10 +11146,7 @@
     "pages": 448,
     "releaseDate": "2017-01-01",
     "releaseYear": 2017,
-    "authors": [
-      "Fredrik Backman",
-      "Neil   Smith"
-    ],
+    "authors": ["Fredrik Backman", "Neil   Smith"],
     "coverImage": "https://assets.hardcover.app/edition/15917710/630d4a466c1ceea288a1a3d3719dd5e463ceb295.jpeg",
     "series": [
       {
@@ -11621,9 +11374,7 @@
     "pages": 689,
     "releaseDate": "2014-10-01",
     "releaseYear": 2014,
-    "authors": [
-      "Fredrik Backman"
-    ],
+    "authors": ["Fredrik Backman"],
     "coverImage": "https://assets.hardcover.app/edition/30396770/b61f2a09828b383c400b576205c39239297a7d5e.jpeg",
     "series": [
       {
@@ -11959,9 +11710,7 @@
     "pages": 688,
     "releaseDate": "2021-01-01",
     "releaseYear": 2021,
-    "authors": [
-      "Fredrik Backman"
-    ],
+    "authors": ["Fredrik Backman"],
     "coverImage": "https://assets.hardcover.app/external_data/60220445/ba8ce436b2b2dd0c15322ecc6911e05732856b5e.jpeg",
     "series": [
       {
@@ -12216,11 +11965,7 @@
         "Fiction",
         "Literary Fiction"
       ],
-      "Content Warning": [
-        "Drug abuse",
-        "Rape",
-        "Sexual assault"
-      ]
+      "Content Warning": ["Drug abuse", "Rape", "Sexual assault"]
     },
     "isbn10": null,
     "isbn13": null,
@@ -12251,23 +11996,12 @@
     "pages": 464,
     "releaseDate": "2006-01-01",
     "releaseYear": 2006,
-    "authors": [
-      "Douglas Coupland",
-      "Clemens Altgård"
-    ],
+    "authors": ["Douglas Coupland", "Clemens Altgård"],
     "coverImage": "https://assets.hardcover.app/external_data/60013533/04fb790eec7c941fe59c625fad76ef45affcdd76.jpeg",
     "series": [],
-    "tags": [
-      "Science fiction",
-      "Fiction",
-      "General"
-    ],
+    "tags": ["Science fiction", "Fiction", "General"],
     "tagsByCategory": {
-      "Genre": [
-        "Science fiction",
-        "Fiction",
-        "General"
-      ]
+      "Genre": ["Science fiction", "Fiction", "General"]
     },
     "isbn10": null,
     "isbn13": "9789170015564",
@@ -12298,9 +12032,7 @@
     "pages": 400,
     "releaseDate": "2020-01-01",
     "releaseYear": 2020,
-    "authors": [
-      "TJ Klune"
-    ],
+    "authors": ["TJ Klune"],
     "coverImage": "https://assets.hardcover.app/edition/29272503/10207033-L.jpg",
     "series": [
       {
@@ -13537,9 +13269,7 @@
     "pages": 304,
     "releaseDate": "2022-01-01",
     "releaseYear": 2022,
-    "authors": [
-      "Nita Prose"
-    ],
+    "authors": ["Nita Prose"],
     "coverImage": "https://assets.hardcover.app/external_data/61232329/a00eeff3f8677a286daa3d85009fae72b0ae7b76.jpeg",
     "series": [
       {
@@ -14081,9 +13811,7 @@
     "pages": 304,
     "releaseDate": "2021-01-01",
     "releaseYear": 2021,
-    "authors": [
-      "Dave Grohl"
-    ],
+    "authors": ["Dave Grohl"],
     "coverImage": "https://assets.hardcover.app/external_data/61495138/1ef69ae46debe8855af335adaac4d0bb20fc6995.jpeg",
     "series": [],
     "tags": [
@@ -14204,10 +13932,7 @@
     "pages": 353,
     "releaseDate": "1995-01-01",
     "releaseYear": 1995,
-    "authors": [
-      "Nick Hornby",
-      "Erik Andersson"
-    ],
+    "authors": ["Nick Hornby", "Erik Andersson"],
     "coverImage": "https://assets.hardcover.app/edition/20764143/04ca743ab8a2c64141d7d3a500c7d801acf9c9ff.jpeg",
     "series": [],
     "tags": [
@@ -14257,24 +13982,12 @@
     "pages": 306,
     "releaseDate": "1988-04-01",
     "releaseYear": 1988,
-    "authors": [
-      "Michael Chabon"
-    ],
+    "authors": ["Michael Chabon"],
     "coverImage": "https://assets.hardcover.app/external_data/59844946/79b3f25ceaed4122b02e340c960069e95f6f04e9.jpeg",
     "series": [],
-    "tags": [
-      "LGBTQ",
-      "Young Adult",
-      "Classics",
-      "Fiction"
-    ],
+    "tags": ["LGBTQ", "Young Adult", "Classics", "Fiction"],
     "tagsByCategory": {
-      "Genre": [
-        "LGBTQ",
-        "Young Adult",
-        "Classics",
-        "Fiction"
-      ]
+      "Genre": ["LGBTQ", "Young Adult", "Classics", "Fiction"]
     },
     "isbn10": "0060790598",
     "isbn13": "9780060790592",
@@ -14299,22 +14012,12 @@
     "pages": 154,
     "releaseDate": "2019-01-01",
     "releaseYear": 2019,
-    "authors": [
-      "Richard Ayoade"
-    ],
+    "authors": ["Richard Ayoade"],
     "coverImage": "https://assets.hardcover.app/edition/23970245/11037683-L.jpg",
     "series": [],
-    "tags": [
-      "Performing Arts",
-      "Literature",
-      "Nonfiction"
-    ],
+    "tags": ["Performing Arts", "Literature", "Nonfiction"],
     "tagsByCategory": {
-      "Genre": [
-        "Performing Arts",
-        "Literature",
-        "Nonfiction"
-      ]
+      "Genre": ["Performing Arts", "Literature", "Nonfiction"]
     },
     "isbn10": "0571339131",
     "isbn13": "9780571339136",
@@ -14332,22 +14035,12 @@
     "pages": null,
     "releaseDate": "2005-01-01",
     "releaseYear": 2005,
-    "authors": [
-      "John Ajvide Lindqvist"
-    ],
+    "authors": ["John Ajvide Lindqvist"],
     "coverImage": "https://assets.hardcover.app/external_data/60870311/f07b19a2e13febe41f61bee1ef7a17db1ddba18f.jpeg",
     "series": [],
-    "tags": [
-      "Fantasy",
-      "Science fiction",
-      "Dystopian"
-    ],
+    "tags": ["Fantasy", "Science fiction", "Dystopian"],
     "tagsByCategory": {
-      "Genre": [
-        "Fantasy",
-        "Science fiction",
-        "Dystopian"
-      ]
+      "Genre": ["Fantasy", "Science fiction", "Dystopian"]
     },
     "isbn10": "9170372381",
     "isbn13": "9789170378546",
@@ -14372,9 +14065,7 @@
     "pages": 706,
     "releaseDate": "2000-01-01",
     "releaseYear": 2000,
-    "authors": [
-      "Michael Chabon"
-    ],
+    "authors": ["Michael Chabon"],
     "coverImage": "https://assets.hardcover.app/edition/30385746/96cdd59ef83ad016f0a468bf76f0049bc36ec5da.jpeg",
     "series": [],
     "tags": [
@@ -14439,10 +14130,7 @@
         "relaxing",
         "sad"
       ],
-      "Pace": [
-        "medium",
-        "medium"
-      ],
+      "Pace": ["medium", "medium"],
       "Tag": [
         "A mix driven",
         "Strong Character Development",
@@ -14453,9 +14141,7 @@
         "Loveable Characters",
         "Not Diverse Characters"
       ],
-      "Content Warning": [
-        "Rape"
-      ]
+      "Content Warning": ["Rape"]
     },
     "isbn10": "0312282990",
     "isbn13": null,
@@ -14521,9 +14207,7 @@
     "pages": 518,
     "releaseDate": "1999-08-24",
     "releaseYear": 1999,
-    "authors": [
-      "Philip Pullman"
-    ],
+    "authors": ["Philip Pullman"],
     "coverImage": "https://assets.hardcover.app/editions/16913314/4463346300750242-283870.jpg",
     "series": [
       {
@@ -14729,9 +14413,7 @@
     "pages": 482,
     "releaseDate": "2022-01-01",
     "releaseYear": 2022,
-    "authors": [
-      "Gabrielle Zevin"
-    ],
+    "authors": ["Gabrielle Zevin"],
     "coverImage": "https://assets.hardcover.app/edition/30535150/2efdfd508a803c89913fd6e987f69048a17c89c6.jpeg",
     "series": [],
     "tags": [
@@ -16377,9 +16059,7 @@
     "pages": null,
     "releaseDate": "2009-01-01",
     "releaseYear": 2009,
-    "authors": [
-      "Mike Cohn"
-    ],
+    "authors": ["Mike Cohn"],
     "coverImage": "https://assets.hardcover.app/edition/30421030/0d4829354752f7c0969bee8037190f1306649e0b.jpeg",
     "series": [
       {
@@ -16418,11 +16098,7 @@
     "pages": 474,
     "releaseDate": "2012-01-01",
     "releaseYear": 2012,
-    "authors": [
-      "Rolf Börjlind",
-      "Rod Bradbury",
-      "Cilla Börjlind"
-    ],
+    "authors": ["Rolf Börjlind", "Rod Bradbury", "Cilla Börjlind"],
     "coverImage": "https://assets.hardcover.app/external_data/59589937/cd3190bd60dd493ab01d71db439d1b64406f0222.jpeg",
     "series": [
       {
@@ -16431,19 +16107,9 @@
         "position": 1
       }
     ],
-    "tags": [
-      "Murder",
-      "Police",
-      "Mystery",
-      "Fiction"
-    ],
+    "tags": ["Murder", "Police", "Mystery", "Fiction"],
     "tagsByCategory": {
-      "Genre": [
-        "Murder",
-        "Police",
-        "Mystery",
-        "Fiction"
-      ]
+      "Genre": ["Murder", "Police", "Mystery", "Fiction"]
     },
     "isbn10": null,
     "isbn13": "9789113041681",
@@ -16474,11 +16140,7 @@
     "pages": 813,
     "releaseDate": "2013-11-01",
     "releaseYear": 2013,
-    "authors": [
-      "Mats Strandberg",
-      "Sara Bergmark Elfgren",
-      "Sara Elfgren"
-    ],
+    "authors": ["Mats Strandberg", "Sara Bergmark Elfgren", "Sara Elfgren"],
     "series": [
       {
         "id": 1294,
@@ -16511,9 +16173,7 @@
     "pages": 414,
     "releaseDate": "2004-05-01",
     "releaseYear": 2004,
-    "authors": [
-      "John Ajvide Lindqvist"
-    ],
+    "authors": ["John Ajvide Lindqvist"],
     "series": [
       {
         "id": 5945,
@@ -16546,22 +16206,12 @@
     "pages": 237,
     "releaseDate": "2000-01-01",
     "releaseYear": 2000,
-    "authors": [
-      "Mikael Niemi"
-    ],
+    "authors": ["Mikael Niemi"],
     "coverImage": "https://assets.hardcover.app/edition/30556931/fece60d0f2620843583dd7022a4a24cf7d2ec3ad.jpeg",
     "series": [],
-    "tags": [
-      "Sweden",
-      "Young Adult",
-      "Classics"
-    ],
+    "tags": ["Sweden", "Young Adult", "Classics"],
     "tagsByCategory": {
-      "Genre": [
-        "Sweden",
-        "Young Adult",
-        "Classics"
-      ]
+      "Genre": ["Sweden", "Young Adult", "Classics"]
     },
     "isbn10": "9176437183",
     "isbn13": "9789176437186",
@@ -16586,10 +16236,7 @@
     "pages": 423,
     "releaseDate": "2014-01-01",
     "releaseYear": 2014,
-    "authors": [
-      "Rolf Börjlind",
-      "Cilla Börjlind"
-    ],
+    "authors": ["Rolf Börjlind", "Cilla Börjlind"],
     "coverImage": "https://assets.hardcover.app/external_data/59723651/95bce90d00016ba60621976bde11d3f2aab32460.jpeg",
     "series": [
       {
@@ -16623,9 +16270,7 @@
     "pages": 304,
     "releaseDate": "2024-01-01",
     "releaseYear": 2024,
-    "authors": [
-      "Coco Mellors"
-    ],
+    "authors": ["Coco Mellors"],
     "coverImage": "https://assets.hardcover.app/edition/30692936/ad424b30db4ac712a73e408cc7ac9b76c449eab0.jpeg",
     "series": [],
     "tags": [
@@ -16699,13 +16344,7 @@
         "Drug use",
         "Domestic abuse"
       ],
-      "Genre": [
-        "LGBTQ",
-        "Fiction",
-        "Fiction",
-        "Fiction",
-        "General fiction"
-      ],
+      "Genre": ["LGBTQ", "Fiction", "Fiction", "Fiction", "General fiction"],
       "Mood": [
         "dark",
         "reflective",
@@ -16727,13 +16366,7 @@
         "reflective",
         "emotional"
       ],
-      "Pace": [
-        "medium",
-        "medium",
-        "medium",
-        "slow",
-        "medium"
-      ],
+      "Pace": ["medium", "medium", "medium", "slow", "medium"],
       "Tag": [
         "Character driven",
         "Strong Character Development",
@@ -16783,9 +16416,7 @@
     "pages": 678,
     "releaseDate": "2023-01-01",
     "releaseYear": 2023,
-    "authors": [
-      "Rebecca Yarros"
-    ],
+    "authors": ["Rebecca Yarros"],
     "coverImage": "https://assets.hardcover.app/editions/30706608/7798138539052064-fourth-wing.jpeg",
     "series": [
       {
@@ -18597,11 +18228,7 @@
     "pages": 1003,
     "releaseDate": "1979-01-01",
     "releaseYear": 1979,
-    "authors": [
-      "Douglas Adams",
-      "Thomas Tidholm",
-      "Nille Lindgren"
-    ],
+    "authors": ["Douglas Adams", "Thomas Tidholm", "Nille Lindgren"],
     "coverImage": "https://assets.hardcover.app/external_data/59858190/73312718ce0c8282721e46521d24b2b8ff5d3dd4.jpeg",
     "series": [
       {
@@ -18663,11 +18290,7 @@
     "pages": null,
     "releaseDate": "2000-12-15",
     "releaseYear": 2000,
-    "authors": [
-      "Dave Thomas",
-      "Chad Fowler",
-      "Andy Hunt"
-    ],
+    "authors": ["Dave Thomas", "Chad Fowler", "Andy Hunt"],
     "series": [],
     "tags": [],
     "tagsByCategory": {},
@@ -18694,9 +18317,7 @@
     "pages": 294,
     "releaseDate": "2018-01-01",
     "releaseYear": 2018,
-    "authors": [
-      "Karin Smirnoff"
-    ],
+    "authors": ["Karin Smirnoff"],
     "coverImage": "https://assets.hardcover.app/edition/31533162/bb369f754eab0da6f6083edc990b3983eadd30c9.jpeg",
     "series": [
       {
@@ -18730,18 +18351,12 @@
     "pages": 391,
     "releaseDate": "2006-01-01",
     "releaseYear": 2006,
-    "authors": [
-      "John Ajvide Lindqvist"
-    ],
+    "authors": ["John Ajvide Lindqvist"],
     "coverImage": "https://assets.hardcover.app/external_data/60980712/6cfe3f7730bd2791c0f64638a4b8330508455957.jpeg",
     "series": [],
-    "tags": [
-      "Fantasy"
-    ],
+    "tags": ["Fantasy"],
     "tagsByCategory": {
-      "Genre": [
-        "Fantasy"
-      ]
+      "Genre": ["Fantasy"]
     },
     "isbn10": "9170373000",
     "isbn13": "9789170373008",
@@ -18766,10 +18381,7 @@
     "pages": 339,
     "releaseDate": "1971-01-01",
     "releaseYear": 1971,
-    "authors": [
-      "Luke Rhinehart",
-      "Ingrid Söderberg-Reeves"
-    ],
+    "authors": ["Luke Rhinehart", "Ingrid Söderberg-Reeves"],
     "series": [
       {
         "id": 12493,
@@ -18802,9 +18414,7 @@
     "pages": 362,
     "releaseDate": "2005-01-01",
     "releaseYear": 2005,
-    "authors": [
-      "Jonathan Safran Foer"
-    ],
+    "authors": ["Jonathan Safran Foer"],
     "coverImage": "https://assets.hardcover.app/external_data/60016239/25d318266b61baa48787502d8140b53feca8df37.jpeg",
     "series": [],
     "tags": [],
@@ -18832,11 +18442,7 @@
     "pages": 742,
     "releaseDate": "1994-04-12",
     "releaseYear": 1994,
-    "authors": [
-      "Haruki Murakami",
-      "Eiko Duke",
-      "Yukiko Duke"
-    ],
+    "authors": ["Haruki Murakami", "Eiko Duke", "Yukiko Duke"],
     "coverImage": "https://assets.hardcover.app/external_data/60016240/f968f4297744133fc40f71cf5b9623e1f16fe459.jpeg",
     "series": [
       {
@@ -18845,19 +18451,9 @@
         "position": 1
       }
     ],
-    "tags": [
-      "Fantasy",
-      "Classics",
-      "Science fiction",
-      "War"
-    ],
+    "tags": ["Fantasy", "Classics", "Science fiction", "War"],
     "tagsByCategory": {
-      "Genre": [
-        "Fantasy",
-        "Classics",
-        "Science fiction",
-        "War"
-      ]
+      "Genre": ["Fantasy", "Classics", "Science fiction", "War"]
     },
     "isbn10": "9113019406",
     "isbn13": "9789113019406",
@@ -18882,9 +18478,7 @@
     "pages": 350,
     "releaseDate": "2019-04-25",
     "releaseYear": 2019,
-    "authors": [
-      "Karin Smirnoff"
-    ],
+    "authors": ["Karin Smirnoff"],
     "coverImage": "https://assets.hardcover.app/external_data/60016248/8e1997d2795ffe4e4c4c47a4a7f2f2c7478a65d1.jpeg",
     "series": [
       {
@@ -18918,18 +18512,12 @@
     "pages": 438,
     "releaseDate": "2019-01-24",
     "releaseYear": 2019,
-    "authors": [
-      "Nina Wähä"
-    ],
+    "authors": ["Nina Wähä"],
     "coverImage": "https://assets.hardcover.app/external_data/60016246/2a848b376924b4e42cd5c325cb3a36b37d527ee0.jpeg",
     "series": [],
-    "tags": [
-      "LGBTQ"
-    ],
+    "tags": ["LGBTQ"],
     "tagsByCategory": {
-      "Genre": [
-        "LGBTQ"
-      ]
+      "Genre": ["LGBTQ"]
     },
     "isbn10": "9113086979",
     "isbn13": "9789113086972",
@@ -18947,10 +18535,7 @@
     "pages": 335,
     "releaseDate": "2017-01-01",
     "releaseYear": 2017,
-    "authors": [
-      "Shaun Bythell",
-      "Andreas Vesterlund"
-    ],
+    "authors": ["Shaun Bythell", "Andreas Vesterlund"],
     "coverImage": "https://assets.hardcover.app/edition/30887714/f7d4f8f106e5341f53b7c6d918e17b81cbe03e1e.jpeg",
     "series": [
       {
@@ -18977,9 +18562,7 @@
     "pages": 332,
     "releaseDate": "2020-04-01",
     "releaseYear": 2020,
-    "authors": [
-      "Karin Smirnoff"
-    ],
+    "authors": ["Karin Smirnoff"],
     "coverImage": "https://assets.hardcover.app/external_data/60016250/516da2f396a3d47ccaeb8838541a977b7f148e12.jpeg",
     "series": [
       {
@@ -19006,18 +18589,12 @@
     "pages": 479,
     "releaseDate": "2015-09-16",
     "releaseYear": 2015,
-    "authors": [
-      "Mats Strandberg"
-    ],
+    "authors": ["Mats Strandberg"],
     "coverImage": "https://assets.hardcover.app/edition/30887718/61eff6d6c686064da294f7a785be57d0d94425a6.jpeg",
     "series": [],
-    "tags": [
-      "Fantasy"
-    ],
+    "tags": ["Fantasy"],
     "tagsByCategory": {
-      "Genre": [
-        "Fantasy"
-      ]
+      "Genre": ["Fantasy"]
     },
     "isbn10": "9113060333",
     "isbn13": "9789113060347",
@@ -19035,23 +18612,12 @@
     "pages": 176,
     "releaseDate": "2016-01-07",
     "releaseYear": 2016,
-    "authors": [
-      "Olivier Bourdeaut",
-      "Regan Kramer"
-    ],
+    "authors": ["Olivier Bourdeaut", "Regan Kramer"],
     "coverImage": "https://assets.hardcover.app/external_data/27298302/60406d464c23b19d0a876e7c5b8d4084edbeeaaf.jpeg",
     "series": [],
-    "tags": [
-      "Classics",
-      "Fiction",
-      "History"
-    ],
+    "tags": ["Classics", "Fiction", "History"],
     "tagsByCategory": {
-      "Genre": [
-        "Classics",
-        "Fiction",
-        "History"
-      ]
+      "Genre": ["Classics", "Fiction", "History"]
     },
     "isbn10": "1501145916",
     "isbn13": "9781501145919",
@@ -19076,9 +18642,7 @@
     "pages": 376,
     "releaseDate": "2023-01-01",
     "releaseYear": 2023,
-    "authors": [
-      "Andrev Walden"
-    ],
+    "authors": ["Andrev Walden"],
     "coverImage": "https://assets.hardcover.app/edition/31054155/45afbfcfd60b71bd26b29a097e7c90e1f32390e9.jpeg",
     "series": [],
     "tags": [],
@@ -19112,10 +18676,7 @@
     "pages": 448,
     "releaseDate": "2024-01-01",
     "releaseYear": 2024,
-    "authors": [
-      "Sally Rooney",
-      "Klara Lindell"
-    ],
+    "authors": ["Sally Rooney", "Klara Lindell"],
     "coverImage": "https://assets.hardcover.app/edition/31538598/d625279bd52b64a8256798c91f67a45adec382f6.jpeg",
     "series": [],
     "tags": [
@@ -19161,12 +18722,7 @@
       "Not Diverse Characters"
     ],
     "tagsByCategory": {
-      "Genre": [
-        "Fiction",
-        "Fiction",
-        "Romance",
-        "Literature"
-      ],
+      "Genre": ["Fiction", "Fiction", "Romance", "Literature"],
       "Mood": [
         "reflective",
         "emotional",
@@ -19186,12 +18742,7 @@
         "reflective",
         "emotional"
       ],
-      "Pace": [
-        "medium",
-        "slow",
-        "medium",
-        "medium"
-      ],
+      "Pace": ["medium", "slow", "medium", "medium"],
       "Tag": [
         "Character driven",
         "Weak Character Development",
@@ -19226,18 +18777,12 @@
     "pages": null,
     "releaseDate": "2024-11-19",
     "releaseYear": 2024,
-    "authors": [
-      "Jim O’Heir"
-    ],
+    "authors": ["Jim O’Heir"],
     "coverImage": "https://assets.hardcover.app/edition/31624095/1099860c2fbe63947a0767f24f4a536e9a294640.jpeg",
     "series": [],
-    "tags": [
-      "Humor"
-    ],
+    "tags": ["Humor"],
     "tagsByCategory": {
-      "Genre": [
-        "Humor"
-      ]
+      "Genre": ["Humor"]
     },
     "isbn10": "0063293501",
     "isbn13": "9780063293502",
@@ -19255,18 +18800,12 @@
     "pages": 448,
     "releaseDate": "2025-05-20",
     "releaseYear": 2025,
-    "authors": [
-      "Fredrik Backman"
-    ],
+    "authors": ["Fredrik Backman"],
     "coverImage": "https://assets.hardcover.app/edition/31722523/c1fb71fac80646fa9d227a93602f49241de91821.jpeg",
     "series": [],
-    "tags": [
-      "Fiction"
-    ],
+    "tags": ["Fiction"],
     "tagsByCategory": {
-      "Genre": [
-        "Fiction"
-      ]
+      "Genre": ["Fiction"]
     },
     "isbn10": "1982112824",
     "isbn13": "9781982112820",
@@ -19284,9 +18823,7 @@
     "pages": 362,
     "releaseDate": "2023-12-28",
     "releaseYear": 2023,
-    "authors": [
-      "Lisa Ridzén"
-    ],
+    "authors": ["Lisa Ridzén"],
     "coverImage": "https://assets.hardcover.app/edition/31780859/bdf21e4b20c4021500ed008ceb9a3542dc2eb1cc.jpeg",
     "series": [],
     "tags": [],

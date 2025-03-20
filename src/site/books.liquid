@@ -1,0 +1,42 @@
+---
+layout: layout.liquid
+description: Jonas Brusman's read books.
+title: Books
+---
+<div class="w-content flex flex-col">
+  <h2 class="header-block">
+    Books
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="header-icon">
+      <path fill-rule="evenodd" d="M6.32 2.577a49.255 49.255 0 0 1 11.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 0 1-1.085.67L12 18.089l-7.165 3.583A.75.75 0 0 1 3.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93Z" clip-rule="evenodd" />
+    </svg>
+  </h2>
+  <div class="py-5">
+    <div class="grid grid-cols-1 gap-x-10">
+      {% assign reading = books | booksCurrentlyReading %}
+      {% if reading %}
+        <h2 class="mt-6 mb-4 text-lg leading-relaxed font-semibold text-balance sm:text-xl">Currently reading</h2>
+        {% for book in reading %}
+          <div class="flex">
+            <div class="mr-4 shrink-0 self-center">
+              <img src="{{book.coverImage}}" alt="{{book.title}}">
+            </div>
+            <div>
+              <h4 class="text-lg font-bold">{{ book.title }}</h4>
+              <h3 class="font-bold">{{ book.authors | join: ', ' }}</h3>
+              <p class="mt-1">Started reading on {{ book.readingHistory[0].started }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+
+      <div class="h-10 bg-gray-500">hej</div>
+      {% assign bookz = books | sort: 'dateAdded' | reverse %}
+
+      {% for book in bookz %}
+        <div>
+          {{ book.title }}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
