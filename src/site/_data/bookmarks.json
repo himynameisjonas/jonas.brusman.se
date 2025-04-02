@@ -1,5 +1,19 @@
 [
   {
+    "title": "Pages CMS: The No-Hassle CMS for Static Sites Generators",
+    "link": "https://pagescms.org/",
+    "excerpt": "Tired of juggling Git and YAML to update your Next.js, Astro, Hugo or Nuxt website? Make it easy on you and your team, get a user-friendly CMS running straight on top of GitHub.",
+    "tags": [
+      "cms",
+      "static sites",
+      "github"
+    ],
+    "date": "2025-04-01T18:22:17.757Z",
+    "content": "",
+    "prettyUrl": "pagescms.org",
+    "permalink": "/bookmarks/2025-04-01-pagescms-org/"
+  },
+  {
     "title": "RawWeb - Search in Independent Websites",
     "link": "https://rawweb.org/",
     "excerpt": "The search engine dedicated to indexing independent websites. Help you explore the hidden gems of the internet.",
