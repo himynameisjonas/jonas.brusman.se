@@ -6,5 +6,10 @@ module.exports = {
         syndication.includes("tacocat.space"),
       );
     },
+    blueskyPost: (data) => {
+      return data.syndications?.find((syndication) =>
+        syndication.includes("bsky.app"),
+      );
+    },
   },
 };
