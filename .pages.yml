@@ -1,0 +1,28 @@
+content:
+  - name: blog_posts
+    label: Blog Posts
+    path: src/site/blog_posts
+    type: collection
+    fields:
+      - name: date
+        label: Date
+        type: date
+        options:
+          time: true
+          format: dd-MM-yyyy HH:mm
+      - name: title
+        label: Title
+        type: string
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+      - name: syndications
+        label: Syndication URLs
+        type: string
+        list: true
+      - name: body
+        label: Body
+        type: code
+        options:
+          language: markdown
