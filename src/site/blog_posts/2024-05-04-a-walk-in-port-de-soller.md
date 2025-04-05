@@ -13,6 +13,7 @@ tags:
   - vacation
   - emil
   - car
+  - window
 syndications:
   - https://tacocat.space/@jonas/112390026341518587
 ---
