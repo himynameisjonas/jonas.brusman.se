@@ -9,6 +9,9 @@ import webmentions from "./src/11ty/webmentions.cjs";
 import typeCollection from "./src/11ty/type_collection.cjs";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
