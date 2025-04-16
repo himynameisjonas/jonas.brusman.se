@@ -26,6 +26,7 @@ const lightboxLink = async function (content, imagePath) {
         duration: "10y",
       },
     });
+
     return `
       <a href="${stats.jpeg[0].url}" data-pswp-width="${stats.jpeg[0].width}" data-pswp-height="${stats.jpeg[0].height}">
       ${content}

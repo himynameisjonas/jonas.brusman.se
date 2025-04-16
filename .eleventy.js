@@ -53,7 +53,6 @@ export default async function (eleventyConfig) {
       animated: true,
     },
 
-    urlPath: "/img/",
     defaultAttributes: {
       loading: "lazy",
       decoding: "async",
@@ -66,6 +65,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/site/css");
   eleventyConfig.addPassthroughCopy("./src/site/js");
   eleventyConfig.addPassthroughCopy("./public");
+  eleventyConfig.addPassthroughCopy("./img");
 
   eleventyConfig.addTransform("minifyHtml", minifyHtml);
 
