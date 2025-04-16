@@ -1,5 +1,5 @@
 import extractExcerpt from "./src/11ty/extract_excerpt.cjs";
-import { imageUrl, lightboxLink } from "./src/11ty/image_url.cjs";
+import { lightboxLink, imageObject } from "./src/11ty/image_object.js";
 import minifyHtml from "./src/11ty/minify_html.cjs";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import similarPosts from "./src/11ty/similar_posts.cjs";
@@ -7,7 +7,6 @@ import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import trackingScript from "./src/11ty/tracking_script.cjs";
 import webmentions from "./src/11ty/webmentions.cjs";
 import typeCollection from "./src/11ty/type_collection.cjs";
-import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
 import dotenv from "dotenv";
 
@@ -40,24 +39,6 @@ export default async function (eleventyConfig) {
     },
   });
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    extensions: "html",
-
-    cacheOptions: {
-      duration: "10y",
-    },
-    formats: ["webp", "jpeg"],
-
-    widths: ["auto"],
-    sharpOptions: {
-      animated: true,
-    },
-
-    defaultAttributes: {
-      loading: "lazy",
-      decoding: "async",
-    },
-  });
 
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.setUseGitIgnore(false);
@@ -91,7 +72,7 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addShortcode("excerpt", extractExcerpt);
 
-  eleventyConfig.addShortcode("image_url", imageUrl);
+  eleventyConfig.addShortcode("image_object", imageObject);
   eleventyConfig.addPairedShortcode("lightbox_link", lightboxLink);
   eleventyConfig.addShortcode("tracking_script", trackingScript);
 

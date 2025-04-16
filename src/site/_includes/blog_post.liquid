@@ -10,16 +10,9 @@ layout: layout.liquid
     <div class="markdown py-5">
       {% if photos %}
         <div class="js-gallery">
-          {% for photo in photos %}
-            {% lightbox_link photo %}
-            <img
-              src="{{ photo }}"
-              alt="{{ title }}"
-              loading="{% if forloop.index == 1 %}eager{% else %}lazy{% endif %}"
-              eleventy:widths="800,1200,2000,3000,4000"
-              sizes="(max-width: 1000px) 100vw, 133vh"
-              class="u-photo ml-0 block max-h-screen w-auto bg-transparent object-contain pb-4 lg:pb-6"
-            >
+          {% for photo in photoObjects %}
+            {% lightbox_link photo.stats %}
+                {{ photo.html }}
             {% endlightbox_link %}
           {% endfor %}
         </div>
