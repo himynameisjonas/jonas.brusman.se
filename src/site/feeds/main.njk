@@ -33,8 +33,8 @@
       <id>{{ absolutePostUrl }}</id>
       <content type="html">
         <![CDATA[
-        {%- for image in post.data.photos -%}
-          <img src="{% image_url image %}">
+        {%- for photo in post.data.photoObjects -%}
+          <img src="{{ photo.stats.jpeg[0].url }}">
         {% endfor -%}
         {{- post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | safe -}}
         <hr><p>Have some thoughts? <a href="mailto:blog@brusman.se?subject=Re: {{ post.data.title }}">Send me an email.</a></p>

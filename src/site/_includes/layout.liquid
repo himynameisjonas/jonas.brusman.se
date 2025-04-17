@@ -26,8 +26,8 @@
     {% endcapture %}
     <meta name="description" content="{{ page_excerpt | escape_once | truncate: 200 }}">
     {% if photos.length > 0 -%}
-      {%- assign photo = photos[0] -%}
-      <meta property="og:image" content="{% image_url photo, true %}">
+      {%- assign photo = photoObjects[0] -%}
+    <meta property="og:image" content="{{ photo.stats.jpeg.first.url }}">
     {% else %}
       <meta property="og:image" content="/og.png">
     {% endif -%}
