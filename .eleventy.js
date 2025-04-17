@@ -1,5 +1,9 @@
 import extractExcerpt from "./src/11ty/extract_excerpt.cjs";
-import { lightboxLink, imageObject } from "./src/11ty/image_object.js";
+import {
+  lightboxLink,
+  imageObject,
+  imageHtml,
+} from "./src/11ty/image_object.js";
 import minifyHtml from "./src/11ty/minify_html.cjs";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import similarPosts from "./src/11ty/similar_posts.cjs";
@@ -74,6 +78,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addShortcode("excerpt", extractExcerpt);
 
   eleventyConfig.addShortcode("image_object", imageObject);
+  eleventyConfig.addShortcode("image_html", imageHtml);
   eleventyConfig.addPairedShortcode("lightbox_link", lightboxLink);
   eleventyConfig.addShortcode("tracking_script", trackingScript);
 
