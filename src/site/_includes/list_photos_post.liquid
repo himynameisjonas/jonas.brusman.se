@@ -3,14 +3,8 @@
     href="{{ post.url }}"
     class="ar-3x2 group absolute top-0 left-0 h-full w-full bg-gray-500"
   >
-    <img
-      src="{{ post.data.photos | first }}"
-      alt="{{ post.data.title }}"
-      eleventy:widths="400,800,1200,2000,3000,4000"
-      sizes="(max-width: 640px) calc(100vw - 32px), 436px"
-      loading="{% if forloop.index == 1 %}eager{% else %}lazy{% endif %}"
-      class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-    >
+    {% image_html post.data.photoObjects.first.stats "list_photos_post_large" post.data.title, "eager" %}
+
     <div class="absolute inset-0 flex flex-col justify-center bg-gray-700/15 px-4 text-center transition-colors hover:bg-transparent">
       <h2 class="pb-1 text-3xl/14 text-balance">
         <span class="bg-neutral-100/65 box-decoration-clone px-2 py-1 pt-2 text-neutral-700 transition-colors group-hover:bg-neutral-100/85 dark:bg-neutral-900/65 dark:text-neutral-300 dark:group-hover:bg-neutral-900/85">
@@ -26,18 +20,12 @@
     </div>
   </a>
   <div class="grid grid-cols-3 gap-2">
-    {% for photo in post.data.photos offset: 1 %}
+    {% for photo in post.data.photoObjects offset: 1 %}
       <a
         href="{{ post.url }}"
         class="ar-3x2 group bg-gray-500"
       >
-        <img
-          src="{{ photo }}"
-          alt="{{ post.data.title }}"
-          eleventy:widths="400,800,1200,2000,3000,4000"
-          sizes="(min-width: 1700px) 103px, (min-width: 1040px) 140px, (min-width: 780px) calc(1.67vw + 102px), (min-width: 640px) 187px, calc(33.44vw - 16px)"
-          class="absolute inset-0 h-full w-full bg-gray-500 object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-        >
+        {% image_html photo.stats "list_photos_post_small" post.data.title %}
       </a>
     {% endfor %}
   </div>
