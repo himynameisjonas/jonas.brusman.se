@@ -4,6 +4,9 @@ export const imageObject = async function (imagePath, imgAttributes) {
   let stats = await Image(imagePath, {
     formats: ["webp", "jpeg"],
     widths: [800, 1200, 2000, 3000, 4000],
+    urlPath: "/img/",
+    outputDir: "dist/img",
+
     cacheOptions: {
       duration: "10y",
     },

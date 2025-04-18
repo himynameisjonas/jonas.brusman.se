@@ -51,7 +51,6 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/site/js");
   eleventyConfig.addPassthroughCopy("./src/site/images");
   eleventyConfig.addPassthroughCopy("./public");
-  eleventyConfig.addPassthroughCopy("./img");
 
   eleventyConfig.addTransform("minifyHtml", minifyHtml);
 
