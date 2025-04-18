@@ -27,49 +27,55 @@ export const imageHtml = async function (
   alt = "",
   loading = "lazy",
 ) {
-  let imgAttributes = {
-    alt: alt,
-    loading,
-    decoding: "async",
-  };
-  let fallback = "largest";
+  try {
+    let imgAttributes = {
+      alt: alt,
+      loading,
+      decoding: "async",
+    };
+    let fallback = "largest";
 
-  switch (variant) {
-    case "blog_post":
-      imgAttributes.class =
-        "u-photo ml-0 block max-h-screen w-auto bg-transparent object-contain pb-4 lg:pb-6";
-      imgAttributes.sizes = "(max-width: 1000px) 100vw, 133vh";
-      imgAttributes.loading = "eager";
-      break;
-    case "list_photos_post_large":
-      imgAttributes.class =
-        "absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105";
-      imgAttributes.sizes = "(max-width: 640px) calc(100vw - 32px), 436px";
-      break;
-    case "list_photos_post_small":
-      imgAttributes.class =
-        "absolute inset-0 h-full w-full bg-gray-500 object-cover transition-transform duration-700 ease-out group-hover:scale-105";
-      imgAttributes.sizes =
-        "(min-width: 1700px) 103px, (min-width: 1040px) 140px, (min-width: 780px) calc(1.67vw + 102px), (min-width: 640px) 187px, calc(33.44vw - 16px)";
+    switch (variant) {
+      case "blog_post":
+        imgAttributes.class =
+          "u-photo ml-0 block max-h-screen w-auto bg-transparent object-contain pb-4 lg:pb-6";
+        imgAttributes.sizes = "(max-width: 1000px) 100vw, 133vh";
+        imgAttributes.loading = "eager";
+        break;
+      case "list_photos_post_large":
+        imgAttributes.class =
+          "absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105";
+        imgAttributes.sizes = "(max-width: 640px) calc(100vw - 32px), 436px";
+        break;
+      case "list_photos_post_small":
+        imgAttributes.class =
+          "absolute inset-0 h-full w-full bg-gray-500 object-cover transition-transform duration-700 ease-out group-hover:scale-105";
+        imgAttributes.sizes =
+          "(min-width: 1700px) 103px, (min-width: 1040px) 140px, (min-width: 780px) calc(1.67vw + 102px), (min-width: 640px) 187px, calc(33.44vw - 16px)";
 
-      break;
+        break;
+    }
+
+    return generateHTML(
+      stats,
+      {},
+      {
+        imgAttributes: Object.assign(
+          {
+            alt: "",
+            loading: "lazy",
+            decoding: "async",
+          },
+          imgAttributes,
+        ),
+        fallback,
+      },
+    );
+  } catch (error) {
+    console.error("imageHtml error:");
+    console.error(error);
+    return "";
   }
-
-  return generateHTML(
-    stats,
-    {},
-    {
-      imgAttributes: Object.assign(
-        {
-          alt: "",
-          loading: "lazy",
-          decoding: "async",
-        },
-        imgAttributes,
-      ),
-      fallback,
-    },
-  );
 };
 
 export const lightboxLink = async function (content, stats) {
