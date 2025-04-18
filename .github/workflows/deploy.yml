@@ -87,7 +87,6 @@ jobs:
         with:
           path: |
             .cache
-            ./img
             dist/img/*.jpeg
             dist/img/*.webp
           key: 11ty-${{ runner.os }}-${{ github.run_id }}
