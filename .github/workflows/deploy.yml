@@ -44,10 +44,10 @@ jobs:
           path: |
             .cache
             ./img
-          key: 11ty-${{ runner.os }}-${{ github.run_id }}
+          key: 11ty-v2-${{ runner.os }}-${{ github.run_id }}
           restore-keys: |
-            11ty-${{ runner.os }}
-            ${{ runner.os }}-11ty
+            11ty-v2-${{ runner.os }}
+            ${{ runner.os }}-11ty-v2
       - name: Build 11ty site
         run: npm run build
         env:
@@ -87,4 +87,4 @@ jobs:
           path: |
             .cache
             ./img
-          key: 11ty-${{ runner.os }}-${{ github.run_id }}
+          key: 11ty-v2-${{ runner.os }}-${{ github.run_id }}
