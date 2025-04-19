@@ -13,6 +13,7 @@ import webmentions from "./src/11ty/webmentions.cjs";
 import typeCollection from "./src/11ty/type_collection.cjs";
 import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
 import dotenv from "dotenv";
+import fse from "fs-extra";
 
 dotenv.config();
 
@@ -47,10 +48,16 @@ export default async function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.setUseGitIgnore(false);
 
-  eleventyConfig.addPassthroughCopy("./src/site/css");
-  eleventyConfig.addPassthroughCopy("./src/site/js");
-  eleventyConfig.addPassthroughCopy("./src/site/images");
-  eleventyConfig.addPassthroughCopy("./public");
+  eleventyConfig.addPassthroughCopy("src/site/css");
+  eleventyConfig.addPassthroughCopy("src/site/js");
+  eleventyConfig.addPassthroughCopy("src/site/images");
+
+  eleventyConfig.on("eleventy.after", async () => {
+    const srcDir = "./img";
+    const outDir = "./dist/img";
+
+    fse.copySync(srcDir, outDir);
+  });
 
   eleventyConfig.addTransform("minifyHtml", minifyHtml);
 
@@ -75,7 +82,6 @@ export default async function (eleventyConfig) {
   });
 
   eleventyConfig.addShortcode("excerpt", extractExcerpt);
-
   eleventyConfig.addShortcode("image_object", imageObject);
   eleventyConfig.addShortcode("image_html", imageHtml);
   eleventyConfig.addPairedShortcode("lightbox_link", lightboxLink);

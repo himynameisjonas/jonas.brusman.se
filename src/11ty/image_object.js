@@ -5,7 +5,7 @@ export const imageObject = async function (imagePath, imgAttributes) {
     formats: ["webp", "jpeg"],
     widths: [800, 1200, 2000, 3000, 4000],
     urlPath: "/img/",
-    outputDir: "dist/img",
+    outputDir: "img",
 
     cacheOptions: {
       duration: "10y",
