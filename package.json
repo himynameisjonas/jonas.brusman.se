@@ -24,10 +24,11 @@
   },
   "type": "module",
   "devDependencies": {
-    "@11ty/eleventy": "3.0.0-alpha.14",
+    "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "^6.0.1",
     "@11ty/eleventy-plugin-rss": "1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "5.0.0",
+    "@11ty/eleventy-plugin-vite": "^6.0.0",
     "@shopify/prettier-plugin-liquid": "^1.4.4",
     "@tailwindcss/postcss": "^4.0.8",
     "html-minifier": "4.0.0",
@@ -38,7 +39,6 @@
     "tailwindcss": "^4.0.8"
   },
   "dependencies": {
-    "@11ty/eleventy-plugin-vite": "^5.0.0-alpha.1",
     "@tinacms/auth": "*",
     "@tinacms/cli": "^1.5.42",
     "express": "^4.18.2",
