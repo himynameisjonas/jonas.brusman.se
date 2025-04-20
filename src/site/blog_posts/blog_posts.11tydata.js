@@ -2,16 +2,14 @@ import { imageObject } from "../../11ty/image_object.js";
 
 export default {
   eleventyComputed: {
-    photoObjects: (data) => {
+    photoObjects: async (data) => {
       if (!data.photos) return [];
-      let objects = data.photos.map((photo) => {
-        console.log("generating photoObject for", photo);
-        return imageObject(photo, {
-          alt: data.title,
-          class:
-            "u-photo ml-0 block max-h-screen w-auto bg-transparent object-contain pb-4 lg:pb-6",
-        });
-      });
+      let objects = await Promise.all(
+        data.photos.map((photo) => {
+          console.log("generating photoObject for", photo);
+          return imageObject(photo);
+        }),
+      );
       return objects;
     },
     blogPostType: (data) => (data.photos ? "photo" : "article"),

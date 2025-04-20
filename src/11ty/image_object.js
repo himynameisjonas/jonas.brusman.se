@@ -1,6 +1,6 @@
 import Image, { generateHTML } from "@11ty/eleventy-img";
 
-export const imageObject = async function (imagePath, imgAttributes) {
+export const imageObject = async function (imagePath) {
   let stats = await Image(imagePath, {
     formats: ["webp", "jpeg"],
     widths: [800, 1200, 2000, 3000, 4000],
