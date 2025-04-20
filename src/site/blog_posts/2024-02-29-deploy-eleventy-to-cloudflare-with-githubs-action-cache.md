@@ -69,9 +69,6 @@ jobs:
       - name: Build 11ty site
         run: yarn build
         env:
-          TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
-          TINA_SEARCH_TOKEN: ${{ secrets.TINA_SEARCH_TOKEN }}
-          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
           ENABLE_ANALYTICS: ${{ github.ref == 'refs/heads/master' }}
 
       - name: Publish to Cloudflare Pages

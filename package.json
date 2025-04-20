@@ -7,7 +7,6 @@
   "private": true,
   "scripts": {
     "prettier": "prettier --write .",
-    "prebuild": "if [ -n \"$TINA_TOKEN\" ]; then tinacms build; fi",
     "build": "eleventy",
     "fetch_bookmarks": "node ./src/scripts/fetch_bookmarks.js",
     "watch": "eleventy --serve",
@@ -31,6 +30,7 @@
     "@11ty/eleventy-plugin-vite": "^6.0.0",
     "@shopify/prettier-plugin-liquid": "^1.4.4",
     "@tailwindcss/postcss": "^4.0.8",
+    "dotenv": "^16.5.0",
     "html-minifier": "4.0.0",
     "npm-run-all2": "6.1.2",
     "prettier": "^3.5.2",
@@ -39,14 +39,11 @@
     "tailwindcss": "^4.0.8"
   },
   "dependencies": {
-    "@tinacms/auth": "*",
-    "@tinacms/cli": "^1.5.42",
     "express": "^4.18.2",
-    "next-tinacms-s3": "^2.0.0",
+    "fs-extra": "^11.3.0",
     "photoswipe": "^5.4.4",
     "postcss": "^8.4.38",
     "quicklink": "^2.3.0",
-    "serverless-http": "^3.2.0",
-    "tinacms": "*"
+    "serverless-http": "^3.2.0"
   }
 }
