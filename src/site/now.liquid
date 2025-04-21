@@ -2,46 +2,23 @@
 title: Now
 headline: Now
 layout: page.liquid
-date: "git Last Modified"
-date_desc: "Last updated"
+no_footer: true
+icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="header-icon">
+  <path d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
+  <path fill-rule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z" clip-rule="evenodd" /></svg>'
+eleventyComputed:
+  canonical: "{{ collections.now.last.url }}"
 ---
 <p>
   This is my <code><a href="https://nownownow.com">/now</a></code> page. The plan is to keep this updated automatically
   with books/music and other things but this is it for now.
 </p>
 
-<div>
-  <ul class="list-none!">
-    <li class="mb-6">
-      🏢 Work
-      <ul class="ml-4">
-        <li>
-          I'm still enjoying my role as a <i>señor</i> developer at
-          <a href="https://career.teamtailor.com/departments/product">Teamtailor</a>, now in my 11th year. 🚀
-        </li>
-      </ul>
-    </li>
-    <li class="mb-6">
-      📚 Books (Follow me on <a href="https://hardcover.app/@himynameisjonas">Hardcover</a> or
-      <a href="https://www.goodreads.com/user/show/1769297-jonas-brusman">Goodreads</a>)
-      <ul class="ml-4">
-        <li>
-          Currently reading
-          <a href="https://hardcover.app/books/spring-tide-2012/editions/31892694"
-            >Springfloden Cilla Börjlind, Rolf Börjlind</a
-          >
-        </li>
-        <li>
-          Just finished the <a href="https://hardcover.app/series/beartown">Beartown series by Fredrik Backman</a>
-        </li>
-      </ul>
-    </li>
-    <li class="mb-6">
-      🎮 Games
-      <ul class="ml-4">
-        <li><a href="https://www.reachthefinals.com/">The Finals</a></li>
-        <li><a href="https://boardgamegeek.com/boardgame/167791/terraforming-mars">Terraforming Mars</a></li>
-      </ul>
-    </li>
-  </ul>
+<div class="mb-2 border-t-4 border-b-4 border-salmon-50 dark:border-salmon-600 text-sm mb-4 py-4">
+    Last updated: <a href="{{ collections.now.last.url }}">{{ collections.now.last.date | date: '%Y-%m-%d' }}</a>.
+    <a href="/tags/now/">Previous entries</a>.
+</div>
+
+<div class="now-page-content">
+{{ collections.now.last.content }}
 </div>

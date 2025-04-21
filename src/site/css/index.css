@@ -153,6 +153,10 @@ header {
 }
 
 @layer base {
+  .markdown .now-page-content > ul {
+    @apply list-none pl-0;
+  }
+
   .markdown {
     @apply text-lg leading-relaxed break-words sm:text-xl lg:text-2xl;
   }
