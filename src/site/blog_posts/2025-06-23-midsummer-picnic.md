@@ -16,6 +16,7 @@ tags:
   - daniel
   - landscape
 syndications:
+  - https://tacocat.space/@jonas/114734036641478594
 ---
 
 Another year and [another traditional bike trip](/gota-kanal/) to my mum's place right next to Göta Canal.
