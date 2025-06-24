@@ -8,6 +8,7 @@ tags:
   - road
   - nora
 syndications:
+  - https://tacocat.space/@jonas/114738580029550332
 ---
 
 Celebrated Midsummer with friends and family in the countryside where I grew up. The photo is from our walk to my aunt's house, where we had lunch, played games, and danced around the maypole.
