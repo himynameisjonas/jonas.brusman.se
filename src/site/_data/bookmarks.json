@@ -1,5 +1,20 @@
 [
   {
+    "title": "Whirlwind Chat: Connect with peers, 2 minutes at a time!",
+    "link": "https://whirlwind.chat/",
+    "excerpt": "Dive into quick, one-on-one conversations with your peers – perfect for conferences, meetups, team check-ins, or catching up with friends. Whirlwind Chat randomly pairs you with others from your group for engaging 2-minute chats. Let's get talking!",
+    "tags": [
+      "meeting",
+      "social",
+      "video",
+      "chat"
+    ],
+    "date": "2025-07-22T17:45:40.218Z",
+    "content": "",
+    "prettyUrl": "whirlwind.chat",
+    "permalink": "/bookmarks/2025-07-22-whirlwind-chat/"
+  },
+  {
     "title": "Pages CMS: The No-Hassle CMS for Static Sites Generators",
     "link": "https://pagescms.org/",
     "excerpt": "Tired of juggling Git and YAML to update your Next.js, Astro, Hugo or Nuxt website? Make it easy on you and your team, get a user-friendly CMS running straight on top of GitHub.",
