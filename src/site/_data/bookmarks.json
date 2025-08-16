@@ -1,5 +1,18 @@
 [
   {
+    "title": "Radicle",
+    "link": "https://radicle.xyz/",
+    "excerpt": "Sovereign code infrastructure.",
+    "tags": [
+      "git",
+      "opensource"
+    ],
+    "date": "2025-08-15T11:56:31.730Z",
+    "content": "",
+    "prettyUrl": "radicle.xyz",
+    "permalink": "/bookmarks/2025-08-15-radicle-xyz/"
+  },
+  {
     "title": "Whirlwind Chat: Connect with peers, 2 minutes at a time!",
     "link": "https://whirlwind.chat/",
     "excerpt": "Dive into quick, one-on-one conversations with your peers – perfect for conferences, meetups, team check-ins, or catching up with friends. Whirlwind Chat randomly pairs you with others from your group for engaging 2-minute chats. Let's get talking!",
