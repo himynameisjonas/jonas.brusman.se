@@ -15,6 +15,7 @@ tags:
   - empty
 syndications:
   - https://tacocat.space/@jonas/115045840699973510
+  - https://bsky.app/profile/jonas.brusman.se/post/3lwmnsdu25p2i
 ---
 _June 2025_
 
