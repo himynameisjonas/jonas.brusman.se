@@ -1,5 +1,20 @@
 [
   {
+    "title": "Hosting an IRC Server with Traefik and Coolify",
+    "link": "https://melkat.blog/p/hosting-an-irc-server-with-traefik-and-coolify/",
+    "excerpt": "hi there! please enjoy my blog of things i think are interesting",
+    "tags": [
+      "irc",
+      "selfhosting",
+      "coolify",
+      "caddy"
+    ],
+    "date": "2026-02-09T22:20:34.036Z",
+    "content": "",
+    "prettyUrl": "melkat.blog/p/hosting-an-irc-server-with-traefik-and-coolify/",
+    "permalink": "/bookmarks/2026-02-09-melkat-blog-p-hosting-an-irc-server-with-traefik-and-coolify/"
+  },
+  {
     "title": "Radicle",
     "link": "https://radicle.xyz/",
     "excerpt": "Sovereign code infrastructure.",
