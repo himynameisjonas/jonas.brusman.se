@@ -1,5 +1,17 @@
 [
   {
+    "title": "deSEC – Free Secure DNS",
+    "link": "https://desec.io/",
+    "excerpt": "",
+    "tags": [
+      "dns"
+    ],
+    "date": "2026-02-12T17:55:26.959Z",
+    "content": "",
+    "prettyUrl": "desec.io",
+    "permalink": "/bookmarks/2026-02-12-desec-io/"
+  },
+  {
     "title": "Hosting an IRC Server with Traefik and Coolify",
     "link": "https://melkat.blog/p/hosting-an-irc-server-with-traefik-and-coolify/",
     "excerpt": "hi there! please enjoy my blog of things i think are interesting",
