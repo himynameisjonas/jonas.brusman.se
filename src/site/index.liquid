@@ -27,25 +27,93 @@ title: Blog
   </div>
 
   <div>
-    <a href="/photos/">
+    <a href="https://photos.brusman.se">
       <h2 class="header-block">
-        Photo posts
+        Photos
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="header-icon">
           <path d="M12 9a3.75 3.75 0 1 0 0 7.5A3.75 3.75 0 0 0 12 9Z" />
           <path fill-rule="evenodd" d="M9.344 3.071a49.52 49.52 0 0 1 5.312 0c.967.052 1.83.585 2.332 1.39l.821 1.317c.24.383.645.643 1.11.71.386.054.77.113 1.152.177 1.432.239 2.429 1.493 2.429 2.909V18a3 3 0 0 1-3 3h-15a3 3 0 0 1-3-3V9.574c0-1.416.997-2.67 2.429-2.909.382-.064.766-.123 1.151-.178a1.56 1.56 0 0 0 1.11-.71l.822-1.315a2.942 2.942 0 0 1 2.332-1.39ZM6.75 12.75a5.25 5.25 0 1 1 10.5 0 5.25 5.25 0 0 1-10.5 0Zm12-1.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" />
         </svg>
       </h2>
     </a>
+    <p class="pt-1 text-neutral-500 dark:text-neutral-400">
+      My photos have moved to <a href="https://photos.brusman.se" class="link">photos.brusman.se</a> — here are the latest.
+    </p>
     <div class="py-5">
-      <div class="grid grid-cols-1 gap-6">
-        {% assign photos = collections.photos | reverse %}
-        {% assign photoWidths = 'w-full' %}
-        {% for post in photos limit: 3 %}
-          {% include 'list_photos_post' %}
-        {% endfor %}
-      </div>
+      {% if photostream.journal or photostream.photos.size > 0 %}
+        {% if photostream.journal %}
+          {% assign j = photostream.journal %}
+          <a
+            href="{{ j.href }}"
+            class="ar-3x2 group mb-3 block bg-neutral-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-salmon-500 dark:bg-neutral-800 dark:focus-visible:outline-salmon-600"
+          >
+            <img
+              src="{{ j.img }}"
+              alt="{{ j.alt }}"
+              loading="lazy"
+              decoding="async"
+              class="absolute inset-0 h-full w-full object-cover"
+            />
+            <div class="absolute inset-0 flex flex-col justify-center bg-gray-700/5 px-4 text-center transition-colors group-hover:bg-transparent">
+              <h3 class="pb-1 text-3xl/14 text-balance">
+                <span class="bg-neutral-100/75 box-decoration-clone px-2 py-1 pt-2 text-neutral-700 transition-colors group-hover:bg-neutral-100/90 dark:bg-neutral-900/75 dark:text-neutral-300 dark:group-hover:bg-neutral-900/85">
+                  {{- j.title -}}
+                </span>
+              </h3>
+              {% if j.date %}
+                <time datetime="{{ j.date }}" class="pt-1 font-medium text-gray-100">{{ j.date }}</time>
+              {% endif %}
+            </div>
+          </a>
+          {% if j.intro %}
+            <p class="mb-4 text-neutral-600 dark:text-neutral-400">
+              {{ j.intro | truncatewords: 24 }}
+              <a href="{{ j.href }}" class="link whitespace-nowrap">Read journal →</a>
+            </p>
+          {% endif %}
+        {% endif %}
+        {% if photostream.photos.size > 0 %}
+          {% if photostream.journal %}
+            <div class="mt-6 mb-3 flex items-center gap-3">
+              <h3 class="font-semibold text-neutral-700 dark:text-neutral-300">Latest photos</h3>
+              <span class="h-px flex-1 bg-neutral-200 dark:bg-neutral-700"></span>
+            </div>
+          {% endif %}
+          <div class="grid grid-cols-2 gap-2">
+            {% for photo in photostream.photos %}
+              <a
+                href="{{ photo.href }}"
+                class="ar-3x2 group block bg-neutral-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-salmon-500 dark:bg-neutral-800 dark:focus-visible:outline-salmon-600"
+              >
+                <img
+                  src="{{ photo.img }}"
+                  alt="{{ photo.alt }}"
+                  loading="lazy"
+                  decoding="async"
+                  class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                />
+                {% if photo.date %}
+                  <div class="pointer-events-none absolute inset-x-0 bottom-0 flex justify-end p-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100 motion-reduce:transition-none">
+                    <time
+                      datetime="{{ photo.date }}"
+                      class="bg-neutral-100/80 px-1.5 py-0.5 text-xs font-medium text-neutral-700 dark:bg-neutral-900/80 dark:text-neutral-300"
+                    >
+                      {{ photo.date }}
+                    </time>
+                  </div>
+                {% endif %}
+              </a>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% else %}
+        <div class="flex flex-col items-center justify-center gap-3 border border-salmon-200 bg-salmon-25 px-6 py-12 text-center text-lg dark:border-salmon-900 dark:bg-neutral-800">
+          <p class="text-balance">My photos now live at their own place.</p>
+          <a href="https://photos.brusman.se" class="link">Visit photos.brusman.se →</a>
+        </div>
+      {% endif %}
       <div class="mt-2 mb-2 border-t-4 border-salmon-500 pt-2 text-xl font-semibold dark:border-salmon-600">
-        <a href="/photos/" class="block text-center link text-inherit">View all photos</a>
+        <a href="https://photos.brusman.se" class="block text-center link text-inherit">View all photos</a>
       </div>
     </div>
   </div>
